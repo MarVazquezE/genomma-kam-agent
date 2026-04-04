@@ -334,32 +334,34 @@ async function generatePPTX(account, op, marcas) {
     s5.addText("+" + (p.impacto_som_pts || 0).toFixed(1) + "pts SOM · " + p.plazo, { x: 8.7, y: y + 1.1, w: 3.9, h: 0.35, fontSize: 9, color: isF ? "CCDDFF" : "AACCFF", fontFace: theme.font, align: "center" })
   })
 
-  // SLIDE 6 KBDs
+// SLIDE 6 KBDs
   const s6 = pptx.addSlide()
   s6.background = { color: "FFFFFF" }
   hdr(s6, "05  Como Medimos el Exito — KBDs por Marca", "Inputs comprometidos que generan los outputs acordados")
   s6.addText("Cada palanca tiene un KBD especifico auditado semanalmente. Sin ejecucion de los inputs no se logran los outputs.", { x: 0.3, y: 0.8, w: 12.4, h: 0.3, fontSize: 10, color: GRAY, fontFace: theme.font, italic: true })
-  const kbdM = marcas.slice(0, 6).map(m => ({ marca: m.marca, data: kbd[m.marca] })).filter(x => x.data).slice(0, 3)
-  const numMarcas = kbdM.length || 1
-  const colW = numMarcas === 1 ? 12.6 : numMarcas === 2 ? 6.1 : 4.0
-  const colGap = numMarcas === 1 ? 0 : numMarcas === 2 ? 6.4 : 4.25
-  kbdM.forEach((km, i) => {
-    const x = 0.2 + i * colGap
-    s6.addShape(pptx.ShapeType.rect, { x, y: 1.2, w: colW, h: 5.6, fill: { color: "F8F9FA" }, line: { color: "E0E0E0", width: 1 } })
-    s6.addShape(pptx.ShapeType.rect, { x, y: 1.2, w: colW, h: 0.32, fill: { color: theme.primary } })
-    s6.addText(km.marca, { x: x + 0.1, y: 1.22, w: colW - 0.2, h: 0.28, fontSize: 11, bold: true, color: WHITE, fontFace: theme.font })
-    s6.addText("Obj: VN " + (km.data.objetivo_venta_neta_pct > 0 ? "+" : "") + km.data.objetivo_venta_neta_pct + "% | SOM +" + km.data.objetivo_som_pts + "pts", { x: x + 0.1, y: 1.56, w: colW - 0.2, h: 0.26, fontSize: 7.5, bold: true, color: PRIM, fontFace: theme.font })
-    const maxKbds = numMarcas === 1 ? 5 : 3
-    const kbdH = numMarcas === 1 ? 1.1 : 1.55
-    km.data.kbds.slice(0, maxKbds).forEach((k, ki) => {
-      const ky = 1.9 + ki * kbdH
-      const c = k.status === "off_track" ? "EF4444" : k.status === "at_risk" ? "F59E0B" : "10B981"
-      s6.addShape(pptx.ShapeType.rect, { x: x + 0.1, y: ky, w: colW - 0.2, h: nummarcas === 1 ? 1.55 : 1.4, fill: { color: k.status === "off_track" ? "FFF0F0" : k.status === "at_risk" ? "FFFBF0" : "F0FFF8" }, line: { color: c, width: 1 } })
-      s6.addText("[" + k.area + "] " + k.cumplimiento_pct + "%", { x: x + 0.18, y: ky + 0.06, w: colW - 0.36, h: 0.26, fontSize: 9, bold: true, color: "#" + c, fontFace: theme.font })
-      const nc = numMarcas
-      const descLen = nc === 1 ? 160 : 90
-      s6.addText(k.descripcion.substring(0, descLen) + (k.descripcion.length > descLen ? "..." : ""), { x: x + 0.18, y: ky + 0.32, w: colW - 0.36, h: nc === 1 ? 0.5 : 0.65, fontSize: nc === 1 ? 8.5 : 7.5, color: GRAY, fontFace: theme.font })
-      s6.addText("Output: " + k.impacto, { x: x + 0.18, y: ky + (nc === 1 ? 0.82 : 1.0), w: colW - 0.36, h: 0.24, fontSize: nc === 1 ? 8.5 : 7.5, bold: true, color: PRIM, fontFace: theme.font })
+  const kbdMarcas = marcas.slice(0, 6).map(m => ({ marca: m.marca, data: kbd[m.marca] })).filter(x => x.data).slice(0, 3)
+  const nk = kbdMarcas.length || 1
+  const kColW = nk === 1 ? 12.6 : nk === 2 ? 6.1 : 4.0
+  const kColGap = nk === 1 ? 0 : nk === 2 ? 6.4 : 4.25
+  const kMaxRows = nk === 1 ? 5 : 3
+  const kRowH = nk === 1 ? 1.1 : 1.55
+  kbdMarcas.forEach(function(km, i) {
+    const kx = 0.2 + i * kColGap
+    s6.addShape(pptx.ShapeType.rect, { x: kx, y: 1.2, w: kColW, h: 5.6, fill: { color: "F8F9FA" }, line: { color: "E0E0E0", width: 1 } })
+    s6.addShape(pptx.ShapeType.rect, { x: kx, y: 1.2, w: kColW, h: 0.32, fill: { color: theme.primary } })
+    s6.addText(km.marca, { x: kx + 0.1, y: 1.22, w: kColW - 0.2, h: 0.28, fontSize: 11, bold: true, color: WHITE, fontFace: theme.font })
+    s6.addText("Obj: VN " + (km.data.objetivo_venta_neta_pct > 0 ? "+" : "") + km.data.objetivo_venta_neta_pct + "% | SOM +" + km.data.objetivo_som_pts + "pts", { x: kx + 0.1, y: 1.56, w: kColW - 0.2, h: 0.26, fontSize: 7.5, bold: true, color: PRIM, fontFace: theme.font })
+    km.data.kbds.slice(0, kMaxRows).forEach(function(k, ki) {
+      const ky = 1.9 + ki * kRowH
+      const kc = k.status === "off_track" ? "EF4444" : k.status === "at_risk" ? "F59E0B" : "10B981"
+      const kbg = k.status === "off_track" ? "FFF0F0" : k.status === "at_risk" ? "FFFBF0" : "F0FFF8"
+      const kDescLen = nk === 1 ? 160 : 80
+      const kFontSize = nk === 1 ? 8.5 : 7.5
+      const kBoxH = nk === 1 ? 0.98 : 1.38
+      s6.addShape(pptx.ShapeType.rect, { x: kx + 0.1, y: ky, w: kColW - 0.2, h: kBoxH, fill: { color: kbg }, line: { color: kc, width: 1 } })
+      s6.addText("[" + k.area + "] " + k.cumplimiento_pct + "%", { x: kx + 0.18, y: ky + 0.06, w: kColW - 0.36, h: 0.26, fontSize: 9, bold: true, color: "#" + kc, fontFace: theme.font })
+      s6.addText(k.descripcion.substring(0, kDescLen) + (k.descripcion.length > kDescLen ? "..." : ""), { x: kx + 0.18, y: ky + 0.32, w: kColW - 0.36, h: 0.45, fontSize: kFontSize, color: GRAY, fontFace: theme.font })
+      s6.addText("Output: " + k.impacto, { x: kx + 0.18, y: ky + 0.76, w: kColW - 0.36, h: 0.22, fontSize: kFontSize, bold: true, color: PRIM, fontFace: theme.font })
     })
   })
 
