@@ -409,9 +409,15 @@ export default function OnePager({ accountId, onBack }) {
 
   async function handlePPT() {
     setGeneratingPPT(true)
-    try { await generatePPTX(account, onePagerData, marcas) }
-    catch (e) { setError("Error PPT: " + e.message) }
-    finally { setGeneratingPPT(false) }
+    setError(null)
+    try {
+      await generatePPTX(account, onePagerData, marcas)
+    } catch (e) {
+      setError("Error PPT: " + e.message)
+      alert("Error: " + e.message)
+    } finally {
+      setGeneratingPPT(false)
+    }
   }
 
   return (
