@@ -1,0 +1,54 @@
+{
+  "categorias": {
+    "dolor": {
+      "marcas": ["Alliviax", "XL-3", "Next", "Tukol", "Bio", "Bengue", "Balsamo Bengue"],
+      "descripcion": "Categoria OTC para alivio del dolor, gripa y tos",
+      "palancas": ["temporada invernal", "precio especial multipack", "exhibicion adicional farmacia", "capacitacion farmaceuticos"]
+    },
+    "piel": {
+      "marcas": ["Cicatricure", "Teatrical", "Asepxia", "Goicoechea", "Goicoechea Diabet TX", "Silkamedic"],
+      "descripcion": "Cuidado de la piel, cicatrices, acne y dermatologia",
+      "palancas": ["gondola de belleza", "precio especial 2x1", "exhibicion piso de venta", "digital en portales"]
+    },
+    "cabello": {
+      "marcas": ["Tio Nacho", "Medicasp", "Sistema GB", "Vanart"],
+      "descripcion": "Cuidado del cabello, anticaspa y tratamiento capilar",
+      "palancas": ["display cabello", "promocion 3x2", "nueva formulacion melatonina", "exhibicion cruzada con piel"]
+    },
+    "hidratacion": {
+      "marcas": ["Suerox"],
+      "descripcion": "Hidratacion y electrolitos para toda la familia",
+      "palancas": ["temporada calor", "multipack", "precio por volumen", "activacion digital", "exhibicion fria"]
+    },
+    "lactantes": {
+      "marcas": ["Novamil"],
+      "descripcion": "Formula infantil para lactantes - categoria PH exclusiva",
+      "palancas": ["espacio exclusivo lactantes", "capacitacion medicos", "muestras medicas", "exhibicion especial bebe"]
+    },
+    "salud_intima": {
+      "marcas": ["Nikzon", "Lomecan V", "Unesia", "Pointts"],
+      "descripcion": "Salud intima, hemorroides, infecciones y verrugas",
+      "palancas": ["anaquel farmacia especializada", "discrecion en exhibicion", "precio competitivo"]
+    },
+    "digestivo": {
+      "marcas": ["Kaopectate", "QG5", "Genoprazol"],
+      "descripcion": "Salud digestiva, diarrea, colitis y reflujo",
+      "palancas": ["temporada viajes", "precio promocional", "exhibicion checkout"]
+    },
+    "sexual": {
+      "marcas": ["Condon M"],
+      "descripcion": "Salud sexual masculina",
+      "palancas": ["anaquel especializado", "precio competitivo", "discrecion"]
+    }
+  },
+  "reglas_recomendacion": [
+    "NUNCA mezclar estrategias entre categorias distintas (ej: no aplicar estrategia de Novamil en marcas de piel)",
+    "Las palancas deben ser especificas a la categoria y al canal",
+    "Novamil SOLO se puede comparar con otras formulas infantiles, nunca con OTC o SC",
+    "Suerox es hidratacion, no se compara con OTC de dolor",
+    "Las marcas de salud intima requieren estrategias de discrecion en exhibicion",
+    "Temporada invernal aplica SOLO para: XL-3, Next, Tukol, Alliviax, Bio",
+    "Temporada calor aplica SOLO para: Suerox",
+    "Cicatricure es lider en piel, estrategias deben defender anaquel vs competencia dermatologica"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "wmt":[
+    {"marca":"Suerox","bu":"BE","categoria":"revertir","sell_out_trend":-21.5,"venta_w12":24634413,"venta_ytd":290414354,"gap_ytd":-70098130,"inventario_dias":19,"market_share":18.4,"oportunidad_mxn":890000,"razon":"Caida -21.5% YoY W12, gap YTD -$70M. Principal alerta del portafolio BE."},
+    {"marca":"Alliviax","bu":"OTC","categoria":"revertir","sell_out_trend":-15.2,"venta_w12":6305046,"venta_ytd":82009556,"gap_ytd":-8805879,"inventario_dias":6,"market_share":24.1,"oportunidad_mxn":537000,"razon":"Caida -15.2% YoY + riesgo quiebre critico 6 dias cobertura."},
+    {"marca":"Nikzon","bu":"OTC","categoria":"revertir","sell_out_trend":-23.9,"venta_w12":5181080,"venta_ytd":65776493,"gap_ytd":-14206565,"inventario_dias":18,"market_share":19.2,"oportunidad_mxn":380000,"razon":"Caida sostenida -23.9% YoY, gap YTD -$14M. Requiere plan de recuperacion urgente."},
+    {"marca":"Cicatricure","bu":"SC","categoria":"revertir","sell_out_trend":-10.8,"venta_w12":3952596,"venta_ytd":48852994,"gap_ytd":-8334612,"inventario_dias":21,"market_share":31.2,"oportunidad_mxn":250000,"razon":"Lider de categoria pero cayendo -10.8%. Riesgo de perder liderazgo."},
+    {"marca":"XL-3","bu":"OTC","categoria":"proteger","sell_out_trend":0.4,"venta_w12":15961577,"venta_ytd":239154387,"gap_ytd":13692409,"inventario_dias":22,"market_share":19.8,"oportunidad_mxn":180000,"razon":"Practicamente plano +0.4%. Segunda marca mas grande, temporada alta proxima."},
+    {"marca":"Bio","bu":"OTC","categoria":"proteger","sell_out_trend":-0.9,"venta_w12":6129854,"venta_ytd":77219267,"gap_ytd":95556,"inventario_dias":20,"market_share":16.4,"oportunidad_mxn":120000,"razon":"Casi neutro -0.9%, gap minimo. Mantener ejecucion."},
+    {"marca":"Tio Nacho","bu":"HC","categoria":"proteger","sell_out_trend":-1.7,"venta_w12":7406654,"venta_ytd":92905724,"gap_ytd":-4342194,"inventario_dias":26,"market_share":22.3,"oportunidad_mxn":210000,"razon":"Leve caida -1.7%, nueva formulacion Henna generando momentum."},
+    {"marca":"Novamil","bu":"PH","categoria":"capitalizar","sell_out_trend":12.8,"venta_w12":11464621,"venta_ytd":135225379,"gap_ytd":17386930,"inventario_dias":28,"market_share":34.1,"oportunidad_mxn":420000,"razon":"Crecimiento solido +12.8% YoY, gap positivo +$17M. Acelerar."},
+    {"marca":"Teatrical","bu":"SC","categoria":"capitalizar","sell_out_trend":16.1,"venta_w12":4916587,"venta_ytd":59274054,"gap_ytd":5425649,"inventario_dias":24,"market_share":28.4,"oportunidad_mxn":280000,"razon":"Mejor performance SC +16.1%. Oportunidad de ganar anaquel."},
+    {"marca":"Kaopectate","bu":"OTC","categoria":"capitalizar","sell_out_trend":47.0,"venta_w12":389234,"venta_ytd":4592016,"gap_ytd":1199374,"inventario_dias":22,"market_share":8.2,"oportunidad_mxn":95000,"razon":"Crecimiento excepcional +47% aunque base pequena. Potencial de expansion."}
+  ],
+  "ched":[
+    {"marca":"Suerox","bu":"BE","categoria":"revertir","sell_out_trend":-36.0,"venta_w12":3200000,"venta_ytd":38000000,"gap_ytd":-15000000,"inventario_dias":8,"market_share":12.1,"oportunidad_mxn":890000,"razon":"CRITICO: Caida -36% sell-out, exceso gasto vs facturacion. Primera prioridad."},
+    {"marca":"Alliviax","bu":"OTC","categoria":"revertir","sell_out_trend":-4.8,"venta_w12":1200000,"venta_ytd":14500000,"gap_ytd":-800000,"inventario_dias":6,"market_share":21.4,"oportunidad_mxn":180000,"razon":"Caida y riesgo de quiebre."},
+    {"marca":"Cicatricure","bu":"SC","categoria":"capitalizar","sell_out_trend":3.1,"venta_w12":890000,"venta_ytd":10200000,"gap_ytd":320000,"inventario_dias":23,"market_share":28.9,"oportunidad_mxn":140000,"razon":"Chedraui Selecto es oportunidad premium para Cicatricure."},
+    {"marca":"Novamil","bu":"PH","categoria":"capitalizar","sell_out_trend":8.4,"venta_w12":980000,"venta_ytd":11800000,"gap_ytd":900000,"inventario_dias":25,"market_share":29.2,"oportunidad_mxn":180000,"razon":"PH creciendo en Chedraui, acelerar distribucion."},
+    {"marca":"XL-3","bu":"OTC","categoria":"proteger","sell_out_trend":-2.4,"venta_w12":680000,"venta_ytd":8100000,"gap_ytd":-210000,"inventario_dias":19,"market_share":17.2,"oportunidad_mxn":80000,"razon":"Leve caida, monitorear temporada."},
+    {"marca":"Tio Nacho","bu":"HC","categoria":"revertir","sell_out_trend":-6.1,"venta_w12":420000,"venta_ytd":5100000,"gap_ytd":-380000,"inventario_dias":13,"market_share":19.1,"oportunidad_mxn":95000,"razon":"Caida y bajo inventario."}
+  ],
+  "sor":[
+    {"marca":"Suerox","bu":"BE","categoria":"capitalizar","sell_out_trend":8.4,"venta_w12":4200000,"venta_ytd":49000000,"gap_ytd":3800000,"inventario_dias":25,"market_share":20.1,"oportunidad_mxn":280000,"razon":"Momentum positivo en Soriana, capitalizar con promo activa."},
+    {"marca":"Alliviax","bu":"OTC","categoria":"proteger","sell_out_trend":2.8,"venta_w12":1800000,"venta_ytd":21500000,"gap_ytd":580000,"inventario_dias":22,"market_share":23.4,"oportunidad_mxn":190000,"razon":"Estable, proteger posicion."},
+    {"marca":"Tio Nacho","bu":"HC","categoria":"capitalizar","sell_out_trend":11.4,"venta_w12":980000,"venta_ytd":11800000,"gap_ytd":1200000,"inventario_dias":24,"market_share":24.1,"oportunidad_mxn":310000,"razon":"Mejor performance HC en Soriana. Reformulacion Henna con fuerte momentum."},
+    {"marca":"Novamil","bu":"PH","categoria":"capitalizar","sell_out_trend":14.2,"venta_w12":1240000,"venta_ytd":14900000,"gap_ytd":1800000,"inventario_dias":28,"market_share":31.8,"oportunidad_mxn":240000,"razon":"PH lider en Soriana con crecimiento solido."},
+    {"marca":"Cicatricure","bu":"SC","categoria":"capitalizar","sell_out_trend":6.2,"venta_w12":720000,"venta_ytd":8600000,"gap_ytd":520000,"inventario_dias":23,"market_share":29.8,"oportunidad_mxn":220000,"razon":"Crecimiento sostenido en SC."},
+    {"marca":"Nikzon","bu":"OTC","categoria":"revertir","sell_out_trend":-18.4,"venta_w12":480000,"venta_ytd":5800000,"gap_ytd":-1300000,"inventario_dias":16,"market_share":14.2,"oportunidad_mxn":150000,"razon":"Caida fuerte en Soriana, necesita activacion."}
+  ],
+  "ahorro":[
+    {"marca":"Alliviax","bu":"OTC","categoria":"proteger","sell_out_trend":-2.1,"venta_w12":980000,"venta_ytd":11800000,"gap_ytd":-260000,"inventario_dias":20,"market_share":28.4,"oportunidad_mxn":140000,"razon":"Leve caida en canal farmacia, lider de categoria."},
+    {"marca":"Cicatricure","bu":"SC","categoria":"revertir","sell_out_trend":-8.4,"venta_w12":620000,"venta_ytd":7400000,"gap_ytd":-680000,"inventario_dias":13,"market_share":22.1,"oportunidad_mxn":180000,"razon":"Caida y bajo inventario en farmacia."},
+    {"marca":"Suerox","bu":"BE","categoria":"proteger","sell_out_trend":1.8,"venta_w12":840000,"venta_ytd":10100000,"gap_ytd":180000,"inventario_dias":23,"market_share":14.2,"oportunidad_mxn":90000,"razon":"Canal menor pero estable."},
+    {"marca":"Nikzon","bu":"OTC","categoria":"revertir","sell_out_trend":-14.2,"venta_w12":340000,"venta_ytd":4100000,"gap_ytd":-710000,"inventario_dias":15,"market_share":18.4,"oportunidad_mxn":120000,"razon":"Caida relevante en farmacia."},
+    {"marca":"Lomecan V","bu":"OTC","categoria":"capitalizar","sell_out_trend":4.8,"venta_w12":420000,"venta_ytd":5000000,"gap_ytd":230000,"inventario_dias":22,"market_share":31.4,"oportunidad_mxn":110000,"razon":"Buen desempeno en canal farmacia donde es lider."}
+  ],
+  "oxxo":[
+    {"marca":"Suerox","bu":"BE","categoria":"revertir","sell_out_trend":-36.0,"venta_w12":1980000,"venta_ytd":23800000,"gap_ytd":-9800000,"inventario_dias":8,"market_share":12.1,"oportunidad_mxn":890000,"razon":"CRITICO: -36% YoY sostenido. Exceso de gasto vs facturacion. Accion inmediata."},
+    {"marca":"Cicatricure","bu":"SC","categoria":"revertir","sell_out_trend":-12.4,"venta_w12":280000,"venta_ytd":3400000,"gap_ytd":-480000,"inventario_dias":14,"market_share":8.4,"oportunidad_mxn":240000,"razon":"Tendencia negativa sostenida en canal OXXO."},
+    {"marca":"XL-3","bu":"OTC","categoria":"revertir","sell_out_trend":-18.2,"venta_w12":160000,"venta_ytd":1900000,"gap_ytd":-420000,"inventario_dias":11,"market_share":6.2,"oportunidad_mxn":180000,"razon":"Canal no priorizado historicamente, perdiendo share."}
+  ],
+  "costco":[
+    {"marca":"Suerox","bu":"BE","categoria":"capitalizar","sell_out_trend":4.2,"venta_w12":1120000,"venta_ytd":13400000,"gap_ytd":540000,"inventario_dias":31,"market_share":24.8,"oportunidad_mxn":180000,"razon":"Formato multipack con buen desempeno en club."},
+    {"marca":"Alliviax","bu":"OTC","categoria":"proteger","sell_out_trend":-1.8,"venta_w12":820000,"venta_ytd":9800000,"gap_ytd":-180000,"inventario_dias":22,"market_share":19.4,"oportunidad_mxn":120000,"razon":"Monitorear rotacion formato club."},
+    {"marca":"Cicatricure","bu":"SC","categoria":"capitalizar","sell_out_trend":6.8,"venta_w12":690000,"venta_ytd":8300000,"gap_ytd":560000,"inventario_dias":23,"market_share":28.2,"oportunidad_mxn":160000,"razon":"Crecimiento consistente en club."},
+    {"marca":"Novamil","bu":"PH","categoria":"capitalizar","sell_out_trend":9.4,"venta_w12":580000,"venta_ytd":6900000,"gap_ytd":590000,"inventario_dias":26,"market_share":26.4,"oportunidad_mxn":140000,"razon":"PH creciendo en formato club."}
+  ]
+}

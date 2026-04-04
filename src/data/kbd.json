@@ -1,0 +1,73 @@
+{
+  "Suerox": {
+    "objetivo_venta_neta_pct": 10,
+    "objetivo_som_pts": 0.7,
+    "objetivo_sellout_pct": 10,
+    "competidor_principal": "Electrolit",
+    "kbds": [
+      {"id":"s1","area":"Marca","descripcion":"80% de inversion en campanas de intencion de compra vs Electrolit comunicando hidratacion saludable + 8 iones","cumplimiento_pct":65,"status":"off_track","impacto":"SOM +0.6-0.8pts"},
+      {"id":"s2","area":"eCommerce","descripcion":"100% de paginas de producto actualizadas con contenido hero en canales clave","cumplimiento_pct":80,"status":"on_track","impacto":"Sell-Out digital +15%"},
+      {"id":"s3","area":"OXXO","descripcion":"95% de tiendas OXXO con charola Suerox completa 4 frentes en refrigerador #3 o #4","cumplimiento_pct":38,"status":"off_track","impacto":"Sell-Out OXXO +20%"},
+      {"id":"s4","area":"Autoservicios","descripcion":"80% de tiendas con Suerox al lado o arriba de Electrolit en anaquel","cumplimiento_pct":52,"status":"off_track","impacto":"SOM +1pt"},
+      {"id":"s5","area":"Precio","descripcion":"80% de tiendas con precio -2 pesos vs Electrolit revisado semanalmente","cumplimiento_pct":71,"status":"at_risk","impacto":"Conversion +12%"},
+      {"id":"s6","area":"Exhibicion","descripcion":"80% de tiendas en temporada alta con exhibicion adicional 2 cabeceras","cumplimiento_pct":32,"status":"off_track","impacto":"Sell-Out +25% temporada"}
+    ]
+  },
+  "Tio Nacho": {
+    "objetivo_venta_neta_pct": 14.4,
+    "objetivo_som_pts": 2.4,
+    "objetivo_sellout_pct": 7.7,
+    "competidor_principal": "Head & Shoulders / Pantene",
+    "kbds": [
+      {"id":"tn1","area":"Innovacion","descripcion":"Relanzamiento Henna con diferenciacion en performance iniciando facturacion marzo 2026","cumplimiento_pct":90,"status":"on_track","impacto":"Venta Neta +14.4%"},
+      {"id":"tn2","area":"Autoservicios","descripcion":"Anaquel ejecutado en 80% de PDV con bloque de marca e innovacion a altura de ojos","cumplimiento_pct":58,"status":"at_risk","impacto":"SOM +2.4pts"},
+      {"id":"tn3","area":"eCommerce","descripcion":"100% SKU prioritarios con portafolio correcto y precio competitivo en pure players","cumplimiento_pct":75,"status":"at_risk","impacto":"Sell-Out digital +18%"},
+      {"id":"tn4","area":"Precio","descripcion":"Plan promocional 20-25% en linea con temporadas F de Belleza y T Naranja","cumplimiento_pct":80,"status":"on_track","impacto":"Rotacion +10%"}
+    ]
+  },
+  "Cicatricure": {
+    "objetivo_venta_neta_pct": 3.4,
+    "objetivo_som_pts": 2.6,
+    "objetivo_sellout_pct": 0,
+    "competidor_principal": "L Oreal / Neutrogena",
+    "kbds": [
+      {"id":"c1","area":"Marca","descripcion":"Plan de medios TV y digital en Gold, Rosita, NeuroZen, Gel Cicatrices y Maquillaje BB","cumplimiento_pct":70,"status":"at_risk","impacto":"SOM +2.6pts"},
+      {"id":"c2","area":"Autoservicios","descripcion":"Anaquel ejecutado en 80% PDV con acomodo vertical al lado de L Oreal por rutinas de manana","cumplimiento_pct":45,"status":"off_track","impacto":"SOM +1.5pts"},
+      {"id":"c3","area":"Innovacion","descripcion":"Continuidad lanzamiento Neurozen y Regeneplast con medios TV y digital 2 temporadas al ano","cumplimiento_pct":60,"status":"at_risk","impacto":"Venta Neta +3.4%"},
+      {"id":"c4","area":"eCommerce","descripcion":"100% SKU prioritarios con portafolio correcto y precio competitivo","cumplimiento_pct":80,"status":"on_track","impacto":"Sell-Out digital +12%"},
+      {"id":"c5","area":"Precio","descripcion":"Plan promocional 20-25% en F de Belleza y T Naranja","cumplimiento_pct":75,"status":"at_risk","impacto":"Rotacion +8%"}
+    ]
+  },
+  "Vanart": {
+    "objetivo_venta_neta_pct": -4.8,
+    "objetivo_som_pts": 1.1,
+    "objetivo_sellout_pct": 0,
+    "competidor_principal": "Pantene / Sedal",
+    "kbds": [
+      {"id":"v1","area":"Rentabilidad","descripcion":"Mejorar -15.5pts COGS mediante integracion de produccion envase 180ml a planta","cumplimiento_pct":40,"status":"off_track","impacto":"Margen +15.5pts"},
+      {"id":"v2","area":"Tradicional","descripcion":"Alcanzar distribucion numerica 180ml de 30% a 50% durante primer ano","cumplimiento_pct":28,"status":"off_track","impacto":"Cobertura +22pts"},
+      {"id":"v3","area":"Precio","descripcion":"Implementar portafolio canal correcto: Clasicos 39 pesos y Resto Linea 49 pesos","cumplimiento_pct":65,"status":"at_risk","impacto":"Rentabilidad +8%"}
+    ]
+  },
+  "Asepxia": {
+    "objetivo_venta_neta_pct": 3.3,
+    "objetivo_som_pts": 1.2,
+    "objetivo_sellout_pct": 4.3,
+    "competidor_principal": "Neutrogena / Clean Clear",
+    "kbds": [
+      {"id":"a1","area":"Marca","descripcion":"Plan de medios 100% digital con campanas diferenciadas Cuidado Diario y Base","cumplimiento_pct":70,"status":"at_risk","impacto":"SOM +1.2pts"},
+      {"id":"a2","area":"Precio","descripcion":"Plan promocional Anti-Imperfecciones 13% jabones y 20% maquillajes en Back to School","cumplimiento_pct":55,"status":"at_risk","impacto":"Sell-Out +4.3%"},
+      {"id":"a3","area":"eCommerce","descripcion":"100% SKU prioritarios con portafolio correcto y precio competitivo","cumplimiento_pct":80,"status":"on_track","impacto":"Digital +15%"}
+    ]
+  },
+  "Teatrical": {
+    "objetivo_venta_neta_pct": 11.7,
+    "objetivo_som_pts": 3.5,
+    "objetivo_sellout_pct": 10,
+    "competidor_principal": "Pond s / Nivea",
+    "kbds": [
+      {"id":"t1","area":"Innovacion","descripcion":"Lanzar en Q4 propuesta diferenciada Intensity o Piel Coreana 2.0 con ecuacion de valor ganadora","cumplimiento_pct":45,"status":"off_track","impacto":"Venta Neta +11.7%"},
+      {"id":"t2","area":"Precio","descripcion":"Estrategia de precio competitivo vs Pond s y Nivea en canal moderno","cumplimiento_pct":72,"status":"at_risk","impacto":"SOM +3.5pts"}
+    ]
+  }
+}

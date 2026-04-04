@@ -1,7 +1,8 @@
 [
-  {"id":"wmt","name":"Walmart México","ticker":"WALMEX","type":"Autoservicio","region":"Nacional","buyer":"Ing. Carlos Méndez","kam":"Sofía Torres","annual_target_mxn":45000000,"stores":2847,"listed":true,"logo_initials":"WM","color":"#0071CE"},
-  {"id":"ched","name":"Chedraui","ticker":"CHDRAUI","type":"Autoservicio","region":"Nacional","buyer":"Lic. Patricia Solís","kam":"Diego Ramírez","annual_target_mxn":18500000,"stores":412,"listed":true,"logo_initials":"CH","color":"#E31E24"},
-  {"id":"sor","name":"Soriana","ticker":"SORIANAB","type":"Autoservicio","region":"Nacional","buyer":"Mtro. Fernando Garza","kam":"Sofía Torres","annual_target_mxn":22000000,"stores":831,"listed":true,"logo_initials":"SO","color":"#004B93"},
+  {"id":"wmt","name":"Walmart Mexico","ticker":"WALMEX","type":"Autoservicio","region":"Nacional","buyer":"Ing. Carlos Mendez","kam":"Cristy Angelica Quiroga","annual_target_mxn":45000000,"stores":2847,"listed":true,"logo_initials":"WM","color":"#0071CE"},
+  {"id":"ched","name":"Chedraui","ticker":"CHDRAUI","type":"Autoservicio","region":"Nacional","buyer":"Lic. Patricia Solis","kam":"Ramon Benitez","annual_target_mxn":18500000,"stores":412,"listed":true,"logo_initials":"CH","color":"#E31E24"},
+  {"id":"sor","name":"Soriana","ticker":"SORIANAB","type":"Autoservicio","region":"Nacional","buyer":"Mtro. Fernando Garza","kam":"Cristy Angelica Quiroga","annual_target_mxn":22000000,"stores":831,"listed":true,"logo_initials":"SO","color":"#004B93"},
   {"id":"ahorro","name":"Farmacias del Ahorro","ticker":null,"type":"Farmacia","region":"Nacional","buyer":"Dra. Mariana Vega","kam":"Luis Cervantes","annual_target_mxn":12000000,"stores":1640,"listed":false,"logo_initials":"FA","color":"#00A651"},
-  {"id":"costco","name":"Costco México","ticker":null,"type":"Club de Precio","region":"Nacional","buyer":"Mr. David Chen","kam":"Diego Ramírez","annual_target_mxn":8200000,"stores":41,"listed":false,"logo_initials":"CO","color":"#005DAA"}
+  {"id":"oxxo","name":"OXXO","ticker":null,"type":"Canal Moderno","region":"Nacional","buyer":"Lic. Jorge Fuentes","kam":"Alicia Martinez","annual_target_mxn":9800000,"stores":22000,"listed":false,"logo_initials":"OX","color":"#E8212A"},
+  {"id":"costco","name":"Costco Mexico","ticker":null,"type":"Club de Precio","region":"Nacional","buyer":"Mr. David Chen","kam":"Ramon Benitez","annual_target_mxn":8200000,"stores":41,"listed":false,"logo_initials":"CO","color":"#005DAA"}
 ]

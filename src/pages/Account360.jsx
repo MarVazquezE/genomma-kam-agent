@@ -9,7 +9,7 @@ import { formatMXN, formatPct, getAccountHealth, getHealthLabel, getLastWeekSell
 const SKU_COLORS = { "Alliviax": "#1D9E75", "Cicatricure": "#185FA5", "XL-3": "#BA7517", "Suerox": "#E24B4A", "Tio Nacho": "#7F77DD" }
 const statusMap = { completada: { label: "Completada", cls: "chip-green" }, en_curso: { label: "En curso", cls: "chip-amber" }, pendiente: { label: "Pendiente", cls: "chip-gray" } }
 
-export default function Account360({ accountId, onBack, onGoToAgent }) {
+export default function Account360({ accountId, onBack, onGoToAgent, onGoToPresentacion, onGoToOnePager }) {
   const account = accounts.find(a => a.id === accountId)
   const inv = inventory[accountId]
   const fund = funds[accountId]
@@ -42,7 +42,7 @@ export default function Account360({ accountId, onBack, onGoToAgent }) {
             <span className={`health-dot dot-${health}`} />{getHealthLabel(health)}
           </span>
         </div>
-        <button className="btn btn-primary" onClick={onGoToAgent}>Abrir Agente IA →</button>
+        <div style={{ display: "flex", gap: 8 }}><button className="btn btn-primary" onClick={onGoToAgent}>Agente IA →</button><button className="btn btn-secondary" onClick={onGoToPresentacion}>Presentacion →</button><button className="btn btn-secondary" onClick={onGoToOnePager} style={{ background: "#E0E7FF", color: "#4F46E5" }}>One-Pager →</button></div>
       </div>
       <div className="metric-grid" style={{ marginBottom: 16 }}>
         <div className="metric-card">

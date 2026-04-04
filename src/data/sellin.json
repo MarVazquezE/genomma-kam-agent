@@ -1,0 +1,8 @@
+{
+  "wmt":{"objetivo_mes":3800000,"real_mes":3420000,"objetivo_trim":11400000,"real_trim":9876000,"objetivo_acum":38000000,"real_acum":31240000,"vs_anterior_mes":4.2,"vs_anterior_trim":2.8,"vs_anterior_acum":6.1},
+  "ched":{"objetivo_mes":1540000,"real_mes":1489000,"objetivo_trim":4620000,"real_trim":4102000,"objetivo_acum":15400000,"real_acum":13280000,"vs_anterior_mes":1.2,"vs_anterior_trim":-2.1,"vs_anterior_acum":3.4},
+  "sor":{"objetivo_mes":1830000,"real_mes":1920000,"objetivo_trim":5490000,"real_trim":5640000,"objetivo_acum":18300000,"real_acum":17890000,"vs_anterior_mes":8.4,"vs_anterior_trim":6.2,"vs_anterior_acum":5.7},
+  "ahorro":{"objetivo_mes":1000000,"real_mes":890000,"objetivo_trim":3000000,"real_trim":2540000,"objetivo_acum":10000000,"real_acum":8120000,"vs_anterior_mes":-3.2,"vs_anterior_trim":-8.4,"vs_anterior_acum":-5.1},
+  "oxxo":{"objetivo_mes":816000,"real_mes":612000,"objetivo_trim":2448000,"real_trim":1640000,"objetivo_acum":8160000,"real_acum":5240000,"vs_anterior_mes":-18.4,"vs_anterior_trim":-22.1,"vs_anterior_acum":-15.3},
+  "costco":{"objetivo_mes":683000,"real_mes":710000,"objetivo_trim":2049000,"real_trim":2180000,"objetivo_acum":6830000,"real_acum":7120000,"vs_anterior_mes":6.8,"vs_anterior_trim":4.2,"vs_anterior_acum":8.1}
+}

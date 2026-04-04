@@ -1,0 +1,110 @@
+{
+  "wmt": {
+    "score_general_pct": 68.4,
+    "objetivo_pct": 85.0,
+    "gap_pts": -16.6,
+    "tendencia": "baja",
+    "indicadores": [
+      {"nombre":"Disponibilidad en anaquel","resultado_pct":78.2,"objetivo_pct":90,"status":"off_track","marcas_criticas":["Suerox","Alliviax"]},
+      {"nombre":"Precio correcto al consumidor","resultado_pct":71.4,"objetivo_pct":85,"status":"off_track","marcas_criticas":["Suerox","XL-3"]},
+      {"nombre":"Planograma ejecutado","resultado_pct":62.8,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Cicatricure","Tio Nacho"]},
+      {"nombre":"Exhibicion adicional activa","resultado_pct":48.2,"objetivo_pct":75,"status":"off_track","marcas_criticas":["Suerox","Alliviax","XL-3"]},
+      {"nombre":"Material POP vigente","resultado_pct":55.1,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Tio Nacho","Cicatricure"]},
+      {"nombre":"Share de anaquel objetivo","resultado_pct":61.4,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox","Cicatricure"]}
+    ],
+    "marcas_detalle": [
+      {"marca":"Suerox","dispo_pct":72.4,"precio_ok_pct":68.2,"plano_pct":55.1,"exhibicion_pct":38.2,"tp_score_pct":58.5,"objetivo_pct":85},
+      {"marca":"Alliviax","dispo_pct":81.2,"precio_ok_pct":74.8,"plano_pct":68.4,"exhibicion_pct":42.1,"tp_score_pct":66.6,"objetivo_pct":85},
+      {"marca":"XL-3","dispo_pct":84.1,"precio_ok_pct":78.2,"plano_pct":72.1,"exhibicion_pct":51.4,"tp_score_pct":71.5,"objetivo_pct":85},
+      {"marca":"Cicatricure","dispo_pct":76.8,"precio_ok_pct":72.4,"plano_pct":58.2,"exhibicion_pct":44.8,"tp_score_pct":63.1,"objetivo_pct":85},
+      {"marca":"Tio Nacho","dispo_pct":79.4,"precio_ok_pct":76.1,"plano_pct":64.8,"exhibicion_pct":52.1,"tp_score_pct":68.1,"objetivo_pct":85},
+      {"marca":"Novamil","dispo_pct":88.2,"precio_ok_pct":84.1,"plano_pct":78.4,"exhibicion_pct":62.1,"tp_score_pct":78.2,"objetivo_pct":85}
+    ]
+  },
+  "ched": {
+    "score_general_pct": 74.2,
+    "objetivo_pct": 85.0,
+    "gap_pts": -10.8,
+    "tendencia": "alza",
+    "indicadores": [
+      {"nombre":"Disponibilidad en anaquel","resultado_pct":82.1,"objetivo_pct":90,"status":"at_risk","marcas_criticas":["Suerox","Alliviax"]},
+      {"nombre":"Precio correcto al consumidor","resultado_pct":76.4,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["Suerox"]},
+      {"nombre":"Planograma ejecutado","resultado_pct":68.4,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Cicatricure"]},
+      {"nombre":"Exhibicion adicional activa","resultado_pct":62.1,"objetivo_pct":75,"status":"at_risk","marcas_criticas":["Suerox","Alliviax"]},
+      {"nombre":"Material POP vigente","resultado_pct":72.8,"objetivo_pct":80,"status":"at_risk","marcas_criticas":["Tio Nacho"]},
+      {"nombre":"Share de anaquel objetivo","resultado_pct":68.2,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox"]}
+    ],
+    "marcas_detalle": [
+      {"marca":"Suerox","dispo_pct":68.2,"precio_ok_pct":64.1,"plano_pct":58.4,"exhibicion_pct":42.8,"tp_score_pct":58.4,"objetivo_pct":85},
+      {"marca":"Alliviax","dispo_pct":78.4,"precio_ok_pct":72.1,"plano_pct":68.2,"exhibicion_pct":54.1,"tp_score_pct":68.2,"objetivo_pct":85},
+      {"marca":"Cicatricure","dispo_pct":82.1,"precio_ok_pct":78.4,"plano_pct":64.8,"exhibicion_pct":58.2,"tp_score_pct":70.9,"objetivo_pct":85},
+      {"marca":"Tio Nacho","dispo_pct":80.4,"precio_ok_pct":76.8,"plano_pct":72.1,"exhibicion_pct":61.4,"tp_score_pct":72.7,"objetivo_pct":85}
+    ]
+  },
+  "sor": {
+    "score_general_pct": 79.8,
+    "objetivo_pct": 85.0,
+    "gap_pts": -5.2,
+    "tendencia": "alza",
+    "indicadores": [
+      {"nombre":"Disponibilidad en anaquel","resultado_pct":86.4,"objetivo_pct":90,"status":"at_risk","marcas_criticas":[]},
+      {"nombre":"Precio correcto al consumidor","resultado_pct":81.2,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["XL-3"]},
+      {"nombre":"Planograma ejecutado","resultado_pct":76.8,"objetivo_pct":80,"status":"at_risk","marcas_criticas":["Tio Nacho"]},
+      {"nombre":"Exhibicion adicional activa","resultado_pct":72.4,"objetivo_pct":75,"status":"at_risk","marcas_criticas":[]},
+      {"nombre":"Material POP vigente","resultado_pct":78.2,"objetivo_pct":80,"status":"at_risk","marcas_criticas":[]},
+      {"nombre":"Share de anaquel objetivo","resultado_pct":74.1,"objetivo_pct":80,"status":"at_risk","marcas_criticas":[]}
+    ],
+    "marcas_detalle": [
+      {"marca":"Suerox","dispo_pct":84.2,"precio_ok_pct":80.1,"plano_pct":76.4,"exhibicion_pct":68.2,"tp_score_pct":77.2,"objetivo_pct":85},
+      {"marca":"Alliviax","dispo_pct":86.1,"precio_ok_pct":82.4,"plano_pct":78.2,"exhibicion_pct":71.4,"tp_score_pct":79.5,"objetivo_pct":85},
+      {"marca":"Tio Nacho","dispo_pct":82.4,"precio_ok_pct":78.8,"plano_pct":72.1,"exhibicion_pct":68.4,"tp_score_pct":75.4,"objetivo_pct":85}
+    ]
+  },
+  "oxxo": {
+    "score_general_pct": 42.1,
+    "objetivo_pct": 85.0,
+    "gap_pts": -42.9,
+    "tendencia": "baja",
+    "indicadores": [
+      {"nombre":"Charola completa 4 frentes refrigerador","resultado_pct":38.2,"objetivo_pct":95,"status":"off_track","marcas_criticas":["Suerox"]},
+      {"nombre":"Precio -2 pesos vs Electrolit","resultado_pct":44.8,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox"]},
+      {"nombre":"Posicion refrigerador #3 o #4","resultado_pct":41.2,"objetivo_pct":95,"status":"off_track","marcas_criticas":["Suerox"]},
+      {"nombre":"Material merchandising vigente","resultado_pct":52.1,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox"]}
+    ],
+    "marcas_detalle": [
+      {"marca":"Suerox","dispo_pct":44.8,"precio_ok_pct":41.2,"plano_pct":38.2,"exhibicion_pct":32.4,"tp_score_pct":39.2,"objetivo_pct":85}
+    ]
+  },
+  "ahorro": {
+    "score_general_pct": 71.4,
+    "objetivo_pct": 85.0,
+    "gap_pts": -13.6,
+    "tendencia": "estable",
+    "indicadores": [
+      {"nombre":"Disponibilidad en anaquel","resultado_pct":78.4,"objetivo_pct":90,"status":"off_track","marcas_criticas":["Cicatricure"]},
+      {"nombre":"Ubicacion mostrador farmacia","resultado_pct":64.2,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Nikzon","Lomecan V"]},
+      {"nombre":"Material POP farmacia","resultado_pct":72.1,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["Alliviax"]},
+      {"nombre":"Capacitacion farmaceuticos","resultado_pct":48.2,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Alliviax"]}
+    ],
+    "marcas_detalle": [
+      {"marca":"Alliviax","dispo_pct":82.1,"precio_ok_pct":78.4,"plano_pct":72.1,"exhibicion_pct":58.4,"tp_score_pct":72.8,"objetivo_pct":85},
+      {"marca":"Cicatricure","dispo_pct":74.2,"precio_ok_pct":70.8,"plano_pct":64.1,"exhibicion_pct":48.2,"tp_score_pct":64.3,"objetivo_pct":85}
+    ]
+  },
+  "costco": {
+    "score_general_pct": 82.4,
+    "objetivo_pct": 85.0,
+    "gap_pts": -2.6,
+    "tendencia": "alza",
+    "indicadores": [
+      {"nombre":"Disponibilidad en anaquel","resultado_pct":88.4,"objetivo_pct":90,"status":"at_risk","marcas_criticas":[]},
+      {"nombre":"Formato multipack correcto","resultado_pct":84.2,"objetivo_pct":85,"status":"at_risk","marcas_criticas":[]},
+      {"nombre":"Precio competitivo formato club","resultado_pct":82.1,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["Novamil"]},
+      {"nombre":"Demo en tienda activa","resultado_pct":74.8,"objetivo_pct":80,"status":"at_risk","marcas_criticas":[]}
+    ],
+    "marcas_detalle": [
+      {"marca":"Suerox","dispo_pct":86.4,"precio_ok_pct":82.1,"plano_pct":80.4,"exhibicion_pct":72.8,"tp_score_pct":80.4,"objetivo_pct":85},
+      {"marca":"Novamil","dispo_pct":88.2,"precio_ok_pct":80.4,"plano_pct":82.1,"exhibicion_pct":74.2,"tp_score_pct":81.2,"objetivo_pct":85}
+    ]
+  }
+}

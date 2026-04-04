@@ -1,0 +1,160 @@
+{
+  "wmt": {
+    "formato": "Walmart Supercenter + Express + Bodega",
+    "categorias": {
+      "Hidratacion": {
+        "categoria_total_mxn_semana": 8200000,
+        "marcas": [
+          {"marca":"Suerox","som_pct":18.4,"som_anterior_pct":19.2,"tendencia":"baja","competidor":"Electrolit","competidor_som_pct":54.2,"gap_liderazgo_pts":-35.8},
+          {"marca":"Electrolit","som_pct":54.2,"es_competidor":true},
+          {"marca":"Powerade","som_pct":18.1,"es_competidor":true},
+          {"marca":"Otros","som_pct":9.3,"es_competidor":true}
+        ]
+      },
+      "Cuidado Facial": {
+        "categoria_total_mxn_semana": 3100000,
+        "marcas": [
+          {"marca":"Cicatricure","som_pct":28.6,"som_anterior_pct":29.8,"tendencia":"baja","competidor":"L Oreal","competidor_som_pct":22.4,"gap_liderazgo_pts":6.2},
+          {"marca":"Teatrical","som_pct":14.2,"som_anterior_pct":12.8,"tendencia":"alza","competidor":"Pond s","competidor_som_pct":18.6,"gap_liderazgo_pts":-4.4},
+          {"marca":"Asepxia","som_pct":8.4,"som_anterior_pct":8.8,"tendencia":"baja","competidor":"Clean Clear","competidor_som_pct":12.1,"gap_liderazgo_pts":-3.7},
+          {"marca":"L Oreal","som_pct":22.4,"es_competidor":true},
+          {"marca":"Pond s","som_pct":18.6,"es_competidor":true}
+        ]
+      },
+      "Cabello": {
+        "categoria_total_mxn_semana": 4800000,
+        "marcas": [
+          {"marca":"Tio Nacho","som_pct":22.1,"som_anterior_pct":22.8,"tendencia":"baja","competidor":"Head Shoulders","competidor_som_pct":31.4,"gap_liderazgo_pts":-9.3},
+          {"marca":"Vanart","som_pct":8.2,"som_anterior_pct":7.9,"tendencia":"alza","competidor":"Sedal","competidor_som_pct":14.2,"gap_liderazgo_pts":-6.0},
+          {"marca":"Head Shoulders","som_pct":31.4,"es_competidor":true}
+        ]
+      },
+      "OTC Dolor Gripa": {
+        "categoria_total_mxn_semana": 6200000,
+        "marcas": [
+          {"marca":"Alliviax","som_pct":24.1,"som_anterior_pct":26.2,"tendencia":"baja","competidor":"Aspirina Bayer","competidor_som_pct":18.4,"gap_liderazgo_pts":5.7},
+          {"marca":"XL-3","som_pct":19.8,"som_anterior_pct":19.6,"tendencia":"estable","competidor":"Vick Nyquil","competidor_som_pct":22.1,"gap_liderazgo_pts":-2.3},
+          {"marca":"Bio","som_pct":8.1,"som_anterior_pct":8.3,"tendencia":"baja","competidor":"Tempra","competidor_som_pct":11.2,"gap_liderazgo_pts":-3.1},
+          {"marca":"Vick Nyquil","som_pct":22.1,"es_competidor":true}
+        ]
+      },
+      "Lactantes": {
+        "categoria_total_mxn_semana": 2800000,
+        "marcas": [
+          {"marca":"Novamil","som_pct":34.1,"som_anterior_pct":32.8,"tendencia":"alza","competidor":"Enfamil","competidor_som_pct":28.4,"gap_liderazgo_pts":5.7},
+          {"marca":"Enfamil","som_pct":28.4,"es_competidor":true},
+          {"marca":"Similac","som_pct":24.2,"es_competidor":true}
+        ]
+      }
+    }
+  },
+  "ched": {
+    "formato": "Chedraui Supercenter + Selecto",
+    "categorias": {
+      "Hidratacion": {
+        "categoria_total_mxn_semana": 2100000,
+        "marcas": [
+          {"marca":"Suerox","som_pct":12.1,"som_anterior_pct":16.4,"tendencia":"baja","competidor":"Electrolit","competidor_som_pct":58.2,"gap_liderazgo_pts":-46.1},
+          {"marca":"Electrolit","som_pct":58.2,"es_competidor":true}
+        ]
+      },
+      "Cuidado Facial": {
+        "categoria_total_mxn_semana": 980000,
+        "marcas": [
+          {"marca":"Cicatricure","som_pct":31.2,"som_anterior_pct":32.1,"tendencia":"baja","competidor":"L Oreal","competidor_som_pct":24.8,"gap_liderazgo_pts":6.4},
+          {"marca":"Teatrical","som_pct":16.8,"som_anterior_pct":14.2,"tendencia":"alza","competidor":"Pond s","competidor_som_pct":19.2,"gap_liderazgo_pts":-2.4}
+        ]
+      },
+      "Cabello": {
+        "categoria_total_mxn_semana": 1400000,
+        "marcas": [
+          {"marca":"Tio Nacho","som_pct":19.1,"som_anterior_pct":20.4,"tendencia":"baja","competidor":"Head Shoulders","competidor_som_pct":33.2,"gap_liderazgo_pts":-14.1}
+        ]
+      },
+      "OTC Dolor Gripa": {
+        "categoria_total_mxn_semana": 1800000,
+        "marcas": [
+          {"marca":"Alliviax","som_pct":21.4,"som_anterior_pct":23.8,"tendencia":"baja","competidor":"Aspirina Bayer","competidor_som_pct":19.2,"gap_liderazgo_pts":2.2},
+          {"marca":"XL-3","som_pct":17.2,"som_anterior_pct":17.8,"tendencia":"baja","competidor":"Vick Nyquil","competidor_som_pct":24.1,"gap_liderazgo_pts":-6.9}
+        ]
+      }
+    }
+  },
+  "sor": {
+    "formato": "Soriana Hiper + Super + Express",
+    "categorias": {
+      "Hidratacion": {
+        "categoria_total_mxn_semana": 2800000,
+        "marcas": [
+          {"marca":"Suerox","som_pct":20.1,"som_anterior_pct":19.2,"tendencia":"alza","competidor":"Electrolit","competidor_som_pct":51.8,"gap_liderazgo_pts":-31.7}
+        ]
+      },
+      "Cuidado Facial": {
+        "categoria_total_mxn_semana": 1200000,
+        "marcas": [
+          {"marca":"Cicatricure","som_pct":29.8,"som_anterior_pct":28.4,"tendencia":"alza","competidor":"L Oreal","competidor_som_pct":21.8,"gap_liderazgo_pts":8.0},
+          {"marca":"Teatrical","som_pct":18.4,"som_anterior_pct":16.2,"tendencia":"alza","competidor":"Pond s","competidor_som_pct":17.1,"gap_liderazgo_pts":1.3}
+        ]
+      },
+      "Cabello": {
+        "categoria_total_mxn_semana": 1800000,
+        "marcas": [
+          {"marca":"Tio Nacho","som_pct":24.1,"som_anterior_pct":22.8,"tendencia":"alza","competidor":"Head Shoulders","competidor_som_pct":29.8,"gap_liderazgo_pts":-5.7}
+        ]
+      },
+      "OTC Dolor Gripa": {
+        "categoria_total_mxn_semana": 2200000,
+        "marcas": [
+          {"marca":"Alliviax","som_pct":23.4,"som_anterior_pct":22.8,"tendencia":"alza","competidor":"Aspirina Bayer","competidor_som_pct":17.8,"gap_liderazgo_pts":5.6},
+          {"marca":"XL-3","som_pct":21.4,"som_anterior_pct":20.8,"tendencia":"alza","competidor":"Vick Nyquil","competidor_som_pct":21.8,"gap_liderazgo_pts":-0.4}
+        ]
+      }
+    }
+  },
+  "oxxo": {
+    "formato": "OXXO Convenience",
+    "categorias": {
+      "Hidratacion": {
+        "categoria_total_mxn_semana": 4200000,
+        "marcas": [
+          {"marca":"Suerox","som_pct":12.1,"som_anterior_pct":18.4,"tendencia":"baja","competidor":"Electrolit","competidor_som_pct":62.4,"gap_liderazgo_pts":-50.3}
+        ]
+      }
+    }
+  },
+  "ahorro": {
+    "formato": "Farmacias del Ahorro",
+    "categorias": {
+      "OTC Dolor Gripa": {
+        "categoria_total_mxn_semana": 1800000,
+        "marcas": [
+          {"marca":"Alliviax","som_pct":28.4,"som_anterior_pct":29.2,"tendencia":"baja","competidor":"Aspirina Bayer","competidor_som_pct":14.2,"gap_liderazgo_pts":14.2},
+          {"marca":"Nikzon","som_pct":18.4,"som_anterior_pct":21.2,"tendencia":"baja","competidor":"Dermofante","competidor_som_pct":24.8,"gap_liderazgo_pts":-6.4}
+        ]
+      },
+      "Cuidado Facial": {
+        "categoria_total_mxn_semana": 820000,
+        "marcas": [
+          {"marca":"Cicatricure","som_pct":22.1,"som_anterior_pct":24.8,"tendencia":"baja","competidor":"Neutrogena","competidor_som_pct":18.4,"gap_liderazgo_pts":3.7}
+        ]
+      }
+    }
+  },
+  "costco": {
+    "formato": "Costco Club",
+    "categorias": {
+      "Hidratacion": {
+        "categoria_total_mxn_semana": 980000,
+        "marcas": [
+          {"marca":"Suerox","som_pct":24.8,"som_anterior_pct":23.4,"tendencia":"alza","competidor":"Electrolit","competidor_som_pct":48.2,"gap_liderazgo_pts":-23.4}
+        ]
+      },
+      "Lactantes": {
+        "categoria_total_mxn_semana": 640000,
+        "marcas": [
+          {"marca":"Novamil","som_pct":26.4,"som_anterior_pct":24.8,"tendencia":"alza","competidor":"Enfamil","competidor_som_pct":31.8,"gap_liderazgo_pts":-5.4}
+        ]
+      }
+    }
+  }
+}

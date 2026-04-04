@@ -1,8 +1,10 @@
-import { useState } from "react"
+﻿import { useState } from "react"
 import Dashboard from "./pages/Dashboard"
 import Account360 from "./pages/Account360"
 import AgentPage from "./pages/AgentPage"
 import MarketSignals from "./pages/MarketSignals"
+import PresentacionCliente from "./pages/PresentacionCliente"
+import OnePager from "./pages/OnePager"
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("dashboard")
@@ -16,9 +18,11 @@ export default function App() {
   }
 
   function handleGoToAgent() { setSubView("agent") }
+  function handleGoToPresentacion() { setSubView("presentacion") }
+  function handleGoToOnePager() { setSubView("onepager") }
 
   function handleBack() {
-    if (subView === "agent") { setSubView("360") }
+    if (subView === "agent" || subView === "presentacion" || subView === "onepager") { setSubView("360") }
     else { setSubView(null); setSelectedAccount(null) }
   }
 
@@ -30,17 +34,27 @@ export default function App() {
 
   const showAccountNav = selectedAccount && subView === "360"
   const showAgentNav = selectedAccount && subView === "agent"
+  const showPresNav = selectedAccount && subView === "presentacion"
 
   const navItems = showAccountNav
-    ? [{ id: "back", label: "← Volver" }, { id: "360", label: "Vista 360°", active: true }, { id: "agent", label: "Agente IA" }]
+    ? [{ id: "back", label: "â† Volver" }, { id: "360", label: "Vista 360", active: true }, { id: "agent", label: "Agente IA" }, { id: "presentacion", label: "Presentacion" }]
     : showAgentNav
-    ? [{ id: "back", label: "← Volver" }, { id: "360", label: "Vista 360°" }, { id: "agent", label: "Agente IA", active: true }]
-    : [{ id: "dashboard", label: "Dashboard", active: activeTab === "dashboard" }, { id: "signals", label: "Senales Bursatiles", active: activeTab === "signals" }]
+    ? [{ id: "back", label: "â† Volver" }, { id: "360", label: "Vista 360" }, { id: "agent", label: "Agente IA", active: true }, { id: "presentacion", label: "Presentacion" }, { id: "onepager", label: "One-Pager" }]
+    : showPresNav
+    ? [{ id: "back", label: "â† Volver" }, { id: "360", label: "Vista 360" }, { id: "agent", label: "Agente IA" }, { id: "presentacion", label: "Presentacion", active: true }, { id: "onepager", label: "One-Pager" }]
+    : selectedAccount && subView === "onepager"
+    ? [{ id: "back", label: "â† Volver" }, { id: "360", label: "Vista 360" }, { id: "agent", label: "Agente IA" }, { id: "presentacion", label: "Presentacion" }, { id: "onepager", label: "One-Pager", active: true }]
+    : [
+        { id: "dashboard", label: "Dashboard", active: activeTab === "dashboard" },
+        { id: "signals", label: "Senales Bursatiles", active: activeTab === "signals" },
+      ]
 
   function handleNavClick(id) {
     if (id === "back") handleBack()
     else if (id === "360") setSubView("360")
     else if (id === "agent") setSubView("agent")
+    else if (id === "presentacion") setSubView("presentacion")
+    else if (id === "onepager") setSubView("onepager")
     else handleTabChange(id)
   }
 
@@ -51,14 +65,14 @@ export default function App() {
           <div className="header-logo"><span>G09</span></div>
           <div>
             <div className="header-title">Genomma KAM Agent</div>
-            <div className="header-subtitle">Area 09 · Plataforma Inteligente de Cuentas Clave</div>
+            <div className="header-subtitle">Area 09 Â· Plataforma Inteligente de Cuentas Clave</div>
           </div>
         </div>
         <div className="header-kam">
-          <span style={{ fontSize: 12, color: "var(--gray-400)" }}>Semana 47, 2024</span>
-          <div style={{ width: 1, height: 16, background: "var(--gray-200)" }} />
-          <div className="kam-avatar">ST</div>
-          <span>Sofia Torres · KAM Senior</span>
+          <span style={{ fontSize: 12, color: "var(--silver)" }}>Semana 47, 2024</span>
+          <div style={{ width: 1, height: 16, background: "var(--slate)" }} />
+          <div className="kam-avatar">AD</div>
+          <span>Alan Donatto Â· Director Canal Moderno</span>
         </div>
       </header>
       <nav className="nav">
@@ -70,10 +84,21 @@ export default function App() {
       </nav>
       <main className="main">
         {activeTab === "signals" && !selectedAccount && <MarketSignals />}
-        {activeTab === "dashboard" && !selectedAccount && <Dashboard onSelectAccount={handleSelectAccount} />}
-        {selectedAccount && subView === "360" && <Account360 accountId={selectedAccount} onBack={handleBack} onGoToAgent={handleGoToAgent} />}
+        {activeTab === "dashboard" && !selectedAccount && <Dashboard onSelectAccount={handleSelectAccount} onModuleClick={(module) => {
+          if (module === "signals") { handleTabChange("signals") }
+          else {
+            setSelectedAccount("wmt")
+            setSubView(module)
+            setActiveTab("dashboard")
+          }
+        }} />}
+        {selectedAccount && subView === "360" && <Account360 accountId={selectedAccount} onBack={handleBack} onGoToAgent={handleGoToAgent} onGoToPresentacion={handleGoToPresentacion} onGoToOnePager={handleGoToOnePager} />}
         {selectedAccount && subView === "agent" && <AgentPage accountId={selectedAccount} onBack={handleBack} />}
+        {selectedAccount && subView === "presentacion" && <PresentacionCliente accountId={selectedAccount} onBack={handleBack} />}
+        {selectedAccount && subView === "onepager" && <OnePager accountId={selectedAccount} onBack={handleBack} />}
       </main>
     </div>
   )
 }
+
+

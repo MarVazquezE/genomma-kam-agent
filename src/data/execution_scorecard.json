@@ -1,0 +1,27 @@
+{
+  "wmt":[
+    {"iniciativa":"Promo Invernal Alliviax","tipo":"promocion","estado":"off_track","avance_pct":32,"objetivo_pct":80,"venta_perdida_mxn":428000,"deadline":"2024-11-30","accion":"Activar exhibicion adicional y precio especial"},
+    {"iniciativa":"Lanzamiento Tio Nacho Henna","tipo":"innovacion","estado":"on_track","avance_pct":74,"objetivo_pct":80,"venta_perdida_mxn":0,"deadline":"2024-12-15","accion":"Mantener ritmo de sell out"},
+    {"iniciativa":"Display Cicatricure gondola","tipo":"fondos","estado":"off_track","avance_pct":0,"objetivo_pct":100,"venta_perdida_mxn":250000,"deadline":"2024-11-15","accion":"Confirmar fecha de instalacion con comprador"},
+    {"iniciativa":"Activacion digital Suerox","tipo":"fondos","estado":"pendiente","avance_pct":0,"objetivo_pct":100,"venta_perdida_mxn":180000,"deadline":"2024-11-20","accion":"Enviar materiales a Walmart Connect"}
+  ],
+  "ched":[
+    {"iniciativa":"Suerox Coco Pina innovacion","tipo":"innovacion","estado":"off_track","avance_pct":18,"objetivo_pct":70,"venta_perdida_mxn":320000,"deadline":"2024-11-30","accion":"Urgente: gestionar espacio en anaquel con comprador"},
+    {"iniciativa":"Cabecera Cicatricure","tipo":"fondos","estado":"on_track","avance_pct":82,"objetivo_pct":80,"venta_perdida_mxn":0,"deadline":"2024-12-01","accion":"Confirmar cierre de actividad"}
+  ],
+  "oxxo":[
+    {"iniciativa":"Plan Invernal Suerox OXXO","tipo":"promocion","estado":"off_track","avance_pct":12,"objetivo_pct":75,"venta_perdida_mxn":890000,"deadline":"2024-11-30","accion":"CRITICO: Reunirse urgente con buyer OXXO, Suerox -36%"},
+    {"iniciativa":"Cicatricure anaquel OXXO","tipo":"distribucion","estado":"off_track","avance_pct":24,"objetivo_pct":60,"venta_perdida_mxn":240000,"deadline":"2024-12-15","accion":"Incrementar presencia en zona metropolitana"}
+  ],
+  "sor":[
+    {"iniciativa":"Tio Nacho Henna lanzamiento","tipo":"innovacion","estado":"on_track","avance_pct":68,"objetivo_pct":70,"venta_perdida_mxn":0,"deadline":"2024-12-01","accion":"Mantener ejecucion"},
+    {"iniciativa":"Promo Cicatricure 2x1","tipo":"promocion","estado":"on_track","avance_pct":88,"objetivo_pct":80,"venta_perdida_mxn":0,"deadline":"2024-11-20","accion":"Cerrar actividad exitosamente"}
+  ],
+  "ahorro":[
+    {"iniciativa":"Capacitacion farmaceuticos Alliviax","tipo":"trade","estado":"off_track","avance_pct":45,"objetivo_pct":80,"venta_perdida_mxn":152000,"deadline":"2024-11-30","accion":"Agendar segunda ronda de capacitacion"},
+    {"iniciativa":"Exhibicion Cicatricure mostrador","tipo":"fondos","estado":"pendiente","avance_pct":0,"objetivo_pct":100,"venta_perdida_mxn":280000,"deadline":"2024-12-01","accion":"Urgente: instalar exhibidor antes de temporada"}
+  ],
+  "costco":[
+    {"iniciativa":"Demo Suerox multipack","tipo":"promocion","estado":"on_track","avance_pct":100,"objetivo_pct":100,"venta_perdida_mxn":0,"deadline":"2024-11-15","accion":"Actividad completada exitosamente"}
+  ]
+}
