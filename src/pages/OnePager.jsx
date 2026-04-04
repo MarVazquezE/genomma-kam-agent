@@ -354,11 +354,11 @@ async function generatePPTX(account, op, marcas) {
     km.data.kbds.slice(0, maxKbds).forEach((k, ki) => {
       const ky = 1.9 + ki * kbdH
       const c = k.status === "off_track" ? "EF4444" : k.status === "at_risk" ? "F59E0B" : "10B981"
-      s6.addShape(pptx.ShapeType.rect, { x: x + 0.1, y: ky, w: colW - 0.2, h: numcols === 1 ? 1.1 : 1.4, fill: { color: k.status === "off_track" ? "FFF0F0" : k.status === "at_risk" ? "FFFBF0" : "F0FFF8" }, line: { color: c, width: 1 } })
+      s6.addShape(pptx.ShapeType.rect, { x: x + 0.1, y: ky, w: colW - 0.2, h: kbdm.length === 1 ? 1.1 : 1.4, fill: { color: k.status === "off_track" ? "FFF0F0" : k.status === "at_risk" ? "FFFBF0" : "F0FFF8" }, line: { color: c, width: 1 } })
       s6.addText("[" + k.area + "] " + k.cumplimiento_pct + "%", { x: x + 0.18, y: ky + 0.06, w: colW - 0.36, h: 0.26, fontSize: 9, bold: true, color: "#" + c, fontFace: theme.font })
-      const descLen = numCols === 1 ? 160 : 90
-      s6.addText(k.descripcion.substring(0, descLen) + (k.descripcion.length > descLen ? "..." : ""), { x: x + 0.18, y: ky + 0.32, w: colW - 0.36, h: numCols === 1 ? 0.5 : 0.65, fontSize: numCols === 1 ? 8.5 : 7.5, color: GRAY, fontFace: theme.font })
-      s6.addText("Output: " + k.impacto, { x: x + 0.18, y: ky + (numCols === 1 ? 0.82 : 1.0), w: colW - 0.36, h: 0.24, fontSize: numCols === 1 ? 8.5 : 7.5, bold: true, color: PRIM, fontFace: theme.font })
+      const descLen = kbdM.length === 1 ? 160 : 90
+      s6.addText(k.descripcion.substring(0, descLen) + (k.descripcion.length > descLen ? "..." : ""), { x: x + 0.18, y: ky + 0.32, w: colW - 0.36, h: kbdM.length === 1 ? 0.5 : 0.65, fontSize: kbdM.length === 1 ? 8.5 : 7.5, color: GRAY, fontFace: theme.font })
+      s6.addText("Output: " + k.impacto, { x: x + 0.18, y: ky + (kbdM.length === 1 ? 0.82 : 1.0), w: colW - 0.36, h: 0.24, fontSize: kbdM.length === 1 ? 8.5 : 7.5, bold: true, color: PRIM, fontFace: theme.font })
     })
   })
 
