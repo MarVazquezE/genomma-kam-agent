@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from "recharts"
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, ComposedChart } from "recharts"
 import accounts from "../data/accounts.json"
 import sellout from "../data/sellout.json"
 import inventory from "../data/inventory.json"
@@ -476,98 +476,175 @@ function OCModule({ accountId }) {
 function MarcaClienteModule() {
   const allMarcas = [...new Set(accounts.flatMap(acc => Object.keys(sellout[acc.id]?.skus || {})))].sort()
   const [selectedMarca, setSelectedMarca] = useState(allMarcas[0] || "")
+  const [expandedAccount, setExpandedAccount] = useState(null)
   
+  // Build marca data across all accounts
   const marcaData = accounts.map(acc => {
     const so = sellout[acc.id]
     const bn = brutoNeto[acc.id]
     const weeks = so?.skus?.[selectedMarca] || []
     const w12 = weeks[weeks.length - 1] || 0
     const w11 = weeks[weeks.length - 2] || 0
-    const wow = w11 > 0 ? ((w12 - w11) / w11 * 100) : 0
     const inv_data = inventory[acc.id]?.skus?.[selectedMarca]
     const bn_marca = bn?.marcas?.find(m => m.marca === selectedMarca)
+    const tp = tiendaPerfecta[acc.id]
+    const tp_marca = tp?.marcas_detalle?.find(m => m.marca === selectedMarca)
     return {
-      account: acc.name.split(" ")[0],
-      accountId: acc.id,
-      color: acc.color,
-      logo: acc.logo_initials,
-      w12_neto: w12,
-      wow,
-      coverage: inv_data?.coverage_days || 0,
-      stock: inv_data?.stock_units || 0,
-      bruto_w12: bn_marca?.bruto_w12 || 0,
-      neto_w12: bn_marca?.neto_w12 || 0,
-      bruto_ytd: bn_marca?.bruto_ytd || 0,
-      neto_ytd: bn_marca?.neto_ytd || 0,
+      account: acc.name, accountShort: acc.name.split(" ")[0], accountId: acc.id,
+      color: acc.color, logo: acc.logo_initials,
+      neto_w12: bn_marca?.neto_w12 || w12, neto_ytd: bn_marca?.neto_ytd || 0,
+      neto_w12_ly: bn_marca?.neto_w12 && bn_marca?.yoy_neto ? Math.round(bn_marca.neto_w12 / (1 + bn_marca.yoy_neto/100)) : 0,
+      neto_ytd_ly: bn_marca?.neto_ytd && bn_marca?.yoy_neto ? Math.round(bn_marca.neto_ytd / (1 + bn_marca.yoy_neto/100)) : 0,
+      bruto_w12: bn_marca?.bruto_w12 || 0, bruto_ytd: bn_marca?.bruto_ytd || 0,
+      yoy_neto: bn_marca?.yoy_neto || 0, yoy_bruto: bn_marca?.yoy_bruto || 0,
       pct_trade: bn_marca?.pct_trade_ytd || 0,
-      yoy_neto: bn_marca?.yoy_neto || 0,
+      coverage: inv_data?.coverage_days || 0, stock: inv_data?.stock_units || 0,
+      tp_score: tp_marca?.tp_score_pct || 0, tp_obj: tp_marca?.objetivo_pct || 85,
+      weeks: weeks,
     }
-  }).filter(d => d.w12_neto > 0 || d.bruto_ytd > 0).sort((a, b) => b.neto_ytd - a.neto_ytd)
+  }).filter(d => d.neto_w12 > 0 || d.neto_ytd > 0).sort((a, b) => b.neto_ytd - a.neto_ytd)
 
-  const chartData = sellout["wmt"]?.weeks?.map((week, i) => {
-    const entry = { week }
+  // Totals for KPI header
+  const totalNetoYTD = marcaData.reduce((s, d) => s + d.neto_ytd, 0)
+  const totalNetoYTDLY = marcaData.reduce((s, d) => s + d.neto_ytd_ly, 0)
+  const totalNetoW12 = marcaData.reduce((s, d) => s + d.neto_w12, 0)
+  const totalNetoW12LY = marcaData.reduce((s, d) => s + d.neto_w12_ly, 0)
+  const yoyYTD = totalNetoYTDLY > 0 ? ((totalNetoYTD - totalNetoYTDLY) / totalNetoYTDLY * 100) : 0
+  const yoyLW = totalNetoW12LY > 0 ? ((totalNetoW12 - totalNetoW12LY) / totalNetoW12LY * 100) : 0
+  const siData = Object.values(sellin).reduce((s, a) => s + (a.real_neto_q1 || a.real_trim || 0), 0)
+  const avgTP = marcaData.length > 0 ? marcaData.reduce((s, d) => s + d.tp_score, 0) / marcaData.length : 0
+
+  // Chart: bars = LY, line = TY (total across all accounts)
+  const weekLabels = sellout["wmt"]?.weeks || []
+  const totalChartData = weekLabels.map((week, i) => {
+    let ty = 0
+    let ly = 0
     accounts.forEach(acc => {
       const weeks = sellout[acc.id]?.skus?.[selectedMarca] || []
-      entry[acc.name.split(" ")[0]] = Math.round((weeks[i] || 0) / 1000)
+      const val = weeks[i] || 0
+      ty += val
+      // Estimate LY: use YoY ratio
+      const bn_marca = brutoNeto[acc.id]?.marcas?.find(m => m.marca === selectedMarca)
+      const yoy = bn_marca?.yoy_neto || 0
+      ly += yoy !== 0 ? Math.round(val / (1 + yoy/100)) : val
     })
-    return entry
-  }) || []
+    return { week, "2026": Math.round(ty/1000), "2025": Math.round(ly/1000) }
+  })
+
+  // Per-account chart when expanded
+  const accountChartData = expandedAccount ? weekLabels.map((week, i) => {
+    const weeks = sellout[expandedAccount]?.skus?.[selectedMarca] || []
+    const val = weeks[i] || 0
+    const bn_marca = brutoNeto[expandedAccount]?.marcas?.find(m => m.marca === selectedMarca)
+    const yoy = bn_marca?.yoy_neto || 0
+    const ly = yoy !== 0 ? Math.round(val / (1 + yoy/100)) : val
+    return { week, "2026": Math.round(val/1000), "2025": Math.round(ly/1000) }
+  }) : []
 
   return (
     <div>
       <div className="card" style={{ marginBottom: 16 }}>
         <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 4 }}>Vista por Marca - Comparativo entre Clientes</div>
-        <div style={{ fontSize: 12, color: "var(--silver)", marginBottom: 12 }}>Selecciona una marca para ver su desempeno en todos los clientes · Sell-Out Neto</div>
+        <div style={{ fontSize: 12, color: "var(--silver)", marginBottom: 12 }}>Selecciona una marca · Barras = 2025 · Linea = 2026 · Sell-Out Neto</div>
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
           {allMarcas.map(m => (
-            <button key={m} onClick={() => setSelectedMarca(m)} className={"btn " + (selectedMarca === m ? "btn-primary" : "btn-secondary")} style={{ fontSize: 11, padding: "4px 10px" }}>{m}</button>
+            <button key={m} onClick={() => { setSelectedMarca(m); setExpandedAccount(null) }} className={"btn " + (selectedMarca === m ? "btn-primary" : "btn-secondary")} style={{ fontSize: 11, padding: "4px 10px" }}>{m}</button>
           ))}
         </div>
       </div>
       {selectedMarca && (
         <>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 10, marginBottom: 16 }}>
+            <div className="metric-card" style={{ borderLeft: "3px solid var(--primary)" }}>
+              <div className="metric-label">SO Neto YTD</div>
+              <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 16 }}>{formatMXN(totalNetoYTD, true)}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: yoyYTD >= 0 ? "var(--success)" : "var(--critical)", marginTop: 4 }}>{yoyYTD >= 0 ? "+" : ""}{yoyYTD.toFixed(1)}% vs LY</div>
+            </div>
+            <div className="metric-card" style={{ borderLeft: "3px solid var(--cyan)" }}>
+              <div className="metric-label">SO Neto LW (W12)</div>
+              <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 16 }}>{formatMXN(totalNetoW12, true)}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: yoyLW >= 0 ? "var(--success)" : "var(--critical)", marginTop: 4 }}>{yoyLW >= 0 ? "+" : ""}{yoyLW.toFixed(1)}% vs LY</div>
+            </div>
+            <div className="metric-card" style={{ borderLeft: "3px solid var(--info)" }}>
+              <div className="metric-label">SI Neto YTD</div>
+              <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 16 }}>{formatMXN(siData, true)}</div>
+              <div className="metric-sub">Sell-In Q1 acumulado</div>
+            </div>
+            <div className="metric-card" style={{ borderLeft: "3px solid var(--warning)" }}>
+              <div className="metric-label">TP Promedio</div>
+              <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 16, color: avgTP >= 75 ? "var(--success)" : avgTP >= 60 ? "var(--warning)" : "var(--critical)" }}>{avgTP.toFixed(0)}%</div>
+              <div className="metric-sub">vs obj 85%</div>
+            </div>
+            <div className="metric-card" style={{ borderLeft: "3px solid var(--success)" }}>
+              <div className="metric-label">Clientes Activos</div>
+              <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 16 }}>{marcaData.length}</div>
+              <div className="metric-sub">de {accounts.length} cuentas</div>
+            </div>
+          </div>
+
           <div className="card" style={{ marginBottom: 16 }}>
-            <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 12 }}>{selectedMarca} - Sell-Out Neto Semanal por Cliente (miles MXN)</div>
-            <ResponsiveContainer width="100%" height={220}>
-              <LineChart data={chartData}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 800 }}>{selectedMarca} - Sell-Out Neto {expandedAccount ? accounts.find(a=>a.id===expandedAccount)?.name : "Total"} (miles MXN)</div>
+                <div style={{ fontSize: 11, color: "var(--silver)" }}>Barras = 2025 · Linea = 2026</div>
+              </div>
+              {expandedAccount && <button className="btn btn-secondary" style={{ fontSize: 11, padding: "4px 12px" }} onClick={() => setExpandedAccount(null)}>Ver Total</button>}
+            </div>
+            <ResponsiveContainer width="100%" height={240}>
+              <ComposedChart data={expandedAccount ? accountChartData : totalChartData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#F0F2F5" />
                 <XAxis dataKey="week" tick={{ fontSize: 11, fill: "#888780" }} />
                 <YAxis tick={{ fontSize: 11, fill: "#888780" }} />
                 <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8 }} formatter={v => ["$" + v + "K MXN", ""]} />
                 <Legend wrapperStyle={{ fontSize: 11 }} />
-                {accounts.map((acc, i) => <Line key={acc.id} type="monotone" dataKey={acc.name.split(" ")[0]} stroke={SKU_COLORS[i]} strokeWidth={2} dot={false} />)}
-              </LineChart>
+                <Bar dataKey="2025" fill="#E2E8F0" name="2025 (LY)" radius={[4,4,0,0]} />
+                <Line type="monotone" dataKey="2026" stroke="#4F46E5" strokeWidth={3} name="2026 (TY)" dot={{ r: 4, fill: "#4F46E5" }} />
+              </ComposedChart>
             </ResponsiveContainer>
           </div>
+
           <div className="card">
-            <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 12 }}>{selectedMarca} - Performance por Cliente</div>
+            <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 4 }}>{selectedMarca} - Performance por Cliente</div>
+            <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Click en un cliente para ver su evolutivo semanal</div>
             <table className="data-table">
               <thead>
                 <tr>
                   <th>Cliente</th>
-                  <th style={{ textAlign: "right" }}>SO Neto W12</th>
-                  <th style={{ textAlign: "right" }}>SO Bruto W12</th>
+                  <th style={{ textAlign: "right" }}>SO Neto YTD</th>
+                  <th style={{ textAlign: "right" }}>vs LY</th>
+                  <th style={{ textAlign: "right" }}>SO Neto LW</th>
+                  <th style={{ textAlign: "right" }}>vs LY</th>
+                  <th style={{ textAlign: "right" }}>Inventario</th>
+                  <th style={{ textAlign: "right" }}>TP Score</th>
                   <th style={{ textAlign: "right" }}>% Trade</th>
-                  <th style={{ textAlign: "right" }}>YoY Neto</th>
-                  <th style={{ textAlign: "right" }}>Neto YTD</th>
-                  <th style={{ textAlign: "right" }}>Cobertura</th>
                 </tr>
               </thead>
               <tbody>
                 {marcaData.map((d, i) => {
                   const covColor = d.coverage < 7 ? "var(--critical)" : d.coverage < 14 ? "var(--warning)" : "var(--success)"
+                  const tpColor = d.tp_score >= 75 ? "var(--success)" : d.tp_score >= 60 ? "var(--warning)" : "var(--critical)"
+                  const isExpanded = expandedAccount === d.accountId
                   return (
-                    <tr key={i}>
-                      <td><div style={{ display: "flex", alignItems: "center", gap: 6 }}><div style={{ width: 20, height: 20, borderRadius: 4, background: d.color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 7, fontWeight: 800, color: "white" }}>{d.logo}</div><span style={{ fontWeight: 700 }}>{d.account}</span></div></td>
-                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(d.neto_w12, true)}</td>
-                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(d.bruto_w12, true)}</td>
-                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, color: d.pct_trade > 25 ? "var(--critical)" : "var(--silver)" }}>{d.pct_trade}%</td>
+                    <tr key={i} onClick={() => setExpandedAccount(isExpanded ? null : d.accountId)} style={{ cursor: "pointer", background: isExpanded ? "var(--primary-wash)" : "transparent" }}>
+                      <td><div style={{ display: "flex", alignItems: "center", gap: 6 }}><div style={{ width: 22, height: 22, borderRadius: 4, background: d.color, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 7, fontWeight: 800, color: "white" }}>{d.logo}</div><span style={{ fontWeight: 700 }}>{d.accountShort}</span>{isExpanded && <span style={{ fontSize: 9, color: "var(--primary)" }}>ver grafica</span>}</div></td>
+                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700 }}>{formatMXN(d.neto_ytd, true)}</td>
                       <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: d.yoy_neto >= 0 ? "var(--success)" : "var(--critical)" }}>{d.yoy_neto > 0 ? "+" : ""}{d.yoy_neto}%</td>
-                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(d.neto_ytd, true)}</td>
-                      <td style={{ textAlign: "right" }}><span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: covColor }}>{d.coverage}d</span></td>
+                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(d.neto_w12, true)}</td>
+                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: d.yoy_neto >= 0 ? "var(--success)" : "var(--critical)" }}>{d.yoy_neto > 0 ? "+" : ""}{d.yoy_neto}%</td>
+                      <td style={{ textAlign: "right" }}><span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: covColor }}>{d.coverage}d</span><span style={{ fontSize: 9, color: "var(--silver)", marginLeft: 4 }}>{d.stock.toLocaleString()} uds</span></td>
+                      <td style={{ textAlign: "right" }}><span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: tpColor }}>{d.tp_score > 0 ? d.tp_score.toFixed(0) + "%" : "—"}</span></td>
+                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, color: d.pct_trade > 25 ? "var(--critical)" : "var(--silver)" }}>{d.pct_trade}%</td>
                     </tr>
                   )
                 })}
+                <tr style={{ background: "var(--pearl)", fontWeight: 800 }}>
+                  <td style={{ fontWeight: 800 }}>TOTAL</td>
+                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800 }}>{formatMXN(totalNetoYTD, true)}</td>
+                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800, color: yoyYTD >= 0 ? "var(--success)" : "var(--critical)" }}>{yoyYTD >= 0 ? "+" : ""}{yoyYTD.toFixed(1)}%</td>
+                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800 }}>{formatMXN(totalNetoW12, true)}</td>
+                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800, color: yoyLW >= 0 ? "var(--success)" : "var(--critical)" }}>{yoyLW >= 0 ? "+" : ""}{yoyLW.toFixed(1)}%</td>
+                  <td colSpan={3}></td>
+                </tr>
               </tbody>
             </table>
           </div>
