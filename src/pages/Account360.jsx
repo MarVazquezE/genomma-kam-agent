@@ -344,7 +344,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
                       <div style={{ fontSize: 11, color: "var(--obsidian)", lineHeight: 1.6 }}>
                         {r.coverage < 14 && <div style={{ marginBottom: 4 }}>A. Generar OC urgente para llevar inventario a minimo 21 dias de cobertura.</div>}
                         {peorFmt && <div style={{ marginBottom: 4 }}>{r.coverage < 14 ? "B" : "A"}. Audit de distribucion en {peorFmt.formato}: verificar SKUs activos y negociar reposicion.</div>}
-                        <div style={{ marginBottom: 4 }}>{r.coverage < 14 && peorFmt ? "C" : peorFmt ? "B" : "A"}. Activar exhibicion y promo con fondos disponibles. Maximizar retorno invirtiendo en distribucion y disponibilidad.</div>
+                        <div style={{ marginBottom: 4 }}>{r.coverage < 14 && peorFmt ? "C" : peorFmt ? "B" : "A"}. Activar exhibicion y precio punta con fondos disponibles. Priorizar distribucion y disponibilidad en anaquel.</div>
                         {(() => {
                           const isBigBrand = i < 3
                           const isTradeExcedido = r.pct_trade > 25

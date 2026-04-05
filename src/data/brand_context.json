@@ -1,44 +1,117 @@
 {
   "categorias": {
     "dolor": {
-      "marcas": ["Alliviax", "XL-3", "Next", "Tukol", "Bio", "Bengue", "Balsamo Bengue"],
+      "marcas": [
+        "Alliviax",
+        "XL-3",
+        "Next",
+        "Tukol",
+        "Bio",
+        "Bengue",
+        "Balsamo Bengue"
+      ],
       "descripcion": "Categoria OTC para alivio del dolor, gripa y tos",
-      "palancas": ["temporada invernal", "precio especial multipack", "exhibicion adicional farmacia", "capacitacion farmaceuticos"]
+      "palancas": [
+        "temporada invernal",
+        "precio especial multipack",
+        "exhibicion adicional farmacia",
+        "capacitacion farmaceuticos"
+      ]
     },
     "piel": {
-      "marcas": ["Cicatricure", "Teatrical", "Asepxia", "Goicoechea", "Goicoechea Diabet TX", "Silkamedic"],
+      "marcas": [
+        "Cicatricure",
+        "Teatrical",
+        "Asepxia",
+        "Goicoechea",
+        "Goicoechea Diabet TX",
+        "Silkamedic"
+      ],
       "descripcion": "Cuidado de la piel, cicatrices, acne y dermatologia",
-      "palancas": ["gondola de belleza", "precio especial 2x1", "exhibicion piso de venta", "digital en portales"]
+      "palancas": [
+        "gondola de belleza",
+        "precio especial 2x1",
+        "exhibicion piso de venta",
+        "digital en portales"
+      ]
     },
     "cabello": {
-      "marcas": ["Tio Nacho", "Medicasp", "Sistema GB", "Vanart"],
+      "marcas": [
+        "Tio Nacho",
+        "Medicasp",
+        "Sistema GB",
+        "Vanart"
+      ],
       "descripcion": "Cuidado del cabello, anticaspa y tratamiento capilar",
-      "palancas": ["display cabello", "promocion 3x2", "nueva formulacion melatonina", "exhibicion cruzada con piel"]
+      "palancas": [
+        "display cabello",
+        "promocion 3x2",
+        "nueva formulacion melatonina",
+        "exhibicion cruzada con piel"
+      ]
     },
     "hidratacion": {
-      "marcas": ["Suerox"],
+      "marcas": [
+        "Suerox"
+      ],
       "descripcion": "Hidratacion y electrolitos para toda la familia",
-      "palancas": ["temporada calor", "multipack", "precio por volumen", "activacion digital", "exhibicion fria"]
+      "palancas": [
+        "temporada calor",
+        "multipack",
+        "precio por volumen",
+        "activacion digital",
+        "exhibicion fria"
+      ]
     },
     "lactantes": {
-      "marcas": ["Novamil"],
+      "marcas": [
+        "Novamil"
+      ],
       "descripcion": "Formula infantil para lactantes - categoria PH exclusiva",
-      "palancas": ["espacio exclusivo lactantes", "capacitacion medicos", "muestras medicas", "exhibicion especial bebe"]
+      "palancas": [
+        "espacio exclusivo lactantes",
+        "capacitacion medicos",
+        "muestras medicas",
+        "exhibicion especial bebe"
+      ]
     },
     "salud_intima": {
-      "marcas": ["Nikzon", "Lomecan V", "Unesia", "Pointts"],
+      "marcas": [
+        "Nikzon",
+        "Lomecan V",
+        "Unesia",
+        "Pointts"
+      ],
       "descripcion": "Salud intima, hemorroides, infecciones y verrugas",
-      "palancas": ["anaquel farmacia especializada", "discrecion en exhibicion", "precio competitivo"]
+      "palancas": [
+        "anaquel farmacia especializada",
+        "discrecion en exhibicion",
+        "precio competitivo"
+      ]
     },
     "digestivo": {
-      "marcas": ["Kaopectate", "QG5", "Genoprazol"],
+      "marcas": [
+        "Kaopectate",
+        "QG5",
+        "Genoprazol"
+      ],
       "descripcion": "Salud digestiva, diarrea, colitis y reflujo",
-      "palancas": ["temporada viajes", "precio promocional", "exhibicion checkout"]
+      "palancas": [
+        "temporada viajes",
+        "precio promocional",
+        "exhibicion checkout"
+      ]
     },
     "sexual": {
-      "marcas": ["Condon M"],
+      "marcas": [
+        "Condon M"
+      ],
       "descripcion": "Salud sexual masculina",
-      "palancas": ["anaquel especializado", "precio competitivo", "discrecion"]
+      "palancas": [
+        "anaquel especializado",
+        "precio competitivo",
+        "discrecion"
+      ]
     }
   },
   "reglas_recomendacion": [

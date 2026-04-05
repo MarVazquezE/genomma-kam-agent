@@ -5,37 +5,37 @@
     "execution_pct": 18.1,
     "activities": [
       {
-        "name": "Exhibicion adicional Alliviax Q4",
+        "name": "Exhibicion adicional Alliviax Q1",
         "budget": 480000,
         "executed": 480000,
         "status": "completada"
       },
       {
-        "name": "Promo 3x2 Suerox temporada calor",
+        "name": "Plan Verano Suerox 2026",
         "budget": 320000,
-        "executed": 287000,
+        "executed": 180000,
         "status": "en_curso"
       },
       {
-        "name": "Display Cicatricure gondola central",
+        "name": "Display Cicatricure gondola central Q2",
         "budget": 250000,
         "executed": 0,
         "status": "pendiente"
       },
       {
-        "name": "Activacion digital sell-out nov",
+        "name": "Activacion digital sell-out abril",
         "budget": 180000,
         "executed": 0,
         "status": "pendiente"
       },
       {
-        "name": "Descuento volumen XL-3 temporada",
+        "name": "Promo XL-3 temporada lluvias Q2",
         "budget": 390000,
-        "executed": 143000,
+        "executed": 120000,
         "status": "en_curso"
       },
       {
-        "name": "Precio especial Tio Nacho back-to-school",
+        "name": "Relanzamiento Tio Nacho Henna Q2",
         "budget": 220000,
         "executed": 220000,
         "status": "completada"
@@ -48,33 +48,33 @@
     "execution_pct": 27.8,
     "activities": [
       {
-        "name": "Cabecera de gondola Alliviax",
+        "name": "Cabecera Alliviax enero-febrero",
         "budget": 280000,
         "executed": 280000,
         "status": "completada"
       },
       {
-        "name": "Promo Suerox especial verano",
+        "name": "Plan Verano Suerox Chedraui",
         "budget": 190000,
         "executed": 190000,
         "status": "completada"
       },
       {
-        "name": "Exhibicion Cicatricure piso de venta",
+        "name": "Exhibicion Cicatricure PDV Q2",
         "budget": 240000,
-        "executed": 198000,
+        "executed": 95000,
         "status": "en_curso"
       },
       {
-        "name": "Descuento XL-3 gripe temporada",
+        "name": "Promo XL-3 temporada lluvias Q2",
         "budget": 320000,
-        "executed": 220000,
+        "executed": 110000,
         "status": "en_curso"
       },
       {
-        "name": "Material POP renovacion Tio Nacho",
+        "name": "Material POP Tio Nacho Henna",
         "budget": 170000,
-        "executed": 190000,
+        "executed": 170000,
         "status": "completada"
       }
     ]
@@ -85,33 +85,33 @@
     "execution_pct": 20.2,
     "activities": [
       {
-        "name": "Cabecera Alliviax nacionales",
+        "name": "Cabecera Alliviax nacional Q1",
         "budget": 380000,
         "executed": 380000,
         "status": "completada"
       },
       {
-        "name": "Activacion digital + in-store Suerox",
+        "name": "Activacion Suerox verano Soriana",
         "budget": 290000,
         "executed": 290000,
         "status": "completada"
       },
       {
-        "name": "Promo Cicatricure 2x1 selecto",
+        "name": "Promo Cicatricure Soriana Selecto Q2",
         "budget": 320000,
-        "executed": 281000,
+        "executed": 80000,
         "status": "en_curso"
       },
       {
-        "name": "Exhibicion XL-3 temporada alta",
+        "name": "Exhibicion XL-3 temporada lluvias",
         "budget": 240000,
         "executed": 240000,
         "status": "completada"
       },
       {
-        "name": "Lanzamiento display Tio Nacho melatonina",
+        "name": "Lanzamiento Tio Nacho Henna Q2",
         "budget": 520000,
-        "executed": 331000,
+        "executed": 150000,
         "status": "en_curso"
       }
     ]
@@ -122,25 +122,25 @@
     "execution_pct": 19.4,
     "activities": [
       {
-        "name": "Material POP OTC farmacia",
+        "name": "Material POP OTC farmacia Q1",
         "budget": 280000,
         "executed": 280000,
         "status": "completada"
       },
       {
-        "name": "Capacitacion farmaceuticos Alliviax",
+        "name": "Capacitacion farmaceuticos Alliviax Q2",
         "budget": 180000,
-        "executed": 152000,
+        "executed": 60000,
         "status": "en_curso"
       },
       {
-        "name": "Descuento volumen Suerox",
+        "name": "Activacion Suerox farmacias Q2",
         "budget": 220000,
         "executed": 0,
         "status": "pendiente"
       },
       {
-        "name": "Exhibicion Cicatricure mostrador",
+        "name": "Exhibicion Cicatricure mostrador Q2",
         "budget": 280000,
         "executed": 0,
         "status": "pendiente"
@@ -153,25 +153,25 @@
     "execution_pct": 22.7,
     "activities": [
       {
-        "name": "Plan Invernal Suerox OXXO",
+        "name": "Plan Verano Suerox OXXO 2026",
         "budget": 480000,
-        "executed": 58000,
-        "status": "en_curso"
-      },
-      {
-        "name": "Exhibicion Cicatricure zona metro",
-        "budget": 320000,
         "executed": 220000,
         "status": "en_curso"
       },
       {
-        "name": "Precio especial XL-3 temporada",
+        "name": "Exhibicion Cicatricure zona metro Q2",
+        "budget": 320000,
+        "executed": 90000,
+        "status": "en_curso"
+      },
+      {
+        "name": "Precio especial XL-3 Q1",
         "budget": 240000,
         "executed": 240000,
         "status": "completada"
       },
       {
-        "name": "Display entrada tienda Suerox",
+        "name": "Display entrada tienda Suerox Q1",
         "budget": 160000,
         "executed": 160000,
         "status": "completada"
@@ -184,21 +184,21 @@
     "execution_pct": 26.5,
     "activities": [
       {
-        "name": "Demo en tienda Suerox multipack",
+        "name": "Demo en tienda Suerox multipack Q1",
         "budget": 240000,
         "executed": 240000,
         "status": "completada"
       },
       {
-        "name": "Display Cicatricure multipack",
+        "name": "Display Cicatricure multipack Q2",
         "budget": 180000,
-        "executed": 163000,
+        "executed": 50000,
         "status": "en_curso"
       },
       {
-        "name": "Exhibicion Tio Nacho formato club",
+        "name": "Exhibicion Tio Nacho formato club Q2",
         "budget": 200000,
-        "executed": 124000,
+        "executed": 70000,
         "status": "en_curso"
       }
     ]
