@@ -944,6 +944,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                   <div style={{ textAlign: "center" }}>
                     <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>SO Bruto W12</div>
                     <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)" }}>{formatMXN(summary.totalBrutoW12, true)}</div>
+                    <div style={{ fontSize: 10, fontWeight: 700, fontFamily: "var(--font-mono)", color: "var(--critical)" }}>-10.0% vs LY</div>
                   </div>
                   <div style={{ width: 1, height: 30, background: "var(--slate)" }} />
                   <div style={{ textAlign: "center" }}>
