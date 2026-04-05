@@ -186,7 +186,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
                     <th style={{ textAlign: "right" }}>vs LY</th>
                     <th style={{ textAlign: "right" }}>Inventario</th>
                     <th style={{ textAlign: "right" }}>TP</th>
-                    <th style={{ textAlign: "right" }}>% Trade</th>
+                    <th style={{ textAlign: "right" }}>% Bruto a Neto</th>
                     <th style={{ textAlign: "center" }}>Status</th>
                   </tr>
                 </thead>

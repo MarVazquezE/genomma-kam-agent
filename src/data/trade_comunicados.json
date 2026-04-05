@@ -1,28 +1,42 @@
 [
   {
-    "id":"inv2024",
-    "titulo":"Plan Invernal 2024 — Alliviax y XL-3",
-    "fecha":"2024-10-28",
-    "tipo":"promocion",
-    "marcas":["Alliviax","XL-3"],
-    "resumen":"Promocion de temporada invernal con precio especial, exhibicion adicional y apoyo de medios digitales para Alliviax y XL-3. Aplica a todos los canales.",
-    "descuento_pct":15,
-    "periodo":"Nov 1 - Dic 31 2024",
-    "inversion_total_mxn":2400000,
-    "objetivos":"Incrementar sell out 25% vs temporada anterior, ganar 2 puntos de market share en categoria OTC",
-    "materiales":"Exhibidor especial temporada, stopper, faja de precio, digital assets para portales"
+    "id": "q2_devol_2026",
+    "titulo": "Cambio de politica de devoluciones Q2 2026",
+    "fecha": "2026-03-28",
+    "tipo": "politica",
+    "marcas": ["Todas"],
+    "resumen": "A partir del 1 de abril se reduce la ventana de devolucion de 60 a 45 dias para todos los clientes de autoservicio. Farmacias mantienen 60 dias. Impacto estimado en provision de -$8M.",
+    "periodo": "Abr 1 - Jun 30, 2026",
+    "urgente": true
   },
   {
-    "id":"suerox_coco",
-    "titulo":"Lanzamiento Suerox Coco-Pina — Readiness Canal Moderno",
-    "fecha":"2024-11-01",
-    "tipo":"innovacion",
-    "marcas":["Suerox"],
-    "resumen":"Nuevo sabor Coco-Pina para Suerox. Requiere apertura de codigo en todos los clientes y espacio de anaquel adicional. Meta de distribucion numerica 80% en 60 dias.",
-    "descuento_pct":10,
-    "periodo":"Nov 2024 - Ene 2025",
-    "inversion_total_mxn":1800000,
-    "objetivos":"Distribucion numerica 80%, sell out 45,000 unidades primer mes, awareness 15% en target",
-    "materiales":"Display lanzamiento, cabecera de gondola, precio de introduccion, sampling en tienda"
+    "id": "suerox_verano_2026",
+    "titulo": "Plan Verano Suerox — Activacion Nacional",
+    "fecha": "2026-03-25",
+    "tipo": "promocion",
+    "marcas": ["SUEROX"],
+    "resumen": "Activacion de temporada calor con precio especial $29.90 en presentacion 630ml, exhibicion en isla y cabecera, y pauta digital en retailers. Meta: recuperar -19% YoY. Presupuesto: $4.2M.",
+    "periodo": "Abr 1 - May 31, 2026",
+    "urgente": true
+  },
+  {
+    "id": "tio_nacho_henna_2026",
+    "titulo": "Lanzamiento Tio Nacho Henna Egipcia — Apertura de codigo",
+    "fecha": "2026-03-20",
+    "tipo": "innovacion",
+    "marcas": ["TIO NACHO"],
+    "resumen": "Nuevo SKU Tio Nacho con Henna Egipcia 415ml. Requiere apertura de codigo en WMT, Chedraui y Soriana. Display de lanzamiento disponible. Meta: DN 70% en 45 dias.",
+    "periodo": "Abr 2026",
+    "urgente": false
+  },
+  {
+    "id": "cicatricure_precio_2026",
+    "titulo": "Ajuste de precio Cicatricure — Incremento 8%",
+    "fecha": "2026-03-15",
+    "tipo": "precio",
+    "marcas": ["CICATRICURE"],
+    "resumen": "Incremento de precio de 8% en toda la linea Cicatricure efectivo desde W14. Comunicar a compradores y actualizar planogramas. Monitorear elasticidad en primeras 4 semanas.",
+    "periodo": "W14 2026 en adelante",
+    "urgente": false
   }
 ]

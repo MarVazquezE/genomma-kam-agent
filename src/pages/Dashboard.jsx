@@ -11,6 +11,7 @@ import marketShare from "../data/market_share.json"
 import tiendaPerfecta from "../data/tienda_perfecta.json"
 import kbd from "../data/kbd.json"
 import brutoNeto from "../data/bruto_neto.json"
+import tradeComunicados from "../data/trade_comunicados.json"
 import marcasNacional from "../data/marcas_nacional.json"
 import { formatMXN, getAccountHealth, getHealthLabel, getLastWeekSellout, getAvgCoverage, getCriticalSkus } from "../utils/helpers"
 
@@ -310,7 +311,7 @@ function BrutoNetoModule({ accountId }) {
             <div className="metric-sub">Obj Neto Anual: {formatMXN(siObjNeto, true)}</div>
           </div>
           <div className="metric-card" style={{ borderLeft: "3px solid var(--warning)" }}>
-            <div className="metric-label">% Trade Real YTD</div>
+            <div className="metric-label">% Bruto a Neto Real YTD</div>
             <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 18, color: desviacion > 3 ? "var(--critical)" : "var(--warning)" }}>{tradeRealPct}%</div>
             <div className="metric-sub">Presupuesto G60: {tradeObjPct}%</div>
           </div>
@@ -322,15 +323,15 @@ function BrutoNetoModule({ accountId }) {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
           <div style={{ background: "var(--pearl)", borderRadius: "var(--radius-md)", padding: "10px 14px", textAlign: "center" }}>
-            <div style={{ fontSize: 10, color: "var(--silver)", fontWeight: 700, textTransform: "uppercase", marginBottom: 4 }}>Trade Presupuesto G60</div>
+            <div style={{ fontSize: 10, color: "var(--silver)", fontWeight: 700, textTransform: "uppercase", marginBottom: 4 }}>Bruto a Neto Presupuesto G60</div>
             <div style={{ fontSize: 20, fontWeight: 800, fontFamily: "var(--font-mono)", color: "var(--primary)" }}>{tradeObjPct}%</div>
           </div>
           <div style={{ background: "var(--pearl)", borderRadius: "var(--radius-md)", padding: "10px 14px", textAlign: "center" }}>
-            <div style={{ fontSize: 10, color: "var(--silver)", fontWeight: 700, textTransform: "uppercase", marginBottom: 4 }}>Trade Real YTD 2026</div>
+            <div style={{ fontSize: 10, color: "var(--silver)", fontWeight: 700, textTransform: "uppercase", marginBottom: 4 }}>Bruto a Neto Real YTD 2026</div>
             <div style={{ fontSize: 20, fontWeight: 800, fontFamily: "var(--font-mono)", color: desviacion > 3 ? "var(--critical)" : "var(--obsidian)" }}>{tradeRealPct}%</div>
           </div>
           <div style={{ background: "var(--pearl)", borderRadius: "var(--radius-md)", padding: "10px 14px", textAlign: "center" }}>
-            <div style={{ fontSize: 10, color: "var(--silver)", fontWeight: 700, textTransform: "uppercase", marginBottom: 4 }}>Trade Real 2025</div>
+            <div style={{ fontSize: 10, color: "var(--silver)", fontWeight: 700, textTransform: "uppercase", marginBottom: 4 }}>Bruto a Neto Real 2025</div>
             <div style={{ fontSize: 20, fontWeight: 800, fontFamily: "var(--font-mono)", color: "var(--silver)" }}>{data.trade_real25_pct || 0}%</div>
           </div>
         </div>
@@ -343,8 +344,8 @@ function BrutoNetoModule({ accountId }) {
               <th>Marca</th>
               <th style={{ textAlign: "right" }}>Bruto W12</th>
               <th style={{ textAlign: "right" }}>Neto W12</th>
-              <th style={{ textAlign: "right" }}>% Trade Real</th>
-              <th style={{ textAlign: "right" }}>% Trade G60</th>
+              <th style={{ textAlign: "right" }}>% Bruto a Neto Real</th>
+              <th style={{ textAlign: "right" }}>% Bruto a Neto G60</th>
               <th style={{ textAlign: "right" }}>Desv.</th>
               <th style={{ textAlign: "right" }}>YoY Bruto</th>
               <th style={{ textAlign: "right" }}>YoY Neto</th>
@@ -368,7 +369,7 @@ function BrutoNetoModule({ accountId }) {
                   <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, color: m.yoy_neto >= 0 ? "var(--success)" : "var(--critical)" }}>{m.yoy_neto > 0 ? "+" : ""}{m.yoy_neto}%</td>
                   <td style={{ textAlign: "center" }}>
                     {dobleErosion && <span className="chip chip-red">Doble erosion</span>}
-                    {tradeExcedido && !dobleErosion && <span className="chip chip-amber">Trade excedido</span>}
+                    {tradeExcedido && !dobleErosion && <span className="chip chip-amber">Bruto a Neto excedido</span>}
                   </td>
                 </tr>
               )
@@ -380,7 +381,7 @@ function BrutoNetoModule({ accountId }) {
             <strong>Doble erosion:</strong> el sell-out cae mas en neto que en bruto — se vende menos Y se da mas descuento por unidad.
           </div>
           <div style={{ padding: "8px 12px", background: "#FEF3C7", borderRadius: "var(--radius-md)", fontSize: 11, color: "#92400E" }}>
-            <strong>Trade excedido:</strong> la inversion comercial real supera el presupuesto G60 por mas de 3 puntos porcentuales.
+            <strong>Bruto a Neto excedido:</strong> el bruto a neto real supera el presupuesto G60 por mas de 3 puntos porcentuales.
           </div>
         </div>
       </div>
@@ -642,7 +643,7 @@ function MarcaClienteModule() {
                   <th style={{ textAlign: "right" }}>vs LY</th>
                   <th style={{ textAlign: "right" }}>Inventario</th>
                   <th style={{ textAlign: "right" }}>TP Score</th>
-                  <th style={{ textAlign: "right" }}>% Trade</th>
+                  <th style={{ textAlign: "right" }}>% Bruto a Neto</th>
                 </tr>
               </thead>
               <tbody>
@@ -813,9 +814,9 @@ function AccountCard({ account, onSelect }) {
       <div>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
           <span className="metric-label">Fondos ejecutados</span>
-          <span style={{ fontSize: 12, fontWeight: 600, color: fundExec < 50 ? "var(--critical)" : fundExec < 70 ? "var(--warning)" : "var(--success)" }}>{fundExec.toFixed(0)}%</span>
+          <span style={{ fontSize: 12, fontWeight: 600, color: Math.abs(fundExec - 23.1) <= 2 ? "var(--success)" : fundExec > 28.1 ? "var(--critical)" : "var(--warning)" }}>{fundExec.toFixed(0)}%</span>
         </div>
-        <div className="progress-bar"><div className="progress-fill" style={{ width: Math.min(fundExec, 100) + "%", background: fundExec < 50 ? "var(--critical)" : fundExec < 70 ? "var(--warning)" : "var(--success)" }} /></div>
+        <div className="progress-bar"><div className="progress-fill" style={{ width: Math.min(fundExec, 100) + "%", background: Math.abs(fundExec - 23.1) <= 2 ? "var(--success)" : fundExec > 28.1 ? "var(--critical)" : "var(--warning)" }} /></div>
       </div>
       <div style={{ marginTop: 10, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <span style={{ fontSize: 11, color: "var(--silver)" }}>KAM: {account.kam}</span>
@@ -971,6 +972,52 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
               </div>
             </div>
 
+            {/* COMUNICADOS DE TRADE — alertas nuevas */}
+            {tradeComunicados.filter(c => c.urgente).length > 0 && (
+              <div style={{ marginBottom: 16 }}>
+                {tradeComunicados.filter(c => c.urgente).map((c, i) => {
+                  const bgColor = c.tipo === "politica" ? "#FEF2F2" : c.tipo === "promocion" ? "#DBEAFE" : c.tipo === "precio" ? "#FEF3C7" : "#F0FDF4"
+                  const borderColor = c.tipo === "politica" ? "var(--critical)" : c.tipo === "promocion" ? "var(--info)" : c.tipo === "precio" ? "var(--warning)" : "var(--success)"
+                  const tagLabel = c.tipo === "politica" ? "POLITICA" : c.tipo === "promocion" ? "ACTIVACION" : c.tipo === "precio" ? "PRECIO" : c.tipo === "innovacion" ? "INNOVACION" : "TRADE"
+                  return (
+                    <div key={i} style={{ background: bgColor, border: "1px solid " + borderColor + "40", borderLeft: "4px solid " + borderColor, borderRadius: "var(--radius-md)", padding: "12px 16px", marginBottom: 6, cursor: "pointer" }}
+                      onClick={() => toggleDrillDown("comunicado_" + c.id)}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                          <span style={{ fontSize: 9, fontWeight: 800, background: borderColor, color: "white", padding: "2px 6px", borderRadius: 4 }}>{tagLabel}</span>
+                          <span style={{ fontSize: 12, fontWeight: 700, color: "var(--obsidian)" }}>{c.titulo}</span>
+                        </div>
+                        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                          <span style={{ fontSize: 10, color: "var(--silver)" }}>{c.fecha} · {c.periodo}</span>
+                          <span style={{ fontSize: 10, color: borderColor, fontWeight: 700 }}>Ver detalle</span>
+                        </div>
+                      </div>
+                      {drillDown === "comunicado_" + c.id && (
+                        <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid " + borderColor + "30" }}>
+                          <div style={{ fontSize: 11, color: "var(--obsidian)", lineHeight: 1.6, marginBottom: 6 }}>{c.resumen}</div>
+                          <div style={{ fontSize: 10, color: "var(--silver)" }}>Marcas: {c.marcas.join(", ")} · Periodo: {c.periodo}</div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+                {tradeComunicados.filter(c => !c.urgente).length > 0 && (
+                  <div style={{ fontSize: 10, color: "var(--silver)", marginTop: 4, cursor: "pointer" }} onClick={() => toggleDrillDown("all_comunicados")}>
+                    + {tradeComunicados.filter(c => !c.urgente).length} comunicados adicionales {drillDown === "all_comunicados" ? "▲" : "▼"}
+                  </div>
+                )}
+                {drillDown === "all_comunicados" && tradeComunicados.filter(c => !c.urgente).map((c, i) => (
+                  <div key={i} style={{ background: "var(--pearl)", borderRadius: "var(--radius-md)", padding: "10px 14px", marginTop: 6, borderLeft: "3px solid var(--silver)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: 11, fontWeight: 600, color: "var(--obsidian)" }}>{c.titulo}</span>
+                      <span style={{ fontSize: 10, color: "var(--silver)" }}>{c.fecha}</span>
+                    </div>
+                    <div style={{ fontSize: 10, color: "var(--silver)", marginTop: 4 }}>{c.resumen}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* FILA 2: Sell-Out + Sell-In lado a lado */}
             <div className="grid-2" style={{ marginBottom: 16 }}>
               <div className="card">
@@ -996,7 +1043,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
               <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Alertas y ejecucion</div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
                 <AlertCard label="Venta en Riesgo" value={formatMXN(summary.totalOpp, true)} sub="Por ejecucion pendiente" color="var(--critical)" onClick={() => toggleDrillDown("alertas")} />
-                <AlertCard label="Fondos Ejecutados" value={summary.fondosExec.toFixed(0) + "%"} sub={"Esperado W12: 23% · " + (summary.fondosExec >= 18 ? "En linea" : "Rezagado")} color={summary.fondosExec >= 18 ? "var(--success)" : summary.fondosExec >= 12 ? "var(--warning)" : "var(--critical)"} onClick={() => toggleDrillDown("fondos")} />
+                <AlertCard label="Fondos Ejecutados" value={summary.fondosExec.toFixed(0) + "%"} sub={"Esperado W12: 23% · " + (Math.abs(summary.fondosExec - 23.1) <= 2 ? "En linea" : summary.fondosExec > 25.1 ? "Sobreutilizado" : "Subutilizado")} color={Math.abs(summary.fondosExec - 23.1) <= 2 ? "var(--success)" : summary.fondosExec > 28.1 ? "var(--critical)" : "var(--warning)"} onClick={() => toggleDrillDown("fondos")} />
                 <AlertCard label="Tienda Perfecta" value={summary.avgTP.toFixed(0) + "%"} sub="Obj: 85% · Prom. cuentas" color={summary.avgTP >= 80 ? "var(--success)" : summary.avgTP >= 65 ? "var(--warning)" : "var(--critical)"} onClick={() => setActiveSection("tp")} />
                 <AlertCard label="KBDs Off-Track" value={summary.totalKBDOffTrack} sub="Actividades sin cumplir" color="var(--critical)" onClick={() => setActiveSection("kbd")} />
               </div>
@@ -1034,15 +1081,18 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                   <tbody>
                     {accounts.map(acc => {
                       const f = funds[acc.id]
-                      const c = f.execution_pct < 12 ? "var(--critical)" : f.execution_pct < 18 ? "var(--warning)" : "var(--success)"
-                      const diffPts = (f.execution_pct - 23.1).toFixed(1)
+                      const avanceAnio = 23.1
+                      const diff = f.execution_pct - avanceAnio
+                      const c = diff > 5 ? "var(--critical)" : diff > 2 ? "var(--warning)" : diff < -5 ? "var(--warning)" : "var(--success)"
+                      const chipCls = diff > 5 ? "chip-red" : diff > 2 ? "chip-amber" : diff < -5 ? "chip-amber" : "chip-green"
+                      const label = diff > 5 ? "Sobreutilizado" : diff > 2 ? "Adelantado" : diff < -5 ? "Subutilizado" : "En linea"
                       return (
                         <tr key={acc.id}>
                           <td style={{ fontWeight: 700 }}>{acc.name}</td>
                           <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.annual_committed_mxn, true)}</td>
                           <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.executed_ytd_mxn, true)}</td>
-                          <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: c }}>{f.execution_pct.toFixed(0)}%</td>
-                          <td style={{ textAlign: "center" }}><span className={"chip " + (f.execution_pct < 12 ? "chip-red" : f.execution_pct < 18 ? "chip-amber" : "chip-green")}>{f.execution_pct >= 18 ? "En linea" : f.execution_pct >= 12 ? "Rezagado" : "Critico"}</span></td>
+                          <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: c }}>{f.execution_pct.toFixed(0)}% <span style={{ fontSize: 9, color: "var(--silver)" }}>({diff > 0 ? "+" : ""}{diff.toFixed(0)} vs {avanceAnio.toFixed(0)}%)</span></td>
+                          <td style={{ textAlign: "center" }}><span className={"chip " + chipCls}>{label}</span></td>
                         </tr>
                       )
                     })}
@@ -1108,7 +1158,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 12 }}>
                   <KPICard label="Sell-In YTD (MXN)" value={formatMXN(sellin[account.id].real_acum, true)} target={formatMXN(sellin[account.id].objetivo_acum, true)} vsLY={sellin[account.id].vs_anterior_acum} pct={(sellin[account.id].real_acum / sellin[account.id].objetivo_acum) * 100} />
                   <KPICard label="Sell-In Mes (MXN)" value={formatMXN(sellin[account.id].real_mes, true)} target={formatMXN(sellin[account.id].objetivo_mes, true)} vsLY={sellin[account.id].vs_anterior_mes} pct={(sellin[account.id].real_mes / sellin[account.id].objetivo_mes) * 100} />
-                  <AlertCard label="Gasto Fondos" value={funds[account.id].execution_pct.toFixed(0) + "%"} sub={formatMXN(funds[account.id].executed_ytd_mxn, true) + " de " + formatMXN(funds[account.id].annual_committed_mxn, true) + " MXN"} color={funds[account.id].execution_pct < 60 ? "var(--critical)" : "var(--success)"} />
+                  <AlertCard label="Gasto Fondos" value={funds[account.id].execution_pct.toFixed(0) + "%"} sub={formatMXN(funds[account.id].executed_ytd_mxn, true) + " de " + formatMXN(funds[account.id].annual_committed_mxn, true) + " · Esp: 23%"} color={Math.abs(funds[account.id].execution_pct - 23.1) <= 2 ? "var(--success)" : funds[account.id].execution_pct > 28.1 ? "var(--critical)" : "var(--warning)"} />
                   <TPScoreCard accountId={selectedAccount} />
                 </div>
                 <div className="card">
