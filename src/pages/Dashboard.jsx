@@ -13,6 +13,7 @@ import kbd from "../data/kbd.json"
 import brutoNeto from "../data/bruto_neto.json"
 import tradeComunicados from "../data/trade_comunicados.json"
 import marcasNacional from "../data/marcas_nacional.json"
+import CuboConsultas from "./CuboConsultas"
 import { formatMXN, getAccountHealth, getHealthLabel, getLastWeekSellout, getPrevWeekSellout, getAvgCoverage, getCriticalSkus } from "../utils/helpers"
 
 const SKU_COLORS = ["#6366F1","#14B8A6","#F59E0B","#F43F5E","#8B5CF6","#06B6D4","#F97316","#EC4899","#10B981","#3B82F6","#EF4444","#84CC16"]
@@ -895,6 +896,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
       { id: "marcas", label: "Mapa de Marcas", icon: "+" },
       { id: "bruto_neto", label: "Bruto vs Neto", icon: "\u0394" },
       { id: "oc_sugerida", label: "OC Sugerida", icon: "\u2193" },
+      { id: "cubo", label: "Cubo de Consultas", icon: "\u25A6" },
     ]},
     { title: "Ejecucion", items: [
       { id: "tp", label: "Tienda Perfecta", icon: "T" },
@@ -1321,6 +1323,8 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
             </div>
           </div>
         )}
+
+        {activeSection === "cubo" && <CuboConsultas />}
       </div>
     </div>
   )
