@@ -71,10 +71,10 @@ async function generateOnePager(account, marcas) {
     sell_out_semana_mxn: getLastWeekSellout(sellout, account.id),
     cobertura_promedio_dias: getAvgCoverage(inventory, account.id).toFixed(0),
     sell_in_ytd_mxn: sellin[account.id].real_acum,
-    sell_in_objetivo_ytd_mxn: sellin[account.id].objetivo_acum,
-    sell_in_cumplimiento_pct: ((sellin[account.id].real_acum / sellin[account.id].objetivo_acum) * 100).toFixed(1),
+    sell_in_objetivo_q1_mxn: sellin[account.id].objetivo_q1,
+    sell_in_cumplimiento_q1_pct: ((sellin[account.id].real_trim / sellin[account.id].objetivo_q1) * 100).toFixed(1),
     fondos_ejecutados_pct: funds[account.id].execution_pct,
-    fondos_disponibles_mxn: funds[account.id].annual_committed_mxn - funds[account.id].executed_ytd_mxn,
+    fondos_disponibles_q1_mxn: funds[account.id].q1_available_mxn,
     tienda_perfecta_score: tp ? tp.score_general_pct : null,
     tienda_perfecta_gaps: tp ? tp.indicadores.filter(i => i.status === "off_track").map(i => i.nombre) : [],
     market_share_por_categoria: ms ? Object.entries(ms.categorias).slice(0, 3).map(([cat, d]) => ({
@@ -222,7 +222,7 @@ async function generatePPTX(account, op, marcas) {
   const semC = { verde: "10B981", amarillo: "F59E0B", rojo: "EF4444" }[op.semaforo_negocio] || "888888"
   s2.addShape(pptx.ShapeType.ellipse, { x: 12.1, y: 0.82, w: 0.5, h: 0.5, fill: { color: semC } })
   const kpis = [
-    { l: "Sell-In YTD", v: formatMXN(sellin[account.id].real_acum, true), pct: (sellin[account.id].real_acum / sellin[account.id].objetivo_acum) * 100, sub: "Obj: " + formatMXN(sellin[account.id].objetivo_acum, true) },
+    { l: "Sell-In Q1", v: formatMXN(sellin[account.id].real_trim, true), pct: (sellin[account.id].real_trim / sellin[account.id].objetivo_q1) * 100, sub: "Obj Q1: " + formatMXN(sellin[account.id].objetivo_q1, true) },
     { l: "Sell-In Mes", v: formatMXN(sellin[account.id].real_mes, true), pct: (sellin[account.id].real_mes / sellin[account.id].objetivo_mes) * 100, sub: "Obj: " + formatMXN(sellin[account.id].objetivo_mes, true) },
     { l: "Fondos Ejecutados", v: funds[account.id].execution_pct.toFixed(0) + "%", pct: funds[account.id].execution_pct, sub: formatMXN(funds[account.id].executed_ytd_mxn, true) + " MXN" },
     { l: "Tienda Perfecta", v: tp ? tp.score_general_pct.toFixed(0) + "%" : "N/D", pct: tp ? (tp.score_general_pct / 85) * 100 : 0, sub: "vs objetivo 85%" },

@@ -285,7 +285,7 @@ function BrutoNetoModule({ accountId }) {
   const desviacion = data.trade_desviacion_pts || 0
   const alertaNivel = data.alerta_nivel
   const siObjBruto = si?.objetivo_bruto_anual || 0
-  const siObjNeto = si?.objetivo_neto_anual || 0
+  const siObjNeto = si?.objetivo_q1 || 0
   return (
     <div>
       {data.alerta_trade && (
@@ -855,14 +855,14 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
     const totalAlerts = accounts.reduce((sum, acc) => sum + (executionScorecard[acc.id] || []).filter(i => i.estado === "off_track").length, 0)
     const totalOpp = accounts.reduce((sum, acc) => sum + (executionScorecard[acc.id] || []).reduce((s, i) => s + (i.venta_perdida_mxn || 0), 0), 0)
     const si_real_acum = Object.values(sellin).reduce((s, a) => s + a.real_acum, 0)
-    const si_obj_acum = Object.values(sellin).reduce((s, a) => s + a.objetivo_acum, 0)
+    const si_obj_acum = Object.values(sellin).reduce((s, a) => s + (a.objetivo_q1 || 0), 0)
     const si_vs_ly = Object.values(sellin).reduce((s, a) => s + a.vs_anterior_acum, 0) / Object.values(sellin).length
     const si_real_mes = Object.values(sellin).reduce((s, a) => s + a.real_mes, 0)
     const si_obj_mes = Object.values(sellin).reduce((s, a) => s + a.objetivo_mes, 0)
     const si_real_trim = Object.values(sellin).reduce((s, a) => s + a.real_trim, 0)
     const si_obj_trim = Object.values(sellin).reduce((s, a) => s + a.objetivo_trim, 0)
     const so_real_acum = Object.values(brutoNeto).reduce((s, d) => s + d.total_neto_ytd, 0)
-    const so_obj_acum = Object.values(sellin).reduce((s, a) => s + (a.objetivo_neto_anual || a.objetivo_acum || 0), 0)
+    const so_obj_acum = Object.values(sellin).reduce((s, a) => s + (a.objetivo_q1 || 0), 0)
     const so_vs_ly = -11.1
     const avgCov = accounts.reduce((s, a) => s + getAvgCoverage(inventory, a.id), 0) / accounts.length
     const fondosExec = Object.values(funds).reduce((s, f) => s + f.execution_pct, 0) / Object.values(funds).length
@@ -1155,7 +1155,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                       return (
                         <tr key={acc.id}>
                           <td style={{ fontWeight: 700 }}>{acc.name}</td>
-                          <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.annual_committed_mxn, true)}</td>
+                          <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.q1_committed_mxn || f.annual_committed_mxn * 0.25, true)}</td>
                           <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.executed_ytd_mxn, true)}</td>
                           <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: c }}>{f.execution_pct.toFixed(0)}% <span style={{ fontSize: 9, color: "var(--silver)" }}>({diff > 0 ? "+" : ""}{diff.toFixed(0)} vs {avanceAnio.toFixed(0)}%)</span></td>
                           <td style={{ textAlign: "center" }}><span className={"chip " + chipCls}>{label}</span></td>
@@ -1254,9 +1254,9 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                   <button className="btn btn-primary" style={{ fontSize: 12 }} onClick={() => onSelectAccount(account.id)}>Analisis completo</button>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 12 }}>
-                  <KPICard label="Sell-In YTD (MXN)" value={formatMXN(sellin[account.id].real_acum, true)} target={formatMXN(sellin[account.id].objetivo_acum, true)} vsLY={sellin[account.id].vs_anterior_acum} pct={(sellin[account.id].real_acum / sellin[account.id].objetivo_acum) * 100} />
+                  <KPICard label="Sell-In Q1 (MXN)" value={formatMXN(sellin[account.id].real_trim, true)} target={formatMXN(sellin[account.id].objetivo_q1, true)} vsLY={sellin[account.id].vs_anterior_acum} pct={(sellin[account.id].real_trim / sellin[account.id].objetivo_q1) * 100} />
                   <KPICard label="Sell-In Mes (MXN)" value={formatMXN(sellin[account.id].real_mes, true)} target={formatMXN(sellin[account.id].objetivo_mes, true)} vsLY={sellin[account.id].vs_anterior_mes} pct={(sellin[account.id].real_mes / sellin[account.id].objetivo_mes) * 100} />
-                  <AlertCard label="Gasto Fondos" value={funds[account.id].execution_pct.toFixed(0) + "%"} sub={formatMXN(funds[account.id].executed_ytd_mxn, true) + " de " + formatMXN(funds[account.id].annual_committed_mxn, true) + " · Esp: 23%"} color={Math.abs(funds[account.id].execution_pct - 23.1) <= 2 ? "var(--success)" : funds[account.id].execution_pct > 28.1 ? "var(--critical)" : "var(--warning)"} />
+                  <AlertCard label="Gasto Fondos Q1" value={(funds[account.id].pct_q1_execution || 0).toFixed(0) + "%"} sub={formatMXN(funds[account.id].executed_ytd_mxn, true) + " de " + formatMXN(funds[account.id].q1_committed_mxn || funds[account.id].annual_committed_mxn * 0.25, true) + " Q1"} color={funds[account.id].pct_q1_execution <= 100 ? "var(--success)" : "var(--critical)"} />
                   <TPScoreCard accountId={selectedAccount} />
                 </div>
                 <div className="card">

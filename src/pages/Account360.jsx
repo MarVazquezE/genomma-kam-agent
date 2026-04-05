@@ -116,7 +116,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
           <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 16 }}>{formatMXN(si?.real_neto_q1 || si?.real_trim || 0, true)}</div>
           <div style={{ fontSize: 11, marginTop: 4 }}>
             <span style={{ color: "var(--silver)" }}>Obj SI Neto Anual: </span>
-            <span style={{ fontWeight: 700, fontFamily: "var(--font-mono)", color: "var(--obsidian)" }}>{formatMXN(si?.objetivo_neto_anual || si?.objetivo_acum || 0, true)}</span>
+            <span style={{ fontWeight: 700, fontFamily: "var(--font-mono)", color: "var(--obsidian)" }}>{formatMXN(si?.objetivo_q1 || si?.objetivo_trim || 0, true)}</span>
           </div>
         </div>
         <div className="metric-card" style={{ borderLeft: "3px solid " + (avgCov >= 14 ? "var(--success)" : avgCov >= 7 ? "var(--warning)" : "var(--critical)") }}>
@@ -458,7 +458,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
       {/* FONDOS DE INVERSION */}
       <div className="card" style={{ marginBottom: 16 }}>
         <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Plan de Fondos de Inversion</div>
-        <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Presupuesto anual: {formatMXN(fund.annual_committed_mxn)} · Ejecutado: {formatPct(fund.execution_pct)} · Esperado W12: 23%
+        <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Presupuesto Q1: {formatMXN(fund.q1_committed_mxn)} · Ejecutado Q1: {formatPct(fund.pct_q1_execution)} · Disponible Q1: {formatMXN(fund.q1_available_mxn)}
           {Math.abs(fund.execution_pct - 23.1) <= 5 && <span style={{ color: "var(--success)", fontWeight: 700 }}> · En linea</span>}
           {fund.execution_pct - 23.1 > 5 && <span style={{ color: "var(--critical)", fontWeight: 700 }}> · Sobreutilizado</span>}
           {fund.execution_pct - 23.1 < -5 && <span style={{ color: "var(--warning)", fontWeight: 700 }}> · Subutilizado</span>}
@@ -525,7 +525,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
           {(() => {
             const items = (executionScorecard[accountId] || []).filter(i => i.estado === "off_track")
             // Only flag pendiente activities if they seem overdue (Q1 activities with 0 execution)
-            const pendientes = fund.activities.filter(a => a.status === "pendiente" && a.executed === 0 && a.budget > fund.annual_committed_mxn * 0.15)
+            const pendientes = fund.activities.filter(a => a.status === "pendiente" && a.executed === 0 && a.budget > (fund.q1_committed_mxn || fund.annual_committed_mxn * 0.25) * 0.15)
             if (items.length === 0 && pendientes.length === 0) return <div style={{ fontSize: 12, color: "var(--success)", padding: 8 }}>Sin acciones criticas pendientes — fondos en linea con avance del año (23%)</div>
             return (
               <div>

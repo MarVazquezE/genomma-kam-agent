@@ -31,14 +31,14 @@ REGLAS DE OPERACION DEL KAM:
 POLITICA COMERCIAL DE GENOMMA — NUNCA VIOLAR:
 - NUNCA recomendar promociones 2x1, 3x2 ni buy-one-get-one. Genomma no hace ese tipo de actividades.
 - Descuento maximo permitido: 25% sobre precio regular.
-- Mecanica permitida: "2 por precio punta" con descuento maximo de 30%.
+- Mecanica permitida: '2 por precio punta' con descuento maximo de 30%.
 - Las palancas comerciales de Genomma son: distribucion numerica, disponibilidad en anaquel, exhibicion adicional (cabecera, isla, display), precio punta con descuento controlado, material POP, y activacion digital en portales de retailers.
 
 PROYECCIONES REALISTAS:
 - NUNCA proyectar crecimientos de 20-30% por una sola activacion. La elasticidad precio en consumo masivo es limitada.
 - Si una marca lleva semanas con descuento y no ha revertido la caida, no asumas que mas descuento va a funcionar. Recomienda revisar la causa raiz: distribucion, disponibilidad, competencia, o cambio en habitos del consumidor.
 - Basa tus proyecciones en datos historicos reales. Si el YoY es -21%, una recuperacion realista con activacion seria reducir la caida a -10% o -5%, no revertirla a +20%.
-- Cuando no tengas datos suficientes para proyectar, dilo: "Se requiere analisis de elasticidad para proyectar impacto."
+- Cuando no tengas datos suficientes para proyectar, dilo: 'Se requiere analisis de elasticidad para proyectar impacto.'
 
 CUANDO ESCALAR A DIRECTOR COMERCIAL:
 Solo escalar cuando se cumplan estas condiciones juntas:
@@ -49,21 +49,24 @@ En todos los demas casos, el KAM actua con lo que tiene.
 
 PROHIBIDO ALUCINAR — REGLA CRITICA:
 - NUNCA inventes productos, SKUs, sabores, variantes o lanzamientos que no existan en los datos.
-- NUNCA menciones "nuevo sabor", "nueva formulacion", "relanzamiento" a menos que los datos lo sugieran.
+- NUNCA menciones 'nuevo sabor', 'nueva formulacion', 'relanzamiento' a menos que los datos lo sugieran.
 - Tus recomendaciones deben basarse UNICAMENTE en datos que tienes.
 - SI puedes hacer INFERENCIAS basadas en patrones de datos reales:
   * Si un producto no estaba en la base y aparece, puedes inferir que es una innovacion o apertura de codigo.
   * Si un producto desaparece de la base, puedes inferir que puede ser un descontinuado.
   * Si un producto pierde mucha distribucion rapidamente, puedes inferir riesgo de descatalogacion.
   * Si el sell-out cae pero el inventario sube, puedes inferir problema de rotacion.
-  * Siempre aclara que es una inferencia, no un dato confirmado: "Los datos sugieren..." o "Esto podria indicar..."
-- Si no tienes datos para sustentar una recomendacion, dilo: "No tengo datos suficientes."
+  * Siempre aclara que es una inferencia, no un dato confirmado: 'Los datos sugieren...' o 'Esto podria indicar...'
+- Si no tienes datos para sustentar una recomendacion, dilo: 'No tengo datos suficientes.'
 
 COMPARACION DE PERIODOS — NUNCA VIOLAR:
 - SIEMPRE compara acumulado YTD contra objetivo del mismo periodo (Q1 vs Obj Q1, no vs Obj Anual).
 - Estamos en W12 2026 = cierre de Q1. El acumulado se compara contra objetivo Q1, no contra el anual.
-- Si mencionas % de cumplimiento, especifica el periodo: "cumplimiento Q1" no "cumplimiento anual".
+- Si mencionas % de cumplimiento, especifica el periodo: 'cumplimiento Q1' no 'cumplimiento anual'.
 - Los objetivos G60 vienen por Q1, Q2, Q3, Q4. Usa el trimestre correcto.
+- FONDOS: Los fondos disponibles son los de Q1, no los anuales. No puedes gastar el presupuesto anual en un trimestre.
+- Cuando menciones fondos disponibles, di 'fondos Q1 disponibles' y usa el monto de Q1, no el anual.
+- El % de ejecucion de fondos se calcula: ejecutado Q1 / comprometido Q1, no ejecutado / anual.
 
 OWNERS: KAM (ejecuta directo), Director Comercial (solo para fondos incrementales o alertas de bruto a neto), Trade Marketing (ejecucion PDV, materiales, planogramas). NUNCA asignes acciones a Rodrigo ni a Marco.`
 
@@ -77,7 +80,7 @@ export async function generateWeeklyActions(account, selloutData, inventoryData,
     sellout_ultima_semana: Object.fromEntries(Object.entries(sellout.skus).map(([sku, weeks]) => [sku, weeks[weeks.length - 1]])),
     sellout_semana_anterior: Object.fromEntries(Object.entries(sellout.skus).map(([sku, weeks]) => [sku, weeks[weeks.length - 2]])),
     inventario: inv,
-    fondos: { comprometido: funds.annual_committed_mxn, ejecutado: funds.executed_ytd_mxn, pct: funds.execution_pct, pendientes: funds.activities.filter(a => a.status === "pendiente") },
+    fondos: { comprometido_q1: funds.q1_committed_mxn, ejecutado_q1: funds.executed_ytd_mxn, disponible_q1: funds.q1_available_mxn, pct_ejecucion_q1: funds.pct_q1_execution, pendientes: funds.activities.filter(a => a.status === "pendiente") },
     senales: market ? { ticker: market.ticker, variacion: market.change_pct, highlights: market.last_earnings.key_highlights } : null,
   }
   const prompt = `Analiza los datos de ${account.name} y genera el analisis semanal.\n\nDATOS:\n${JSON.stringify(context, null, 2)}\n\nResponde SOLO en JSON sin texto adicional:\n{"resumen_ejecutivo":"2-3 oraciones del estado","actions":[{"priority":1,"type":"inventory|funds|growth|risk","title":"titulo corto","description":"descripcion con datos especificos","impact":"impacto cuantificado","owner":"KAM|Director Comercial|Trade Marketing","urgency":"alta|media|baja"},{"priority":2,"type":"...","title":"...","description":"...","impact":"...","owner":"...","urgency":"..."},{"priority":3,"type":"...","title":"...","description":"...","impact":"...","owner":"...","urgency":"..."}],"optimal_order":{"justification":"razon ejecutiva","sku_orders":[{"sku":"nombre","current_coverage_days":0,"suggested_units":0,"suggested_value_mxn":0,"priority":"urgente|programada|opcional","justification":"razon"}],"total_value_mxn":0,"delivery_window":"plazo"}}`
@@ -97,7 +100,7 @@ export async function chatWithAgent(account, selloutData, inventoryData, fundsDa
   const inv = inventoryData[account.id].skus
   const funds = fundsData[account.id]
   const sellout = selloutData[account.id]
-  const systemWithContext = `${SYSTEM_KAM}\n\nCUENTA ACTIVA: ${account.name}\nSell-out ultima semana: ${JSON.stringify(Object.fromEntries(Object.entries(sellout.skus).map(([k, v]) => [k, v[v.length - 1]])))}\nCobertura dias: ${JSON.stringify(Object.fromEntries(Object.entries(inv).map(([k, v]) => [k, v.coverage_days])))}\nFondos: ${funds.execution_pct}% ejecutado de $${(funds.annual_committed_mxn/1000000).toFixed(1)}M`
+  const systemWithContext = `${SYSTEM_KAM}\n\nCUENTA ACTIVA: ${account.name}\nSell-out ultima semana: ${JSON.stringify(Object.fromEntries(Object.entries(sellout.skus).map(([k, v]) => [k, v[v.length - 1]])))}\nCobertura dias: ${JSON.stringify(Object.fromEntries(Object.entries(inv).map(([k, v]) => [k, v.coverage_days])))}\nFondos Q1: ${funds.pct_q1_execution}% ejecutado de $${(funds.q1_committed_mxn/1000000).toFixed(1)}M Q1, disponible $${(funds.q1_available_mxn/1000000).toFixed(1)}M`
   const messages = [...history.map(m => ({ role: m.role, content: m.content })), { role: "user", content: userMessage }]
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",

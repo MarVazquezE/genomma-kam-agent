@@ -40,7 +40,10 @@
         "executed": 220000,
         "status": "completada"
       }
-    ]
+    ],
+    "q1_committed_mxn": 16700501,
+    "q1_available_mxn": 4615363,
+    "pct_q1_execution": 72.4
   },
   "ched": {
     "annual_committed_mxn": 16460393,
@@ -77,7 +80,10 @@
         "executed": 170000,
         "status": "completada"
       }
-    ]
+    ],
+    "q1_committed_mxn": 4115098,
+    "q1_available_mxn": -456603,
+    "pct_q1_execution": 111.1
   },
   "sor": {
     "annual_committed_mxn": 14857769,
@@ -114,7 +120,10 @@
         "executed": 150000,
         "status": "en_curso"
       }
-    ]
+    ],
+    "q1_committed_mxn": 3714442,
+    "q1_available_mxn": 716633,
+    "pct_q1_execution": 80.7
   },
   "ahorro": {
     "annual_committed_mxn": 25842922,
@@ -145,7 +154,10 @@
         "executed": 0,
         "status": "pendiente"
       }
-    ]
+    ],
+    "q1_committed_mxn": 6460730,
+    "q1_available_mxn": 1459084,
+    "pct_q1_execution": 77.4
   },
   "oxxo": {
     "annual_committed_mxn": 15042941,
@@ -176,7 +188,10 @@
         "executed": 160000,
         "status": "completada"
       }
-    ]
+    ],
+    "q1_committed_mxn": 3760735,
+    "q1_available_mxn": 344134,
+    "pct_q1_execution": 90.8
   },
   "costco": {
     "annual_committed_mxn": 3004280,
@@ -201,6 +216,9 @@
         "executed": 70000,
         "status": "en_curso"
       }
-    ]
+    ],
+    "q1_committed_mxn": 751070,
+    "q1_available_mxn": -43627,
+    "pct_q1_execution": 105.8
   }
 }
