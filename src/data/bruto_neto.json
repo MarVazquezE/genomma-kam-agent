@@ -20,7 +20,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 1.3,
-        "yoy_bruto": 9.6
+        "yoy_bruto": 9.6,
+        "trade_obj_pct": 18.6,
+        "trade_desviacion": 3.1,
+        "obj_bruto_anual": 259658820,
+        "obj_neto_anual": 211474818,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "SUEROX",
@@ -33,7 +39,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -21.2,
-        "yoy_bruto": -14.7
+        "yoy_bruto": -14.7,
+        "trade_obj_pct": 24.4,
+        "trade_desviacion": -2.7,
+        "obj_bruto_anual": 118200226,
+        "obj_neto_anual": 89350809,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "TEATRICAL",
@@ -46,7 +58,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 7.9,
-        "yoy_bruto": 16.8
+        "yoy_bruto": 16.8,
+        "trade_obj_pct": 20.4,
+        "trade_desviacion": 1.3,
+        "obj_bruto_anual": 115915746,
+        "obj_neto_anual": 92323170,
+        "doble_erosion": false,
+        "trade_excedido": false
       },
       {
         "marca": "SILKAMEDIC",
@@ -59,7 +77,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 2.4,
-        "yoy_bruto": 10.8
+        "yoy_bruto": 10.8,
+        "trade_obj_pct": 23.2,
+        "trade_desviacion": -1.5,
+        "obj_bruto_anual": 108383159,
+        "obj_neto_anual": 83208572,
+        "doble_erosion": false,
+        "trade_excedido": false
       },
       {
         "marca": "XL-3",
@@ -72,7 +96,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -10.1,
-        "yoy_bruto": -2.7
+        "yoy_bruto": -2.7,
+        "trade_obj_pct": 11.6,
+        "trade_desviacion": 10.0,
+        "obj_bruto_anual": 102630671,
+        "obj_neto_anual": 90766649,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "VANART",
@@ -85,7 +115,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -7.4,
-        "yoy_bruto": 0.2
+        "yoy_bruto": 0.2,
+        "trade_obj_pct": 24.5,
+        "trade_desviacion": -2.8,
+        "obj_bruto_anual": 67432414,
+        "obj_neto_anual": 50894560,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "LOMECAN V",
@@ -98,7 +134,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 0.6,
-        "yoy_bruto": 8.9
+        "yoy_bruto": 8.9,
+        "trade_obj_pct": 18.9,
+        "trade_desviacion": 2.8,
+        "obj_bruto_anual": 89177280,
+        "obj_neto_anual": 72332858,
+        "doble_erosion": false,
+        "trade_excedido": false
       },
       {
         "marca": "CICATRICURE",
@@ -111,7 +153,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -10.0,
-        "yoy_bruto": -2.6
+        "yoy_bruto": -2.6,
+        "trade_obj_pct": 15.2,
+        "trade_desviacion": 6.5,
+        "obj_bruto_anual": 74752020,
+        "obj_neto_anual": 63390096,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "MEDICASP",
@@ -124,7 +172,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -11.0,
-        "yoy_bruto": -3.7
+        "yoy_bruto": -3.7,
+        "trade_obj_pct": 13.2,
+        "trade_desviacion": 8.4,
+        "obj_bruto_anual": 55114566,
+        "obj_neto_anual": 47852135,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NEXT",
@@ -137,7 +191,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": 7.0,
-        "yoy_bruto": 15.8
+        "yoy_bruto": 15.8,
+        "trade_obj_pct": 13.4,
+        "trade_desviacion": 8.2,
+        "obj_bruto_anual": 51596169,
+        "obj_neto_anual": 44695094,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "TUKOL",
@@ -150,7 +210,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -11.5,
-        "yoy_bruto": -4.3
+        "yoy_bruto": -4.3,
+        "trade_obj_pct": 11.5,
+        "trade_desviacion": 10.1,
+        "obj_bruto_anual": 50385228,
+        "obj_neto_anual": 44591373,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ASEPXIA",
@@ -163,7 +229,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -31.5,
-        "yoy_bruto": -25.9
+        "yoy_bruto": -25.9,
+        "trade_obj_pct": 25.7,
+        "trade_desviacion": -4.0,
+        "obj_bruto_anual": 67296515,
+        "obj_neto_anual": 50005121,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "GOICOECHEA",
@@ -176,7 +248,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -24.9,
-        "yoy_bruto": -18.7
+        "yoy_bruto": -18.7,
+        "trade_obj_pct": 22.2,
+        "trade_desviacion": -0.5,
+        "obj_bruto_anual": 45376273,
+        "obj_neto_anual": 35291256,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "GROOMEN",
@@ -189,7 +267,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 7.2,
-        "yoy_bruto": 16.0
+        "yoy_bruto": 16.0,
+        "trade_obj_pct": 21.9,
+        "trade_desviacion": -0.2,
+        "obj_bruto_anual": 50819421,
+        "obj_neto_anual": 39689096,
+        "doble_erosion": false,
+        "trade_excedido": false
       },
       {
         "marca": "BIO",
@@ -202,7 +286,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -1.5,
-        "yoy_bruto": 6.6
+        "yoy_bruto": 6.6,
+        "trade_obj_pct": 11.9,
+        "trade_desviacion": 9.8,
+        "obj_bruto_anual": 33212135,
+        "obj_neto_anual": 29264808,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "NIKZON",
@@ -215,7 +305,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -16.8,
-        "yoy_bruto": -10.0
+        "yoy_bruto": -10.0,
+        "trade_obj_pct": 11.2,
+        "trade_desviacion": 10.5,
+        "obj_bruto_anual": 30166346,
+        "obj_neto_anual": 26800677,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "UNESIA",
@@ -228,7 +324,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -9.3,
-        "yoy_bruto": -1.8
+        "yoy_bruto": -1.8,
+        "trade_obj_pct": 20.1,
+        "trade_desviacion": 1.6,
+        "obj_bruto_anual": 45462627,
+        "obj_neto_anual": 36313820,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "POMADA DE LA CAMPANA",
@@ -241,7 +343,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -5.1,
-        "yoy_bruto": 2.7
+        "yoy_bruto": 2.7,
+        "trade_obj_pct": 11.1,
+        "trade_desviacion": 10.6,
+        "obj_bruto_anual": 26437508,
+        "obj_neto_anual": 23502944,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ALLIVIAX",
@@ -254,7 +362,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -14.9,
-        "yoy_bruto": -7.9
+        "yoy_bruto": -7.9,
+        "trade_obj_pct": 15.2,
+        "trade_desviacion": 6.4,
+        "obj_bruto_anual": 40871680,
+        "obj_neto_anual": 34659108,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "GOICOECHEA DIABET TX",
@@ -267,9 +381,20 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -43.1,
-        "yoy_bruto": -38.5
+        "yoy_bruto": -38.5,
+        "trade_obj_pct": 10.3,
+        "trade_desviacion": 11.4,
+        "obj_bruto_anual": 13834097,
+        "obj_neto_anual": 12411168,
+        "doble_erosion": true,
+        "trade_excedido": true
       }
-    ]
+    ],
+    "trade_obj_pct": 18.3,
+    "trade_real25_pct": 16.6,
+    "trade_desviacion_pts": 3.4,
+    "alerta_trade": "Trade real 21.7% supera objetivo 18.3% por 3.4 pts",
+    "alerta_nivel": "alta"
   },
   "ched": {
     "total_bruto_w12": 7157617,
@@ -292,7 +417,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -12.1,
-        "yoy_bruto": -4.9
+        "yoy_bruto": -4.9,
+        "trade_obj_pct": 16.7,
+        "trade_desviacion": 5.0,
+        "obj_bruto_anual": 63492021,
+        "obj_neto_anual": 52888853,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "SUEROX",
@@ -305,7 +436,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -4.5,
-        "yoy_bruto": 3.3
+        "yoy_bruto": 3.3,
+        "trade_obj_pct": 16.7,
+        "trade_desviacion": 5.0,
+        "obj_bruto_anual": 37528279,
+        "obj_neto_anual": 31261056,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "TEATRICAL",
@@ -318,7 +455,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 21.5,
-        "yoy_bruto": 31.5
+        "yoy_bruto": 31.5,
+        "trade_obj_pct": 16.3,
+        "trade_desviacion": 5.4,
+        "obj_bruto_anual": 22535846,
+        "obj_neto_anual": 18862503,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "CICATRICURE",
@@ -331,7 +474,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -5.3,
-        "yoy_bruto": 2.5
+        "yoy_bruto": 2.5,
+        "trade_obj_pct": 15.5,
+        "trade_desviacion": 6.2,
+        "obj_bruto_anual": 24101193,
+        "obj_neto_anual": 20365508,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "XL-3",
@@ -344,7 +493,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": 3.4,
-        "yoy_bruto": 11.9
+        "yoy_bruto": 11.9,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.3,
+        "obj_bruto_anual": 18062495,
+        "obj_neto_anual": 15479558,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "VANART",
@@ -357,7 +512,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -30.8,
-        "yoy_bruto": -25.1
+        "yoy_bruto": -25.1,
+        "trade_obj_pct": 16.7,
+        "trade_desviacion": 5.0,
+        "obj_bruto_anual": 18263003,
+        "obj_neto_anual": 15213082,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "LOMECAN V",
@@ -370,7 +531,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 3.5,
-        "yoy_bruto": 12.0
+        "yoy_bruto": 12.0,
+        "trade_obj_pct": 16.3,
+        "trade_desviacion": 5.4,
+        "obj_bruto_anual": 16089304,
+        "obj_neto_anual": 13466747,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "ASEPXIA",
@@ -383,7 +550,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -30.2,
-        "yoy_bruto": -24.5
+        "yoy_bruto": -24.5,
+        "trade_obj_pct": 15.5,
+        "trade_desviacion": 6.2,
+        "obj_bruto_anual": 21042568,
+        "obj_neto_anual": 17780970,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "TUKOL",
@@ -396,7 +569,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -34.5,
-        "yoy_bruto": -29.1
+        "yoy_bruto": -29.1,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.3,
+        "obj_bruto_anual": 13511478,
+        "obj_neto_anual": 11579337,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "SILKAMEDIC",
@@ -409,7 +588,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -29.4,
-        "yoy_bruto": -23.7
+        "yoy_bruto": -23.7,
+        "trade_obj_pct": 16.3,
+        "trade_desviacion": 5.4,
+        "obj_bruto_anual": 15304945,
+        "obj_neto_anual": 12810239,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NEXT",
@@ -422,7 +607,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -1.5,
-        "yoy_bruto": 6.6
+        "yoy_bruto": 6.6,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.3,
+        "obj_bruto_anual": 10161658,
+        "obj_neto_anual": 8708541,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "MEDICASP",
@@ -435,7 +626,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 4.8,
-        "yoy_bruto": 13.5
+        "yoy_bruto": 13.5,
+        "trade_obj_pct": 15.5,
+        "trade_desviacion": 6.2,
+        "obj_bruto_anual": 9725671,
+        "obj_neto_anual": 8218192,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "ALERT",
@@ -448,7 +645,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -22.3,
-        "yoy_bruto": -15.9
+        "yoy_bruto": -15.9,
+        "trade_obj_pct": 15.5,
+        "trade_desviacion": 6.2,
+        "obj_bruto_anual": 9879471,
+        "obj_neto_anual": 8348153,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ALLIVIAX",
@@ -461,7 +664,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -34.6,
-        "yoy_bruto": -29.3
+        "yoy_bruto": -29.3,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.3,
+        "obj_bruto_anual": 8805778,
+        "obj_neto_anual": 7546551,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "COLONIA SANBORNS",
@@ -474,7 +683,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 11.6,
-        "yoy_bruto": 20.7
+        "yoy_bruto": 20.7,
+        "trade_obj_pct": 11.5,
+        "trade_desviacion": 10.2,
+        "obj_bruto_anual": 7132521,
+        "obj_neto_anual": 6312281,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "BIO",
@@ -487,7 +702,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -3.7,
-        "yoy_bruto": 4.2
+        "yoy_bruto": 4.2,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.4,
+        "obj_bruto_anual": 6426672,
+        "obj_neto_anual": 5507658,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "GROOMEN",
@@ -500,7 +721,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -4.3,
-        "yoy_bruto": 3.6
+        "yoy_bruto": 3.6,
+        "trade_obj_pct": 16.3,
+        "trade_desviacion": 5.4,
+        "obj_bruto_anual": 8174013,
+        "obj_neto_anual": 6841648,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "GOICOECHEA",
@@ -513,7 +740,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.8,
         "yoy_neto": -1.7,
-        "yoy_bruto": 6.4
+        "yoy_bruto": 6.4,
+        "trade_obj_pct": 15.5,
+        "trade_desviacion": 6.3,
+        "obj_bruto_anual": 6275970,
+        "obj_neto_anual": 5303195,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "NIKZON",
@@ -526,7 +759,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -35.8,
-        "yoy_bruto": -30.5
+        "yoy_bruto": -30.5,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.3,
+        "obj_bruto_anual": 6222279,
+        "obj_neto_anual": 5332493,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NORDIKO",
@@ -539,9 +778,20 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -12.2,
-        "yoy_bruto": -5.0
+        "yoy_bruto": -5.0,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.4,
+        "obj_bruto_anual": 1836188,
+        "obj_neto_anual": 1573613,
+        "doble_erosion": true,
+        "trade_excedido": true
       }
-    ]
+    ],
+    "trade_obj_pct": 15.4,
+    "trade_real25_pct": 22.6,
+    "trade_desviacion_pts": 6.3,
+    "alerta_trade": "Trade real 21.7% supera objetivo 15.4% por 6.3 pts",
+    "alerta_nivel": "critica"
   },
   "sor": {
     "total_bruto_w12": 7294526,
@@ -564,7 +814,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -28.8,
-        "yoy_bruto": -23.0
+        "yoy_bruto": -23.0,
+        "trade_obj_pct": 15.7,
+        "trade_desviacion": 6.0,
+        "obj_bruto_anual": 52361796,
+        "obj_neto_anual": 44152631,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "TIO NACHO",
@@ -577,7 +833,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -22.8,
-        "yoy_bruto": -16.5
+        "yoy_bruto": -16.5,
+        "trade_obj_pct": 15.4,
+        "trade_desviacion": 6.3,
+        "obj_bruto_anual": 63557089,
+        "obj_neto_anual": 53745591,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "TEATRICAL",
@@ -590,7 +852,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 24.7,
-        "yoy_bruto": 34.9
+        "yoy_bruto": 34.9,
+        "trade_obj_pct": 14.8,
+        "trade_desviacion": 6.9,
+        "obj_bruto_anual": 27741027,
+        "obj_neto_anual": 23637260,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "XL-3",
@@ -603,7 +871,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -25.9,
-        "yoy_bruto": -19.8
+        "yoy_bruto": -19.8,
+        "trade_obj_pct": 12.7,
+        "trade_desviacion": 8.9,
+        "obj_bruto_anual": 20455635,
+        "obj_neto_anual": 17860677,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "CICATRICURE",
@@ -616,7 +890,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -51.5,
-        "yoy_bruto": -47.5
+        "yoy_bruto": -47.5,
+        "trade_obj_pct": 13.8,
+        "trade_desviacion": 7.9,
+        "obj_bruto_anual": 25627768,
+        "obj_neto_anual": 22099608,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "VANART",
@@ -629,7 +909,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.8,
         "yoy_neto": -20.7,
-        "yoy_bruto": -14.2
+        "yoy_bruto": -14.2,
+        "trade_obj_pct": 15.5,
+        "trade_desviacion": 6.3,
+        "obj_bruto_anual": 24972840,
+        "obj_neto_anual": 21113532,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "SILKAMEDIC",
@@ -642,7 +928,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -19.4,
-        "yoy_bruto": -12.8
+        "yoy_bruto": -12.8,
+        "trade_obj_pct": 15.1,
+        "trade_desviacion": 6.6,
+        "obj_bruto_anual": 21632663,
+        "obj_neto_anual": 18365363,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "LOMECAN V",
@@ -655,7 +947,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -23.5,
-        "yoy_bruto": -17.2
+        "yoy_bruto": -17.2,
+        "trade_obj_pct": 15.1,
+        "trade_desviacion": 6.5,
+        "obj_bruto_anual": 15846102,
+        "obj_neto_anual": 13455984,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "TUKOL",
@@ -668,7 +966,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -46.0,
-        "yoy_bruto": -41.6
+        "yoy_bruto": -41.6,
+        "trade_obj_pct": 12.4,
+        "trade_desviacion": 9.2,
+        "obj_bruto_anual": 15317483,
+        "obj_neto_anual": 13417704,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NEXT",
@@ -681,7 +985,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -20.8,
-        "yoy_bruto": -14.3
+        "yoy_bruto": -14.3,
+        "trade_obj_pct": 12.5,
+        "trade_desviacion": 9.1,
+        "obj_bruto_anual": 13206286,
+        "obj_neto_anual": 11551285,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ASEPXIA",
@@ -694,7 +1004,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -37.8,
-        "yoy_bruto": -32.7
+        "yoy_bruto": -32.7,
+        "trade_obj_pct": 13.9,
+        "trade_desviacion": 7.7,
+        "obj_bruto_anual": 16677960,
+        "obj_neto_anual": 14355838,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "MEDICASP",
@@ -707,7 +1023,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -18.2,
-        "yoy_bruto": -11.5
+        "yoy_bruto": -11.5,
+        "trade_obj_pct": 14.2,
+        "trade_desviacion": 7.4,
+        "obj_bruto_anual": 10533327,
+        "obj_neto_anual": 9039018,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "GROOMEN",
@@ -720,7 +1042,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -38.7,
-        "yoy_bruto": -33.7
+        "yoy_bruto": -33.7,
+        "trade_obj_pct": 15.0,
+        "trade_desviacion": 6.6,
+        "obj_bruto_anual": 9356341,
+        "obj_neto_anual": 7952764,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ALERT",
@@ -733,7 +1061,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -15.9,
-        "yoy_bruto": -9.0
+        "yoy_bruto": -9.0,
+        "trade_obj_pct": 13.6,
+        "trade_desviacion": 8.0,
+        "obj_bruto_anual": 9978955,
+        "obj_neto_anual": 8622163,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NIKZON",
@@ -746,7 +1080,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -19.6,
-        "yoy_bruto": -13.0
+        "yoy_bruto": -13.0,
+        "trade_obj_pct": 12.4,
+        "trade_desviacion": 9.3,
+        "obj_bruto_anual": 10775955,
+        "obj_neto_anual": 9436893,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "BIO",
@@ -759,7 +1099,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -18.7,
-        "yoy_bruto": -12.0
+        "yoy_bruto": -12.0,
+        "trade_obj_pct": 12.7,
+        "trade_desviacion": 9.0,
+        "obj_bruto_anual": 10441284,
+        "obj_neto_anual": 9120114,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "GOICOECHEA",
@@ -772,7 +1118,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -1.9,
-        "yoy_bruto": 6.2
+        "yoy_bruto": 6.2,
+        "trade_obj_pct": 14.0,
+        "trade_desviacion": 7.7,
+        "obj_bruto_anual": 10418496,
+        "obj_neto_anual": 8955547,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "COLONIA SANBORNS",
@@ -785,7 +1137,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -27.5,
-        "yoy_bruto": -21.5
+        "yoy_bruto": -21.5,
+        "trade_obj_pct": 8.3,
+        "trade_desviacion": 13.4,
+        "obj_bruto_anual": 9961794,
+        "obj_neto_anual": 9136278,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ALLIVIAX",
@@ -798,7 +1156,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -40.5,
-        "yoy_bruto": -35.6
+        "yoy_bruto": -35.6,
+        "trade_obj_pct": 12.5,
+        "trade_desviacion": 9.1,
+        "obj_bruto_anual": 10369091,
+        "obj_neto_anual": 9069778,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "WILDROOT",
@@ -811,9 +1175,20 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -31.3,
-        "yoy_bruto": -25.6
+        "yoy_bruto": -25.6,
+        "trade_obj_pct": 11.8,
+        "trade_desviacion": 9.9,
+        "obj_bruto_anual": 8247809,
+        "obj_neto_anual": 7277979,
+        "doble_erosion": true,
+        "trade_excedido": true
       }
-    ]
+    ],
+    "trade_obj_pct": 13.9,
+    "trade_real25_pct": 20.2,
+    "trade_desviacion_pts": 7.8,
+    "alerta_trade": "Trade real 21.7% supera objetivo 13.9% por 7.8 pts",
+    "alerta_nivel": "critica"
   },
   "oxxo": {
     "total_bruto_w12": 7822337,
@@ -836,7 +1211,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -44.1,
-        "yoy_bruto": -39.5
+        "yoy_bruto": -39.5,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.6,
+        "obj_bruto_anual": 144900674,
+        "obj_neto_anual": 108240803,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "XL-3",
@@ -849,7 +1230,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -14.8,
-        "yoy_bruto": -7.8
+        "yoy_bruto": -7.8,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.7,
+        "obj_bruto_anual": 66605985,
+        "obj_neto_anual": 49754671,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "BIO",
@@ -862,7 +1249,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -10.8,
-        "yoy_bruto": -3.5
+        "yoy_bruto": -3.5,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.6,
+        "obj_bruto_anual": 48693170,
+        "obj_neto_anual": 36373798,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "NEXT",
@@ -875,7 +1268,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -2.8,
-        "yoy_bruto": 5.1
+        "yoy_bruto": 5.1,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.7,
+        "obj_bruto_anual": 48739381,
+        "obj_neto_anual": 36408317,
+        "doble_erosion": false,
+        "trade_excedido": false
       },
       {
         "marca": "CONDON M",
@@ -888,7 +1287,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 2.7,
-        "yoy_bruto": 11.2
+        "yoy_bruto": 11.2,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.6,
+        "obj_bruto_anual": 28219618,
+        "obj_neto_anual": 21080055,
+        "doble_erosion": false,
+        "trade_excedido": false
       },
       {
         "marca": "GENOPRAZOL",
@@ -901,7 +1306,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -33.5,
-        "yoy_bruto": -28.1
+        "yoy_bruto": -28.1,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.6,
+        "obj_bruto_anual": 19329375,
+        "obj_neto_anual": 14439043,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "ALLIVIAX",
@@ -914,7 +1325,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -74.3,
-        "yoy_bruto": -72.2
+        "yoy_bruto": -72.2,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.6,
+        "obj_bruto_anual": 14503741,
+        "obj_neto_anual": 10834294,
+        "doble_erosion": true,
+        "trade_excedido": false
       },
       {
         "marca": "TUKOL",
@@ -927,7 +1344,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": 8894.6,
-        "yoy_bruto": 9637.9
+        "yoy_bruto": 9637.9,
+        "trade_obj_pct": 25.3,
+        "trade_desviacion": -3.7,
+        "obj_bruto_anual": 2412174,
+        "obj_neto_anual": 1801894,
+        "doble_erosion": false,
+        "trade_excedido": false
       },
       {
         "marca": "GROOMEN",
@@ -940,7 +1363,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.8,
         "yoy_neto": -89.6,
-        "yoy_bruto": -88.7
+        "yoy_bruto": -88.7,
+        "trade_obj_pct": 0,
+        "trade_desviacion": 21.8,
+        "obj_bruto_anual": 0,
+        "obj_neto_anual": 0,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "POMADA DE LA CAMPANA",
@@ -953,7 +1382,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -65.1,
-        "yoy_bruto": -62.3
+        "yoy_bruto": -62.3,
+        "trade_obj_pct": 0,
+        "trade_desviacion": 21.7,
+        "obj_bruto_anual": 0,
+        "obj_neto_anual": 0,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ASEPXIA",
@@ -966,7 +1401,13 @@
         "pct_trade_w12": 0,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -100.0,
-        "yoy_bruto": -100.0
+        "yoy_bruto": -100.0,
+        "trade_obj_pct": 0,
+        "trade_desviacion": 21.6,
+        "obj_bruto_anual": 0,
+        "obj_neto_anual": 0,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "TIO NACHO",
@@ -979,7 +1420,13 @@
         "pct_trade_w12": 0,
         "pct_trade_ytd": 21.8,
         "yoy_neto": 0,
-        "yoy_bruto": 0
+        "yoy_bruto": 0,
+        "trade_obj_pct": 0,
+        "trade_desviacion": 21.8,
+        "obj_bruto_anual": 0,
+        "obj_neto_anual": 0,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "KAOPECTATE",
@@ -992,7 +1439,13 @@
         "pct_trade_w12": 0,
         "pct_trade_ytd": 22.6,
         "yoy_neto": 0,
-        "yoy_bruto": 0
+        "yoy_bruto": 0,
+        "trade_obj_pct": 0,
+        "trade_desviacion": 22.6,
+        "obj_bruto_anual": 0,
+        "obj_neto_anual": 0,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "VANART",
@@ -1005,9 +1458,20 @@
         "pct_trade_w12": 0,
         "pct_trade_ytd": 23.5,
         "yoy_neto": -100.0,
-        "yoy_bruto": -100.0
+        "yoy_bruto": -100.0,
+        "trade_obj_pct": 0,
+        "trade_desviacion": 23.5,
+        "obj_bruto_anual": 0,
+        "obj_neto_anual": 0,
+        "doble_erosion": false,
+        "trade_excedido": true
       }
-    ]
+    ],
+    "trade_obj_pct": 25.3,
+    "trade_real25_pct": 30.6,
+    "trade_desviacion_pts": -3.6,
+    "alerta_trade": null,
+    "alerta_nivel": null
   },
   "ahorro": {
     "total_bruto_w12": 14781324,
@@ -1030,7 +1494,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 15.4,
-        "yoy_bruto": 24.9
+        "yoy_bruto": 24.9,
+        "trade_obj_pct": 12.9,
+        "trade_desviacion": 8.8,
+        "obj_bruto_anual": 299915442,
+        "obj_neto_anual": 261080308,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "XL-3",
@@ -1043,7 +1513,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -13.4,
-        "yoy_bruto": -6.3
+        "yoy_bruto": -6.3,
+        "trade_obj_pct": 14.2,
+        "trade_desviacion": 7.4,
+        "obj_bruto_anual": 100954052,
+        "obj_neto_anual": 86643924,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "TUKOL",
@@ -1056,7 +1532,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.5,
         "yoy_neto": -36.0,
-        "yoy_bruto": -30.8
+        "yoy_bruto": -30.8,
+        "trade_obj_pct": 14.2,
+        "trade_desviacion": 7.3,
+        "obj_bruto_anual": 87500638,
+        "obj_neto_anual": 75043537,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NIKZON",
@@ -1069,7 +1551,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -21.1,
-        "yoy_bruto": -14.6
+        "yoy_bruto": -14.6,
+        "trade_obj_pct": 13.8,
+        "trade_desviacion": 7.9,
+        "obj_bruto_anual": 58330048,
+        "obj_neto_anual": 50277392,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NEXT",
@@ -1082,7 +1570,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.8,
         "yoy_neto": -18.5,
-        "yoy_bruto": -11.9
+        "yoy_bruto": -11.9,
+        "trade_obj_pct": 14.3,
+        "trade_desviacion": 7.5,
+        "obj_bruto_anual": 42081764,
+        "obj_neto_anual": 36058463,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "BIO",
@@ -1095,7 +1589,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -12.3,
-        "yoy_bruto": -5.1
+        "yoy_bruto": -5.1,
+        "trade_obj_pct": 14.2,
+        "trade_desviacion": 7.5,
+        "obj_bruto_anual": 40689482,
+        "obj_neto_anual": 34916554,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "ALLIVIAX",
@@ -1108,7 +1608,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -38.3,
-        "yoy_bruto": -33.3
+        "yoy_bruto": -33.3,
+        "trade_obj_pct": 14.1,
+        "trade_desviacion": 7.5,
+        "obj_bruto_anual": 41041545,
+        "obj_neto_anual": 35239196,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "LOMECAN V",
@@ -1121,7 +1627,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -7.9,
-        "yoy_bruto": -0.4
+        "yoy_bruto": -0.4,
+        "trade_obj_pct": 11.4,
+        "trade_desviacion": 10.3,
+        "obj_bruto_anual": 27348811,
+        "obj_neto_anual": 24243958,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "SILKAMEDIC",
@@ -1134,7 +1646,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -32.2,
-        "yoy_bruto": -26.6
+        "yoy_bruto": -26.6,
+        "trade_obj_pct": 11.4,
+        "trade_desviacion": 10.3,
+        "obj_bruto_anual": 33952360,
+        "obj_neto_anual": 30069755,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "SUEROX",
@@ -1147,7 +1665,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.8,
         "yoy_neto": -18.6,
-        "yoy_bruto": -11.9
+        "yoy_bruto": -11.9,
+        "trade_obj_pct": 11.2,
+        "trade_desviacion": 10.6,
+        "obj_bruto_anual": 14635816,
+        "obj_neto_anual": 12996672,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "MEDICASP",
@@ -1160,7 +1684,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -6.0,
-        "yoy_bruto": 1.7
+        "yoy_bruto": 1.7,
+        "trade_obj_pct": 13.0,
+        "trade_desviacion": 8.6,
+        "obj_bruto_anual": 13080470,
+        "obj_neto_anual": 11381650,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "POINTTS",
@@ -1173,7 +1703,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -20.2,
-        "yoy_bruto": -13.7
+        "yoy_bruto": -13.7,
+        "trade_obj_pct": 13.3,
+        "trade_desviacion": 8.4,
+        "obj_bruto_anual": 19370458,
+        "obj_neto_anual": 16788701,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "CONDON M",
@@ -1186,7 +1722,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -25.8,
-        "yoy_bruto": -19.8
+        "yoy_bruto": -19.8,
+        "trade_obj_pct": 12.9,
+        "trade_desviacion": 8.8,
+        "obj_bruto_anual": 15527292,
+        "obj_neto_anual": 13518447,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "QG5",
@@ -1199,7 +1741,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -31.2,
-        "yoy_bruto": -25.5
+        "yoy_bruto": -25.5,
+        "trade_obj_pct": 13.9,
+        "trade_desviacion": 7.8,
+        "obj_bruto_anual": 13469101,
+        "obj_neto_anual": 11599537,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "CICATRICURE",
@@ -1212,7 +1760,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -20.9,
-        "yoy_bruto": -14.5
+        "yoy_bruto": -14.5,
+        "trade_obj_pct": 13.1,
+        "trade_desviacion": 8.6,
+        "obj_bruto_anual": 10893718,
+        "obj_neto_anual": 9466556,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "BENGUE",
@@ -1225,7 +1779,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -20.9,
-        "yoy_bruto": -14.4
+        "yoy_bruto": -14.4,
+        "trade_obj_pct": 10.8,
+        "trade_desviacion": 10.9,
+        "obj_bruto_anual": 14809797,
+        "obj_neto_anual": 13212413,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "UNESIA",
@@ -1238,7 +1798,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -14.1,
-        "yoy_bruto": -7.0
+        "yoy_bruto": -7.0,
+        "trade_obj_pct": 11.0,
+        "trade_desviacion": 10.7,
+        "obj_bruto_anual": 12069198,
+        "obj_neto_anual": 10742495,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "GENOPRAZOL",
@@ -1251,7 +1817,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -26.4,
-        "yoy_bruto": -20.4
+        "yoy_bruto": -20.4,
+        "trade_obj_pct": 14.4,
+        "trade_desviacion": 7.3,
+        "obj_bruto_anual": 14053285,
+        "obj_neto_anual": 12036103,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NASALUB",
@@ -1264,7 +1836,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -31.1,
-        "yoy_bruto": -25.4
+        "yoy_bruto": -25.4,
+        "trade_obj_pct": 11.2,
+        "trade_desviacion": 10.5,
+        "obj_bruto_anual": 5703076,
+        "obj_neto_anual": 5064135,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "TIO NACHO",
@@ -1277,9 +1855,20 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": 28.1,
-        "yoy_bruto": 38.6
+        "yoy_bruto": 38.6,
+        "trade_obj_pct": 12.8,
+        "trade_desviacion": 8.8,
+        "obj_bruto_anual": 6231804,
+        "obj_neto_anual": 5432135,
+        "doble_erosion": false,
+        "trade_excedido": true
       }
-    ]
+    ],
+    "trade_obj_pct": 13.2,
+    "trade_real25_pct": 11.3,
+    "trade_desviacion_pts": 8.5,
+    "alerta_trade": "Trade real 21.7% supera objetivo 13.2% por 8.5 pts",
+    "alerta_nivel": "critica"
   },
   "costco": {
     "total_bruto_w12": 929427,
@@ -1302,7 +1891,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 41.4,
-        "yoy_bruto": 52.9
+        "yoy_bruto": 52.9,
+        "trade_obj_pct": 14.0,
+        "trade_desviacion": 7.7,
+        "obj_bruto_anual": 2539671,
+        "obj_neto_anual": 2184971,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "BIO",
@@ -1315,7 +1910,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -14.8,
-        "yoy_bruto": -7.9
+        "yoy_bruto": -7.9,
+        "trade_obj_pct": 13.6,
+        "trade_desviacion": 8.0,
+        "obj_bruto_anual": 11490996,
+        "obj_neto_anual": 9930745,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "MEDICASP",
@@ -1328,7 +1929,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 22.7,
-        "yoy_bruto": 32.8
+        "yoy_bruto": 32.8,
+        "trade_obj_pct": 14.7,
+        "trade_desviacion": 7.0,
+        "obj_bruto_anual": 6935915,
+        "obj_neto_anual": 5914913,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "NIKZON",
@@ -1341,7 +1948,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.8,
         "yoy_neto": -44.5,
-        "yoy_bruto": -39.9
+        "yoy_bruto": -39.9,
+        "trade_obj_pct": 11.3,
+        "trade_desviacion": 10.5,
+        "obj_bruto_anual": 11313994,
+        "obj_neto_anual": 10034382,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "SILKAMEDIC",
@@ -1354,7 +1967,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -9.1,
-        "yoy_bruto": -1.7
+        "yoy_bruto": -1.7,
+        "trade_obj_pct": 11.8,
+        "trade_desviacion": 9.9,
+        "obj_bruto_anual": 6494065,
+        "obj_neto_anual": 5725488,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "SUEROX",
@@ -1367,7 +1986,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": 0,
-        "yoy_bruto": 0
+        "yoy_bruto": 0,
+        "trade_obj_pct": 0,
+        "trade_desviacion": 21.7,
+        "obj_bruto_anual": 0,
+        "obj_neto_anual": 0,
+        "doble_erosion": false,
+        "trade_excedido": true
       },
       {
         "marca": "TUKOL",
@@ -1380,7 +2005,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -86.0,
-        "yoy_bruto": -84.8
+        "yoy_bruto": -84.8,
+        "trade_obj_pct": 13.4,
+        "trade_desviacion": 8.2,
+        "obj_bruto_anual": 13922714,
+        "obj_neto_anual": 12057068,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "QG5",
@@ -1393,7 +2024,13 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.7,
         "yoy_neto": -66.3,
-        "yoy_bruto": -63.5
+        "yoy_bruto": -63.5,
+        "trade_obj_pct": 11.3,
+        "trade_desviacion": 10.4,
+        "obj_bruto_anual": 4130325,
+        "obj_neto_anual": 3662655,
+        "doble_erosion": true,
+        "trade_excedido": true
       },
       {
         "marca": "NEXT",
@@ -1406,8 +2043,19 @@
         "pct_trade_w12": 22.1,
         "pct_trade_ytd": 21.6,
         "yoy_neto": -86.7,
-        "yoy_bruto": -85.6
+        "yoy_bruto": -85.6,
+        "trade_obj_pct": 13.7,
+        "trade_desviacion": 7.9,
+        "obj_bruto_anual": 4647757,
+        "obj_neto_anual": 4012911,
+        "doble_erosion": true,
+        "trade_excedido": true
       }
-    ]
+    ],
+    "trade_obj_pct": 12.9,
+    "trade_real25_pct": 10.7,
+    "trade_desviacion_pts": 8.8,
+    "alerta_trade": "Trade real 21.7% supera objetivo 12.9% por 8.8 pts",
+    "alerta_nivel": "critica"
   }
 }
