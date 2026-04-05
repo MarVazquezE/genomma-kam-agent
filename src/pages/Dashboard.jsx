@@ -870,48 +870,82 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
     return bOpp - aOpp
   })
 
-  const menuSections = [
-    { id: "scorecard", label: "Scorecard General", icon: "\u25CB" },
-    { id: "agenda", label: "Agenda KAM", icon: "!" },
-    { id: "bruto_neto", label: "Bruto vs Neto", icon: "\u0394" },
-    { id: "oc_sugerida", label: "OC Sugerida", icon: "\u2193" },
-    { id: "marca_cliente", label: "Marca x Cliente", icon: "\u2194" },
-    { id: "cuentas", label: "Detalle por Cuenta", icon: "=" },
-    { id: "marcas", label: "Mapa de Marcas", icon: "+" },
-    { id: "share", label: "Market Share", icon: "%" },
-    { id: "tp", label: "Tienda Perfecta", icon: "T" },
-    { id: "kbd", label: "KBDs por Marca", icon: "K" },
-    { id: "alertas", label: "Alertas Ejecucion", icon: "x" },
+  const menuGroups = [
+    { title: "Operacion Diaria", items: [
+      { id: "scorecard", label: "Scorecard General", icon: "\u25CB" },
+      { id: "agenda", label: "Agenda KAM", icon: "!" },
+      { id: "cuentas", label: "Detalle por Cuenta", icon: "=" },
+    ]},
+    { title: "Analisis por Marca", items: [
+      { id: "marca_cliente", label: "Marca x Cliente", icon: "\u2194" },
+      { id: "marcas", label: "Mapa de Marcas", icon: "+" },
+      { id: "bruto_neto", label: "Bruto vs Neto", icon: "\u0394" },
+      { id: "oc_sugerida", label: "OC Sugerida", icon: "\u2193" },
+    ]},
+    { title: "Ejecucion", items: [
+      { id: "tp", label: "Tienda Perfecta", icon: "T" },
+      { id: "share", label: "Market Share", icon: "%" },
+      { id: "kbd", label: "KBDs por Marca", icon: "K" },
+      { id: "alertas", label: "Alertas", icon: "x" },
+    ]},
+  ]
+
+  const aiTools = [
+    { label: "Agente IA", action: "agent", desc: "Analisis y acciones con IA", icon: "\u2726" },
+    { label: "One-Pager + PPT", action: "onepager", desc: "Plan comercial automatico", icon: "\u2193" },
+    { label: "Presentacion", action: "presentacion", desc: "Deck para el comprador", icon: "\u25A1" },
   ]
 
   return (
     <div style={{ display: "flex", gap: 20 }}>
       <div style={{ width: 210, flexShrink: 0, background: "#141B2D", borderRadius: "var(--radius-lg)", padding: "16px 12px", minHeight: "calc(100vh - 140px)" }}>
-        <div style={{ fontSize: 10, fontWeight: 700, color: "#8B95A5", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>Navegacion</div>
-        {menuSections.map(item => (
-          <div key={item.id} onClick={() => setActiveSection(item.id)} style={{ background: activeSection === item.id ? "rgba(6,182,212,0.15)" : "transparent", border: "1px solid " + (activeSection === item.id ? "var(--cyan)" : "transparent"), borderRadius: "var(--radius-md)", padding: "8px 10px", marginBottom: 3, cursor: "pointer" }}>
+        
+        {/* HERRAMIENTAS IA — lo primero, destacado */}
+        <div style={{ fontSize: 10, fontWeight: 700, color: "var(--cyan)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>Herramientas IA</div>
+        {aiTools.map((m, i) => (
+          <div key={i} onClick={() => onModuleClick(m.action, selectedAccount)} style={{ background: "rgba(6,182,212,0.08)", border: "1px solid rgba(6,182,212,0.25)", borderRadius: "var(--radius-md)", padding: "8px 10px", marginBottom: 4, cursor: "pointer" }}
+            onMouseEnter={e => { e.currentTarget.style.background = "rgba(6,182,212,0.18)"; e.currentTarget.style.borderColor = "var(--cyan)" }}
+            onMouseLeave={e => { e.currentTarget.style.background = "rgba(6,182,212,0.08)"; e.currentTarget.style.borderColor = "rgba(6,182,212,0.25)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ fontSize: 12, color: activeSection === item.id ? "var(--cyan)" : "#8B95A5", width: 14, textAlign: "center" }}>{item.icon}</span>
-              <span style={{ fontWeight: 700, fontSize: 11, color: activeSection === item.id ? "var(--white)" : "#8B95A5" }}>{item.label}</span>
+              <span style={{ fontSize: 14, color: "var(--cyan)" }}>{m.icon}</span>
+              <div>
+                <div style={{ fontWeight: 700, fontSize: 11, color: "var(--white)" }}>{m.label}</div>
+                <div style={{ fontSize: 9, color: "var(--silver)" }}>{m.desc}</div>
+              </div>
             </div>
           </div>
         ))}
+        
         <div style={{ height: 1, background: "#1E2A3A", margin: "10px 0" }} />
-        <div style={{ fontSize: 10, fontWeight: 700, color: "#8B95A5", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>Modulos</div>
-        {[
-          { label: "Agente IA", action: "agent" },
-          { label: "One-Pager + PPT", action: "onepager" },
-          { label: "Presentacion", action: "presentacion" },
-          { label: "Senales Bursatiles", action: "signals" }
-        ].map((m, i) => (
-          <div key={i} onClick={() => onModuleClick(m.action, selectedAccount)} style={{ border: "1px solid #1E2A3A", borderRadius: "var(--radius-md)", padding: "8px 10px", marginBottom: 3, cursor: "pointer" }}
-            onMouseEnter={e => { e.currentTarget.style.background = "rgba(6,182,212,0.1)"; e.currentTarget.style.borderColor = "var(--cyan)" }}
-            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "#1E2A3A" }}>
-            <div style={{ fontWeight: 700, fontSize: 11, color: "var(--cyan)" }}>{m.label}</div>
+
+        {/* MENU AGRUPADO */}
+        {menuGroups.map((group, gi) => (
+          <div key={gi}>
+            <div style={{ fontSize: 9, fontWeight: 700, color: "#8B95A5", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6, marginTop: gi > 0 ? 8 : 0 }}>{group.title}</div>
+            {group.items.map(item => (
+              <div key={item.id} onClick={() => setActiveSection(item.id)} style={{ background: activeSection === item.id ? "rgba(6,182,212,0.15)" : "transparent", border: "1px solid " + (activeSection === item.id ? "var(--cyan)" : "transparent"), borderRadius: "var(--radius-md)", padding: "7px 10px", marginBottom: 2, cursor: "pointer" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 11, color: activeSection === item.id ? "var(--cyan)" : "#8B95A5", width: 14, textAlign: "center" }}>{item.icon}</span>
+                  <span style={{ fontWeight: 700, fontSize: 11, color: activeSection === item.id ? "var(--white)" : "#8B95A5" }}>{item.label}</span>
+                </div>
+              </div>
+            ))}
           </div>
         ))}
+
         <div style={{ height: 1, background: "#1E2A3A", margin: "10px 0" }} />
-        <div style={{ fontSize: 10, fontWeight: 700, color: "#8B95A5", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>Cuentas</div>
+
+        {/* SEÑALES BURSATILES */}
+        <div onClick={() => onModuleClick("signals", selectedAccount)} style={{ border: "1px solid #1E2A3A", borderRadius: "var(--radius-md)", padding: "7px 10px", marginBottom: 6, cursor: "pointer" }}
+          onMouseEnter={e => { e.currentTarget.style.background = "rgba(6,182,212,0.1)"; e.currentTarget.style.borderColor = "var(--cyan)" }}
+          onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "#1E2A3A" }}>
+          <div style={{ fontWeight: 700, fontSize: 11, color: "#8B95A5" }}>Senales Bursatiles</div>
+        </div>
+
+        <div style={{ height: 1, background: "#1E2A3A", margin: "10px 0" }} />
+
+        {/* CUENTAS */}
+        <div style={{ fontSize: 9, fontWeight: 700, color: "#8B95A5", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>Cuentas</div>
         {accountSorted.map(acc => {
           const tp = tiendaPerfecta[acc.id]
           const tpColor = tp ? (tp.score_general_pct >= 80 ? "#10B981" : tp.score_general_pct >= 65 ? "#F59E0B" : "#EF4444") : "#8B95A5"
