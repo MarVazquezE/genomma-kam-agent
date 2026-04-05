@@ -9,6 +9,7 @@ import brutoNeto from "../data/bruto_neto.json"
 import tiendaPerfecta from "../data/tienda_perfecta.json"
 import brandMap from "../data/brand_map.json"
 import marcasNacional from "../data/marcas_nacional.json"
+import executionScorecard from "../data/execution_scorecard.json"
 import { formatMXN, formatPct, getAccountHealth, getHealthLabel, getLastWeekSellout, getPrevWeekSellout, getAvgCoverage } from "../utils/helpers"
 
 const SKU_COLORS = ["#6366F1","#14B8A6","#F59E0B","#F43F5E","#8B5CF6","#06B6D4","#F97316","#EC4899","#10B981","#3B82F6","#EF4444","#84CC16"]
@@ -158,53 +159,77 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
 
       {/* TABLA POR MARCA: SO Neto YTD (vs LY), SO Neto LW (vs LY), Inventario, TP, Trade */}
       <div className="card" style={{ marginBottom: 16 }}>
-        <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Performance por Marca — Sell-Out Neto</div>
-        <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>{selectedCat === "Todas" ? "Todas las categorias" : selectedCat} · {filteredMarcas.length} marcas · W12 2026</div>
-        <table className="data-table">
-          <thead>
-            <tr>
-              <th>Marca</th>
-              <th>Categoria</th>
-              <th style={{ textAlign: "right" }}>SO Neto YTD</th>
-              <th style={{ textAlign: "right" }}>vs LY</th>
-              <th style={{ textAlign: "right" }}>SO Neto LW</th>
-              <th style={{ textAlign: "right" }}>vs LY</th>
-              <th style={{ textAlign: "right" }}>Inventario</th>
-              <th style={{ textAlign: "right" }}>TP</th>
-              <th style={{ textAlign: "right" }}>% Trade</th>
-              <th style={{ textAlign: "center" }}>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {marcaRows.map((r, i) => {
-              const covC = r.coverage < 7 ? "var(--critical)" : r.coverage < 14 ? "var(--warning)" : "var(--success)"
-              const tpC = r.tp_score >= 75 ? "var(--success)" : r.tp_score >= 60 ? "var(--warning)" : "var(--critical)"
-              const catCfg = { revertir: { bg: "var(--critical-light)", color: "var(--critical)", label: "Revertir" }, proteger: { bg: "var(--warning-light)", color: "#92400E", label: "Proteger" }, capitalizar: { bg: "var(--success-light)", color: "var(--success)", label: "Capitalizar" } }[r.categoria_mapa] || { bg: "var(--pearl)", color: "var(--silver)", label: "—" }
-              return (
-                <tr key={i}>
-                  <td style={{ fontWeight: 700 }}>{r.marca}</td>
-                  <td><span style={{ fontSize: 10, color: "var(--silver)" }}>{r.cat}</span></td>
-                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700 }}>{formatMXN(r.neto_ytd, true)}</td>
-                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: r.yoy_neto >= 0 ? "var(--success)" : "var(--critical)" }}>{r.yoy_neto > 0 ? "+" : ""}{r.yoy_neto}%</td>
-                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(r.neto_w12, true)}</td>
-                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: r.yoy_neto >= 0 ? "var(--success)" : "var(--critical)" }}>{r.yoy_neto > 0 ? "+" : ""}{r.yoy_neto}%</td>
-                  <td style={{ textAlign: "right" }}><span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: covC }}>{r.coverage}d</span></td>
-                  <td style={{ textAlign: "right" }}><span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: tpC }}>{r.tp_score > 0 ? r.tp_score.toFixed(0)+"%" : "—"}</span></td>
-                  <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, color: r.pct_trade > 25 ? "var(--critical)" : "var(--silver)" }}>{r.pct_trade}%</td>
-                  <td style={{ textAlign: "center" }}><span style={{ fontSize: 9, background: catCfg.bg, color: catCfg.color, padding: "2px 8px", borderRadius: 99, fontWeight: 700 }}>{catCfg.label}</span></td>
-                </tr>
-              )
-            })}
-            <tr style={{ background: "var(--pearl)", fontWeight: 800 }}>
-              <td style={{ fontWeight: 800 }}>TOTAL</td>
-              <td></td>
-              <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800 }}>{formatMXN(totalNetoYTD, true)}</td>
-              <td></td>
-              <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800 }}>{formatMXN(totalNetoW12, true)}</td>
-              <td colSpan={5}></td>
-            </tr>
-          </tbody>
-        </table>
+        <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Performance por Marca — Sell-Out Neto (80-20)</div>
+        <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>{selectedCat === "Todas" ? "Todas las categorias" : selectedCat} · Marcas ordenadas de mayor a menor venta · W12 2026</div>
+        {(() => {
+          // Apply 80-20: show marcas until we reach 80% of total, always sorted by neto_ytd desc
+          let cumPct = 0
+          const top80 = []
+          const rest = []
+          marcaRows.forEach(r => {
+            cumPct += totalNetoYTD > 0 ? (r.neto_ytd / totalNetoYTD * 100) : 0
+            if (cumPct <= 82 || top80.length < 5) top80.push({ ...r, cumPct: cumPct.toFixed(1) })
+            else rest.push(r)
+          })
+          const restTotal = rest.reduce((s, r) => s + r.neto_ytd, 0)
+          return (
+            <div>
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>Marca</th>
+                    <th>Categoria</th>
+                    <th style={{ textAlign: "right" }}>SO Neto YTD</th>
+                    <th style={{ textAlign: "right" }}>vs LY</th>
+                    <th style={{ textAlign: "right" }}>SO Neto LW</th>
+                    <th style={{ textAlign: "right" }}>vs LY</th>
+                    <th style={{ textAlign: "right" }}>Inventario</th>
+                    <th style={{ textAlign: "right" }}>TP</th>
+                    <th style={{ textAlign: "right" }}>% Trade</th>
+                    <th style={{ textAlign: "center" }}>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {top80.map((r, i) => {
+                    const covC = r.coverage < 7 ? "var(--critical)" : r.coverage < 14 ? "var(--warning)" : "var(--success)"
+                    const tpC = r.tp_score >= 75 ? "var(--success)" : r.tp_score >= 60 ? "var(--warning)" : "var(--critical)"
+                    const catCfg = { revertir: { bg: "var(--critical-light)", color: "var(--critical)", label: "Revertir" }, proteger: { bg: "var(--warning-light)", color: "#92400E", label: "Proteger" }, capitalizar: { bg: "var(--success-light)", color: "var(--success)", label: "Capitalizar" } }[r.categoria_mapa] || { bg: "var(--pearl)", color: "var(--silver)", label: "—" }
+                    return (
+                      <tr key={i}>
+                        <td style={{ fontWeight: 700 }}>{r.marca}</td>
+                        <td><span style={{ fontSize: 10, color: "var(--silver)" }}>{r.cat}</span></td>
+                        <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700 }}>{formatMXN(r.neto_ytd, true)}</td>
+                        <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: r.yoy_neto >= 0 ? "var(--success)" : "var(--critical)" }}>{r.yoy_neto > 0 ? "+" : ""}{r.yoy_neto}%</td>
+                        <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(r.neto_w12, true)}</td>
+                        <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: r.yoy_neto >= 0 ? "var(--success)" : "var(--critical)" }}>{r.yoy_neto > 0 ? "+" : ""}{r.yoy_neto}%</td>
+                        <td style={{ textAlign: "right" }}><span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: covC }}>{r.coverage}d</span></td>
+                        <td style={{ textAlign: "right" }}><span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: tpC }}>{r.tp_score > 0 ? r.tp_score.toFixed(0)+"%" : "—"}</span></td>
+                        <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, color: r.pct_trade > 25 ? "var(--critical)" : "var(--silver)" }}>{r.pct_trade}%</td>
+                        <td style={{ textAlign: "center" }}><span style={{ fontSize: 9, background: catCfg.bg, color: catCfg.color, padding: "2px 8px", borderRadius: 99, fontWeight: 700 }}>{catCfg.label}</span></td>
+                      </tr>
+                    )
+                  })}
+                  {rest.length > 0 && (
+                    <tr style={{ background: "var(--pearl)" }}>
+                      <td style={{ fontWeight: 600, color: "var(--silver)" }}>Otras ({rest.length} marcas)</td>
+                      <td></td>
+                      <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--silver)" }}>{formatMXN(restTotal, true)}</td>
+                      <td colSpan={7}></td>
+                    </tr>
+                  )}
+                  <tr style={{ background: "var(--pearl)", fontWeight: 800 }}>
+                    <td style={{ fontWeight: 800 }}>TOTAL</td>
+                    <td></td>
+                    <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800 }}>{formatMXN(totalNetoYTD, true)}</td>
+                    <td></td>
+                    <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 800 }}>{formatMXN(totalNetoW12, true)}</td>
+                    <td colSpan={5}></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          )
+        })()}
       </div>
 
       {/* INVENTARIO POR MARCA */}
@@ -215,7 +240,11 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
           <table className="data-table">
             <thead><tr><th>Marca</th><th style={{ textAlign: "right" }}>Stock (uds)</th><th style={{ textAlign: "right" }}>Cobertura</th><th style={{ textAlign: "center" }}>Estado</th></tr></thead>
             <tbody>
-              {Object.entries(inv.skus).filter(([sku]) => selectedCat === "Todas" || (marcasNacional[sku]?.categoria_comercial || "Otras") === selectedCat).map(([sku, data]) => {
+              {Object.entries(inv.skus).filter(([sku]) => selectedCat === "Todas" || (marcasNacional[sku]?.categoria_comercial || "Otras") === selectedCat).sort((a,b) => {
+                const aVal = so.skus[a[0]]?.[so.skus[a[0]]?.length-1] || 0
+                const bVal = so.skus[b[0]]?.[so.skus[b[0]]?.length-1] || 0
+                return bVal - aVal
+              }).map(([sku, data]) => {
                 const cov = data.coverage_days
                 const chipCls = cov < 7 ? "chip-red" : cov < 14 ? "chip-amber" : "chip-green"
                 const label = cov < 7 ? "Critico" : cov < 14 ? "Atencion" : cov >= 21 ? "En piso" : "OK"
@@ -259,7 +288,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
       </div>
 
       {/* FONDOS DE INVERSION */}
-      <div className="card">
+      <div className="card" style={{ marginBottom: 16 }}>
         <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Plan de Fondos de Inversion</div>
         <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Presupuesto anual: {formatMXN(fund.annual_committed_mxn)} · Ejecutado: {formatPct(fund.execution_pct)}</div>
         <table className="data-table">
@@ -281,6 +310,74 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
             })}
           </tbody>
         </table>
+      </div>
+
+      {/* PRIORIDADES DE LA SEMANA + ACCIONES DE TRADE PENDIENTES */}
+      <div className="grid-2" style={{ marginBottom: 16 }}>
+        <div className="card">
+          <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Prioridades de la Semana</div>
+          <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Acciones criticas basadas en sell-out neto, inventario y tienda perfecta</div>
+          {(() => {
+            const prioridades = []
+            const revertir = bm.filter(m => m.categoria === "revertir").sort((a,b) => a.gap_ytd - b.gap_ytd).slice(0, 3)
+            revertir.forEach(m => {
+              prioridades.push({ urgencia: "critica", tipo: "Sell-Out Neto", accion: "Recuperar " + m.marca + " (" + m.sell_out_trend.toFixed(1) + "% YoY)", impacto: "Gap YTD: " + formatMXN(Math.abs(m.gap_ytd), true) })
+            })
+            const criticos = Object.entries(inv.skus).filter(([,d]) => d.coverage_days > 0 && d.coverage_days < 10).slice(0, 2)
+            criticos.forEach(([sku, d]) => {
+              prioridades.push({ urgencia: "alta", tipo: "Inventario", accion: sku + ": solo " + d.coverage_days + " dias de cobertura", impacto: "Riesgo quiebre" })
+            })
+            if (tp && tp.score_general_pct < 70) {
+              const peores = tp.marcas_detalle.sort((a,b) => a.tp_score_pct - b.tp_score_pct).slice(0, 2)
+              peores.forEach(m => {
+                prioridades.push({ urgencia: "alta", tipo: "Tienda Perfecta", accion: m.marca + ": TP " + m.tp_score_pct.toFixed(0) + "% (obj " + m.objetivo_pct + "%)", impacto: "Mejorar ejecucion en PDV" })
+              })
+            }
+            if (prioridades.length === 0) return <div style={{ fontSize: 12, color: "var(--success)", padding: 8 }}>Sin prioridades criticas esta semana</div>
+            return prioridades.slice(0, 5).map((p, i) => (
+              <div key={i} style={{ background: p.urgencia === "critica" ? "var(--critical-light)" : "var(--warning-light)", borderRadius: "var(--radius-md)", padding: "8px 12px", marginBottom: 6, borderLeft: "3px solid " + (p.urgencia === "critica" ? "var(--critical)" : "var(--warning)") }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 2 }}>
+                  <span style={{ fontSize: 10, fontWeight: 700, color: p.urgencia === "critica" ? "var(--critical)" : "#92400E", textTransform: "uppercase" }}>{p.tipo}</span>
+                  <span style={{ fontSize: 9, fontWeight: 700, color: p.urgencia === "critica" ? "var(--critical)" : "#92400E" }}>{p.urgencia.toUpperCase()}</span>
+                </div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: "var(--obsidian)", marginBottom: 2 }}>{p.accion}</div>
+                <div style={{ fontSize: 10, color: "var(--silver)" }}>{p.impacto}</div>
+              </div>
+            ))
+          })()}
+        </div>
+
+        <div className="card">
+          <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Acciones de Trade Pendientes</div>
+          <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Iniciativas off-track que requieren accion inmediata</div>
+          {(() => {
+            const items = (executionScorecard[accountId] || []).filter(i => i.estado === "off_track")
+            const pendientes = fund.activities.filter(a => a.status === "pendiente")
+            if (items.length === 0 && pendientes.length === 0) return <div style={{ fontSize: 12, color: "var(--success)", padding: 8 }}>Sin acciones pendientes</div>
+            return (
+              <div>
+                {items.map((item, i) => (
+                  <div key={"sc"+i} style={{ background: "var(--critical-light)", borderRadius: "var(--radius-md)", padding: "8px 12px", marginBottom: 6, borderLeft: "3px solid var(--critical)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 2 }}>
+                      <span style={{ fontSize: 11, fontWeight: 700, color: "var(--obsidian)" }}>{item.iniciativa}</span>
+                      {item.venta_perdida_mxn > 0 && <span style={{ fontSize: 11, fontWeight: 700, color: "var(--critical)", fontFamily: "var(--font-mono)" }}>-{formatMXN(item.venta_perdida_mxn, true)}</span>}
+                    </div>
+                    <div style={{ fontSize: 10, color: "#475569" }}>{item.accion}</div>
+                  </div>
+                ))}
+                {pendientes.map((act, i) => (
+                  <div key={"pd"+i} style={{ background: "var(--warning-light)", borderRadius: "var(--radius-md)", padding: "8px 12px", marginBottom: 6, borderLeft: "3px solid var(--warning)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 2 }}>
+                      <span style={{ fontSize: 11, fontWeight: 700, color: "var(--obsidian)" }}>{act.name}</span>
+                      <span style={{ fontSize: 11, fontWeight: 700, color: "#92400E", fontFamily: "var(--font-mono)" }}>{formatMXN(act.budget, true)}</span>
+                    </div>
+                    <div style={{ fontSize: 10, color: "#92400E" }}>Presupuesto sin ejecutar</div>
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
+        </div>
       </div>
     </div>
   )
