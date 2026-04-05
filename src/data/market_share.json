@@ -1,158 +1,884 @@
 {
   "wmt": {
-    "formato": "Walmart Supercenter + Express + Bodega",
     "categorias": {
-      "Hidratacion": {
-        "categoria_total_mxn_semana": 8200000,
+      "Cuidado del Cabello": {
+        "categoria_total_mxn_semana": 16710513,
         "marcas": [
-          {"marca":"Suerox","som_pct":18.4,"som_anterior_pct":19.2,"tendencia":"baja","competidor":"Electrolit","competidor_som_pct":54.2,"gap_liderazgo_pts":-35.8},
-          {"marca":"Electrolit","som_pct":54.2,"es_competidor":true},
-          {"marca":"Powerade","som_pct":18.1,"es_competidor":true},
-          {"marca":"Otros","som_pct":9.3,"es_competidor":true}
+          {
+            "marca": "VANART",
+            "som_pct": 13.9,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Head & Shoulders",
+            "competidor_som_pct": 20.9,
+            "gap_liderazgo_pts": -8.8
+          },
+          {
+            "marca": "TIO NACHO",
+            "som_pct": 11.0,
+            "tendencia": "estable",
+            "es_competidor": false,
+            "competidor": "Head & Shoulders",
+            "competidor_som_pct": 26.5,
+            "gap_liderazgo_pts": -10.5
+          },
+          {
+            "marca": "Head & Shoulders",
+            "som_pct": 25.5,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pantene",
+            "som_pct": 10.4,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Cuidado Facial": {
-        "categoria_total_mxn_semana": 3100000,
+      "Hidratacion/Bebidas": {
+        "categoria_total_mxn_semana": 7527228,
         "marcas": [
-          {"marca":"Cicatricure","som_pct":28.6,"som_anterior_pct":29.8,"tendencia":"baja","competidor":"L Oreal","competidor_som_pct":22.4,"gap_liderazgo_pts":6.2},
-          {"marca":"Teatrical","som_pct":14.2,"som_anterior_pct":12.8,"tendencia":"alza","competidor":"Pond s","competidor_som_pct":18.6,"gap_liderazgo_pts":-4.4},
-          {"marca":"Asepxia","som_pct":8.4,"som_anterior_pct":8.8,"tendencia":"baja","competidor":"Clean Clear","competidor_som_pct":12.1,"gap_liderazgo_pts":-3.7},
-          {"marca":"L Oreal","som_pct":22.4,"es_competidor":true},
-          {"marca":"Pond s","som_pct":18.6,"es_competidor":true}
+          {
+            "marca": "SUEROX",
+            "som_pct": 14.6,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Electrolit",
+            "competidor_som_pct": 23.1,
+            "gap_liderazgo_pts": -13.0
+          },
+          {
+            "marca": "Electrolit",
+            "som_pct": 30.5,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pedialyte",
+            "som_pct": 21.1,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Cabello": {
-        "categoria_total_mxn_semana": 4800000,
+      "Cuidado de la Piel": {
+        "categoria_total_mxn_semana": 4968680,
         "marcas": [
-          {"marca":"Tio Nacho","som_pct":22.1,"som_anterior_pct":22.8,"tendencia":"baja","competidor":"Head Shoulders","competidor_som_pct":31.4,"gap_liderazgo_pts":-9.3},
-          {"marca":"Vanart","som_pct":8.2,"som_anterior_pct":7.9,"tendencia":"alza","competidor":"Sedal","competidor_som_pct":14.2,"gap_liderazgo_pts":-6.0},
-          {"marca":"Head Shoulders","som_pct":31.4,"es_competidor":true}
+          {
+            "marca": "CICATRICURE",
+            "som_pct": 13.4,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Nivea",
+            "competidor_som_pct": 15.4,
+            "gap_liderazgo_pts": -2.0
+          },
+          {
+            "marca": "TEATRICAL",
+            "som_pct": 27.9,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Nivea",
+            "competidor_som_pct": 19.5,
+            "gap_liderazgo_pts": 11.7
+          },
+          {
+            "marca": "Nivea",
+            "som_pct": 16.3,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pond's",
+            "som_pct": 14.2,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "OTC Dolor Gripa": {
-        "categoria_total_mxn_semana": 6200000,
+      "OTC/Analgesicos": {
+        "categoria_total_mxn_semana": 9647418,
         "marcas": [
-          {"marca":"Alliviax","som_pct":24.1,"som_anterior_pct":26.2,"tendencia":"baja","competidor":"Aspirina Bayer","competidor_som_pct":18.4,"gap_liderazgo_pts":5.7},
-          {"marca":"XL-3","som_pct":19.8,"som_anterior_pct":19.6,"tendencia":"estable","competidor":"Vick Nyquil","competidor_som_pct":22.1,"gap_liderazgo_pts":-2.3},
-          {"marca":"Bio","som_pct":8.1,"som_anterior_pct":8.3,"tendencia":"baja","competidor":"Tempra","competidor_som_pct":11.2,"gap_liderazgo_pts":-3.1},
-          {"marca":"Vick Nyquil","som_pct":22.1,"es_competidor":true}
-        ]
-      },
-      "Lactantes": {
-        "categoria_total_mxn_semana": 2800000,
-        "marcas": [
-          {"marca":"Novamil","som_pct":34.1,"som_anterior_pct":32.8,"tendencia":"alza","competidor":"Enfamil","competidor_som_pct":28.4,"gap_liderazgo_pts":5.7},
-          {"marca":"Enfamil","som_pct":28.4,"es_competidor":true},
-          {"marca":"Similac","som_pct":24.2,"es_competidor":true}
+          {
+            "marca": "LOMECAN V",
+            "som_pct": 24.3,
+            "tendencia": "estable",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.4,
+            "gap_liderazgo_pts": 6.1
+          },
+          {
+            "marca": "XL-3",
+            "som_pct": 8.9,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 16.6,
+            "gap_liderazgo_pts": -8.4
+          },
+          {
+            "marca": "SILKAMEDIC",
+            "som_pct": 10.3,
+            "tendencia": "estable",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 12.4,
+            "gap_liderazgo_pts": -7.0
+          },
+          {
+            "marca": "Advil",
+            "som_pct": 15.7,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Tempra",
+            "som_pct": 10.7,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       }
     }
   },
   "ched": {
-    "formato": "Chedraui Supercenter + Selecto",
     "categorias": {
-      "Hidratacion": {
-        "categoria_total_mxn_semana": 2100000,
+      "Cuidado del Cabello": {
+        "categoria_total_mxn_semana": 5470007,
         "marcas": [
-          {"marca":"Suerox","som_pct":12.1,"som_anterior_pct":16.4,"tendencia":"baja","competidor":"Electrolit","competidor_som_pct":58.2,"gap_liderazgo_pts":-46.1},
-          {"marca":"Electrolit","som_pct":58.2,"es_competidor":true}
+          {
+            "marca": "VANART",
+            "som_pct": 24.3,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Head & Shoulders",
+            "competidor_som_pct": 21.4,
+            "gap_liderazgo_pts": 1.4
+          },
+          {
+            "marca": "TIO NACHO",
+            "som_pct": 26.8,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Head & Shoulders",
+            "competidor_som_pct": 24.6,
+            "gap_liderazgo_pts": 0.4
+          },
+          {
+            "marca": "Head & Shoulders",
+            "som_pct": 27.6,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pantene",
+            "som_pct": 13.3,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Cuidado Facial": {
-        "categoria_total_mxn_semana": 980000,
+      "Hidratacion/Bebidas": {
+        "categoria_total_mxn_semana": 3686155,
         "marcas": [
-          {"marca":"Cicatricure","som_pct":31.2,"som_anterior_pct":32.1,"tendencia":"baja","competidor":"L Oreal","competidor_som_pct":24.8,"gap_liderazgo_pts":6.4},
-          {"marca":"Teatrical","som_pct":16.8,"som_anterior_pct":14.2,"tendencia":"alza","competidor":"Pond s","competidor_som_pct":19.2,"gap_liderazgo_pts":-2.4}
+          {
+            "marca": "SUEROX",
+            "som_pct": 15.5,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Electrolit",
+            "competidor_som_pct": 29.9,
+            "gap_liderazgo_pts": -16.8
+          },
+          {
+            "marca": "Electrolit",
+            "som_pct": 33.9,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pedialyte",
+            "som_pct": 17.3,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Cabello": {
-        "categoria_total_mxn_semana": 1400000,
+      "Cuidado de la Piel": {
+        "categoria_total_mxn_semana": 2558787,
         "marcas": [
-          {"marca":"Tio Nacho","som_pct":19.1,"som_anterior_pct":20.4,"tendencia":"baja","competidor":"Head Shoulders","competidor_som_pct":33.2,"gap_liderazgo_pts":-14.1}
+          {
+            "marca": "ASEPXIA",
+            "som_pct": 11.4,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Nivea",
+            "competidor_som_pct": 19.2,
+            "gap_liderazgo_pts": -8.1
+          },
+          {
+            "marca": "CICATRICURE",
+            "som_pct": 10.8,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Nivea",
+            "competidor_som_pct": 15.3,
+            "gap_liderazgo_pts": -6.0
+          },
+          {
+            "marca": "TEATRICAL",
+            "som_pct": 33.8,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Nivea",
+            "competidor_som_pct": 16.4,
+            "gap_liderazgo_pts": 18.7
+          },
+          {
+            "marca": "Nivea",
+            "som_pct": 21.1,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pond's",
+            "som_pct": 14.6,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "OTC Dolor Gripa": {
-        "categoria_total_mxn_semana": 1800000,
+      "OTC/Analgesicos": {
+        "categoria_total_mxn_semana": 1057804,
         "marcas": [
-          {"marca":"Alliviax","som_pct":21.4,"som_anterior_pct":23.8,"tendencia":"baja","competidor":"Aspirina Bayer","competidor_som_pct":19.2,"gap_liderazgo_pts":2.2},
-          {"marca":"XL-3","som_pct":17.2,"som_anterior_pct":17.8,"tendencia":"baja","competidor":"Vick Nyquil","competidor_som_pct":24.1,"gap_liderazgo_pts":-6.9}
+          {
+            "marca": "LOMECAN V",
+            "som_pct": 27.7,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 18.1,
+            "gap_liderazgo_pts": 13.7
+          },
+          {
+            "marca": "XL-3",
+            "som_pct": 10.6,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.6,
+            "gap_liderazgo_pts": -5.6
+          },
+          {
+            "marca": "Advil",
+            "som_pct": 13.8,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Tempra",
+            "som_pct": 10.2,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       }
     }
   },
   "sor": {
-    "formato": "Soriana Hiper + Super + Express",
     "categorias": {
-      "Hidratacion": {
-        "categoria_total_mxn_semana": 2800000,
+      "Hidratacion/Bebidas": {
+        "categoria_total_mxn_semana": 2548913,
         "marcas": [
-          {"marca":"Suerox","som_pct":20.1,"som_anterior_pct":19.2,"tendencia":"alza","competidor":"Electrolit","competidor_som_pct":51.8,"gap_liderazgo_pts":-31.7}
+          {
+            "marca": "SUEROX",
+            "som_pct": 9.2,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Electrolit",
+            "competidor_som_pct": 34.1,
+            "gap_liderazgo_pts": -17.9
+          },
+          {
+            "marca": "Electrolit",
+            "som_pct": 24.8,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pedialyte",
+            "som_pct": 19.9,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Cuidado Facial": {
-        "categoria_total_mxn_semana": 1200000,
+      "Cuidado del Cabello": {
+        "categoria_total_mxn_semana": 4524218,
         "marcas": [
-          {"marca":"Cicatricure","som_pct":29.8,"som_anterior_pct":28.4,"tendencia":"alza","competidor":"L Oreal","competidor_som_pct":21.8,"gap_liderazgo_pts":8.0},
-          {"marca":"Teatrical","som_pct":18.4,"som_anterior_pct":16.2,"tendencia":"alza","competidor":"Pond s","competidor_som_pct":17.1,"gap_liderazgo_pts":1.3}
+          {
+            "marca": "VANART",
+            "som_pct": 12.4,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Head & Shoulders",
+            "competidor_som_pct": 21.7,
+            "gap_liderazgo_pts": -9.5
+          },
+          {
+            "marca": "TIO NACHO",
+            "som_pct": 28.9,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Head & Shoulders",
+            "competidor_som_pct": 26.9,
+            "gap_liderazgo_pts": 1.4
+          },
+          {
+            "marca": "Head & Shoulders",
+            "som_pct": 25.6,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pantene",
+            "som_pct": 13.1,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Cabello": {
-        "categoria_total_mxn_semana": 1800000,
+      "Cuidado de la Piel": {
+        "categoria_total_mxn_semana": 2053709,
         "marcas": [
-          {"marca":"Tio Nacho","som_pct":24.1,"som_anterior_pct":22.8,"tendencia":"alza","competidor":"Head Shoulders","competidor_som_pct":29.8,"gap_liderazgo_pts":-5.7}
+          {
+            "marca": "CICATRICURE",
+            "som_pct": 25.2,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Nivea",
+            "competidor_som_pct": 18.1,
+            "gap_liderazgo_pts": 3.7
+          },
+          {
+            "marca": "TEATRICAL",
+            "som_pct": 31.1,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Nivea",
+            "competidor_som_pct": 16.3,
+            "gap_liderazgo_pts": 14.4
+          },
+          {
+            "marca": "Nivea",
+            "som_pct": 16.4,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pond's",
+            "som_pct": 11.5,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "OTC Dolor Gripa": {
-        "categoria_total_mxn_semana": 2200000,
+      "OTC/Analgesicos": {
+        "categoria_total_mxn_semana": 1094713,
         "marcas": [
-          {"marca":"Alliviax","som_pct":23.4,"som_anterior_pct":22.8,"tendencia":"alza","competidor":"Aspirina Bayer","competidor_som_pct":17.8,"gap_liderazgo_pts":5.6},
-          {"marca":"XL-3","som_pct":21.4,"som_anterior_pct":20.8,"tendencia":"alza","competidor":"Vick Nyquil","competidor_som_pct":21.8,"gap_liderazgo_pts":-0.4}
+          {
+            "marca": "LOMECAN V",
+            "som_pct": 26.9,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 17.9,
+            "gap_liderazgo_pts": 11.0
+          },
+          {
+            "marca": "SILKAMEDIC",
+            "som_pct": 13.7,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 13.9,
+            "gap_liderazgo_pts": -2.1
+          },
+          {
+            "marca": "XL-3",
+            "som_pct": 18.3,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.8,
+            "gap_liderazgo_pts": 1.9
+          },
+          {
+            "marca": "Advil",
+            "som_pct": 18.1,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Tempra",
+            "som_pct": 13.9,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       }
     }
   },
   "oxxo": {
-    "formato": "OXXO Convenience",
     "categorias": {
-      "Hidratacion": {
-        "categoria_total_mxn_semana": 4200000,
+      "Hidratacion/Bebidas": {
+        "categoria_total_mxn_semana": 25772690,
         "marcas": [
-          {"marca":"Suerox","som_pct":12.1,"som_anterior_pct":18.4,"tendencia":"baja","competidor":"Electrolit","competidor_som_pct":62.4,"gap_liderazgo_pts":-50.3}
+          {
+            "marca": "SUEROX",
+            "som_pct": 26.6,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Electrolit",
+            "competidor_som_pct": 23.8,
+            "gap_liderazgo_pts": -2.0
+          },
+          {
+            "marca": "Electrolit",
+            "som_pct": 27.4,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pedialyte",
+            "som_pct": 16.2,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
+        ]
+      },
+      "OTC/Analgesicos": {
+        "categoria_total_mxn_semana": 4965283,
+        "marcas": [
+          {
+            "marca": "TUKOL",
+            "som_pct": 13.7,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 15.0,
+            "gap_liderazgo_pts": 0.7
+          },
+          {
+            "marca": "ALLIVIAX",
+            "som_pct": 31.7,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 16.3,
+            "gap_liderazgo_pts": 17.7
+          },
+          {
+            "marca": "GENOPRAZOL",
+            "som_pct": 32.7,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 15.6,
+            "gap_liderazgo_pts": 16.2
+          },
+          {
+            "marca": "NEXT",
+            "som_pct": 29.7,
+            "tendencia": "estable",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 15.6,
+            "gap_liderazgo_pts": 11.2
+          },
+          {
+            "marca": "BIO",
+            "som_pct": 14.2,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.7,
+            "gap_liderazgo_pts": 1.5
+          },
+          {
+            "marca": "XL-3",
+            "som_pct": 26.5,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.9,
+            "gap_liderazgo_pts": 9.3
+          },
+          {
+            "marca": "Advil",
+            "som_pct": 12.6,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Tempra",
+            "som_pct": 10.2,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
+        ]
+      },
+      "Multimarca": {
+        "categoria_total_mxn_semana": 4076795,
+        "marcas": [
+          {
+            "marca": "CONDON M",
+            "som_pct": 15.2,
+            "tendencia": "estable",
+            "es_competidor": false,
+            "competidor": "Varios",
+            "competidor_som_pct": 16.3,
+            "gap_liderazgo_pts": 3.1
+          },
+          {
+            "marca": "Varios",
+            "som_pct": 17.8,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       }
     }
   },
   "ahorro": {
-    "formato": "Farmacias del Ahorro",
     "categorias": {
-      "OTC Dolor Gripa": {
-        "categoria_total_mxn_semana": 1800000,
+      "Nutricion Infantil": {
+        "categoria_total_mxn_semana": 33048826,
         "marcas": [
-          {"marca":"Alliviax","som_pct":28.4,"som_anterior_pct":29.2,"tendencia":"baja","competidor":"Aspirina Bayer","competidor_som_pct":14.2,"gap_liderazgo_pts":14.2},
-          {"marca":"Nikzon","som_pct":18.4,"som_anterior_pct":21.2,"tendencia":"baja","competidor":"Dermofante","competidor_som_pct":24.8,"gap_liderazgo_pts":-6.4}
+          {
+            "marca": "NOVAMIL",
+            "som_pct": 19.6,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Nan",
+            "competidor_som_pct": 22.8,
+            "gap_liderazgo_pts": -1.0
+          },
+          {
+            "marca": "Nan",
+            "som_pct": 22.4,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Enfamil",
+            "som_pct": 21.7,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Cuidado Facial": {
-        "categoria_total_mxn_semana": 820000,
+      "OTC/Analgesicos": {
+        "categoria_total_mxn_semana": 7778249,
         "marcas": [
-          {"marca":"Cicatricure","som_pct":22.1,"som_anterior_pct":24.8,"tendencia":"baja","competidor":"Neutrogena","competidor_som_pct":18.4,"gap_liderazgo_pts":3.7}
+          {
+            "marca": "LOMECAN V",
+            "som_pct": 24.1,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 17.4,
+            "gap_liderazgo_pts": 6.4
+          },
+          {
+            "marca": "ALLIVIAX",
+            "som_pct": 29.4,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 18.0,
+            "gap_liderazgo_pts": 17.0
+          },
+          {
+            "marca": "BIO",
+            "som_pct": 12.1,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.3,
+            "gap_liderazgo_pts": -0.2
+          },
+          {
+            "marca": "NEXT",
+            "som_pct": 28.4,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 15.6,
+            "gap_liderazgo_pts": 11.3
+          },
+          {
+            "marca": "NIKZON",
+            "som_pct": 21.8,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 15.6,
+            "gap_liderazgo_pts": 4.8
+          },
+          {
+            "marca": "TUKOL",
+            "som_pct": 34.9,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 13.3,
+            "gap_liderazgo_pts": 18.8
+          },
+          {
+            "marca": "XL-3",
+            "som_pct": 18.8,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 16.3,
+            "gap_liderazgo_pts": 4.6
+          },
+          {
+            "marca": "Advil",
+            "som_pct": 13.4,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Tempra",
+            "som_pct": 14.1,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       }
     }
   },
   "costco": {
-    "formato": "Costco Club",
     "categorias": {
-      "Hidratacion": {
-        "categoria_total_mxn_semana": 980000,
+      "OTC/Analgesicos": {
+        "categoria_total_mxn_semana": 845140,
         "marcas": [
-          {"marca":"Suerox","som_pct":24.8,"som_anterior_pct":23.4,"tendencia":"alza","competidor":"Electrolit","competidor_som_pct":48.2,"gap_liderazgo_pts":-23.4}
+          {
+            "marca": "QG5",
+            "som_pct": 31.5,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 16.3,
+            "gap_liderazgo_pts": 13.0
+          },
+          {
+            "marca": "TUKOL",
+            "som_pct": 21.7,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.2,
+            "gap_liderazgo_pts": 8.1
+          },
+          {
+            "marca": "SILKAMEDIC",
+            "som_pct": 8.1,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 14.0,
+            "gap_liderazgo_pts": -7.6
+          },
+          {
+            "marca": "NIKZON",
+            "som_pct": 19.7,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 15.2,
+            "gap_liderazgo_pts": 6.6
+          },
+          {
+            "marca": "MEDICASP",
+            "som_pct": 17.2,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 17.0,
+            "gap_liderazgo_pts": 0.2
+          },
+          {
+            "marca": "BIO",
+            "som_pct": 28.3,
+            "tendencia": "baja",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 12.7,
+            "gap_liderazgo_pts": 13.0
+          },
+          {
+            "marca": "XL-3",
+            "som_pct": 26.4,
+            "tendencia": "alza",
+            "es_competidor": false,
+            "competidor": "Advil",
+            "competidor_som_pct": 12.8,
+            "gap_liderazgo_pts": 8.2
+          },
+          {
+            "marca": "Advil",
+            "som_pct": 14.2,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Tempra",
+            "som_pct": 10.0,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       },
-      "Lactantes": {
-        "categoria_total_mxn_semana": 640000,
+      "Hidratacion/Bebidas": {
+        "categoria_total_mxn_semana": 310447,
         "marcas": [
-          {"marca":"Novamil","som_pct":26.4,"som_anterior_pct":24.8,"tendencia":"alza","competidor":"Enfamil","competidor_som_pct":31.8,"gap_liderazgo_pts":-5.4}
+          {
+            "marca": "SUEROX",
+            "som_pct": 34.2,
+            "tendencia": "estable",
+            "es_competidor": false,
+            "competidor": "Electrolit",
+            "competidor_som_pct": 31.1,
+            "gap_liderazgo_pts": 5.3
+          },
+          {
+            "marca": "Electrolit",
+            "som_pct": 32.7,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          },
+          {
+            "marca": "Pedialyte",
+            "som_pct": 17.6,
+            "tendencia": "estable",
+            "es_competidor": true,
+            "competidor": "",
+            "competidor_som_pct": 0,
+            "gap_liderazgo_pts": 0
+          }
         ]
       }
     }

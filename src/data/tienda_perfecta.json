@@ -1,110 +1,832 @@
 {
   "wmt": {
-    "score_general_pct": 68.4,
+    "score_general_pct": 64.7,
     "objetivo_pct": 85.0,
-    "gap_pts": -16.6,
-    "tendencia": "baja",
+    "gap_pts": -20.3,
+    "tendencia": "estable",
     "indicadores": [
-      {"nombre":"Disponibilidad en anaquel","resultado_pct":78.2,"objetivo_pct":90,"status":"off_track","marcas_criticas":["Suerox","Alliviax"]},
-      {"nombre":"Precio correcto al consumidor","resultado_pct":71.4,"objetivo_pct":85,"status":"off_track","marcas_criticas":["Suerox","XL-3"]},
-      {"nombre":"Planograma ejecutado","resultado_pct":62.8,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Cicatricure","Tio Nacho"]},
-      {"nombre":"Exhibicion adicional activa","resultado_pct":48.2,"objetivo_pct":75,"status":"off_track","marcas_criticas":["Suerox","Alliviax","XL-3"]},
-      {"nombre":"Material POP vigente","resultado_pct":55.1,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Tio Nacho","Cicatricure"]},
-      {"nombre":"Share de anaquel objetivo","resultado_pct":61.4,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox","Cicatricure"]}
+      {
+        "nombre": "Disponibilidad en anaquel",
+        "resultado_pct": 76.9,
+        "objetivo_pct": 90,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "TIO NACHO",
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Precio correcto",
+        "resultado_pct": 69.4,
+        "objetivo_pct": 85,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "TIO NACHO",
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Planograma ejecutado",
+        "resultado_pct": 63.7,
+        "objetivo_pct": 80,
+        "status": "off_track",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Exhibicion adicional",
+        "resultado_pct": 49.0,
+        "objetivo_pct": 75,
+        "status": "off_track",
+        "marcas_criticas": [
+          "TIO NACHO",
+          "SUEROX",
+          "SILKAMEDIC"
+        ]
+      }
     ],
     "marcas_detalle": [
-      {"marca":"Suerox","dispo_pct":72.4,"precio_ok_pct":68.2,"plano_pct":55.1,"exhibicion_pct":38.2,"tp_score_pct":58.5,"objetivo_pct":85},
-      {"marca":"Alliviax","dispo_pct":81.2,"precio_ok_pct":74.8,"plano_pct":68.4,"exhibicion_pct":42.1,"tp_score_pct":66.6,"objetivo_pct":85},
-      {"marca":"XL-3","dispo_pct":84.1,"precio_ok_pct":78.2,"plano_pct":72.1,"exhibicion_pct":51.4,"tp_score_pct":71.5,"objetivo_pct":85},
-      {"marca":"Cicatricure","dispo_pct":76.8,"precio_ok_pct":72.4,"plano_pct":58.2,"exhibicion_pct":44.8,"tp_score_pct":63.1,"objetivo_pct":85},
-      {"marca":"Tio Nacho","dispo_pct":79.4,"precio_ok_pct":76.1,"plano_pct":64.8,"exhibicion_pct":52.1,"tp_score_pct":68.1,"objetivo_pct":85},
-      {"marca":"Novamil","dispo_pct":88.2,"precio_ok_pct":84.1,"plano_pct":78.4,"exhibicion_pct":62.1,"tp_score_pct":78.2,"objetivo_pct":85}
+      {
+        "marca": "TIO NACHO",
+        "dispo_pct": 59.8,
+        "precio_ok_pct": 52.9,
+        "plano_pct": 53.9,
+        "exhibicion_pct": 33.6,
+        "tp_score_pct": 50.0,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SUEROX",
+        "dispo_pct": 48.8,
+        "precio_ok_pct": 30.4,
+        "plano_pct": 33.8,
+        "exhibicion_pct": 22.9,
+        "tp_score_pct": 34.0,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TEATRICAL",
+        "dispo_pct": 95,
+        "precio_ok_pct": 81.2,
+        "plano_pct": 76.8,
+        "exhibicion_pct": 57.5,
+        "tp_score_pct": 77.6,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SILKAMEDIC",
+        "dispo_pct": 71.9,
+        "precio_ok_pct": 56.0,
+        "plano_pct": 60.4,
+        "exhibicion_pct": 36.7,
+        "tp_score_pct": 56.2,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "XL-3",
+        "dispo_pct": 80.6,
+        "precio_ok_pct": 56.7,
+        "plano_pct": 55.5,
+        "exhibicion_pct": 44.9,
+        "tp_score_pct": 59.4,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "VANART",
+        "dispo_pct": 95,
+        "precio_ok_pct": 92,
+        "plano_pct": 82.5,
+        "exhibicion_pct": 82,
+        "tp_score_pct": 87.9,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "LOMECAN V",
+        "dispo_pct": 72.4,
+        "precio_ok_pct": 92,
+        "plano_pct": 71.8,
+        "exhibicion_pct": 45.8,
+        "tp_score_pct": 70.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "CICATRICURE",
+        "dispo_pct": 86.0,
+        "precio_ok_pct": 75.7,
+        "plano_pct": 55.2,
+        "exhibicion_pct": 52.8,
+        "tp_score_pct": 67.4,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "MEDICASP",
+        "dispo_pct": 78.8,
+        "precio_ok_pct": 82.7,
+        "plano_pct": 70.4,
+        "exhibicion_pct": 61.6,
+        "tp_score_pct": 73.4,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "NEXT",
+        "dispo_pct": 80.7,
+        "precio_ok_pct": 74.0,
+        "plano_pct": 76.8,
+        "exhibicion_pct": 51.9,
+        "tp_score_pct": 70.8,
+        "objetivo_pct": 85
+      }
     ]
   },
   "ched": {
-    "score_general_pct": 74.2,
+    "score_general_pct": 68.0,
     "objetivo_pct": 85.0,
-    "gap_pts": -10.8,
+    "gap_pts": -17.0,
     "tendencia": "alza",
     "indicadores": [
-      {"nombre":"Disponibilidad en anaquel","resultado_pct":82.1,"objetivo_pct":90,"status":"at_risk","marcas_criticas":["Suerox","Alliviax"]},
-      {"nombre":"Precio correcto al consumidor","resultado_pct":76.4,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["Suerox"]},
-      {"nombre":"Planograma ejecutado","resultado_pct":68.4,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Cicatricure"]},
-      {"nombre":"Exhibicion adicional activa","resultado_pct":62.1,"objetivo_pct":75,"status":"at_risk","marcas_criticas":["Suerox","Alliviax"]},
-      {"nombre":"Material POP vigente","resultado_pct":72.8,"objetivo_pct":80,"status":"at_risk","marcas_criticas":["Tio Nacho"]},
-      {"nombre":"Share de anaquel objetivo","resultado_pct":68.2,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox"]}
+      {
+        "nombre": "Disponibilidad en anaquel",
+        "resultado_pct": 81.9,
+        "objetivo_pct": 90,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Precio correcto",
+        "resultado_pct": 70.9,
+        "objetivo_pct": 85,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Planograma ejecutado",
+        "resultado_pct": 68.2,
+        "objetivo_pct": 80,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Exhibicion adicional",
+        "resultado_pct": 50.8,
+        "objetivo_pct": 75,
+        "status": "off_track",
+        "marcas_criticas": [
+          "SUEROX",
+          "CICATRICURE",
+          "XL-3"
+        ]
+      }
     ],
     "marcas_detalle": [
-      {"marca":"Suerox","dispo_pct":68.2,"precio_ok_pct":64.1,"plano_pct":58.4,"exhibicion_pct":42.8,"tp_score_pct":58.4,"objetivo_pct":85},
-      {"marca":"Alliviax","dispo_pct":78.4,"precio_ok_pct":72.1,"plano_pct":68.2,"exhibicion_pct":54.1,"tp_score_pct":68.2,"objetivo_pct":85},
-      {"marca":"Cicatricure","dispo_pct":82.1,"precio_ok_pct":78.4,"plano_pct":64.8,"exhibicion_pct":58.2,"tp_score_pct":70.9,"objetivo_pct":85},
-      {"marca":"Tio Nacho","dispo_pct":80.4,"precio_ok_pct":76.8,"plano_pct":72.1,"exhibicion_pct":61.4,"tp_score_pct":72.7,"objetivo_pct":85}
+      {
+        "marca": "TIO NACHO",
+        "dispo_pct": 77.0,
+        "precio_ok_pct": 68.0,
+        "plano_pct": 60.9,
+        "exhibicion_pct": 51.9,
+        "tp_score_pct": 64.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SUEROX",
+        "dispo_pct": 42.1,
+        "precio_ok_pct": 40.5,
+        "plano_pct": 31.2,
+        "exhibicion_pct": 18.8,
+        "tp_score_pct": 33.1,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TEATRICAL",
+        "dispo_pct": 95,
+        "precio_ok_pct": 82.1,
+        "plano_pct": 88,
+        "exhibicion_pct": 77.5,
+        "tp_score_pct": 85.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "CICATRICURE",
+        "dispo_pct": 80.8,
+        "precio_ok_pct": 58.5,
+        "plano_pct": 55.0,
+        "exhibicion_pct": 42.6,
+        "tp_score_pct": 59.2,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "XL-3",
+        "dispo_pct": 65.2,
+        "precio_ok_pct": 68.0,
+        "plano_pct": 63.1,
+        "exhibicion_pct": 42.1,
+        "tp_score_pct": 59.6,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "VANART",
+        "dispo_pct": 95,
+        "precio_ok_pct": 92,
+        "plano_pct": 88,
+        "exhibicion_pct": 55.6,
+        "tp_score_pct": 82.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "LOMECAN V",
+        "dispo_pct": 83.5,
+        "precio_ok_pct": 69.8,
+        "plano_pct": 70.4,
+        "exhibicion_pct": 59.0,
+        "tp_score_pct": 70.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "ASEPXIA",
+        "dispo_pct": 95,
+        "precio_ok_pct": 92,
+        "plano_pct": 88,
+        "exhibicion_pct": 82,
+        "tp_score_pct": 89.2,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TUKOL",
+        "dispo_pct": 91.2,
+        "precio_ok_pct": 68.8,
+        "plano_pct": 67.6,
+        "exhibicion_pct": 42.6,
+        "tp_score_pct": 67.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SILKAMEDIC",
+        "dispo_pct": 94.4,
+        "precio_ok_pct": 69.3,
+        "plano_pct": 69.9,
+        "exhibicion_pct": 35.5,
+        "tp_score_pct": 67.3,
+        "objetivo_pct": 85
+      }
     ]
   },
   "sor": {
-    "score_general_pct": 79.8,
+    "score_general_pct": 65.6,
     "objetivo_pct": 85.0,
-    "gap_pts": -5.2,
+    "gap_pts": -19.4,
     "tendencia": "alza",
     "indicadores": [
-      {"nombre":"Disponibilidad en anaquel","resultado_pct":86.4,"objetivo_pct":90,"status":"at_risk","marcas_criticas":[]},
-      {"nombre":"Precio correcto al consumidor","resultado_pct":81.2,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["XL-3"]},
-      {"nombre":"Planograma ejecutado","resultado_pct":76.8,"objetivo_pct":80,"status":"at_risk","marcas_criticas":["Tio Nacho"]},
-      {"nombre":"Exhibicion adicional activa","resultado_pct":72.4,"objetivo_pct":75,"status":"at_risk","marcas_criticas":[]},
-      {"nombre":"Material POP vigente","resultado_pct":78.2,"objetivo_pct":80,"status":"at_risk","marcas_criticas":[]},
-      {"nombre":"Share de anaquel objetivo","resultado_pct":74.1,"objetivo_pct":80,"status":"at_risk","marcas_criticas":[]}
+      {
+        "nombre": "Disponibilidad en anaquel",
+        "resultado_pct": 78.1,
+        "objetivo_pct": 90,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Precio correcto",
+        "resultado_pct": 73.1,
+        "objetivo_pct": 85,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Planograma ejecutado",
+        "resultado_pct": 61.0,
+        "objetivo_pct": 80,
+        "status": "off_track",
+        "marcas_criticas": [
+          "SUEROX",
+          "XL-3"
+        ]
+      },
+      {
+        "nombre": "Exhibicion adicional",
+        "resultado_pct": 50.0,
+        "objetivo_pct": 75,
+        "status": "off_track",
+        "marcas_criticas": [
+          "SUEROX",
+          "TIO NACHO",
+          "CICATRICURE"
+        ]
+      }
     ],
     "marcas_detalle": [
-      {"marca":"Suerox","dispo_pct":84.2,"precio_ok_pct":80.1,"plano_pct":76.4,"exhibicion_pct":68.2,"tp_score_pct":77.2,"objetivo_pct":85},
-      {"marca":"Alliviax","dispo_pct":86.1,"precio_ok_pct":82.4,"plano_pct":78.2,"exhibicion_pct":71.4,"tp_score_pct":79.5,"objetivo_pct":85},
-      {"marca":"Tio Nacho","dispo_pct":82.4,"precio_ok_pct":78.8,"plano_pct":72.1,"exhibicion_pct":68.4,"tp_score_pct":75.4,"objetivo_pct":85}
+      {
+        "marca": "SUEROX",
+        "dispo_pct": 36.5,
+        "precio_ok_pct": 32.9,
+        "plano_pct": 29.3,
+        "exhibicion_pct": 23.2,
+        "tp_score_pct": 30.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TIO NACHO",
+        "dispo_pct": 65.8,
+        "precio_ok_pct": 62.4,
+        "plano_pct": 54.2,
+        "exhibicion_pct": 33.7,
+        "tp_score_pct": 54.0,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TEATRICAL",
+        "dispo_pct": 88.8,
+        "precio_ok_pct": 89.0,
+        "plano_pct": 66.8,
+        "exhibicion_pct": 60.9,
+        "tp_score_pct": 76.4,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "XL-3",
+        "dispo_pct": 63.3,
+        "precio_ok_pct": 70.4,
+        "plano_pct": 48.4,
+        "exhibicion_pct": 51.1,
+        "tp_score_pct": 58.3,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "CICATRICURE",
+        "dispo_pct": 73.5,
+        "precio_ok_pct": 82.0,
+        "plano_pct": 52.9,
+        "exhibicion_pct": 44.6,
+        "tp_score_pct": 63.2,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "VANART",
+        "dispo_pct": 95,
+        "precio_ok_pct": 92,
+        "plano_pct": 88,
+        "exhibicion_pct": 81.4,
+        "tp_score_pct": 89.1,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SILKAMEDIC",
+        "dispo_pct": 93.7,
+        "precio_ok_pct": 82.5,
+        "plano_pct": 59.9,
+        "exhibicion_pct": 52.9,
+        "tp_score_pct": 72.2,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "LOMECAN V",
+        "dispo_pct": 94.4,
+        "precio_ok_pct": 74.6,
+        "plano_pct": 60.4,
+        "exhibicion_pct": 40.5,
+        "tp_score_pct": 67.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TUKOL",
+        "dispo_pct": 95,
+        "precio_ok_pct": 63.0,
+        "plano_pct": 68.8,
+        "exhibicion_pct": 52.8,
+        "tp_score_pct": 69.9,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "NEXT",
+        "dispo_pct": 75.1,
+        "precio_ok_pct": 82.5,
+        "plano_pct": 81.7,
+        "exhibicion_pct": 59.4,
+        "tp_score_pct": 74.7,
+        "objetivo_pct": 85
+      }
     ]
   },
   "oxxo": {
-    "score_general_pct": 42.1,
+    "score_general_pct": 65.2,
     "objetivo_pct": 85.0,
-    "gap_pts": -42.9,
-    "tendencia": "baja",
+    "gap_pts": -19.8,
+    "tendencia": "alza",
     "indicadores": [
-      {"nombre":"Charola completa 4 frentes refrigerador","resultado_pct":38.2,"objetivo_pct":95,"status":"off_track","marcas_criticas":["Suerox"]},
-      {"nombre":"Precio -2 pesos vs Electrolit","resultado_pct":44.8,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox"]},
-      {"nombre":"Posicion refrigerador #3 o #4","resultado_pct":41.2,"objetivo_pct":95,"status":"off_track","marcas_criticas":["Suerox"]},
-      {"nombre":"Material merchandising vigente","resultado_pct":52.1,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Suerox"]}
+      {
+        "nombre": "Disponibilidad en anaquel",
+        "resultado_pct": 81.1,
+        "objetivo_pct": 90,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Precio correcto",
+        "resultado_pct": 70.9,
+        "objetivo_pct": 85,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX",
+          "GROOMEN"
+        ]
+      },
+      {
+        "nombre": "Planograma ejecutado",
+        "resultado_pct": 60.8,
+        "objetivo_pct": 80,
+        "status": "off_track",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Exhibicion adicional",
+        "resultado_pct": 48.1,
+        "objetivo_pct": 75,
+        "status": "off_track",
+        "marcas_criticas": [
+          "SUEROX",
+          "XL-3",
+          "ALLIVIAX"
+        ]
+      }
     ],
     "marcas_detalle": [
-      {"marca":"Suerox","dispo_pct":44.8,"precio_ok_pct":41.2,"plano_pct":38.2,"exhibicion_pct":32.4,"tp_score_pct":39.2,"objetivo_pct":85}
+      {
+        "marca": "SUEROX",
+        "dispo_pct": 40.6,
+        "precio_ok_pct": 31.8,
+        "plano_pct": 40.8,
+        "exhibicion_pct": 25.4,
+        "tp_score_pct": 34.6,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "XL-3",
+        "dispo_pct": 81.5,
+        "precio_ok_pct": 78.2,
+        "plano_pct": 57.6,
+        "exhibicion_pct": 35.2,
+        "tp_score_pct": 63.1,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "BIO",
+        "dispo_pct": 65.7,
+        "precio_ok_pct": 72.8,
+        "plano_pct": 55.4,
+        "exhibicion_pct": 54.5,
+        "tp_score_pct": 62.1,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "NEXT",
+        "dispo_pct": 94.6,
+        "precio_ok_pct": 92,
+        "plano_pct": 73.5,
+        "exhibicion_pct": 46.1,
+        "tp_score_pct": 76.6,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "CONDON M",
+        "dispo_pct": 93.7,
+        "precio_ok_pct": 60.2,
+        "plano_pct": 66.8,
+        "exhibicion_pct": 60.3,
+        "tp_score_pct": 70.2,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "GENOPRAZOL",
+        "dispo_pct": 95,
+        "precio_ok_pct": 85.7,
+        "plano_pct": 88,
+        "exhibicion_pct": 69.2,
+        "tp_score_pct": 84.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "ALLIVIAX",
+        "dispo_pct": 79.1,
+        "precio_ok_pct": 86.6,
+        "plano_pct": 60.2,
+        "exhibicion_pct": 43.3,
+        "tp_score_pct": 67.3,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TUKOL",
+        "dispo_pct": 87.2,
+        "precio_ok_pct": 67.8,
+        "plano_pct": 62.3,
+        "exhibicion_pct": 48.8,
+        "tp_score_pct": 66.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "GROOMEN",
+        "dispo_pct": 86.0,
+        "precio_ok_pct": 52.8,
+        "plano_pct": 51.9,
+        "exhibicion_pct": 42.4,
+        "tp_score_pct": 58.3,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "POMADA DE LA CAMPANA",
+        "dispo_pct": 87.8,
+        "precio_ok_pct": 81.2,
+        "plano_pct": 51.8,
+        "exhibicion_pct": 55.9,
+        "tp_score_pct": 69.2,
+        "objetivo_pct": 85
+      }
     ]
   },
   "ahorro": {
-    "score_general_pct": 71.4,
+    "score_general_pct": 63.0,
     "objetivo_pct": 85.0,
-    "gap_pts": -13.6,
+    "gap_pts": -22.0,
     "tendencia": "estable",
     "indicadores": [
-      {"nombre":"Disponibilidad en anaquel","resultado_pct":78.4,"objetivo_pct":90,"status":"off_track","marcas_criticas":["Cicatricure"]},
-      {"nombre":"Ubicacion mostrador farmacia","resultado_pct":64.2,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Nikzon","Lomecan V"]},
-      {"nombre":"Material POP farmacia","resultado_pct":72.1,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["Alliviax"]},
-      {"nombre":"Capacitacion farmaceuticos","resultado_pct":48.2,"objetivo_pct":80,"status":"off_track","marcas_criticas":["Alliviax"]}
+      {
+        "nombre": "Disponibilidad en anaquel",
+        "resultado_pct": 72.2,
+        "objetivo_pct": 90,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "NOVAMIL",
+          "TUKOL",
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Precio correcto",
+        "resultado_pct": 68.8,
+        "objetivo_pct": 85,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "TUKOL",
+          "ALLIVIAX",
+          "SILKAMEDIC"
+        ]
+      },
+      {
+        "nombre": "Planograma ejecutado",
+        "resultado_pct": 59.9,
+        "objetivo_pct": 80,
+        "status": "off_track",
+        "marcas_criticas": [
+          "TUKOL",
+          "ALLIVIAX",
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Exhibicion adicional",
+        "resultado_pct": 51.1,
+        "objetivo_pct": 75,
+        "status": "off_track",
+        "marcas_criticas": [
+          "TUKOL",
+          "LOMECAN V",
+          "SUEROX"
+        ]
+      }
     ],
     "marcas_detalle": [
-      {"marca":"Alliviax","dispo_pct":82.1,"precio_ok_pct":78.4,"plano_pct":72.1,"exhibicion_pct":58.4,"tp_score_pct":72.8,"objetivo_pct":85},
-      {"marca":"Cicatricure","dispo_pct":74.2,"precio_ok_pct":70.8,"plano_pct":64.1,"exhibicion_pct":48.2,"tp_score_pct":64.3,"objetivo_pct":85}
+      {
+        "marca": "NOVAMIL",
+        "dispo_pct": 57.8,
+        "precio_ok_pct": 61.1,
+        "plano_pct": 56.9,
+        "exhibicion_pct": 54.9,
+        "tp_score_pct": 57.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "XL-3",
+        "dispo_pct": 95,
+        "precio_ok_pct": 92,
+        "plano_pct": 85.5,
+        "exhibicion_pct": 73.8,
+        "tp_score_pct": 86.6,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TUKOL",
+        "dispo_pct": 45.4,
+        "precio_ok_pct": 44.7,
+        "plano_pct": 40.6,
+        "exhibicion_pct": 23.6,
+        "tp_score_pct": 38.6,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "NIKZON",
+        "dispo_pct": 95,
+        "precio_ok_pct": 92,
+        "plano_pct": 88,
+        "exhibicion_pct": 75.7,
+        "tp_score_pct": 87.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "NEXT",
+        "dispo_pct": 78.7,
+        "precio_ok_pct": 78.4,
+        "plano_pct": 56.4,
+        "exhibicion_pct": 56.1,
+        "tp_score_pct": 67.4,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "BIO",
+        "dispo_pct": 95,
+        "precio_ok_pct": 92,
+        "plano_pct": 88,
+        "exhibicion_pct": 65.5,
+        "tp_score_pct": 85.1,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "ALLIVIAX",
+        "dispo_pct": 71.7,
+        "precio_ok_pct": 50.0,
+        "plano_pct": 41.0,
+        "exhibicion_pct": 47.5,
+        "tp_score_pct": 52.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "LOMECAN V",
+        "dispo_pct": 65.9,
+        "precio_ok_pct": 66.5,
+        "plano_pct": 52.4,
+        "exhibicion_pct": 38.2,
+        "tp_score_pct": 55.8,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SILKAMEDIC",
+        "dispo_pct": 71.0,
+        "precio_ok_pct": 53.6,
+        "plano_pct": 56.6,
+        "exhibicion_pct": 45.0,
+        "tp_score_pct": 56.5,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SUEROX",
+        "dispo_pct": 47.0,
+        "precio_ok_pct": 57.3,
+        "plano_pct": 33.1,
+        "exhibicion_pct": 30.3,
+        "tp_score_pct": 41.9,
+        "objetivo_pct": 85
+      }
     ]
   },
   "costco": {
-    "score_general_pct": 82.4,
+    "score_general_pct": 65.4,
     "objetivo_pct": 85.0,
-    "gap_pts": -2.6,
+    "gap_pts": -19.6,
     "tendencia": "alza",
     "indicadores": [
-      {"nombre":"Disponibilidad en anaquel","resultado_pct":88.4,"objetivo_pct":90,"status":"at_risk","marcas_criticas":[]},
-      {"nombre":"Formato multipack correcto","resultado_pct":84.2,"objetivo_pct":85,"status":"at_risk","marcas_criticas":[]},
-      {"nombre":"Precio competitivo formato club","resultado_pct":82.1,"objetivo_pct":85,"status":"at_risk","marcas_criticas":["Novamil"]},
-      {"nombre":"Demo en tienda activa","resultado_pct":74.8,"objetivo_pct":80,"status":"at_risk","marcas_criticas":[]}
+      {
+        "nombre": "Disponibilidad en anaquel",
+        "resultado_pct": 76.4,
+        "objetivo_pct": 90,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Precio correcto",
+        "resultado_pct": 74.2,
+        "objetivo_pct": 85,
+        "status": "at_risk",
+        "marcas_criticas": [
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Planograma ejecutado",
+        "resultado_pct": 63.4,
+        "objetivo_pct": 80,
+        "status": "off_track",
+        "marcas_criticas": [
+          "BIO",
+          "SUEROX"
+        ]
+      },
+      {
+        "nombre": "Exhibicion adicional",
+        "resultado_pct": 47.7,
+        "objetivo_pct": 75,
+        "status": "off_track",
+        "marcas_criticas": [
+          "BIO",
+          "MEDICASP",
+          "SUEROX"
+        ]
+      }
     ],
     "marcas_detalle": [
-      {"marca":"Suerox","dispo_pct":86.4,"precio_ok_pct":82.1,"plano_pct":80.4,"exhibicion_pct":72.8,"tp_score_pct":80.4,"objetivo_pct":85},
-      {"marca":"Novamil","dispo_pct":88.2,"precio_ok_pct":80.4,"plano_pct":82.1,"exhibicion_pct":74.2,"tp_score_pct":81.2,"objetivo_pct":85}
+      {
+        "marca": "XL-3",
+        "dispo_pct": 77.7,
+        "precio_ok_pct": 79.0,
+        "plano_pct": 51.3,
+        "exhibicion_pct": 47.7,
+        "tp_score_pct": 63.9,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "BIO",
+        "dispo_pct": 72.4,
+        "precio_ok_pct": 80.1,
+        "plano_pct": 48.8,
+        "exhibicion_pct": 39.5,
+        "tp_score_pct": 60.2,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "MEDICASP",
+        "dispo_pct": 95,
+        "precio_ok_pct": 73.1,
+        "plano_pct": 84.3,
+        "exhibicion_pct": 39.8,
+        "tp_score_pct": 73.0,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "NIKZON",
+        "dispo_pct": 95,
+        "precio_ok_pct": 91.5,
+        "plano_pct": 88,
+        "exhibicion_pct": 82,
+        "tp_score_pct": 89.1,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SILKAMEDIC",
+        "dispo_pct": 74.3,
+        "precio_ok_pct": 75.4,
+        "plano_pct": 55.3,
+        "exhibicion_pct": 45.7,
+        "tp_score_pct": 62.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "SUEROX",
+        "dispo_pct": 43.5,
+        "precio_ok_pct": 33.8,
+        "plano_pct": 36.3,
+        "exhibicion_pct": 25.2,
+        "tp_score_pct": 34.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "TUKOL",
+        "dispo_pct": 95,
+        "precio_ok_pct": 70.1,
+        "plano_pct": 83.1,
+        "exhibicion_pct": 42.7,
+        "tp_score_pct": 72.7,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "QG5",
+        "dispo_pct": 62.8,
+        "precio_ok_pct": 73.1,
+        "plano_pct": 67.0,
+        "exhibicion_pct": 45.1,
+        "tp_score_pct": 62.0,
+        "objetivo_pct": 85
+      },
+      {
+        "marca": "NEXT",
+        "dispo_pct": 71.8,
+        "precio_ok_pct": 92,
+        "plano_pct": 56.2,
+        "exhibicion_pct": 62.0,
+        "tp_score_pct": 70.5,
+        "objetivo_pct": 85
+      }
     ]
   }
 }

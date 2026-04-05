@@ -1,0 +1,330 @@
+[
+  {
+    "prioridad": "CRÍTICA",
+    "marca": "SUEROX",
+    "bu": "BE",
+    "w12_yoy": -29.8,
+    "gap_ytd": -32203527,
+    "señal": "W12 -29.8% | YTD -24.9% | L4W -31.5% | GAP YTD $-32,203,527"
+  },
+  {
+    "prioridad": "CRÍTICA",
+    "marca": "TUKOL",
+    "bu": "OTC",
+    "w12_yoy": -30.4,
+    "gap_ytd": -15198738,
+    "señal": "W12 -30.4% | YTD -17.2% | L4W -26.4% | GAP YTD $-15,198,738"
+  },
+  {
+    "prioridad": "CRÍTICA",
+    "marca": "CICATRICURE",
+    "bu": "SC",
+    "w12_yoy": -18.7,
+    "gap_ytd": -10477512,
+    "señal": "W12 -18.7% | YTD -22.2% | L4W -28.9% | GAP YTD $-10,477,512"
+  },
+  {
+    "prioridad": "CRÍTICA",
+    "marca": "ALLIVIAX",
+    "bu": "OTC",
+    "w12_yoy": -37.8,
+    "gap_ytd": -8089617,
+    "señal": "W12 -37.8% | YTD -22.8% | L4W -34.6% | GAP YTD $-8,089,617"
+  },
+  {
+    "prioridad": "CRÍTICA",
+    "marca": "GENOPRAZOL",
+    "bu": "OTC",
+    "w12_yoy": -30.8,
+    "gap_ytd": -4531584,
+    "señal": "W12 -30.8% | YTD -26.6% | L4W -29.4% | GAP YTD $-4,531,584"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "TIO NACHO",
+    "bu": "HC",
+    "w12_yoy": -3.4,
+    "gap_ytd": -5456115,
+    "señal": "W12 -3.4% | YTD -6.4% | L4W -8.3% | GAP YTD $-5,456,115"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "VANART",
+    "bu": "HC",
+    "w12_yoy": -10.4,
+    "gap_ytd": -4716814,
+    "señal": "W12 -10.4% | YTD -15.2% | L4W -15.9% | GAP YTD $-4,716,814"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "NIKZON",
+    "bu": "OTC",
+    "w12_yoy": -25.6,
+    "gap_ytd": -4603909,
+    "señal": "W12 -25.6% | YTD -10.5% | L4W -21.8% | GAP YTD $-4,603,909"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "SILKAMEDIC",
+    "bu": "OTC",
+    "w12_yoy": -7.3,
+    "gap_ytd": -4487181,
+    "señal": "W12 -7.3% | YTD -10.5% | L4W -15.8% | GAP YTD $-4,487,181"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "QG5",
+    "bu": "OTC",
+    "w12_yoy": -41.2,
+    "gap_ytd": -4084737,
+    "señal": "W12 -41.2% | YTD -34.1% | L4W -38.4% | GAP YTD $-4,084,737"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "GOICOECHEA DIABET TX",
+    "bu": "SC",
+    "w12_yoy": -37.0,
+    "gap_ytd": -3733288,
+    "señal": "W12 -37.0% | YTD -34.4% | L4W -35.8% | GAP YTD $-3,733,288"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "FERMODYL",
+    "bu": "MM",
+    "w12_yoy": -41.4,
+    "gap_ytd": -3478133,
+    "señal": "W12 -41.4% | YTD -39.0% | L4W -40.6% | GAP YTD $-3,478,133"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "GOICOECHEA",
+    "bu": "SC",
+    "w12_yoy": -19.6,
+    "gap_ytd": -3280358,
+    "señal": "W12 -19.6% | YTD -19.8% | L4W -21.0% | GAP YTD $-3,280,358"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "BENGUE",
+    "bu": "OTC",
+    "w12_yoy": -27.5,
+    "gap_ytd": -2999098,
+    "señal": "W12 -27.5% | YTD -22.7% | L4W -24.5% | GAP YTD $-2,999,098"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "CONDON M",
+    "bu": "MM",
+    "w12_yoy": -16.6,
+    "gap_ytd": -2994536,
+    "señal": "W12 -16.6% | YTD -14.9% | L4W -23.7% | GAP YTD $-2,994,536"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "ALERT",
+    "bu": "MM",
+    "w12_yoy": -16.4,
+    "gap_ytd": -2847590,
+    "señal": "W12 -16.4% | YTD -28.6% | L4W -3.4% | GAP YTD $-2,847,590"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "SISTEMA GB",
+    "bu": "MM",
+    "w12_yoy": -24.0,
+    "gap_ytd": -2463706,
+    "señal": "W12 -24.0% | YTD -27.7% | L4W -27.0% | GAP YTD $-2,463,706"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "GROOMEN",
+    "bu": "MM",
+    "w12_yoy": -15.5,
+    "gap_ytd": -2143380,
+    "señal": "W12 -15.5% | YTD -16.7% | L4W -14.1% | GAP YTD $-2,143,380"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "POINTTS",
+    "bu": "OTC",
+    "w12_yoy": -23.8,
+    "gap_ytd": -1393782,
+    "señal": "W12 -23.8% | YTD -20.7% | L4W -29.4% | GAP YTD $-1,393,782"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "UNESIA",
+    "bu": "OTC",
+    "w12_yoy": -7.0,
+    "gap_ytd": -1259072,
+    "señal": "W12 -7.0% | YTD -7.8% | L4W -12.5% | GAP YTD $-1,259,072"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "ASEPXIA",
+    "bu": "SC",
+    "w12_yoy": -29.0,
+    "gap_ytd": -1144648,
+    "señal": "W12 -29.0% | YTD -5.7% | L4W -22.2% | GAP YTD $-1,144,648"
+  },
+  {
+    "prioridad": "ALTA",
+    "marca": "COLONIA SANBORNS",
+    "bu": "MM",
+    "w12_yoy": -7.9,
+    "gap_ytd": -1008139,
+    "señal": "W12 -7.9% | YTD -8.3% | L4W -7.3% | GAP YTD $-1,008,139"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "PLAN EXHIBIDORES",
+    "bu": "OTC",
+    "w12_yoy": -100.0,
+    "gap_ytd": -5258206,
+    "señal": "W12 -100.0% | YTD -99.7% | L4W -99.4% | GAP YTD $-5,258,206"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "ZANZUSI",
+    "bu": "MM",
+    "w12_yoy": -88.9,
+    "gap_ytd": -2947585,
+    "señal": "W12 -88.9% | YTD -87.0% | L4W -90.4% | GAP YTD $-2,947,585"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "LOMECAN V",
+    "bu": "OTC",
+    "w12_yoy": -9.3,
+    "gap_ytd": -2025943,
+    "señal": "W12 -9.3% | YTD -4.9% | L4W -7.7% | GAP YTD $-2,025,943"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "ROHTO",
+    "bu": "MM",
+    "w12_yoy": -99.0,
+    "gap_ytd": -1237608,
+    "señal": "W12 -99.0% | YTD -94.7% | L4W -98.6% | GAP YTD $-1,237,608"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "X RAY",
+    "bu": "OTC",
+    "w12_yoy": -24.4,
+    "gap_ytd": -1097725,
+    "señal": "W12 -24.4% | YTD -33.0% | L4W -30.8% | GAP YTD $-1,097,725"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "LOSECA",
+    "bu": "OTC",
+    "w12_yoy": -20.1,
+    "gap_ytd": -778184,
+    "señal": "W12 -20.1% | YTD -23.5% | L4W -24.5% | GAP YTD $-778,184"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "TOUCH ME",
+    "bu": "MM",
+    "w12_yoy": -59.8,
+    "gap_ytd": -562364,
+    "señal": "W12 -59.8% | YTD -47.3% | L4W -55.8% | GAP YTD $-562,364"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "DALAY",
+    "bu": "OTC",
+    "w12_yoy": -73.0,
+    "gap_ytd": -504208,
+    "señal": "W12 -73.0% | YTD -47.9% | L4W -70.5% | GAP YTD $-504,208"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "NORDIKO",
+    "bu": "MM",
+    "w12_yoy": -19.9,
+    "gap_ytd": -310702,
+    "señal": "W12 -19.9% | YTD -9.3% | L4W -12.6% | GAP YTD $-310,702"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "GARGAX",
+    "bu": "OTC",
+    "w12_yoy": -24.6,
+    "gap_ytd": -290130,
+    "señal": "W12 -24.6% | YTD -10.5% | L4W -20.5% | GAP YTD $-290,130"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "NASALUB",
+    "bu": "OTC",
+    "w12_yoy": -18.7,
+    "gap_ytd": -275251,
+    "señal": "W12 -18.7% | YTD -4.7% | L4W -12.1% | GAP YTD $-275,251"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "SILUET 40",
+    "bu": "MM",
+    "w12_yoy": -68.3,
+    "gap_ytd": -194492,
+    "señal": "W12 -68.3% | YTD -54.9% | L4W -63.6% | GAP YTD $-194,492"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "BALSAMO BENGUE",
+    "bu": "OTC",
+    "w12_yoy": -11.2,
+    "gap_ytd": -189713,
+    "señal": "W12 -11.2% | YTD -16.3% | L4W -13.1% | GAP YTD $-189,713"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "KAOPECTATE",
+    "bu": "OTC",
+    "w12_yoy": -4.7,
+    "gap_ytd": -181113,
+    "señal": "W12 -4.7% | YTD -16.8% | L4W -18.9% | GAP YTD $-181,113"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "ENGLISH LEATHER",
+    "bu": "MM",
+    "w12_yoy": -21.8,
+    "gap_ytd": -172927,
+    "señal": "W12 -21.8% | YTD -30.2% | L4W -21.5% | GAP YTD $-172,927"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "SHOT B",
+    "bu": "MM",
+    "w12_yoy": -16.0,
+    "gap_ytd": -140607,
+    "señal": "W12 -16.0% | YTD -7.4% | L4W -2.8% | GAP YTD $-140,607"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "GELBECK",
+    "bu": "OTC",
+    "w12_yoy": -17.6,
+    "gap_ytd": -76018,
+    "señal": "W12 -17.6% | YTD -8.3% | L4W -11.3% | GAP YTD $-76,018"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "XL-3 AB",
+    "bu": "MM",
+    "w12_yoy": 0,
+    "gap_ytd": -639,
+    "señal": "YTD -100.0% | L4W -100.0% | GAP YTD $-639"
+  },
+  {
+    "prioridad": "MONITOREO",
+    "marca": "MA EVANS",
+    "bu": "MM",
+    "w12_yoy": 0,
+    "gap_ytd": -66,
+    "señal": "YTD -100.0% | GAP YTD $-66"
+  }
+]

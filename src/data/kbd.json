@@ -1,73 +1,632 @@
 {
-  "Suerox": {
-    "objetivo_venta_neta_pct": 10,
-    "objetivo_som_pts": 0.7,
-    "objetivo_sellout_pct": 10,
+  "TEATRICAL": {
+    "objetivo_venta_neta_pct": 1.9,
+    "objetivo_som_pts": 3.4,
+    "competidor_principal": "Nivea",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "on_track",
+        "cumplimiento_pct": 92
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de Cuidado de la Piel",
+        "impacto": "Defender share",
+        "status": "at_risk",
+        "cumplimiento_pct": 63
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 50
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "off_track",
+        "cumplimiento_pct": 39
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "off_track",
+        "cumplimiento_pct": 36
+      }
+    ]
+  },
+  "SILKAMEDIC": {
+    "objetivo_venta_neta_pct": -10.5,
+    "objetivo_som_pts": 4.6,
+    "competidor_principal": "Advil",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "at_risk",
+        "cumplimiento_pct": 72
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 35
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "on_track",
+        "cumplimiento_pct": 80
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "off_track",
+        "cumplimiento_pct": 38
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "off_track",
+        "cumplimiento_pct": 39
+      }
+    ]
+  },
+  "CICATRICURE": {
+    "objetivo_venta_neta_pct": -22.2,
+    "objetivo_som_pts": 3.9,
+    "competidor_principal": "Nivea",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "off_track",
+        "cumplimiento_pct": 39
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de Cuidado de la Piel",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 50
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "on_track",
+        "cumplimiento_pct": 77
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "off_track",
+        "cumplimiento_pct": 48
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "off_track",
+        "cumplimiento_pct": 43
+      }
+    ]
+  },
+  "GENOPRAZOL": {
+    "objetivo_venta_neta_pct": -26.6,
+    "objetivo_som_pts": 3.6,
+    "competidor_principal": "Advil",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "at_risk",
+        "cumplimiento_pct": 71
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 50
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "on_track",
+        "cumplimiento_pct": 86
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "off_track",
+        "cumplimiento_pct": 47
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "off_track",
+        "cumplimiento_pct": 41
+      }
+    ]
+  },
+  "NOVAMIL": {
+    "objetivo_venta_neta_pct": 9.2,
+    "objetivo_som_pts": 1.2,
+    "competidor_principal": "Nan",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "at_risk",
+        "cumplimiento_pct": 62
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de Nutricion Infantil",
+        "impacto": "Defender share",
+        "status": "at_risk",
+        "cumplimiento_pct": 64
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 38
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "on_track",
+        "cumplimiento_pct": 76
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "off_track",
+        "cumplimiento_pct": 41
+      }
+    ]
+  },
+  "BIO": {
+    "objetivo_venta_neta_pct": -1.9,
+    "objetivo_som_pts": 1.7,
+    "competidor_principal": "Advil",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "at_risk",
+        "cumplimiento_pct": 56
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 50
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 47
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "at_risk",
+        "cumplimiento_pct": 63
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "at_risk",
+        "cumplimiento_pct": 62
+      }
+    ]
+  },
+  "MEDICASP": {
+    "objetivo_venta_neta_pct": -2.2,
+    "objetivo_som_pts": 1.1,
+    "competidor_principal": "Advil",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "off_track",
+        "cumplimiento_pct": 50
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "at_risk",
+        "cumplimiento_pct": 63
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 41
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "on_track",
+        "cumplimiento_pct": 76
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "on_track",
+        "cumplimiento_pct": 88
+      }
+    ]
+  },
+  "CONDON M": {
+    "objetivo_venta_neta_pct": -14.9,
+    "objetivo_som_pts": 1.2,
+    "competidor_principal": "Varios",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "on_track",
+        "cumplimiento_pct": 94
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de Multimarca",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 45
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "at_risk",
+        "cumplimiento_pct": 66
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "off_track",
+        "cumplimiento_pct": 48
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "on_track",
+        "cumplimiento_pct": 92
+      }
+    ]
+  },
+  "VANART": {
+    "objetivo_venta_neta_pct": -15.2,
+    "objetivo_som_pts": 3.2,
+    "competidor_principal": "Head & Shoulders",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "off_track",
+        "cumplimiento_pct": 35
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de Cuidado del Cabello",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 51
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 53
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "on_track",
+        "cumplimiento_pct": 79
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "on_track",
+        "cumplimiento_pct": 85
+      }
+    ]
+  },
+  "TIO NACHO": {
+    "objetivo_venta_neta_pct": -6.4,
+    "objetivo_som_pts": 1.2,
+    "competidor_principal": "Head & Shoulders",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "at_risk",
+        "cumplimiento_pct": 66
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de Cuidado del Cabello",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 47
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 48
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "at_risk",
+        "cumplimiento_pct": 72
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "at_risk",
+        "cumplimiento_pct": 69
+      }
+    ]
+  },
+  "TUKOL": {
+    "objetivo_venta_neta_pct": -17.2,
+    "objetivo_som_pts": 1.3,
+    "competidor_principal": "Advil",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "off_track",
+        "cumplimiento_pct": 38
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "at_risk",
+        "cumplimiento_pct": 72
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "at_risk",
+        "cumplimiento_pct": 67
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "off_track",
+        "cumplimiento_pct": 45
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "at_risk",
+        "cumplimiento_pct": 67
+      }
+    ]
+  },
+  "NEXT": {
+    "objetivo_venta_neta_pct": 5.3,
+    "objetivo_som_pts": 4.6,
+    "competidor_principal": "Advil",
+    "kbds": [
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "off_track",
+        "cumplimiento_pct": 39
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 39
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "on_track",
+        "cumplimiento_pct": 90
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "at_risk",
+        "cumplimiento_pct": 60
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "on_track",
+        "cumplimiento_pct": 95
+      }
+    ]
+  },
+  "SUEROX": {
+    "objetivo_venta_neta_pct": -24.9,
+    "objetivo_som_pts": 3.1,
     "competidor_principal": "Electrolit",
     "kbds": [
-      {"id":"s1","area":"Marca","descripcion":"80% de inversion en campanas de intencion de compra vs Electrolit comunicando hidratacion saludable + 8 iones","cumplimiento_pct":65,"status":"off_track","impacto":"SOM +0.6-0.8pts"},
-      {"id":"s2","area":"eCommerce","descripcion":"100% de paginas de producto actualizadas con contenido hero en canales clave","cumplimiento_pct":80,"status":"on_track","impacto":"Sell-Out digital +15%"},
-      {"id":"s3","area":"OXXO","descripcion":"95% de tiendas OXXO con charola Suerox completa 4 frentes en refrigerador #3 o #4","cumplimiento_pct":38,"status":"off_track","impacto":"Sell-Out OXXO +20%"},
-      {"id":"s4","area":"Autoservicios","descripcion":"80% de tiendas con Suerox al lado o arriba de Electrolit en anaquel","cumplimiento_pct":52,"status":"off_track","impacto":"SOM +1pt"},
-      {"id":"s5","area":"Precio","descripcion":"80% de tiendas con precio -2 pesos vs Electrolit revisado semanalmente","cumplimiento_pct":71,"status":"at_risk","impacto":"Conversion +12%"},
-      {"id":"s6","area":"Exhibicion","descripcion":"80% de tiendas en temporada alta con exhibicion adicional 2 cabeceras","cumplimiento_pct":32,"status":"off_track","impacto":"Sell-Out +25% temporada"}
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "at_risk",
+        "cumplimiento_pct": 72
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de Hidratacion/Bebidas",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 37
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 40
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "on_track",
+        "cumplimiento_pct": 77
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "at_risk",
+        "cumplimiento_pct": 71
+      }
     ]
   },
-  "Tio Nacho": {
-    "objetivo_venta_neta_pct": 14.4,
-    "objetivo_som_pts": 2.4,
-    "objetivo_sellout_pct": 7.7,
-    "competidor_principal": "Head & Shoulders / Pantene",
+  "XL-3": {
+    "objetivo_venta_neta_pct": -1.1,
+    "objetivo_som_pts": 3.6,
+    "competidor_principal": "Advil",
     "kbds": [
-      {"id":"tn1","area":"Innovacion","descripcion":"Relanzamiento Henna con diferenciacion en performance iniciando facturacion marzo 2026","cumplimiento_pct":90,"status":"on_track","impacto":"Venta Neta +14.4%"},
-      {"id":"tn2","area":"Autoservicios","descripcion":"Anaquel ejecutado en 80% de PDV con bloque de marca e innovacion a altura de ojos","cumplimiento_pct":58,"status":"at_risk","impacto":"SOM +2.4pts"},
-      {"id":"tn3","area":"eCommerce","descripcion":"100% SKU prioritarios con portafolio correcto y precio competitivo en pure players","cumplimiento_pct":75,"status":"at_risk","impacto":"Sell-Out digital +18%"},
-      {"id":"tn4","area":"Precio","descripcion":"Plan promocional 20-25% en linea con temporadas F de Belleza y T Naranja","cumplimiento_pct":80,"status":"on_track","impacto":"Rotacion +10%"}
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "off_track",
+        "cumplimiento_pct": 48
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "on_track",
+        "cumplimiento_pct": 80
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "off_track",
+        "cumplimiento_pct": 50
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "at_risk",
+        "cumplimiento_pct": 60
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "on_track",
+        "cumplimiento_pct": 77
+      }
     ]
   },
-  "Cicatricure": {
-    "objetivo_venta_neta_pct": 3.4,
-    "objetivo_som_pts": 2.6,
-    "objetivo_sellout_pct": 0,
-    "competidor_principal": "L Oreal / Neutrogena",
+  "NIKZON": {
+    "objetivo_venta_neta_pct": -10.5,
+    "objetivo_som_pts": 1.9,
+    "competidor_principal": "Advil",
     "kbds": [
-      {"id":"c1","area":"Marca","descripcion":"Plan de medios TV y digital en Gold, Rosita, NeuroZen, Gel Cicatrices y Maquillaje BB","cumplimiento_pct":70,"status":"at_risk","impacto":"SOM +2.6pts"},
-      {"id":"c2","area":"Autoservicios","descripcion":"Anaquel ejecutado en 80% PDV con acomodo vertical al lado de L Oreal por rutinas de manana","cumplimiento_pct":45,"status":"off_track","impacto":"SOM +1.5pts"},
-      {"id":"c3","area":"Innovacion","descripcion":"Continuidad lanzamiento Neurozen y Regeneplast con medios TV y digital 2 temporadas al ano","cumplimiento_pct":60,"status":"at_risk","impacto":"Venta Neta +3.4%"},
-      {"id":"c4","area":"eCommerce","descripcion":"100% SKU prioritarios con portafolio correcto y precio competitivo","cumplimiento_pct":80,"status":"on_track","impacto":"Sell-Out digital +12%"},
-      {"id":"c5","area":"Precio","descripcion":"Plan promocional 20-25% en F de Belleza y T Naranja","cumplimiento_pct":75,"status":"at_risk","impacto":"Rotacion +8%"}
-    ]
-  },
-  "Vanart": {
-    "objetivo_venta_neta_pct": -4.8,
-    "objetivo_som_pts": 1.1,
-    "objetivo_sellout_pct": 0,
-    "competidor_principal": "Pantene / Sedal",
-    "kbds": [
-      {"id":"v1","area":"Rentabilidad","descripcion":"Mejorar -15.5pts COGS mediante integracion de produccion envase 180ml a planta","cumplimiento_pct":40,"status":"off_track","impacto":"Margen +15.5pts"},
-      {"id":"v2","area":"Tradicional","descripcion":"Alcanzar distribucion numerica 180ml de 30% a 50% durante primer ano","cumplimiento_pct":28,"status":"off_track","impacto":"Cobertura +22pts"},
-      {"id":"v3","area":"Precio","descripcion":"Implementar portafolio canal correcto: Clasicos 39 pesos y Resto Linea 49 pesos","cumplimiento_pct":65,"status":"at_risk","impacto":"Rentabilidad +8%"}
-    ]
-  },
-  "Asepxia": {
-    "objetivo_venta_neta_pct": 3.3,
-    "objetivo_som_pts": 1.2,
-    "objetivo_sellout_pct": 4.3,
-    "competidor_principal": "Neutrogena / Clean Clear",
-    "kbds": [
-      {"id":"a1","area":"Marca","descripcion":"Plan de medios 100% digital con campanas diferenciadas Cuidado Diario y Base","cumplimiento_pct":70,"status":"at_risk","impacto":"SOM +1.2pts"},
-      {"id":"a2","area":"Precio","descripcion":"Plan promocional Anti-Imperfecciones 13% jabones y 20% maquillajes en Back to School","cumplimiento_pct":55,"status":"at_risk","impacto":"Sell-Out +4.3%"},
-      {"id":"a3","area":"eCommerce","descripcion":"100% SKU prioritarios con portafolio correcto y precio competitivo","cumplimiento_pct":80,"status":"on_track","impacto":"Digital +15%"}
-    ]
-  },
-  "Teatrical": {
-    "objetivo_venta_neta_pct": 11.7,
-    "objetivo_som_pts": 3.5,
-    "objetivo_sellout_pct": 10,
-    "competidor_principal": "Pond s / Nivea",
-    "kbds": [
-      {"id":"t1","area":"Innovacion","descripcion":"Lanzar en Q4 propuesta diferenciada Intensity o Piel Coreana 2.0 con ecuacion de valor ganadora","cumplimiento_pct":45,"status":"off_track","impacto":"Venta Neta +11.7%"},
-      {"id":"t2","area":"Precio","descripcion":"Estrategia de precio competitivo vs Pond s y Nivea en canal moderno","cumplimiento_pct":72,"status":"at_risk","impacto":"SOM +3.5pts"}
+      {
+        "area": "Distribucion",
+        "descripcion": "Asegurar disponibilidad >85% en tiendas core",
+        "impacto": "Recuperar SO por agotamiento",
+        "status": "at_risk",
+        "cumplimiento_pct": 55
+      },
+      {
+        "area": "Precio",
+        "descripcion": "Mantener precio competitivo vs lider de OTC/Analgesicos",
+        "impacto": "Defender share",
+        "status": "off_track",
+        "cumplimiento_pct": 35
+      },
+      {
+        "area": "Exhibicion",
+        "descripcion": "Negociar exhibicion adicional en temporada alta",
+        "impacto": "Incrementar visibilidad +15%",
+        "status": "at_risk",
+        "cumplimiento_pct": 74
+      },
+      {
+        "area": "Promocion",
+        "descripcion": "Ejecutar promo sellout cada 4 semanas",
+        "impacto": "Acelerar rotacion +8%",
+        "status": "off_track",
+        "cumplimiento_pct": 41
+      },
+      {
+        "area": "Innovacion",
+        "descripcion": "Listar nuevos SKUs en tiendas A y B",
+        "impacto": "Ampliar portafolio",
+        "status": "at_risk",
+        "cumplimiento_pct": 69
+      }
     ]
   }
 }

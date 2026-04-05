@@ -6,7 +6,7 @@ import inventory from "../data/inventory.json"
 import funds from "../data/funds.json"
 import { formatMXN, formatPct, getAccountHealth, getHealthLabel, getLastWeekSellout, getPrevWeekSellout, getAvgCoverage } from "../utils/helpers"
 
-const SKU_COLORS = { "Alliviax": "#1D9E75", "Cicatricure": "#185FA5", "XL-3": "#BA7517", "Suerox": "#E24B4A", "Tio Nacho": "#7F77DD" }
+const SKU_COLORS_LIST = ["#6366F1","#14B8A6","#F59E0B","#F43F5E","#8B5CF6","#06B6D4","#F97316","#EC4899","#10B981","#3B82F6","#EF4444","#84CC16"]
 const statusMap = { completada: { label: "Completada", cls: "chip-green" }, en_curso: { label: "En curso", cls: "chip-amber" }, pendiente: { label: "Pendiente", cls: "chip-gray" } }
 
 export default function Account360({ accountId, onBack, onGoToAgent, onGoToPresentacion, onGoToOnePager }) {
@@ -46,7 +46,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
       </div>
       <div className="metric-grid" style={{ marginBottom: 16 }}>
         <div className="metric-card">
-          <div className="metric-label">Sell-Out Sem. 47</div>
+          <div className="metric-label">Sell-Out W12</div>
           <div className="metric-value">{formatMXN(lastWeekSO, true)}</div>
           <div className={`metric-delta ${deltaSO >= 0 ? "delta-up" : "delta-down"}`}>{deltaSO >= 0 ? "▲" : "▼"} {Math.abs(deltaSO).toFixed(1)}% vs sem. anterior</div>
         </div>
@@ -69,7 +69,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
       <div className="grid-2" style={{ marginBottom: 16 }}>
         <div className="card">
           <div className="section-header">
-            <div><div className="section-title">Sell-Out por SKU</div><div className="section-sub">Semanas S40-S47 · Miles MXN</div></div>
+            <div><div className="section-title">Sell-Out por Marca</div><div className="section-sub">Semanas W05-W12 2026 · Miles MXN</div></div>
           </div>
           <ResponsiveContainer width="100%" height={220}>
             <LineChart data={chartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
@@ -78,8 +78,8 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
               <YAxis tick={{ fontSize: 11, fill: "#888780" }} />
               <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8, border: "1px solid #DDDDD8" }} formatter={(v) => [`$${v}K`, ""]} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
-              {Object.keys(so.skus).map(sku => (
-                <Line key={sku} type="monotone" dataKey={sku} stroke={SKU_COLORS[sku] || "#888780"} strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
+              {Object.keys(so.skus).slice(0, 8).map((sku, idx) => (
+                <Line key={sku} type="monotone" dataKey={sku} stroke={SKU_COLORS_LIST[idx % SKU_COLORS_LIST.length]} strokeWidth={2} dot={false} activeDot={{ r: 4 }} />
               ))}
             </LineChart>
           </ResponsiveContainer>

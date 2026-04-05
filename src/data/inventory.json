@@ -1,8 +1,495 @@
 {
-  "wmt":{"skus":{"Alliviax":{"stock_units":4284,"min_units":3000,"coverage_days":6,"pending_oc":0,"price_mxn":89.50},"Cicatricure":{"stock_units":9870,"min_units":5000,"coverage_days":21,"pending_oc":0,"price_mxn":142.00},"XL-3":{"stock_units":7230,"min_units":4000,"coverage_days":22,"pending_oc":0,"price_mxn":78.00},"Suerox":{"stock_units":11240,"min_units":6000,"coverage_days":19,"pending_oc":5000,"price_mxn":32.00},"Tio Nacho":{"stock_units":5640,"min_units":3000,"coverage_days":26,"pending_oc":0,"price_mxn":118.00}}},
-  "ched":{"skus":{"Alliviax":{"stock_units":1120,"min_units":1500,"coverage_days":6,"pending_oc":2000,"price_mxn":89.50},"Cicatricure":{"stock_units":3240,"min_units":2000,"coverage_days":23,"pending_oc":0,"price_mxn":142.00},"XL-3":{"stock_units":1680,"min_units":1000,"coverage_days":19,"pending_oc":0,"price_mxn":78.00},"Suerox":{"stock_units":6120,"min_units":3000,"coverage_days":29,"pending_oc":0,"price_mxn":32.00},"Tio Nacho":{"stock_units":890,"min_units":1200,"coverage_days":13,"pending_oc":1500,"price_mxn":118.00}}},
-  "sor":{"skus":{"Alliviax":{"stock_units":5670,"min_units":3500,"coverage_days":22,"pending_oc":0,"price_mxn":89.50},"Cicatricure":{"stock_units":4320,"min_units":2500,"coverage_days":23,"pending_oc":0,"price_mxn":142.00},"XL-3":{"stock_units":3890,"min_units":2000,"coverage_days":31,"pending_oc":0,"price_mxn":78.00},"Suerox":{"stock_units":7840,"min_units":4000,"coverage_days":25,"pending_oc":0,"price_mxn":32.00},"Tio Nacho":{"stock_units":2340,"min_units":1800,"coverage_days":24,"pending_oc":0,"price_mxn":118.00}}},
-  "ahorro":{"skus":{"Alliviax":{"stock_units":2890,"min_units":2000,"coverage_days":20,"pending_oc":0,"price_mxn":89.50},"Cicatricure":{"stock_units":1240,"min_units":1500,"coverage_days":13,"pending_oc":2000,"price_mxn":142.00},"XL-3":{"stock_units":1560,"min_units":1000,"coverage_days":23,"pending_oc":0,"price_mxn":78.00},"Suerox":{"stock_units":2870,"min_units":2000,"coverage_days":23,"pending_oc":0,"price_mxn":32.00},"Tio Nacho":{"stock_units":980,"min_units":1000,"coverage_days":25,"pending_oc":0,"price_mxn":118.00}}},
-  "oxxo":{"skus":{"Alliviax":{"stock_units":0,"min_units":0,"coverage_days":0,"pending_oc":0,"price_mxn":89.50},"Cicatricure":{"stock_units":1840,"min_units":1500,"coverage_days":14,"pending_oc":0,"price_mxn":142.00},"XL-3":{"stock_units":1240,"min_units":1000,"coverage_days":11,"pending_oc":0,"price_mxn":78.00},"Suerox":{"stock_units":2100,"min_units":3000,"coverage_days":8,"pending_oc":0,"price_mxn":32.00},"Tio Nacho":{"stock_units":0,"min_units":0,"coverage_days":0,"pending_oc":0,"price_mxn":118.00}}},
-  "costco":{"skus":{"Alliviax":{"stock_units":1840,"min_units":1200,"coverage_days":22,"pending_oc":0,"price_mxn":89.50},"Cicatricure":{"stock_units":1560,"min_units":1000,"coverage_days":23,"pending_oc":0,"price_mxn":142.00},"XL-3":{"stock_units":0,"min_units":0,"coverage_days":0,"pending_oc":0,"price_mxn":78.00},"Suerox":{"stock_units":3240,"min_units":2000,"coverage_days":31,"pending_oc":0,"price_mxn":32.00},"Tio Nacho":{"stock_units":1120,"min_units":900,"coverage_days":22,"pending_oc":0,"price_mxn":118.00}}}
+  "wmt": {
+    "skus": {
+      "TIO NACHO": {
+        "stock_units": 10290781,
+        "min_units": 8003941,
+        "coverage_days": 18,
+        "pending_oc": 0,
+        "price_mxn": 118
+      },
+      "SUEROX": {
+        "stock_units": 8671972,
+        "min_units": 4335986,
+        "coverage_days": 28,
+        "pending_oc": 0,
+        "price_mxn": 32
+      },
+      "TEATRICAL": {
+        "stock_units": 3031675,
+        "min_units": 3264881,
+        "coverage_days": 13,
+        "pending_oc": 0,
+        "price_mxn": 95
+      },
+      "SILKAMEDIC": {
+        "stock_units": 7757606,
+        "min_units": 3393953,
+        "coverage_days": 32,
+        "pending_oc": 0,
+        "price_mxn": 72
+      },
+      "XL-3": {
+        "stock_units": 3880054,
+        "min_units": 1752282,
+        "coverage_days": 31,
+        "pending_oc": 0,
+        "price_mxn": 78
+      },
+      "VANART": {
+        "stock_units": 2591175,
+        "min_units": 2790496,
+        "coverage_days": 13,
+        "pending_oc": 0,
+        "price_mxn": 48
+      },
+      "LOMECAN V": {
+        "stock_units": 2608340,
+        "min_units": 3043063,
+        "coverage_days": 12,
+        "pending_oc": 0,
+        "price_mxn": 125
+      },
+      "CICATRICURE": {
+        "stock_units": 2807813,
+        "min_units": 2068915,
+        "coverage_days": 19,
+        "pending_oc": 0,
+        "price_mxn": 142
+      },
+      "MEDICASP": {
+        "stock_units": 2565246,
+        "min_units": 1496394,
+        "coverage_days": 24,
+        "pending_oc": 0,
+        "price_mxn": 85
+      },
+      "NEXT": {
+        "stock_units": 1403105,
+        "min_units": 1155498,
+        "coverage_days": 17,
+        "pending_oc": 0,
+        "price_mxn": 92
+      },
+      "TUKOL": {
+        "stock_units": 381085,
+        "min_units": 1067038,
+        "coverage_days": 5,
+        "pending_oc": 533519,
+        "price_mxn": 65
+      },
+      "ASEPXIA": {
+        "stock_units": 3031449,
+        "min_units": 1326259,
+        "coverage_days": 32,
+        "pending_oc": 0,
+        "price_mxn": 68
+      }
+    }
+  },
+  "ched": {
+    "skus": {
+      "TIO NACHO": {
+        "stock_units": 1123133,
+        "min_units": 1572387,
+        "coverage_days": 10,
+        "pending_oc": 0,
+        "price_mxn": 118
+      },
+      "SUEROX": {
+        "stock_units": 1052667,
+        "min_units": 1339759,
+        "coverage_days": 11,
+        "pending_oc": 0,
+        "price_mxn": 32
+      },
+      "TEATRICAL": {
+        "stock_units": 1709388,
+        "min_units": 797714,
+        "coverage_days": 30,
+        "pending_oc": 0,
+        "price_mxn": 95
+      },
+      "CICATRICURE": {
+        "stock_units": 727624,
+        "min_units": 679116,
+        "coverage_days": 15,
+        "pending_oc": 0,
+        "price_mxn": 142
+      },
+      "XL-3": {
+        "stock_units": 1172407,
+        "min_units": 497385,
+        "coverage_days": 33,
+        "pending_oc": 0,
+        "price_mxn": 78
+      },
+      "VANART": {
+        "stock_units": 1047004,
+        "min_units": 542891,
+        "coverage_days": 27,
+        "pending_oc": 0,
+        "price_mxn": 48
+      },
+      "LOMECAN V": {
+        "stock_units": 799381,
+        "min_units": 508697,
+        "coverage_days": 22,
+        "pending_oc": 0,
+        "price_mxn": 125
+      },
+      "ASEPXIA": {
+        "stock_units": 647752,
+        "min_units": 431835,
+        "coverage_days": 21,
+        "pending_oc": 0,
+        "price_mxn": 68
+      },
+      "TUKOL": {
+        "stock_units": 135437,
+        "min_units": 270875,
+        "coverage_days": 7,
+        "pending_oc": 135437,
+        "price_mxn": 65
+      },
+      "SILKAMEDIC": {
+        "stock_units": 936533,
+        "min_units": 468266,
+        "coverage_days": 28,
+        "pending_oc": 0,
+        "price_mxn": 72
+      },
+      "NEXT": {
+        "stock_units": 410802,
+        "min_units": 287562,
+        "coverage_days": 20,
+        "pending_oc": 0,
+        "price_mxn": 92
+      },
+      "MEDICASP": {
+        "stock_units": 637024,
+        "min_units": 307529,
+        "coverage_days": 29,
+        "pending_oc": 0,
+        "price_mxn": 85
+      }
+    }
+  },
+  "sor": {
+    "skus": {
+      "SUEROX": {
+        "stock_units": 2624412,
+        "min_units": 1360806,
+        "coverage_days": 27,
+        "pending_oc": 0,
+        "price_mxn": 32
+      },
+      "TIO NACHO": {
+        "stock_units": 2512414,
+        "min_units": 1406952,
+        "coverage_days": 25,
+        "pending_oc": 0,
+        "price_mxn": 118
+      },
+      "TEATRICAL": {
+        "stock_units": 1318440,
+        "min_units": 922908,
+        "coverage_days": 20,
+        "pending_oc": 0,
+        "price_mxn": 95
+      },
+      "XL-3": {
+        "stock_units": 1066113,
+        "min_units": 497519,
+        "coverage_days": 30,
+        "pending_oc": 0,
+        "price_mxn": 78
+      },
+      "CICATRICURE": {
+        "stock_units": 236540,
+        "min_units": 473080,
+        "coverage_days": 7,
+        "pending_oc": 236540,
+        "price_mxn": 142
+      },
+      "VANART": {
+        "stock_units": 851762,
+        "min_units": 993723,
+        "coverage_days": 12,
+        "pending_oc": 0,
+        "price_mxn": 48
+      },
+      "SILKAMEDIC": {
+        "stock_units": 1461568,
+        "min_units": 757850,
+        "coverage_days": 27,
+        "pending_oc": 0,
+        "price_mxn": 72
+      },
+      "LOMECAN V": {
+        "stock_units": 545001,
+        "min_units": 545001,
+        "coverage_days": 14,
+        "pending_oc": 0,
+        "price_mxn": 125
+      },
+      "TUKOL": {
+        "stock_units": 394296,
+        "min_units": 240006,
+        "coverage_days": 23,
+        "pending_oc": 0,
+        "price_mxn": 65
+      },
+      "NEXT": {
+        "stock_units": 337100,
+        "min_units": 235970,
+        "coverage_days": 20,
+        "pending_oc": 0,
+        "price_mxn": 92
+      },
+      "ASEPXIA": {
+        "stock_units": 479384,
+        "min_units": 319589,
+        "coverage_days": 21,
+        "pending_oc": 0,
+        "price_mxn": 68
+      },
+      "MEDICASP": {
+        "stock_units": 442400,
+        "min_units": 344089,
+        "coverage_days": 18,
+        "pending_oc": 0,
+        "price_mxn": 85
+      }
+    }
+  },
+  "oxxo": {
+    "skus": {
+      "SUEROX": {
+        "stock_units": 10350324,
+        "min_units": 6586570,
+        "coverage_days": 22,
+        "pending_oc": 0,
+        "price_mxn": 32
+      },
+      "XL-3": {
+        "stock_units": 1936190,
+        "min_units": 1694167,
+        "coverage_days": 16,
+        "pending_oc": 0,
+        "price_mxn": 78
+      },
+      "BIO": {
+        "stock_units": 1944544,
+        "min_units": 1432822,
+        "coverage_days": 19,
+        "pending_oc": 0,
+        "price_mxn": 55
+      },
+      "NEXT": {
+        "stock_units": 984485,
+        "min_units": 984485,
+        "coverage_days": 14,
+        "pending_oc": 0,
+        "price_mxn": 92
+      },
+      "CONDON M": {
+        "stock_units": 955224,
+        "min_units": 1114428,
+        "coverage_days": 12,
+        "pending_oc": 0,
+        "price_mxn": 45
+      },
+      "GENOPRAZOL": {
+        "stock_units": 874209,
+        "min_units": 437104,
+        "coverage_days": 28,
+        "pending_oc": 0,
+        "price_mxn": 69
+      },
+      "ALLIVIAX": {
+        "stock_units": 188688,
+        "min_units": 176109,
+        "coverage_days": 15,
+        "pending_oc": 0,
+        "price_mxn": 89
+      },
+      "TUKOL": {
+        "stock_units": 96181,
+        "min_units": 48090,
+        "coverage_days": 28,
+        "pending_oc": 0,
+        "price_mxn": 65
+      },
+      "GROOMEN": {
+        "stock_units": 25572,
+        "min_units": 10229,
+        "coverage_days": 35,
+        "pending_oc": 0,
+        "price_mxn": 142
+      },
+      "POMADA DE LA CAMPANA": {
+        "stock_units": 1160,
+        "min_units": 601,
+        "coverage_days": 27,
+        "pending_oc": 0,
+        "price_mxn": 68
+      }
+    }
+  },
+  "ahorro": {
+    "skus": {
+      "NOVAMIL": {
+        "stock_units": 7223921,
+        "min_units": 9194082,
+        "coverage_days": 11,
+        "pending_oc": 0,
+        "price_mxn": 285
+      },
+      "XL-3": {
+        "stock_units": 4266274,
+        "min_units": 2133137,
+        "coverage_days": 28,
+        "pending_oc": 0,
+        "price_mxn": 78
+      },
+      "TUKOL": {
+        "stock_units": 1532533,
+        "min_units": 1650420,
+        "coverage_days": 13,
+        "pending_oc": 0,
+        "price_mxn": 65
+      },
+      "NIKZON": {
+        "stock_units": 2660719,
+        "min_units": 1619568,
+        "coverage_days": 23,
+        "pending_oc": 0,
+        "price_mxn": 110
+      },
+      "NEXT": {
+        "stock_units": 1293643,
+        "min_units": 862429,
+        "coverage_days": 21,
+        "pending_oc": 0,
+        "price_mxn": 92
+      },
+      "BIO": {
+        "stock_units": 1116936,
+        "min_units": 1116936,
+        "coverage_days": 14,
+        "pending_oc": 0,
+        "price_mxn": 55
+      },
+      "ALLIVIAX": {
+        "stock_units": 1373120,
+        "min_units": 620119,
+        "coverage_days": 31,
+        "pending_oc": 0,
+        "price_mxn": 89
+      },
+      "LOMECAN V": {
+        "stock_units": 705505,
+        "min_units": 705505,
+        "coverage_days": 14,
+        "pending_oc": 0,
+        "price_mxn": 125
+      },
+      "SILKAMEDIC": {
+        "stock_units": 842297,
+        "min_units": 737010,
+        "coverage_days": 16,
+        "pending_oc": 0,
+        "price_mxn": 72
+      },
+      "SUEROX": {
+        "stock_units": 546616,
+        "min_units": 546616,
+        "coverage_days": 14,
+        "pending_oc": 0,
+        "price_mxn": 32
+      },
+      "MEDICASP": {
+        "stock_units": 695212,
+        "min_units": 360480,
+        "coverage_days": 27,
+        "pending_oc": 0,
+        "price_mxn": 85
+      },
+      "POINTTS": {
+        "stock_units": 255798,
+        "min_units": 397908,
+        "coverage_days": 9,
+        "pending_oc": 198954,
+        "price_mxn": 80
+      }
+    }
+  },
+  "costco": {
+    "skus": {
+      "XL-3": {
+        "stock_units": 98219,
+        "min_units": 229179,
+        "coverage_days": 6,
+        "pending_oc": 114589,
+        "price_mxn": 78
+      },
+      "BIO": {
+        "stock_units": 351410,
+        "min_units": 223625,
+        "coverage_days": 22,
+        "pending_oc": 0,
+        "price_mxn": 55
+      },
+      "MEDICASP": {
+        "stock_units": 366599,
+        "min_units": 190088,
+        "coverage_days": 27,
+        "pending_oc": 0,
+        "price_mxn": 85
+      },
+      "NIKZON": {
+        "stock_units": 638992,
+        "min_units": 357836,
+        "coverage_days": 25,
+        "pending_oc": 0,
+        "price_mxn": 110
+      },
+      "SILKAMEDIC": {
+        "stock_units": 265402,
+        "min_units": 185782,
+        "coverage_days": 20,
+        "pending_oc": 0,
+        "price_mxn": 72
+      },
+      "SUEROX": {
+        "stock_units": 342609,
+        "min_units": 149891,
+        "coverage_days": 32,
+        "pending_oc": 0,
+        "price_mxn": 32
+      },
+      "TUKOL": {
+        "stock_units": 68435,
+        "min_units": 41656,
+        "coverage_days": 23,
+        "pending_oc": 0,
+        "price_mxn": 65
+      },
+      "QG5": {
+        "stock_units": 96790,
+        "min_units": 67753,
+        "coverage_days": 20,
+        "pending_oc": 0,
+        "price_mxn": 106
+      },
+      "NEXT": {
+        "stock_units": 17154,
+        "min_units": 12640,
+        "coverage_days": 19,
+        "pending_oc": 0,
+        "price_mxn": 92
+      }
+    }
+  }
 }

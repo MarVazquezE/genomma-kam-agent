@@ -1,27 +1,164 @@
 {
-  "wmt":[
-    {"iniciativa":"Promo Invernal Alliviax","tipo":"promocion","estado":"off_track","avance_pct":32,"objetivo_pct":80,"venta_perdida_mxn":428000,"deadline":"2024-11-30","accion":"Activar exhibicion adicional y precio especial"},
-    {"iniciativa":"Lanzamiento Tio Nacho Henna","tipo":"innovacion","estado":"on_track","avance_pct":74,"objetivo_pct":80,"venta_perdida_mxn":0,"deadline":"2024-12-15","accion":"Mantener ritmo de sell out"},
-    {"iniciativa":"Display Cicatricure gondola","tipo":"fondos","estado":"off_track","avance_pct":0,"objetivo_pct":100,"venta_perdida_mxn":250000,"deadline":"2024-11-15","accion":"Confirmar fecha de instalacion con comprador"},
-    {"iniciativa":"Activacion digital Suerox","tipo":"fondos","estado":"pendiente","avance_pct":0,"objetivo_pct":100,"venta_perdida_mxn":180000,"deadline":"2024-11-20","accion":"Enviar materiales a Walmart Connect"}
+  "wmt": [
+    {
+      "iniciativa": "Plan recuperacion SUEROX",
+      "accion": "Activar promo + revisar distribucion. Caida -21.2% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 4083356
+    },
+    {
+      "iniciativa": "Plan recuperacion XL-3",
+      "accion": "Activar promo + revisar distribucion. Caida -10.1% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 0
+    },
+    {
+      "iniciativa": "Plan recuperacion VANART",
+      "accion": "Activar promo + revisar distribucion. Caida -7.4% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 1888736
+    },
+    {
+      "iniciativa": "Mantener ejecucion TIO NACHO",
+      "accion": "Defender anaquel y precio. Tendencia +1.3%",
+      "estado": "on_track",
+      "venta_perdida_mxn": 607414
+    },
+    {
+      "iniciativa": "Mantener ejecucion SILKAMEDIC",
+      "accion": "Defender anaquel y precio. Tendencia +2.4%",
+      "estado": "on_track",
+      "venta_perdida_mxn": 0
+    }
   ],
-  "ched":[
-    {"iniciativa":"Suerox Coco Pina innovacion","tipo":"innovacion","estado":"off_track","avance_pct":18,"objetivo_pct":70,"venta_perdida_mxn":320000,"deadline":"2024-11-30","accion":"Urgente: gestionar espacio en anaquel con comprador"},
-    {"iniciativa":"Cabecera Cicatricure","tipo":"fondos","estado":"on_track","avance_pct":82,"objetivo_pct":80,"venta_perdida_mxn":0,"deadline":"2024-12-01","accion":"Confirmar cierre de actividad"}
+  "ched": [
+    {
+      "iniciativa": "Plan recuperacion TIO NACHO",
+      "accion": "Activar promo + revisar distribucion. Caida -12.1% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 701325
+    },
+    {
+      "iniciativa": "Plan recuperacion CICATRICURE",
+      "accion": "Activar promo + revisar distribucion. Caida -5.3% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 418468
+    },
+    {
+      "iniciativa": "Plan recuperacion VANART",
+      "accion": "Activar promo + revisar distribucion. Caida -30.8% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 959248
+    },
+    {
+      "iniciativa": "Mantener ejecucion SUEROX",
+      "accion": "Defender anaquel y precio. Tendencia -4.5%",
+      "estado": "at_risk",
+      "venta_perdida_mxn": 0
+    },
+    {
+      "iniciativa": "Mantener ejecucion XL-3",
+      "accion": "Defender anaquel y precio. Tendencia +3.4%",
+      "estado": "on_track",
+      "venta_perdida_mxn": 0
+    }
   ],
-  "oxxo":[
-    {"iniciativa":"Plan Invernal Suerox OXXO","tipo":"promocion","estado":"off_track","avance_pct":12,"objetivo_pct":75,"venta_perdida_mxn":890000,"deadline":"2024-11-30","accion":"CRITICO: Reunirse urgente con buyer OXXO, Suerox -36%"},
-    {"iniciativa":"Cicatricure anaquel OXXO","tipo":"distribucion","estado":"off_track","avance_pct":24,"objetivo_pct":60,"venta_perdida_mxn":240000,"deadline":"2024-12-15","accion":"Incrementar presencia en zona metropolitana"}
+  "sor": [
+    {
+      "iniciativa": "Plan recuperacion SUEROX",
+      "accion": "Activar promo + revisar distribucion. Caida -28.8% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 0
+    },
+    {
+      "iniciativa": "Plan recuperacion TIO NACHO",
+      "accion": "Activar promo + revisar distribucion. Caida -22.8% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 2258344
+    },
+    {
+      "iniciativa": "Plan recuperacion XL-3",
+      "accion": "Activar promo + revisar distribucion. Caida -25.9% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 808631
+    }
   ],
-  "sor":[
-    {"iniciativa":"Tio Nacho Henna lanzamiento","tipo":"innovacion","estado":"on_track","avance_pct":68,"objetivo_pct":70,"venta_perdida_mxn":0,"deadline":"2024-12-01","accion":"Mantener ejecucion"},
-    {"iniciativa":"Promo Cicatricure 2x1","tipo":"promocion","estado":"on_track","avance_pct":88,"objetivo_pct":80,"venta_perdida_mxn":0,"deadline":"2024-11-20","accion":"Cerrar actividad exitosamente"}
+  "oxxo": [
+    {
+      "iniciativa": "Plan recuperacion SUEROX",
+      "accion": "Activar promo + revisar distribucion. Caida -44.1% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 22079082
+    },
+    {
+      "iniciativa": "Plan recuperacion XL-3",
+      "accion": "Activar promo + revisar distribucion. Caida -14.8% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 387150
+    },
+    {
+      "iniciativa": "Plan recuperacion BIO",
+      "accion": "Activar promo + revisar distribucion. Caida -10.8% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 423899
+    },
+    {
+      "iniciativa": "Mantener ejecucion NEXT",
+      "accion": "Defender anaquel y precio. Tendencia -2.8%",
+      "estado": "at_risk",
+      "venta_perdida_mxn": 0
+    },
+    {
+      "iniciativa": "Mantener ejecucion CONDON M",
+      "accion": "Defender anaquel y precio. Tendencia +2.7%",
+      "estado": "on_track",
+      "venta_perdida_mxn": 315461
+    }
   ],
-  "ahorro":[
-    {"iniciativa":"Capacitacion farmaceuticos Alliviax","tipo":"trade","estado":"off_track","avance_pct":45,"objetivo_pct":80,"venta_perdida_mxn":152000,"deadline":"2024-11-30","accion":"Agendar segunda ronda de capacitacion"},
-    {"iniciativa":"Exhibicion Cicatricure mostrador","tipo":"fondos","estado":"pendiente","avance_pct":0,"objetivo_pct":100,"venta_perdida_mxn":280000,"deadline":"2024-12-01","accion":"Urgente: instalar exhibidor antes de temporada"}
+  "ahorro": [
+    {
+      "iniciativa": "Plan recuperacion XL-3",
+      "accion": "Activar promo + revisar distribucion. Caida -13.4% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 0
+    },
+    {
+      "iniciativa": "Plan recuperacion TUKOL",
+      "accion": "Activar promo + revisar distribucion. Caida -36.0% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 4186524
+    },
+    {
+      "iniciativa": "Plan recuperacion NIKZON",
+      "accion": "Activar promo + revisar distribucion. Caida -21.1% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 1096829
+    }
   ],
-  "costco":[
-    {"iniciativa":"Demo Suerox multipack","tipo":"promocion","estado":"on_track","avance_pct":100,"objetivo_pct":100,"venta_perdida_mxn":0,"deadline":"2024-11-15","accion":"Actividad completada exitosamente"}
+  "costco": [
+    {
+      "iniciativa": "Plan recuperacion BIO",
+      "accion": "Activar promo + revisar distribucion. Caida -14.8% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 0
+    },
+    {
+      "iniciativa": "Plan recuperacion NIKZON",
+      "accion": "Activar promo + revisar distribucion. Caida -44.5% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 514822
+    },
+    {
+      "iniciativa": "Plan recuperacion SILKAMEDIC",
+      "accion": "Activar promo + revisar distribucion. Caida -9.1% YoY",
+      "estado": "off_track",
+      "venta_perdida_mxn": 0
+    },
+    {
+      "iniciativa": "Mantener ejecucion SUEROX",
+      "accion": "Defender anaquel y precio. Tendencia +0.0%",
+      "estado": "on_track",
+      "venta_perdida_mxn": 0
+    }
   ]
 }

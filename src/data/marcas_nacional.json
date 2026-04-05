@@ -1,0 +1,542 @@
+{
+  "SUEROX": {
+    "bu": "BE",
+    "venta_w12": 8750954,
+    "yoy_w12": -29.8,
+    "l4w_yoy": -31.5,
+    "venta_ytd": 96968526,
+    "ytd_yoy": -24.9,
+    "gap_ytd": -32203527,
+    "pct_negocio": 9.6
+  },
+  "XL-3": {
+    "bu": "OTC",
+    "venta_w12": 5456058,
+    "yoy_w12": -20.2,
+    "l4w_yoy": -15.7,
+    "venta_ytd": 113348440,
+    "ytd_yoy": -1.1,
+    "gap_ytd": -1226311,
+    "pct_negocio": 11.2
+  },
+  "TUKOL": {
+    "bu": "OTC",
+    "venta_w12": 3803628,
+    "yoy_w12": -30.4,
+    "l4w_yoy": -26.4,
+    "venta_ytd": 72938870,
+    "ytd_yoy": -17.2,
+    "gap_ytd": -15198738,
+    "pct_negocio": 7.2
+  },
+  "NEXT": {
+    "bu": "OTC",
+    "venta_w12": 2481562,
+    "yoy_w12": -15.7,
+    "l4w_yoy": -7.9,
+    "venta_ytd": 47046181,
+    "ytd_yoy": 5.3,
+    "gap_ytd": 2356123,
+    "pct_negocio": 4.7
+  },
+  "BIO": {
+    "bu": "OTC",
+    "venta_w12": 2992622,
+    "yoy_w12": -6.1,
+    "l4w_yoy": -6.3,
+    "venta_ytd": 39664059,
+    "ytd_yoy": -1.9,
+    "gap_ytd": -754041,
+    "pct_negocio": 3.9
+  },
+  "LOMECAN V": {
+    "bu": "OTC",
+    "venta_w12": 3528448,
+    "yoy_w12": -9.3,
+    "l4w_yoy": -7.7,
+    "venta_ytd": 39495435,
+    "ytd_yoy": -4.9,
+    "gap_ytd": -2025943,
+    "pct_negocio": 3.9
+  },
+  "NIKZON": {
+    "bu": "OTC",
+    "venta_w12": 2912465,
+    "yoy_w12": -25.6,
+    "l4w_yoy": -21.8,
+    "venta_ytd": 39356068,
+    "ytd_yoy": -10.5,
+    "gap_ytd": -4603909,
+    "pct_negocio": 3.9
+  },
+  "SILKAMEDIC": {
+    "bu": "OTC",
+    "venta_w12": 3997671,
+    "yoy_w12": -7.3,
+    "l4w_yoy": -15.8,
+    "venta_ytd": 38192404,
+    "ytd_yoy": -10.5,
+    "gap_ytd": -4487181,
+    "pct_negocio": 3.8
+  },
+  "MEDICASP": {
+    "bu": "OTC",
+    "venta_w12": 1975029,
+    "yoy_w12": -9.5,
+    "l4w_yoy": -7.8,
+    "venta_ytd": 28996150,
+    "ytd_yoy": -2.2,
+    "gap_ytd": -645057,
+    "pct_negocio": 2.9
+  },
+  "ALLIVIAX": {
+    "bu": "OTC",
+    "venta_w12": 1767674,
+    "yoy_w12": -37.8,
+    "l4w_yoy": -34.6,
+    "venta_ytd": 27332294,
+    "ytd_yoy": -22.8,
+    "gap_ytd": -8089617,
+    "pct_negocio": 2.7
+  },
+  "UNESIA": {
+    "bu": "OTC",
+    "venta_w12": 1656934,
+    "yoy_w12": -7.0,
+    "l4w_yoy": -12.5,
+    "venta_ytd": 14802935,
+    "ytd_yoy": -7.8,
+    "gap_ytd": -1259072,
+    "pct_negocio": 1.5
+  },
+  "GENOPRAZOL": {
+    "bu": "OTC",
+    "venta_w12": 903689,
+    "yoy_w12": -30.8,
+    "l4w_yoy": -29.4,
+    "venta_ytd": 12511946,
+    "ytd_yoy": -26.6,
+    "gap_ytd": -4531584,
+    "pct_negocio": 1.2
+  },
+  "BENGUE": {
+    "bu": "OTC",
+    "venta_w12": 843255,
+    "yoy_w12": -27.5,
+    "l4w_yoy": -24.5,
+    "venta_ytd": 10220088,
+    "ytd_yoy": -22.7,
+    "gap_ytd": -2999098,
+    "pct_negocio": 1.0
+  },
+  "QG5": {
+    "bu": "OTC",
+    "venta_w12": 583941,
+    "yoy_w12": -41.2,
+    "l4w_yoy": -38.4,
+    "venta_ytd": 7911045,
+    "ytd_yoy": -34.1,
+    "gap_ytd": -4084737,
+    "pct_negocio": 0.8
+  },
+  "NASALUB": {
+    "bu": "OTC",
+    "venta_w12": 456197,
+    "yoy_w12": -18.7,
+    "l4w_yoy": -12.1,
+    "venta_ytd": 5626177,
+    "ytd_yoy": -4.7,
+    "gap_ytd": -275251,
+    "pct_negocio": 0.6
+  },
+  "POINTTS": {
+    "bu": "OTC",
+    "venta_w12": 455651,
+    "yoy_w12": -23.8,
+    "l4w_yoy": -29.4,
+    "venta_ytd": 5325076,
+    "ytd_yoy": -20.7,
+    "gap_ytd": -1393782,
+    "pct_negocio": 0.5
+  },
+  "LOSECA": {
+    "bu": "OTC",
+    "venta_w12": 203914,
+    "yoy_w12": -20.1,
+    "l4w_yoy": -24.5,
+    "venta_ytd": 2539021,
+    "ytd_yoy": -23.5,
+    "gap_ytd": -778184,
+    "pct_negocio": 0.3
+  },
+  "GARGAX": {
+    "bu": "OTC",
+    "venta_w12": 169051,
+    "yoy_w12": -24.6,
+    "l4w_yoy": -20.5,
+    "venta_ytd": 2463350,
+    "ytd_yoy": -10.5,
+    "gap_ytd": -290130,
+    "pct_negocio": 0.2
+  },
+  "X RAY": {
+    "bu": "OTC",
+    "venta_w12": 185535,
+    "yoy_w12": -24.4,
+    "l4w_yoy": -30.8,
+    "venta_ytd": 2231814,
+    "ytd_yoy": -33.0,
+    "gap_ytd": -1097725,
+    "pct_negocio": 0.2
+  },
+  "BALSAMO BENGUE": {
+    "bu": "OTC",
+    "venta_w12": 86841,
+    "yoy_w12": -11.2,
+    "l4w_yoy": -13.1,
+    "venta_ytd": 977304,
+    "ytd_yoy": -16.3,
+    "gap_ytd": -189713,
+    "pct_negocio": 0.1
+  },
+  "KAOPECTATE": {
+    "bu": "OTC",
+    "venta_w12": 71274,
+    "yoy_w12": -4.7,
+    "l4w_yoy": -18.9,
+    "venta_ytd": 897750,
+    "ytd_yoy": -16.8,
+    "gap_ytd": -181113,
+    "pct_negocio": 0.1
+  },
+  "LAKESIA": {
+    "bu": "OTC",
+    "venta_w12": 180529,
+    "yoy_w12": 0.0,
+    "l4w_yoy": 0.0,
+    "venta_ytd": 862029,
+    "ytd_yoy": 0.0,
+    "gap_ytd": 862029,
+    "pct_negocio": 0.1
+  },
+  "GELBECK": {
+    "bu": "OTC",
+    "venta_w12": 63057,
+    "yoy_w12": -17.6,
+    "l4w_yoy": -11.3,
+    "venta_ytd": 837994,
+    "ytd_yoy": -8.3,
+    "gap_ytd": -76018,
+    "pct_negocio": 0.1
+  },
+  "DALAY": {
+    "bu": "OTC",
+    "venta_w12": 25003,
+    "yoy_w12": -73.0,
+    "l4w_yoy": -70.5,
+    "venta_ytd": 548503,
+    "ytd_yoy": -47.9,
+    "gap_ytd": -504208,
+    "pct_negocio": 0.1
+  },
+  "NOVAMIL": {
+    "bu": "PH",
+    "venta_w12": 7233341,
+    "yoy_w12": 4.9,
+    "l4w_yoy": -1.5,
+    "venta_ytd": 85587463,
+    "ytd_yoy": 9.2,
+    "gap_ytd": 7219338,
+    "pct_negocio": 8.5
+  },
+  "TIO NACHO": {
+    "bu": "HC",
+    "venta_w12": 6367538,
+    "yoy_w12": -3.4,
+    "l4w_yoy": -8.3,
+    "venta_ytd": 80398770,
+    "ytd_yoy": -6.4,
+    "gap_ytd": -5456115,
+    "pct_negocio": 8.0
+  },
+  "VANART": {
+    "bu": "HC",
+    "venta_w12": 2584886,
+    "yoy_w12": -10.4,
+    "l4w_yoy": -15.9,
+    "venta_ytd": 26338210,
+    "ytd_yoy": -15.2,
+    "gap_ytd": -4716814,
+    "pct_negocio": 2.6
+  },
+  "TEATRICAL": {
+    "bu": "SC",
+    "venta_w12": 3311329,
+    "yoy_w12": 8.0,
+    "l4w_yoy": 5.8,
+    "venta_ytd": 40290415,
+    "ytd_yoy": 1.9,
+    "gap_ytd": 760737,
+    "pct_negocio": 4.0
+  },
+  "CICATRICURE": {
+    "bu": "SC",
+    "venta_w12": 2938542,
+    "yoy_w12": -18.7,
+    "l4w_yoy": -28.9,
+    "venta_ytd": 36788365,
+    "ytd_yoy": -22.2,
+    "gap_ytd": -10477512,
+    "pct_negocio": 3.6
+  },
+  "ASEPXIA": {
+    "bu": "SC",
+    "venta_w12": 1445943,
+    "yoy_w12": -29.0,
+    "l4w_yoy": -22.2,
+    "venta_ytd": 18775211,
+    "ytd_yoy": -5.7,
+    "gap_ytd": -1144648,
+    "pct_negocio": 1.9
+  },
+  "GOICOECHEA": {
+    "bu": "SC",
+    "venta_w12": 1169942,
+    "yoy_w12": -19.6,
+    "l4w_yoy": -21.0,
+    "venta_ytd": 13285174,
+    "ytd_yoy": -19.8,
+    "gap_ytd": -3280358,
+    "pct_negocio": 1.3
+  },
+  "GOICOECHEA DIABET TX": {
+    "bu": "SC",
+    "venta_w12": 579708,
+    "yoy_w12": -37.0,
+    "l4w_yoy": -35.8,
+    "venta_ytd": 7116271,
+    "ytd_yoy": -34.4,
+    "gap_ytd": -3733288,
+    "pct_negocio": 0.7
+  },
+  "CONDON M": {
+    "bu": "MM",
+    "venta_w12": 1316916,
+    "yoy_w12": -16.6,
+    "l4w_yoy": -23.7,
+    "venta_ytd": 17164699,
+    "ytd_yoy": -14.9,
+    "gap_ytd": -2994536,
+    "pct_negocio": 1.7
+  },
+  "POMADA DE LA CAMPANA": {
+    "bu": "MM",
+    "venta_w12": 900139,
+    "yoy_w12": -16.0,
+    "l4w_yoy": 6.6,
+    "venta_ytd": 13625263,
+    "ytd_yoy": 0.9,
+    "gap_ytd": 119309,
+    "pct_negocio": 1.3
+  },
+  "COLONIA SANBORNS": {
+    "bu": "MM",
+    "venta_w12": 906418,
+    "yoy_w12": -7.9,
+    "l4w_yoy": -7.3,
+    "venta_ytd": 11163537,
+    "ytd_yoy": -8.3,
+    "gap_ytd": -1008139,
+    "pct_negocio": 1.1
+  },
+  "GROOMEN": {
+    "bu": "MM",
+    "venta_w12": 827513,
+    "yoy_w12": -15.5,
+    "l4w_yoy": -14.1,
+    "venta_ytd": 10723385,
+    "ytd_yoy": -16.7,
+    "gap_ytd": -2143380,
+    "pct_negocio": 1.1
+  },
+  "WILDROOT": {
+    "bu": "MM",
+    "venta_w12": 490667,
+    "yoy_w12": -20.1,
+    "l4w_yoy": -10.0,
+    "venta_ytd": 7458521,
+    "ytd_yoy": 1.8,
+    "gap_ytd": 128527,
+    "pct_negocio": 0.7
+  },
+  "ALERT": {
+    "bu": "MM",
+    "venta_w12": 532908,
+    "yoy_w12": -16.4,
+    "l4w_yoy": -3.4,
+    "venta_ytd": 7120800,
+    "ytd_yoy": -28.6,
+    "gap_ytd": -2847590,
+    "pct_negocio": 0.7
+  },
+  "SISTEMA GB": {
+    "bu": "MM",
+    "venta_w12": 539046,
+    "yoy_w12": -24.0,
+    "l4w_yoy": -27.0,
+    "venta_ytd": 6437107,
+    "ytd_yoy": -27.7,
+    "gap_ytd": -2463706,
+    "pct_negocio": 0.6
+  },
+  "FERMODYL": {
+    "bu": "MM",
+    "venta_w12": 429540,
+    "yoy_w12": -41.4,
+    "l4w_yoy": -40.6,
+    "venta_ytd": 5448961,
+    "ytd_yoy": -39.0,
+    "gap_ytd": -3478133,
+    "pct_negocio": 0.5
+  },
+  "MAEV-MEDIC": {
+    "bu": "MM",
+    "venta_w12": 383127,
+    "yoy_w12": 0.0,
+    "l4w_yoy": 0.0,
+    "venta_ytd": 4329411,
+    "ytd_yoy": 0.0,
+    "gap_ytd": 4329411,
+    "pct_negocio": 0.4
+  },
+  "NORDIKO": {
+    "bu": "MM",
+    "venta_w12": 234033,
+    "yoy_w12": -19.9,
+    "l4w_yoy": -12.6,
+    "venta_ytd": 3017741,
+    "ytd_yoy": -9.3,
+    "gap_ytd": -310702,
+    "pct_negocio": 0.3
+  },
+  "SHOT B": {
+    "bu": "MM",
+    "venta_w12": 140018,
+    "yoy_w12": -16.0,
+    "l4w_yoy": -2.8,
+    "venta_ytd": 1750732,
+    "ytd_yoy": -7.4,
+    "gap_ytd": -140607,
+    "pct_negocio": 0.2
+  },
+  "TOUCH ME": {
+    "bu": "MM",
+    "venta_w12": 41895,
+    "yoy_w12": -59.8,
+    "l4w_yoy": -55.8,
+    "venta_ytd": 625468,
+    "ytd_yoy": -47.3,
+    "gap_ytd": -562364,
+    "pct_negocio": 0.1
+  },
+  "ZANZUSI": {
+    "bu": "MM",
+    "venta_w12": 25414,
+    "yoy_w12": -88.9,
+    "l4w_yoy": -90.4,
+    "venta_ytd": 439427,
+    "ytd_yoy": -87.0,
+    "gap_ytd": -2947585,
+    "pct_negocio": 0.0
+  },
+  "ENGLISH LEATHER": {
+    "bu": "MM",
+    "venta_w12": 26473,
+    "yoy_w12": -21.8,
+    "l4w_yoy": -21.5,
+    "venta_ytd": 399012,
+    "ytd_yoy": -30.2,
+    "gap_ytd": -172927,
+    "pct_negocio": 0.0
+  },
+  "COLEDIA": {
+    "bu": "MM",
+    "venta_w12": 19222,
+    "yoy_w12": 83.3,
+    "l4w_yoy": -8.7,
+    "venta_ytd": 216237,
+    "ytd_yoy": 18.2,
+    "gap_ytd": 33268,
+    "pct_negocio": 0.0
+  },
+  "SILUET 40": {
+    "bu": "MM",
+    "venta_w12": 9965,
+    "yoy_w12": -68.3,
+    "l4w_yoy": -63.6,
+    "venta_ytd": 159943,
+    "ytd_yoy": -54.9,
+    "gap_ytd": -194492,
+    "pct_negocio": 0.0
+  },
+  "ROHTO": {
+    "bu": "MM",
+    "venta_w12": 732,
+    "yoy_w12": -99.0,
+    "l4w_yoy": -98.6,
+    "venta_ytd": 68611,
+    "ytd_yoy": -94.7,
+    "gap_ytd": -1237608,
+    "pct_negocio": 0.0
+  },
+  "LINEA M": {
+    "bu": "MM",
+    "venta_w12": 0,
+    "yoy_w12": 0.0,
+    "l4w_yoy": 0.0,
+    "venta_ytd": 0,
+    "ytd_yoy": 0.0,
+    "gap_ytd": 0,
+    "pct_negocio": 0.0
+  },
+  "MA EVANS": {
+    "bu": "MM",
+    "venta_w12": 0,
+    "yoy_w12": 0.0,
+    "l4w_yoy": 0.0,
+    "venta_ytd": 0,
+    "ytd_yoy": -100.0,
+    "gap_ytd": -66,
+    "pct_negocio": 0.0
+  },
+  "SILKA": {
+    "bu": "MM",
+    "venta_w12": 0,
+    "yoy_w12": 0.0,
+    "l4w_yoy": 0.0,
+    "venta_ytd": 0,
+    "ytd_yoy": 0.0,
+    "gap_ytd": 0,
+    "pct_negocio": 0.0
+  },
+  "UNIGASTROZOL": {
+    "bu": "MM",
+    "venta_w12": 0,
+    "yoy_w12": 0.0,
+    "l4w_yoy": 0.0,
+    "venta_ytd": 0,
+    "ytd_yoy": 0.0,
+    "gap_ytd": 0,
+    "pct_negocio": 0.0
+  },
+  "XL-3 AB": {
+    "bu": "MM",
+    "venta_w12": 0,
+    "yoy_w12": 0.0,
+    "l4w_yoy": -100.0,
+    "venta_ytd": 0,
+    "ytd_yoy": -100.0,
+    "gap_ytd": -639,
+    "pct_negocio": 0.0
+  }
+}

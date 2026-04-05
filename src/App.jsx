@@ -65,11 +65,11 @@ export default function App() {
           <div className="header-logo"><span>G09</span></div>
           <div>
             <div className="header-title">Genomma KAM Agent</div>
-            <div className="header-subtitle">Area 09 Â· Plataforma Inteligente de Cuentas Clave</div>
+            <div className="header-subtitle">Área 09 · Plataforma Inteligente de Cuentas Clave</div>
           </div>
         </div>
         <div className="header-kam">
-          <span style={{ fontSize: 12, color: "var(--silver)" }}>Semana 47, 2024</span>
+          <span style={{ fontSize: 12, color: "var(--silver)" }}>Semana 12, 2026</span>
           <div style={{ width: 1, height: 16, background: "var(--slate)" }} />
           <div className="kam-avatar">AD</div>
           <span>Alan Donatto Â· Director Canal Moderno</span>
@@ -84,10 +84,10 @@ export default function App() {
       </nav>
       <main className="main">
         {activeTab === "signals" && !selectedAccount && <MarketSignals />}
-        {activeTab === "dashboard" && !selectedAccount && <Dashboard onSelectAccount={handleSelectAccount} onModuleClick={(module) => {
+        {activeTab === "dashboard" && !selectedAccount && <Dashboard onSelectAccount={handleSelectAccount} onModuleClick={(module, accountId) => {
           if (module === "signals") { handleTabChange("signals") }
           else {
-            setSelectedAccount("wmt")
+            setSelectedAccount(accountId || "wmt")
             setSubView(module)
             setActiveTab("dashboard")
           }

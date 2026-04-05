@@ -512,7 +512,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
           { label: "Presentacion", action: "presentacion" },
           { label: "Senales Bursatiles", action: "signals" }
         ].map((m, i) => (
-          <div key={i} onClick={() => onModuleClick(m.action)} style={{ border: "1px solid #1E2A3A", borderRadius: "var(--radius-md)", padding: "8px 10px", marginBottom: 3, cursor: "pointer" }}
+          <div key={i} onClick={() => onModuleClick(m.action, selectedAccount)} style={{ border: "1px solid #1E2A3A", borderRadius: "var(--radius-md)", padding: "8px 10px", marginBottom: 3, cursor: "pointer" }}
             onMouseEnter={e => { e.currentTarget.style.background = "rgba(6,182,212,0.1)"; e.currentTarget.style.borderColor = "var(--cyan)" }}
             onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "#1E2A3A" }}>
             <div style={{ fontWeight: 700, fontSize: 11, color: "var(--cyan)" }}>{m.label}</div>
@@ -538,7 +538,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ marginBottom: 16 }}>
           <h1 style={{ fontSize: 20, fontWeight: 800, marginBottom: 2 }}>Scorecard de Ejecucion</h1>
-          <p style={{ fontSize: 13, color: "var(--silver)" }}>Semana 47 · {accounts.length} cuentas · Alan Donatto - Director Canal Moderno</p>
+          <p style={{ fontSize: 13, color: "var(--silver)" }}>Semana 12 · 2026 · {accounts.length} cuentas · Genomma Lab Mexico</p>
         </div>
 
         {activeSection === "scorecard" && (
