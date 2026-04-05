@@ -13,7 +13,7 @@ import kbd from "../data/kbd.json"
 import brutoNeto from "../data/bruto_neto.json"
 import tradeComunicados from "../data/trade_comunicados.json"
 import marcasNacional from "../data/marcas_nacional.json"
-import { formatMXN, getAccountHealth, getHealthLabel, getLastWeekSellout, getAvgCoverage, getCriticalSkus } from "../utils/helpers"
+import { formatMXN, getAccountHealth, getHealthLabel, getLastWeekSellout, getPrevWeekSellout, getAvgCoverage, getCriticalSkus } from "../utils/helpers"
 
 const SKU_COLORS = ["#6366F1","#14B8A6","#F59E0B","#F43F5E","#8B5CF6","#06B6D4","#F97316","#EC4899","#10B981","#3B82F6","#EF4444","#84CC16"]
 
@@ -807,7 +807,7 @@ function AccountCard({ account, onSelect }) {
     : { text: "Sin alertas criticas", color: "var(--success)" }
   const bn = brutoNeto[account.id]
   const soNetoYTD = bn?.total_neto_ytd || 0
-  const soYoY = bn?.marcas?.length > 0 ? bn.marcas.reduce((s,m) => s + m.yoy_neto * m.neto_ytd, 0) / bn.marcas.reduce((s,m) => s + m.neto_ytd, 0) : 0
+  const soYoY = bn?.marcas?.length > 0 ? (bn.marcas.reduce((s,m) => s + m.neto_ytd, 0) > 0 ? bn.marcas.reduce((s,m) => s + m.yoy_neto * m.neto_ytd, 0) / bn.marcas.reduce((s,m) => s + m.neto_ytd, 0) : 0) : 0
   const prevWeekSO = getPrevWeekSellout(sellout, account.id)
   const wowPct = prevWeekSO > 0 ? ((lastWeekSO - prevWeekSO) / prevWeekSO * 100) : 0
   return (
