@@ -7,7 +7,8 @@
     "venta_ytd": 96968526,
     "ytd_yoy": -24.9,
     "gap_ytd": -32203527,
-    "pct_negocio": 9.6
+    "pct_negocio": 9.6,
+    "categoria_comercial": "Bebidas"
   },
   "XL-3": {
     "bu": "OTC",
@@ -17,7 +18,8 @@
     "venta_ytd": 113348440,
     "ytd_yoy": -1.1,
     "gap_ytd": -1226311,
-    "pct_negocio": 11.2
+    "pct_negocio": 11.2,
+    "categoria_comercial": "Gripe y Resfrio"
   },
   "TUKOL": {
     "bu": "OTC",
@@ -27,7 +29,8 @@
     "venta_ytd": 72938870,
     "ytd_yoy": -17.2,
     "gap_ytd": -15198738,
-    "pct_negocio": 7.2
+    "pct_negocio": 7.2,
+    "categoria_comercial": "Gripe y Resfrio"
   },
   "NEXT": {
     "bu": "OTC",
@@ -37,7 +40,8 @@
     "venta_ytd": 47046181,
     "ytd_yoy": 5.3,
     "gap_ytd": 2356123,
-    "pct_negocio": 4.7
+    "pct_negocio": 4.7,
+    "categoria_comercial": "Otras"
   },
   "BIO": {
     "bu": "OTC",
@@ -47,7 +51,8 @@
     "venta_ytd": 39664059,
     "ytd_yoy": -1.9,
     "gap_ytd": -754041,
-    "pct_negocio": 3.9
+    "pct_negocio": 3.9,
+    "categoria_comercial": "Otras"
   },
   "LOMECAN V": {
     "bu": "OTC",
@@ -57,7 +62,8 @@
     "venta_ytd": 39495435,
     "ytd_yoy": -4.9,
     "gap_ytd": -2025943,
-    "pct_negocio": 3.9
+    "pct_negocio": 3.9,
+    "categoria_comercial": "Otras"
   },
   "NIKZON": {
     "bu": "OTC",
@@ -67,7 +73,8 @@
     "venta_ytd": 39356068,
     "ytd_yoy": -10.5,
     "gap_ytd": -4603909,
-    "pct_negocio": 3.9
+    "pct_negocio": 3.9,
+    "categoria_comercial": "Otras"
   },
   "SILKAMEDIC": {
     "bu": "OTC",
@@ -77,7 +84,8 @@
     "venta_ytd": 38192404,
     "ytd_yoy": -10.5,
     "gap_ytd": -4487181,
-    "pct_negocio": 3.8
+    "pct_negocio": 3.8,
+    "categoria_comercial": "Otras"
   },
   "MEDICASP": {
     "bu": "OTC",
@@ -87,7 +95,8 @@
     "venta_ytd": 28996150,
     "ytd_yoy": -2.2,
     "gap_ytd": -645057,
-    "pct_negocio": 2.9
+    "pct_negocio": 2.9,
+    "categoria_comercial": "Cuidado Capilar"
   },
   "ALLIVIAX": {
     "bu": "OTC",
@@ -97,7 +106,8 @@
     "venta_ytd": 27332294,
     "ytd_yoy": -22.8,
     "gap_ytd": -8089617,
-    "pct_negocio": 2.7
+    "pct_negocio": 2.7,
+    "categoria_comercial": "Dolor"
   },
   "UNESIA": {
     "bu": "OTC",
@@ -107,7 +117,8 @@
     "venta_ytd": 14802935,
     "ytd_yoy": -7.8,
     "gap_ytd": -1259072,
-    "pct_negocio": 1.5
+    "pct_negocio": 1.5,
+    "categoria_comercial": "Otras"
   },
   "GENOPRAZOL": {
     "bu": "OTC",
@@ -117,7 +128,8 @@
     "venta_ytd": 12511946,
     "ytd_yoy": -26.6,
     "gap_ytd": -4531584,
-    "pct_negocio": 1.2
+    "pct_negocio": 1.2,
+    "categoria_comercial": "Gastro"
   },
   "BENGUE": {
     "bu": "OTC",
@@ -127,7 +139,8 @@
     "venta_ytd": 10220088,
     "ytd_yoy": -22.7,
     "gap_ytd": -2999098,
-    "pct_negocio": 1.0
+    "pct_negocio": 1.0,
+    "categoria_comercial": "Dolor"
   },
   "QG5": {
     "bu": "OTC",
@@ -137,7 +150,8 @@
     "venta_ytd": 7911045,
     "ytd_yoy": -34.1,
     "gap_ytd": -4084737,
-    "pct_negocio": 0.8
+    "pct_negocio": 0.8,
+    "categoria_comercial": "Otras"
   },
   "NASALUB": {
     "bu": "OTC",
@@ -147,7 +161,8 @@
     "venta_ytd": 5626177,
     "ytd_yoy": -4.7,
     "gap_ytd": -275251,
-    "pct_negocio": 0.6
+    "pct_negocio": 0.6,
+    "categoria_comercial": "Gripe y Resfrio"
   },
   "POINTTS": {
     "bu": "OTC",
@@ -157,7 +172,8 @@
     "venta_ytd": 5325076,
     "ytd_yoy": -20.7,
     "gap_ytd": -1393782,
-    "pct_negocio": 0.5
+    "pct_negocio": 0.5,
+    "categoria_comercial": "Otras"
   },
   "LOSECA": {
     "bu": "OTC",
@@ -167,7 +183,8 @@
     "venta_ytd": 2539021,
     "ytd_yoy": -23.5,
     "gap_ytd": -778184,
-    "pct_negocio": 0.3
+    "pct_negocio": 0.3,
+    "categoria_comercial": "Gastro"
   },
   "GARGAX": {
     "bu": "OTC",
@@ -177,7 +194,8 @@
     "venta_ytd": 2463350,
     "ytd_yoy": -10.5,
     "gap_ytd": -290130,
-    "pct_negocio": 0.2
+    "pct_negocio": 0.2,
+    "categoria_comercial": "Gripe y Resfrio"
   },
   "X RAY": {
     "bu": "OTC",
@@ -187,7 +205,8 @@
     "venta_ytd": 2231814,
     "ytd_yoy": -33.0,
     "gap_ytd": -1097725,
-    "pct_negocio": 0.2
+    "pct_negocio": 0.2,
+    "categoria_comercial": "Dolor"
   },
   "BALSAMO BENGUE": {
     "bu": "OTC",
@@ -197,7 +216,8 @@
     "venta_ytd": 977304,
     "ytd_yoy": -16.3,
     "gap_ytd": -189713,
-    "pct_negocio": 0.1
+    "pct_negocio": 0.1,
+    "categoria_comercial": "Dolor"
   },
   "KAOPECTATE": {
     "bu": "OTC",
@@ -207,7 +227,8 @@
     "venta_ytd": 897750,
     "ytd_yoy": -16.8,
     "gap_ytd": -181113,
-    "pct_negocio": 0.1
+    "pct_negocio": 0.1,
+    "categoria_comercial": "Gastro"
   },
   "LAKESIA": {
     "bu": "OTC",
@@ -217,7 +238,8 @@
     "venta_ytd": 862029,
     "ytd_yoy": 0.0,
     "gap_ytd": 862029,
-    "pct_negocio": 0.1
+    "pct_negocio": 0.1,
+    "categoria_comercial": "Otras"
   },
   "GELBECK": {
     "bu": "OTC",
@@ -227,7 +249,8 @@
     "venta_ytd": 837994,
     "ytd_yoy": -8.3,
     "gap_ytd": -76018,
-    "pct_negocio": 0.1
+    "pct_negocio": 0.1,
+    "categoria_comercial": "Gastro"
   },
   "DALAY": {
     "bu": "OTC",
@@ -237,7 +260,8 @@
     "venta_ytd": 548503,
     "ytd_yoy": -47.9,
     "gap_ytd": -504208,
-    "pct_negocio": 0.1
+    "pct_negocio": 0.1,
+    "categoria_comercial": "Otras"
   },
   "NOVAMIL": {
     "bu": "PH",
@@ -247,7 +271,8 @@
     "venta_ytd": 85587463,
     "ytd_yoy": 9.2,
     "gap_ytd": 7219338,
-    "pct_negocio": 8.5
+    "pct_negocio": 8.5,
+    "categoria_comercial": "Formulas Infantiles"
   },
   "TIO NACHO": {
     "bu": "HC",
@@ -257,7 +282,8 @@
     "venta_ytd": 80398770,
     "ytd_yoy": -6.4,
     "gap_ytd": -5456115,
-    "pct_negocio": 8.0
+    "pct_negocio": 8.0,
+    "categoria_comercial": "Cuidado Capilar"
   },
   "VANART": {
     "bu": "HC",
@@ -267,7 +293,8 @@
     "venta_ytd": 26338210,
     "ytd_yoy": -15.2,
     "gap_ytd": -4716814,
-    "pct_negocio": 2.6
+    "pct_negocio": 2.6,
+    "categoria_comercial": "Cuidado Capilar"
   },
   "TEATRICAL": {
     "bu": "SC",
@@ -277,7 +304,8 @@
     "venta_ytd": 40290415,
     "ytd_yoy": 1.9,
     "gap_ytd": 760737,
-    "pct_negocio": 4.0
+    "pct_negocio": 4.0,
+    "categoria_comercial": "Cuidado de la Piel"
   },
   "CICATRICURE": {
     "bu": "SC",
@@ -287,7 +315,8 @@
     "venta_ytd": 36788365,
     "ytd_yoy": -22.2,
     "gap_ytd": -10477512,
-    "pct_negocio": 3.6
+    "pct_negocio": 3.6,
+    "categoria_comercial": "Cuidado de la Piel"
   },
   "ASEPXIA": {
     "bu": "SC",
@@ -297,7 +326,8 @@
     "venta_ytd": 18775211,
     "ytd_yoy": -5.7,
     "gap_ytd": -1144648,
-    "pct_negocio": 1.9
+    "pct_negocio": 1.9,
+    "categoria_comercial": "Cuidado de la Piel"
   },
   "GOICOECHEA": {
     "bu": "SC",
@@ -307,7 +337,8 @@
     "venta_ytd": 13285174,
     "ytd_yoy": -19.8,
     "gap_ytd": -3280358,
-    "pct_negocio": 1.3
+    "pct_negocio": 1.3,
+    "categoria_comercial": "Cuidado de la Piel"
   },
   "GOICOECHEA DIABET TX": {
     "bu": "SC",
@@ -317,7 +348,8 @@
     "venta_ytd": 7116271,
     "ytd_yoy": -34.4,
     "gap_ytd": -3733288,
-    "pct_negocio": 0.7
+    "pct_negocio": 0.7,
+    "categoria_comercial": "Cuidado de la Piel"
   },
   "CONDON M": {
     "bu": "MM",
@@ -327,7 +359,8 @@
     "venta_ytd": 17164699,
     "ytd_yoy": -14.9,
     "gap_ytd": -2994536,
-    "pct_negocio": 1.7
+    "pct_negocio": 1.7,
+    "categoria_comercial": "Otras"
   },
   "POMADA DE LA CAMPANA": {
     "bu": "MM",
@@ -337,7 +370,8 @@
     "venta_ytd": 13625263,
     "ytd_yoy": 0.9,
     "gap_ytd": 119309,
-    "pct_negocio": 1.3
+    "pct_negocio": 1.3,
+    "categoria_comercial": "Otras"
   },
   "COLONIA SANBORNS": {
     "bu": "MM",
@@ -347,7 +381,8 @@
     "venta_ytd": 11163537,
     "ytd_yoy": -8.3,
     "gap_ytd": -1008139,
-    "pct_negocio": 1.1
+    "pct_negocio": 1.1,
+    "categoria_comercial": "Otras"
   },
   "GROOMEN": {
     "bu": "MM",
@@ -357,7 +392,8 @@
     "venta_ytd": 10723385,
     "ytd_yoy": -16.7,
     "gap_ytd": -2143380,
-    "pct_negocio": 1.1
+    "pct_negocio": 1.1,
+    "categoria_comercial": "Otras"
   },
   "WILDROOT": {
     "bu": "MM",
@@ -367,7 +403,8 @@
     "venta_ytd": 7458521,
     "ytd_yoy": 1.8,
     "gap_ytd": 128527,
-    "pct_negocio": 0.7
+    "pct_negocio": 0.7,
+    "categoria_comercial": "Cuidado Capilar"
   },
   "ALERT": {
     "bu": "MM",
@@ -377,7 +414,8 @@
     "venta_ytd": 7120800,
     "ytd_yoy": -28.6,
     "gap_ytd": -2847590,
-    "pct_negocio": 0.7
+    "pct_negocio": 0.7,
+    "categoria_comercial": "Otras"
   },
   "SISTEMA GB": {
     "bu": "MM",
@@ -387,7 +425,8 @@
     "venta_ytd": 6437107,
     "ytd_yoy": -27.7,
     "gap_ytd": -2463706,
-    "pct_negocio": 0.6
+    "pct_negocio": 0.6,
+    "categoria_comercial": "Cuidado Capilar"
   },
   "FERMODYL": {
     "bu": "MM",
@@ -397,7 +436,8 @@
     "venta_ytd": 5448961,
     "ytd_yoy": -39.0,
     "gap_ytd": -3478133,
-    "pct_negocio": 0.5
+    "pct_negocio": 0.5,
+    "categoria_comercial": "Cuidado Capilar"
   },
   "MAEV-MEDIC": {
     "bu": "MM",
@@ -407,7 +447,8 @@
     "venta_ytd": 4329411,
     "ytd_yoy": 0.0,
     "gap_ytd": 4329411,
-    "pct_negocio": 0.4
+    "pct_negocio": 0.4,
+    "categoria_comercial": "Otras"
   },
   "NORDIKO": {
     "bu": "MM",
@@ -417,7 +458,8 @@
     "venta_ytd": 3017741,
     "ytd_yoy": -9.3,
     "gap_ytd": -310702,
-    "pct_negocio": 0.3
+    "pct_negocio": 0.3,
+    "categoria_comercial": "Otras"
   },
   "SHOT B": {
     "bu": "MM",
@@ -427,7 +469,8 @@
     "venta_ytd": 1750732,
     "ytd_yoy": -7.4,
     "gap_ytd": -140607,
-    "pct_negocio": 0.2
+    "pct_negocio": 0.2,
+    "categoria_comercial": "Otras"
   },
   "TOUCH ME": {
     "bu": "MM",
@@ -437,7 +480,8 @@
     "venta_ytd": 625468,
     "ytd_yoy": -47.3,
     "gap_ytd": -562364,
-    "pct_negocio": 0.1
+    "pct_negocio": 0.1,
+    "categoria_comercial": "Otras"
   },
   "ZANZUSI": {
     "bu": "MM",
@@ -447,7 +491,8 @@
     "venta_ytd": 439427,
     "ytd_yoy": -87.0,
     "gap_ytd": -2947585,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "ENGLISH LEATHER": {
     "bu": "MM",
@@ -457,7 +502,8 @@
     "venta_ytd": 399012,
     "ytd_yoy": -30.2,
     "gap_ytd": -172927,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "COLEDIA": {
     "bu": "MM",
@@ -467,7 +513,8 @@
     "venta_ytd": 216237,
     "ytd_yoy": 18.2,
     "gap_ytd": 33268,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "SILUET 40": {
     "bu": "MM",
@@ -477,7 +524,8 @@
     "venta_ytd": 159943,
     "ytd_yoy": -54.9,
     "gap_ytd": -194492,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "ROHTO": {
     "bu": "MM",
@@ -487,7 +535,8 @@
     "venta_ytd": 68611,
     "ytd_yoy": -94.7,
     "gap_ytd": -1237608,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "LINEA M": {
     "bu": "MM",
@@ -497,7 +546,8 @@
     "venta_ytd": 0,
     "ytd_yoy": 0.0,
     "gap_ytd": 0,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "MA EVANS": {
     "bu": "MM",
@@ -507,7 +557,8 @@
     "venta_ytd": 0,
     "ytd_yoy": -100.0,
     "gap_ytd": -66,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "SILKA": {
     "bu": "MM",
@@ -517,7 +568,8 @@
     "venta_ytd": 0,
     "ytd_yoy": 0.0,
     "gap_ytd": 0,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Otras"
   },
   "UNIGASTROZOL": {
     "bu": "MM",
@@ -527,7 +579,8 @@
     "venta_ytd": 0,
     "ytd_yoy": 0.0,
     "gap_ytd": 0,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Gastro"
   },
   "XL-3 AB": {
     "bu": "MM",
@@ -537,6 +590,7 @@
     "venta_ytd": 0,
     "ytd_yoy": -100.0,
     "gap_ytd": -639,
-    "pct_negocio": 0.0
+    "pct_negocio": 0.0,
+    "categoria_comercial": "Gripe y Resfrio"
   }
 }

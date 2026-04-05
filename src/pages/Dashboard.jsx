@@ -475,22 +475,22 @@ function OCModule({ accountId }) {
 // NUEVO MODULO: VISTA MARCA → CLIENTE (comparar marca en todos los clientes)
 // ============================================================
 function MarcaClienteModule() {
-  const buOrder = { "BE": 1, "OTC": 2, "PH": 3, "HC": 4, "SC": 5, "MM": 6 }
-  const buLabels = { "BE": "Bebidas", "OTC": "OTC", "PH": "Nutricion", "HC": "Cabello", "SC": "Piel", "MM": "Multimarca" }
+  const buOrder = { "Bebidas": 1, "Dolor": 2, "Gripe y Resfrio": 3, "Gastro": 4, "Cuidado Capilar": 5, "Cuidado de la Piel": 6, "Formulas Infantiles": 7, "Otras": 8 }
+  const buLabels = buOrder
   const allMarcasRaw = [...new Set(accounts.flatMap(acc => Object.keys(sellout[acc.id]?.skus || {})))]
   const allMarcas = allMarcasRaw.sort((a, b) => {
-    const buA = marcasNacional[a]?.bu || "ZZ"
-    const buB = marcasNacional[b]?.bu || "ZZ"
-    const orderA = buOrder[buA] || 99
-    const orderB = buOrder[buB] || 99
+    const catA = marcasNacional[a]?.categoria_comercial || "Otras"
+    const catB = marcasNacional[b]?.categoria_comercial || "Otras"
+    const orderA = buOrder[catA] || 99
+    const orderB = buOrder[catB] || 99
     if (orderA !== orderB) return orderA - orderB
     return a.localeCompare(b)
   })
   const marcasByBU = {}
   allMarcas.forEach(m => {
-    const bu = marcasNacional[m]?.bu || "MM"
-    if (!marcasByBU[bu]) marcasByBU[bu] = []
-    marcasByBU[bu].push(m)
+    const cat = marcasNacional[m]?.categoria_comercial || "Otras"
+    if (!marcasByBU[cat]) marcasByBU[cat] = []
+    marcasByBU[cat].push(m)
   })
   const [selectedMarca, setSelectedMarca] = useState(allMarcas[0] || "")
   const [expandedAccount, setExpandedAccount] = useState(null)
@@ -564,12 +564,12 @@ function MarcaClienteModule() {
         <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 4 }}>Vista por Marca - Comparativo entre Clientes</div>
         <div style={{ fontSize: 12, color: "var(--silver)", marginBottom: 12 }}>Selecciona una marca · Barras = 2025 · Linea = 2026 · Sell-Out Neto</div>
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-          {Object.entries(buOrder).map(([bu]) => {
-            const marcas = marcasByBU[bu]
+          {Object.keys(buOrder).map(cat => {
+            const marcas = marcasByBU[cat]
             if (!marcas || marcas.length === 0) return null
             return (
-              <div key={bu} style={{ display: "flex", alignItems: "center", gap: 4, marginRight: 8 }}>
-                <span style={{ fontSize: 9, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.05em", marginRight: 2 }}>{buLabels[bu]}:</span>
+              <div key={cat} style={{ display: "flex", alignItems: "center", gap: 4, marginRight: 8 }}>
+                <span style={{ fontSize: 9, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.05em", marginRight: 2 }}>{cat}:</span>
                 {marcas.map(m => (
                   <button key={m} onClick={() => { setSelectedMarca(m); setExpandedAccount(null) }} className={"btn " + (selectedMarca === m ? "btn-primary" : "btn-secondary")} style={{ fontSize: 11, padding: "3px 8px" }}>{m}</button>
                 ))}
