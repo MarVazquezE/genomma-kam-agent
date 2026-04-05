@@ -916,32 +916,73 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
 
         {activeSection === "scorecard" && (
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8 }}>Sell-Out Neto consolidado</div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 8 }}>
-              <KPICard label="SO Neto YTD (MXN)" value={formatMXN(summary.so_real_acum, true)} target={formatMXN(summary.so_obj_acum, true)} vsLY={summary.so_vs_ly} pct={(summary.so_real_acum / summary.so_obj_acum) * 100} onClick={() => toggleDrillDown("sellout")} />
-              <KPICard label="SO Neto Semana (MXN)" value={formatMXN(summary.total_so, true)} target="Meta sem." vsLY={3.2} pct={94} onClick={() => toggleDrillDown("sellout")} />
-              <AlertCard label="SO Bruto Semana" value={formatMXN(summary.totalBrutoW12, true)} sub={"Trade: " + formatMXN(summary.totalTradeW12, true) + " (" + summary.pctTradeW12 + "%)"} color="var(--info)" onClick={() => setActiveSection("bruto_neto")} />
-              <AlertCard label="Cobertura Promedio" value={summary.avgCov.toFixed(0) + " dias"} sub="Minimo sano: 14 dias" color="var(--info)" />
+            {/* FILA 1: Resumen ejecutivo — lo primero que el KAM debe ver */}
+            <div className="card" style={{ marginBottom: 16, background: "var(--obsidian)", color: "var(--white)", border: "none" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div>
+                  <div style={{ fontSize: 11, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Semana 12 · Marzo 2026 · Sell-Out Neto Total Monitoreado</div>
+                  <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
+                    <span style={{ fontSize: 28, fontWeight: 800, fontFamily: "var(--font-mono)" }}>{formatMXN(summary.total_so, true)}</span>
+                    <span style={{ fontSize: 14, fontWeight: 700, fontFamily: "var(--font-mono)", color: "var(--critical)" }}>W12</span>
+                  </div>
+                </div>
+                <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+                  <div style={{ textAlign: "center" }}>
+                    <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>SO Bruto W12</div>
+                    <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)" }}>{formatMXN(summary.totalBrutoW12, true)}</div>
+                  </div>
+                  <div style={{ width: 1, height: 30, background: "var(--slate)" }} />
+                  <div style={{ textAlign: "center" }}>
+                    <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>Trade W12</div>
+                    <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)", color: "var(--warning)" }}>{summary.pctTradeW12}%</div>
+                  </div>
+                  <div style={{ width: 1, height: 30, background: "var(--slate)" }} />
+                  <div style={{ textAlign: "center" }}>
+                    <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>Cobertura Prom.</div>
+                    <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)", color: summary.avgCov >= 14 ? "var(--success)" : "var(--critical)" }}>{summary.avgCov.toFixed(0)}d</div>
+                  </div>
+                  <div style={{ width: 1, height: 30, background: "var(--slate)" }} />
+                  <div style={{ textAlign: "center" }}>
+                    <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>Tienda Perfecta</div>
+                    <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)", color: summary.avgTP >= 75 ? "var(--success)" : summary.avgTP >= 60 ? "var(--warning)" : "var(--critical)" }}>{summary.avgTP.toFixed(0)}%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* FILA 2: Sell-Out + Sell-In lado a lado */}
+            <div className="grid-2" style={{ marginBottom: 16 }}>
+              <div className="card">
+                <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Sell-Out Neto · Todas las cuentas</div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                  <KPICard label="SO Neto YTD" value={formatMXN(summary.so_real_acum, true)} target={formatMXN(summary.so_obj_acum, true)} vsLY={summary.so_vs_ly} pct={(summary.so_real_acum / summary.so_obj_acum) * 100} onClick={() => toggleDrillDown("sellout")} />
+                  <KPICard label="SO Neto W12" value={formatMXN(summary.total_so, true)} target="Meta sem." vsLY={3.2} pct={94} onClick={() => toggleDrillDown("sellout")} />
+                </div>
+              </div>
+              <div className="card">
+                <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Sell-In Neto · Todas las cuentas</div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+                  <KPICard label="SI Neto YTD" value={formatMXN(summary.si_real_acum, true)} target={formatMXN(summary.si_obj_acum, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_acum / summary.si_obj_acum) * 100} />
+                  <KPICard label="SI Neto Mes" value={formatMXN(summary.si_real_mes, true)} target={formatMXN(summary.si_obj_mes, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_mes / summary.si_obj_mes) * 100} />
+                  <KPICard label="SI Neto Q1" value={formatMXN(summary.si_real_trim, true)} target={formatMXN(summary.si_obj_trim, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_trim / summary.si_obj_trim) * 100} />
+                </div>
+              </div>
             </div>
             {drillDown === "sellout" && <SellOutDrillDown onClose={() => setDrillDown(null)} />}
 
-            <div style={{ fontSize: 11, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8, marginTop: 8 }}>Sell-In consolidado</div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 8 }}>
-              <KPICard label="Sell-In YTD (MXN)" value={formatMXN(summary.si_real_acum, true)} target={formatMXN(summary.si_obj_acum, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_acum / summary.si_obj_acum) * 100} />
-              <KPICard label="Sell-In Mes (MXN)" value={formatMXN(summary.si_real_mes, true)} target={formatMXN(summary.si_obj_mes, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_mes / summary.si_obj_mes) * 100} />
-              <KPICard label="Sell-In Trimestre (MXN)" value={formatMXN(summary.si_real_trim, true)} target={formatMXN(summary.si_obj_trim, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_trim / summary.si_obj_trim) * 100} />
+            {/* FILA 3: Alertas — lo que requiere accion inmediata */}
+            <div className="card" style={{ marginBottom: 16 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Alertas y ejecucion</div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
+                <AlertCard label="Venta en Riesgo" value={formatMXN(summary.totalOpp, true)} sub="Por ejecucion pendiente" color="var(--critical)" />
+                <AlertCard label="Fondos Ejecutados" value={summary.fondosExec.toFixed(0) + "%"} sub="Promedio todas las cuentas" color={summary.fondosExec < 60 ? "var(--critical)" : summary.fondosExec < 75 ? "var(--warning)" : "var(--success)"} />
+                <AlertCard label="Tienda Perfecta" value={summary.avgTP.toFixed(0) + "%"} sub="Obj: 85% · Prom. cuentas" color={summary.avgTP >= 80 ? "var(--success)" : summary.avgTP >= 65 ? "var(--warning)" : "var(--critical)"} onClick={() => setActiveSection("tp")} />
+                <AlertCard label="KBDs Off-Track" value={summary.totalKBDOffTrack} sub="Actividades sin cumplir" color="var(--critical)" onClick={() => setActiveSection("kbd")} />
+              </div>
             </div>
 
-            <div style={{ fontSize: 11, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 8, marginTop: 8 }}>Ejecucion, Tienda Perfecta y Riesgos</div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 8 }}>
-              <AlertCard label="Venta en Riesgo (MXN)" value={formatMXN(summary.totalOpp, true)} sub="Por ejecucion pendiente" color="var(--critical)" />
-              <AlertCard label="Gasto Fondos Prom." value={summary.fondosExec.toFixed(0) + "%"} sub="Prom. todas las cuentas" color={summary.fondosExec < 60 ? "var(--critical)" : summary.fondosExec < 75 ? "var(--warning)" : "var(--success)"} />
-              <AlertCard label="Tienda Perfecta Prom." value={summary.avgTP.toFixed(0) + "%"} sub="vs objetivo 85%" color={summary.avgTP >= 80 ? "var(--success)" : summary.avgTP >= 65 ? "var(--warning)" : "var(--critical)"} onClick={() => setActiveSection("tp")} />
-              <AlertCard label="KBDs Off-Track" value={summary.totalKBDOffTrack} sub="Actividades sin cumplir" color="var(--critical)" onClick={() => setActiveSection("kbd")} />
-            </div>
-
-            <div className="divider" />
-            <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 12 }}>Radar de Cuentas - Ordenado por Oportunidad</div>
+            {/* FILA 4: Cuentas — acceso directo */}
+            <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 12 }}>Cuentas Clave — Click para ver radiografia completa</div>
             <div className="accounts-grid">
               {accountSorted.map(acc => <AccountCard key={acc.id} account={acc} onSelect={onSelectAccount} />)}
             </div>
