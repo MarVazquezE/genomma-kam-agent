@@ -22,16 +22,30 @@ const METRICS = [
   { id: "yoy_neto_w12", label: "YoY Neto W12 %", group: "Sell-Out" },
   { id: "yoy_neto_ytd", label: "YoY Neto YTD %", group: "Sell-Out" },
   { id: "yoy_bruto_w12", label: "YoY Bruto W12 %", group: "Sell-Out" },
-  { id: "pct_bruto_neto", label: "% Bruto a Neto", group: "Bruto a Neto" },
-  { id: "coverage", label: "Cobertura (dias)", group: "Inventario" },
-  { id: "stock", label: "Stock (uds)", group: "Inventario" },
+  { id: "pct_bruto_neto", label: "% Bruto a Neto Real", group: "Bruto a Neto" },
+  { id: "bn_obj_pct", label: "% Bruto a Neto Obj G60", group: "Bruto a Neto" },
+  { id: "bn_desviacion", label: "Desviacion BN (pts)", group: "Bruto a Neto" },
+  { id: "obj_bruto_anual", label: "Obj Bruto Anual", group: "Bruto a Neto" },
+  { id: "obj_neto_anual", label: "Obj Neto Anual", group: "Bruto a Neto" },
+  { id: "coverage_days", label: "Cobertura (dias)", group: "Inventario" },
+  { id: "stock_units", label: "Stock (uds)", group: "Inventario" },
+  { id: "price_mxn", label: "Precio MXN", group: "Inventario" },
   { id: "tp_score", label: "TP Score %", group: "Tienda Perfecta" },
+  { id: "tp_dispo", label: "Disponibilidad %", group: "Tienda Perfecta" },
+  { id: "tp_precio", label: "Precio OK %", group: "Tienda Perfecta" },
+  { id: "tp_exhib", label: "Exhibicion %", group: "Tienda Perfecta" },
+  { id: "tp_plano", label: "Planograma %", group: "Tienda Perfecta" },
+  { id: "ms_som_pct", label: "Share of Market %", group: "Market Share" },
+  { id: "ms_competidor_som", label: "Share Competidor %", group: "Market Share" },
+  { id: "ms_gap_pts", label: "Gap vs Lider (pts)", group: "Market Share" },
 ]
 
 function formatVal(val, metricId) {
-  if (["yoy_neto_w12","yoy_neto_ytd","yoy_bruto_w12","pct_bruto_neto","tp_score"].includes(metricId)) return val.toFixed(1) + "%"
-  if (["coverage"].includes(metricId)) return val + "d"
-  if (["stock"].includes(metricId)) return val.toLocaleString()
+  if (["yoy_neto_w12","yoy_neto_ytd","yoy_bruto_w12","pct_bruto_neto","bn_obj_pct","tp_score","tp_dispo","tp_precio","tp_exhib","tp_plano","ms_som_pct","ms_competidor_som"].includes(metricId)) return val.toFixed(1) + "%"
+  if (["bn_desviacion","ms_gap_pts"].includes(metricId)) return (val > 0 ? "+" : "") + val.toFixed(1) + " pts"
+  if (["coverage_days"].includes(metricId)) return val + "d"
+  if (["stock_units"].includes(metricId)) return val.toLocaleString()
+  if (["price_mxn"].includes(metricId)) return "$" + val.toFixed(2)
   return formatMXN(val, true)
 }
 
