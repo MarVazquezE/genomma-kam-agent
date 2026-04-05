@@ -10,6 +10,7 @@ import tiendaPerfecta from "../data/tienda_perfecta.json"
 import brandMap from "../data/brand_map.json"
 import marcasNacional from "../data/marcas_nacional.json"
 import executionScorecard from "../data/execution_scorecard.json"
+import formatos from "../data/formatos.json"
 import { formatMXN, formatPct, getAccountHealth, getHealthLabel, getLastWeekSellout, getPrevWeekSellout, getAvgCoverage } from "../utils/helpers"
 
 const SKU_COLORS = ["#6366F1","#14B8A6","#F59E0B","#F43F5E","#8B5CF6","#06B6D4","#F97316","#EC4899","#10B981","#3B82F6","#EF4444","#84CC16"]
@@ -231,6 +232,165 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
           )
         })()}
       </div>
+
+      {/* TOP MARCAS GANADORAS Y PERDEDORAS */}
+      <div className="grid-2" style={{ marginBottom: 16 }}>
+        <div className="card">
+          <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2, color: "var(--success)" }}>Ganadoras — Crecimiento YoY Neto</div>
+          <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 10 }}>Top marcas con mejor desempeno vs año anterior</div>
+          {marcaRows.filter(r => r.yoy_neto > 0).slice(0, 5).map((r, i) => (
+            <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid #F0F2F5" }}>
+              <span style={{ fontWeight: 700, fontSize: 12 }}>{r.marca}</span>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(r.neto_w12, true)}</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 800, color: "var(--success)" }}>+{r.yoy_neto}%</span>
+              </div>
+            </div>
+          ))}
+          {marcaRows.filter(r => r.yoy_neto > 0).length === 0 && <div style={{ fontSize: 12, color: "var(--silver)", padding: 8 }}>Sin marcas en crecimiento</div>}
+        </div>
+        <div className="card">
+          <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2, color: "var(--critical)" }}>Perdedoras — Caida YoY Neto</div>
+          <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 10 }}>Marcas que requieren plan de recuperacion inmediato</div>
+          {marcaRows.filter(r => r.yoy_neto < -5).sort((a,b) => a.yoy_neto - b.yoy_neto).slice(0, 5).map((r, i) => (
+            <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid #F0F2F5" }}>
+              <span style={{ fontWeight: 700, fontSize: 12 }}>{r.marca}</span>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(r.neto_w12, true)}</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 800, color: "var(--critical)" }}>{r.yoy_neto}%</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* PERFORMANCE POR FORMATO DE TIENDA */}
+      {formatos[accountId] && formatos[accountId].length > 1 && (
+        <div className="card" style={{ marginBottom: 16 }}>
+          <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Performance por Formato de Tienda</div>
+          <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Sell-Out Neto W12 por formato · Variacion YoY</div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(" + formatos[accountId].length + ", 1fr)", gap: 12, marginBottom: 16 }}>
+            {formatos[accountId].map((fmt, i) => {
+              const c = fmt.yoy_w12 >= 0 ? "var(--success)" : fmt.yoy_w12 > -10 ? "var(--warning)" : "var(--critical)"
+              return (
+                <div key={i} className="metric-card" style={{ borderLeft: "3px solid " + c }}>
+                  <div className="metric-label">{fmt.formato}</div>
+                  <div className="metric-value" style={{ fontFamily: "var(--font-mono)", fontSize: 16 }}>{formatMXN(fmt.venta_w12, true)}</div>
+                  <div style={{ fontSize: 11, color: "var(--silver)", marginTop: 2 }}>{fmt.share_pct}% del total</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: c, marginTop: 4, fontFamily: "var(--font-mono)" }}>{fmt.yoy_w12 > 0 ? "+" : ""}{fmt.yoy_w12}% YoY · {fmt.wow > 0 ? "+" : ""}{fmt.wow}% WoW</div>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* MAPA DE CALOR MARCA × FORMATO */}
+          <div style={{ fontSize: 12, fontWeight: 700, marginBottom: 8 }}>Mapa de Calor — Var. YoY Neto por Marca x Formato</div>
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Marca</th>
+                {formatos[accountId].map((fmt, i) => <th key={i} style={{ textAlign: "center" }}>{fmt.formato}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {marcaRows.slice(0, 10).map((r, i) => (
+                <tr key={i}>
+                  <td style={{ fontWeight: 700 }}>{r.marca}</td>
+                  {formatos[accountId].map((fmt, fi) => {
+                    const yoy = fmt.marcas_yoy[r.marca]
+                    if (yoy === undefined) return <td key={fi} style={{ textAlign: "center", color: "var(--silver)", fontSize: 11 }}>—</td>
+                    const bg = yoy > 20 ? "#D1FAE5" : yoy > 5 ? "#ECFDF5" : yoy > 0 ? "#F0FDF4" : yoy > -10 ? "#FEF2F2" : yoy > -20 ? "#FEE2E2" : "#FECACA"
+                    const color = yoy > 5 ? "var(--success)" : yoy > 0 ? "#065F46" : yoy > -10 ? "var(--critical)" : "#991B1B"
+                    return <td key={fi} style={{ textAlign: "center", background: bg, fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color }}>{yoy > 0 ? "+" : ""}{yoy}%</td>
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* HIPOTESIS Y ACCIONES POR MARCA CRITICA */}
+      {(() => {
+        const criticas = marcaRows.filter(r => r.yoy_neto < -10).sort((a,b) => a.yoy_neto - b.yoy_neto).slice(0, 3)
+        if (criticas.length === 0) return null
+        return (
+          <div className="card" style={{ marginBottom: 16 }}>
+            <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Hipotesis y Acciones — Marcas Criticas</div>
+            <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Marcas con caida mayor a -10% YoY que requieren plan de accion</div>
+            {criticas.map((r, i) => {
+              const fmtData = formatos[accountId] || []
+              const peorFmt = fmtData.reduce((worst, fmt) => {
+                const yoy = fmt.marcas_yoy[r.marca]
+                return yoy !== undefined && (worst === null || yoy < worst.yoy) ? { formato: fmt.formato, yoy } : worst
+              }, null)
+              return (
+                <div key={i} style={{ background: "var(--white)", border: "1px solid #E2E8F0", borderRadius: "var(--radius-lg)", padding: "16px 20px", marginBottom: 12, borderLeft: "4px solid var(--critical)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+                    <div style={{ fontSize: 14, fontWeight: 800 }}>{r.marca}</div>
+                    <div style={{ fontSize: 12, color: "var(--critical)", fontFamily: "var(--font-mono)", fontWeight: 700 }}>Caida YoY: {r.yoy_neto}% · SO Neto LW: {formatMXN(r.neto_w12, true)}</div>
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                    <div>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", marginBottom: 6 }}>Hipotesis de causa</div>
+                      <div style={{ fontSize: 11, color: "var(--obsidian)", lineHeight: 1.6 }}>
+                        {r.coverage < 14 && <div style={{ marginBottom: 4 }}>1. Riesgo de quiebre: solo {r.coverage} dias de cobertura. Posible perdida de venta por agotamiento en tienda.</div>}
+                        {peorFmt && <div style={{ marginBottom: 4 }}>{r.coverage < 14 ? "2" : "1"}. Deterioro especialmente severo en {peorFmt.formato} ({peorFmt.yoy}% YoY). Revisar distribucion y planograma en este formato.</div>}
+                        <div>{r.coverage < 14 && peorFmt ? "3" : peorFmt ? "2" : "1"}. Presion competitiva o perdida de visibilidad en anaquel. TP Score: {r.tp_score > 0 ? r.tp_score.toFixed(0) + "%" : "sin datos"}.</div>
+                      </div>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", marginBottom: 6 }}>Acciones recomendadas</div>
+                      <div style={{ fontSize: 11, color: "var(--obsidian)", lineHeight: 1.6 }}>
+                        {r.coverage < 14 && <div style={{ marginBottom: 4 }}>A. Generar OC urgente para llevar inventario a minimo 21 dias de cobertura.</div>}
+                        {peorFmt && <div style={{ marginBottom: 4 }}>{r.coverage < 14 ? "B" : "A"}. Audit de distribucion en {peorFmt.formato}: verificar SKUs activos y negociar reposicion.</div>}
+                        <div>{r.coverage < 14 && peorFmt ? "C" : peorFmt ? "B" : "A"}. Revisar precio vs competencia y evaluar activacion de visibilidad (exhibicion adicional, POP).</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        )
+      })()}
+
+      {/* OPORTUNIDADES DE ACELERACION */}
+      {(() => {
+        const ganadoras = marcaRows.filter(r => r.yoy_neto > 3).sort((a,b) => b.yoy_neto - a.yoy_neto).slice(0, 3)
+        if (ganadoras.length === 0) return null
+        return (
+          <div className="card" style={{ marginBottom: 16 }}>
+            <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Oportunidades de Aceleracion</div>
+            <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Marcas en crecimiento donde se puede capitalizar el momentum</div>
+            {ganadoras.map((r, i) => {
+              const fmtData = formatos[accountId] || []
+              const mejorFmt = fmtData.reduce((best, fmt) => {
+                const yoy = fmt.marcas_yoy[r.marca]
+                return yoy !== undefined && (best === null || yoy > best.yoy) ? { formato: fmt.formato, yoy } : best
+              }, null)
+              return (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 16, padding: "12px 0", borderBottom: i < ganadoras.length - 1 ? "1px solid #F0F2F5" : "none" }}>
+                  <div style={{ flexShrink: 0, width: 50, textAlign: "center" }}>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: "var(--success)", fontFamily: "var(--font-mono)" }}>+{r.yoy_neto}%</div>
+                    <div style={{ fontSize: 9, color: "var(--silver)" }}>YoY</div>
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontWeight: 800, fontSize: 13, marginBottom: 4 }}>{r.marca}</div>
+                    <div style={{ fontSize: 11, color: "var(--obsidian)", lineHeight: 1.5 }}>
+                      SO Neto W12: {formatMXN(r.neto_w12, true)} · YTD: {formatMXN(r.neto_ytd, true)}
+                      {mejorFmt && <span> · Mejor formato: {mejorFmt.formato} ({mejorFmt.yoy > 0 ? "+" : ""}{mejorFmt.yoy}%)</span>}
+                    </div>
+                    <div style={{ fontSize: 11, color: "var(--success)", marginTop: 4, fontWeight: 600 }}>
+                      Accion: {r.coverage >= 21 ? "Expandir distribucion y negociar exhibicion adicional" : "Asegurar inventario (solo " + r.coverage + "d) para no perder momentum"}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        )
+      })()}
 
       {/* INVENTARIO POR MARCA */}
       <div className="grid-2" style={{ marginBottom: 16 }}>

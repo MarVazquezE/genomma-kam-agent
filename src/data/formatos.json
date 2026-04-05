@@ -1,0 +1,298 @@
+{
+  "wmt": [
+    {
+      "formato": "Bodega Aurrera",
+      "share_pct": 60.0,
+      "venta_w12": 10473016,
+      "yoy_w12": -13.6,
+      "wow": -7.9,
+      "marcas_yoy": {
+        "TIO NACHO": 11.0,
+        "SUEROX": -32.7,
+        "TEATRICAL": 7.2,
+        "SILKAMEDIC": 4.1,
+        "XL-3": -6.8,
+        "VANART": -18.0,
+        "LOMECAN V": 4.5,
+        "CICATRICURE": -10.0,
+        "MEDICASP": -0.5,
+        "NEXT": -7.1
+      }
+    },
+    {
+      "formato": "Supercenter",
+      "share_pct": 33.0,
+      "venta_w12": 5931971,
+      "yoy_w12": -19.0,
+      "wow": 1.8,
+      "marcas_yoy": {
+        "TIO NACHO": 1.5,
+        "SUEROX": -11.1,
+        "TEATRICAL": -1.6,
+        "SILKAMEDIC": -3.0,
+        "XL-3": -22.5,
+        "VANART": 1.0,
+        "LOMECAN V": 1.6,
+        "CICATRICURE": -18.9,
+        "MEDICASP": -20.2,
+        "NEXT": -5.6
+      }
+    },
+    {
+      "formato": "Superama/CF",
+      "share_pct": 7.0,
+      "venta_w12": 1083740,
+      "yoy_w12": -5.4,
+      "wow": -4.6,
+      "marcas_yoy": {
+        "TIO NACHO": 7.4,
+        "SUEROX": -33.9,
+        "TEATRICAL": 18.1,
+        "SILKAMEDIC": 16.9,
+        "XL-3": -2.9,
+        "VANART": -0.1,
+        "LOMECAN V": 11.1,
+        "CICATRICURE": -22.2,
+        "MEDICASP": -12.2,
+        "NEXT": -5.6
+      }
+    }
+  ],
+  "ched": [
+    {
+      "formato": "Chedraui",
+      "share_pct": 55.0,
+      "venta_w12": 2201465,
+      "yoy_w12": -6.2,
+      "wow": -10.2,
+      "marcas_yoy": {
+        "TIO NACHO": -13.8,
+        "SUEROX": 3.8,
+        "TEATRICAL": 23.1,
+        "CICATRICURE": -16.7,
+        "XL-3": 16.5,
+        "VANART": -44.1,
+        "LOMECAN V": 13.8,
+        "ASEPXIA": -16.0,
+        "TUKOL": -27.0,
+        "SILKAMEDIC": -16.0
+      }
+    },
+    {
+      "formato": "Chedraui Selecto",
+      "share_pct": 30.0,
+      "venta_w12": 1143823,
+      "yoy_w12": -17.3,
+      "wow": -4.0,
+      "marcas_yoy": {
+        "TIO NACHO": -5.0,
+        "SUEROX": 3.6,
+        "TEATRICAL": 18.0,
+        "CICATRICURE": 8.1,
+        "XL-3": -10.5,
+        "VANART": -30.9,
+        "LOMECAN V": -10.3,
+        "ASEPXIA": -34.5,
+        "TUKOL": -19.8,
+        "SILKAMEDIC": -40.9
+      }
+    },
+    {
+      "formato": "Super Che",
+      "share_pct": 15.0,
+      "venta_w12": 623596,
+      "yoy_w12": 6.7,
+      "wow": -0.3,
+      "marcas_yoy": {
+        "TIO NACHO": -25.4,
+        "SUEROX": -5.4,
+        "TEATRICAL": 27.3,
+        "CICATRICURE": -17.4,
+        "XL-3": -2.7,
+        "VANART": -43.0,
+        "LOMECAN V": 13.8,
+        "ASEPXIA": -17.7,
+        "TUKOL": -21.8,
+        "SILKAMEDIC": -21.9
+      }
+    }
+  ],
+  "sor": [
+    {
+      "formato": "Soriana Hiper",
+      "share_pct": 50.0,
+      "venta_w12": 2022723,
+      "yoy_w12": -22.8,
+      "wow": -3.8,
+      "marcas_yoy": {
+        "SUEROX": -21.0,
+        "TIO NACHO": -15.1,
+        "TEATRICAL": 10.5,
+        "XL-3": -40.7,
+        "CICATRICURE": -50,
+        "VANART": -8.0,
+        "SILKAMEDIC": -31.0,
+        "LOMECAN V": -26.8,
+        "TUKOL": -46.7,
+        "NEXT": -9.3
+      }
+    },
+    {
+      "formato": "Soriana Super",
+      "share_pct": 35.0,
+      "venta_w12": 1293173,
+      "yoy_w12": -15.8,
+      "wow": 1.1,
+      "marcas_yoy": {
+        "SUEROX": -41.2,
+        "TIO NACHO": -32.9,
+        "TEATRICAL": 10.5,
+        "XL-3": -12.2,
+        "CICATRICURE": -50,
+        "VANART": -20.7,
+        "SILKAMEDIC": -23.0,
+        "LOMECAN V": -9.1,
+        "TUKOL": -39.6,
+        "NEXT": -17.8
+      }
+    },
+    {
+      "formato": "City Club",
+      "share_pct": 15.0,
+      "venta_w12": 596527,
+      "yoy_w12": -15.6,
+      "wow": 2.3,
+      "marcas_yoy": {
+        "SUEROX": -40.7,
+        "TIO NACHO": -19.1,
+        "TEATRICAL": 18.6,
+        "XL-3": -32.6,
+        "CICATRICURE": -50,
+        "VANART": -30.0,
+        "SILKAMEDIC": -16.6,
+        "LOMECAN V": -36.4,
+        "TUKOL": -50,
+        "NEXT": -31.6
+      }
+    }
+  ],
+  "oxxo": [
+    {
+      "formato": "OXXO Metropolitano",
+      "share_pct": 65.0,
+      "venta_w12": 3635071,
+      "yoy_w12": 5.7,
+      "wow": -3.3,
+      "marcas_yoy": {
+        "SUEROX": -38.7,
+        "XL-3": -6.4,
+        "BIO": -20.8,
+        "NEXT": 10.7,
+        "CONDON M": -0.8,
+        "GENOPRAZOL": -34.7,
+        "ALLIVIAX": -50,
+        "TUKOL": 50,
+        "GROOMEN": -50,
+        "POMADA DE LA CAMPANA": -50
+      }
+    },
+    {
+      "formato": "OXXO Foraneo",
+      "share_pct": 35.0,
+      "venta_w12": 2272215,
+      "yoy_w12": -10.0,
+      "wow": -7.7,
+      "marcas_yoy": {
+        "SUEROX": -33.2,
+        "XL-3": -3.6,
+        "BIO": -0.1,
+        "NEXT": -8.1,
+        "CONDON M": 15.1,
+        "GENOPRAZOL": -25.2,
+        "ALLIVIAX": -50,
+        "TUKOL": 50,
+        "GROOMEN": -50,
+        "POMADA DE LA CAMPANA": -50
+      }
+    }
+  ],
+  "ahorro": [
+    {
+      "formato": "FDA Urbana",
+      "share_pct": 45.0,
+      "venta_w12": 4613100,
+      "yoy_w12": 2.3,
+      "wow": -3.1,
+      "marcas_yoy": {
+        "NOVAMIL": 15.5,
+        "XL-3": -16.4,
+        "TUKOL": -24.9,
+        "NIKZON": -24.7,
+        "NEXT": -11.1,
+        "BIO": -10.4,
+        "ALLIVIAX": -32.1,
+        "LOMECAN V": -13.6,
+        "SILKAMEDIC": -44.8,
+        "SUEROX": -13.3
+      }
+    },
+    {
+      "formato": "FDA Foranea",
+      "share_pct": 30.0,
+      "venta_w12": 2721410,
+      "yoy_w12": -12.4,
+      "wow": 1.3,
+      "marcas_yoy": {
+        "NOVAMIL": 1.9,
+        "XL-3": -1.1,
+        "TUKOL": -33.3,
+        "NIKZON": -19.3,
+        "NEXT": -13.2,
+        "BIO": -25.6,
+        "ALLIVIAX": -50,
+        "LOMECAN V": -1.3,
+        "SILKAMEDIC": -29.6,
+        "SUEROX": -14.4
+      }
+    },
+    {
+      "formato": "Benavides",
+      "share_pct": 25.0,
+      "venta_w12": 2598928,
+      "yoy_w12": -15.5,
+      "wow": -9.3,
+      "marcas_yoy": {
+        "NOVAMIL": 29.5,
+        "XL-3": -26.6,
+        "TUKOL": -35.5,
+        "NIKZON": -17.4,
+        "NEXT": -4.8,
+        "BIO": -24.7,
+        "ALLIVIAX": -32.2,
+        "LOMECAN V": -20.5,
+        "SILKAMEDIC": -33.6,
+        "SUEROX": -15.0
+      }
+    }
+  ],
+  "costco": [
+    {
+      "formato": "Costco",
+      "share_pct": 100.0,
+      "venta_w12": 774339,
+      "yoy_w12": -23.3,
+      "wow": 0.7,
+      "marcas_yoy": {
+        "XL-3": 30.9,
+        "BIO": -17.7,
+        "MEDICASP": 37.1,
+        "NIKZON": -34.0,
+        "SILKAMEDIC": -21.8,
+        "SUEROX": -14.9,
+        "TUKOL": -50,
+        "QG5": -50,
+        "NEXT": -50
+      }
+    }
+  ]
+}
