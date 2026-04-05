@@ -84,15 +84,24 @@ export default function CuboConsultas() {
 
   const rows = useMemo(() => {
     const result = []
+    const allMarcas = Object.keys(marcasNacional)
     selAccounts.forEach(accId => {
       const acc = accounts.find(a => a.id === accId)
-      const marcas = Object.keys(sellout[accId]?.skus || {})
+      // Use all marcas that have data in ANY source for this account
+      const soMarcas = Object.keys(sellout[accId]?.skus || {})
+      const bnMarcas = (brutoNeto[accId]?.marcas || []).map(m => m.marca)
+      const invMarcas = Object.keys(inventory[accId]?.skus || {})
+      const tpMarcas = (tiendaPerfecta[accId]?.marcas_detalle || []).map(m => m.marca)
+      const marcasSet = new Set([...soMarcas, ...bnMarcas, ...invMarcas, ...tpMarcas])
+      const marcas = [...marcasSet].sort()
       marcas.forEach(marca => {
         const cat = marcasNacional[marca]?.categoria_comercial || "Otras"
         if (selCat !== "Todas" && cat !== selCat) return
         const values = {}
         selMetrics.forEach(m => { values[m] = getMetricValue(accId, marca, m) })
-        result.push({ accId, cuenta: acc.name, marca, cat, values })
+        // Only include if at least one metric has a non-zero value
+        const hasData = selMetrics.some(m => values[m] !== 0)
+        if (hasData) result.push({ accId, cuenta: acc.name, marca, cat, values })
       })
     })
     result.sort((a, b) => {
