@@ -854,7 +854,10 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
     const totalNetoW12 = Object.values(brutoNeto).reduce((s, d) => s + d.total_neto_w12, 0)
     const totalTradeW12 = totalBrutoW12 - totalNetoW12
     const pctTradeW12 = totalBrutoW12 > 0 ? ((totalTradeW12 / totalBrutoW12) * 100).toFixed(1) : 0
-    return { total_so, totalAlerts, totalOpp, si_real_acum, si_obj_acum, si_vs_ly, si_real_mes, si_obj_mes, si_real_trim, si_obj_trim, so_real_acum, so_obj_acum, so_vs_ly, avgCov, fondosExec, avgTP, totalKBDOffTrack, totalBrutoW12, totalNetoW12, totalTradeW12, pctTradeW12 }
+    const tradeVsLyPts = 3.8
+    const covVsLy = -3
+    const tpVsLyPts = 2.1
+    return { total_so, totalAlerts, totalOpp, si_real_acum, si_obj_acum, si_vs_ly, si_real_mes, si_obj_mes, si_real_trim, si_obj_trim, so_real_acum, so_obj_acum, so_vs_ly, avgCov, fondosExec, avgTP, totalKBDOffTrack, totalBrutoW12, totalNetoW12, totalTradeW12, pctTradeW12, tradeVsLyPts, covVsLy, tpVsLyPts }
   }, [])
 
   const account = accounts.find(a => a.id === selectedAccount)
@@ -950,16 +953,19 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                   <div style={{ textAlign: "center" }}>
                     <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>Bruto a Neto W12</div>
                     <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)", color: "var(--warning)" }}>{summary.pctTradeW12}%</div>
+                    <div style={{ fontSize: 10, fontWeight: 700, fontFamily: "var(--font-mono)", color: summary.tradeVsLyPts > 0 ? "var(--critical)" : "var(--success)" }}>{summary.tradeVsLyPts > 0 ? "+" : ""}{summary.tradeVsLyPts} pts vs LY</div>
                   </div>
                   <div style={{ width: 1, height: 30, background: "var(--slate)" }} />
                   <div style={{ textAlign: "center" }}>
                     <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>Cobertura Prom.</div>
                     <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)", color: summary.avgCov >= 14 ? "var(--success)" : "var(--critical)" }}>{summary.avgCov.toFixed(0)}d</div>
+                    <div style={{ fontSize: 10, fontWeight: 700, fontFamily: "var(--font-mono)", color: summary.covVsLy >= 0 ? "var(--success)" : "var(--critical)" }}>{summary.covVsLy >= 0 ? "+" : ""}{summary.covVsLy}d vs LY</div>
                   </div>
                   <div style={{ width: 1, height: 30, background: "var(--slate)" }} />
                   <div style={{ textAlign: "center" }}>
                     <div style={{ fontSize: 10, color: "var(--silver)", marginBottom: 2 }}>Tienda Perfecta</div>
                     <div style={{ fontSize: 16, fontWeight: 800, fontFamily: "var(--font-mono)", color: summary.avgTP >= 75 ? "var(--success)" : summary.avgTP >= 60 ? "var(--warning)" : "var(--critical)" }}>{summary.avgTP.toFixed(0)}%</div>
+                    <div style={{ fontSize: 10, fontWeight: 700, fontFamily: "var(--font-mono)", color: summary.tpVsLyPts >= 0 ? "var(--success)" : "var(--critical)" }}>{summary.tpVsLyPts >= 0 ? "+" : ""}{summary.tpVsLyPts} pts vs LY</div>
                   </div>
                 </div>
               </div>
@@ -990,7 +996,7 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
               <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Alertas y ejecucion</div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
                 <AlertCard label="Venta en Riesgo" value={formatMXN(summary.totalOpp, true)} sub="Por ejecucion pendiente" color="var(--critical)" onClick={() => toggleDrillDown("alertas")} />
-                <AlertCard label="Fondos Ejecutados" value={summary.fondosExec.toFixed(0) + "%"} sub="Promedio todas las cuentas" color={summary.fondosExec < 60 ? "var(--critical)" : summary.fondosExec < 75 ? "var(--warning)" : "var(--success)"} onClick={() => toggleDrillDown("fondos")} />
+                <AlertCard label="Fondos Ejecutados" value={summary.fondosExec.toFixed(0) + "%"} sub={"Esperado W12: 23% · " + (summary.fondosExec >= 18 ? "En linea" : "Rezagado")} color={summary.fondosExec >= 18 ? "var(--success)" : summary.fondosExec >= 12 ? "var(--warning)" : "var(--critical)"} onClick={() => toggleDrillDown("fondos")} />
                 <AlertCard label="Tienda Perfecta" value={summary.avgTP.toFixed(0) + "%"} sub="Obj: 85% · Prom. cuentas" color={summary.avgTP >= 80 ? "var(--success)" : summary.avgTP >= 65 ? "var(--warning)" : "var(--critical)"} onClick={() => setActiveSection("tp")} />
                 <AlertCard label="KBDs Off-Track" value={summary.totalKBDOffTrack} sub="Actividades sin cumplir" color="var(--critical)" onClick={() => setActiveSection("kbd")} />
               </div>
@@ -1028,14 +1034,15 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                   <tbody>
                     {accounts.map(acc => {
                       const f = funds[acc.id]
-                      const c = f.execution_pct < 30 ? "var(--critical)" : f.execution_pct < 60 ? "var(--warning)" : "var(--success)"
+                      const c = f.execution_pct < 12 ? "var(--critical)" : f.execution_pct < 18 ? "var(--warning)" : "var(--success)"
+                      const diffPts = (f.execution_pct - 23.1).toFixed(1)
                       return (
                         <tr key={acc.id}>
                           <td style={{ fontWeight: 700 }}>{acc.name}</td>
                           <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.annual_committed_mxn, true)}</td>
                           <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.executed_ytd_mxn, true)}</td>
                           <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: c }}>{f.execution_pct.toFixed(0)}%</td>
-                          <td style={{ textAlign: "center" }}><span className={"chip " + (f.execution_pct < 30 ? "chip-red" : f.execution_pct < 60 ? "chip-amber" : "chip-green")}>{f.execution_pct < 30 ? "Critico" : f.execution_pct < 60 ? "Bajo" : "OK"}</span></td>
+                          <td style={{ textAlign: "center" }}><span className={"chip " + (f.execution_pct < 12 ? "chip-red" : f.execution_pct < 18 ? "chip-amber" : "chip-green")}>{f.execution_pct >= 18 ? "En linea" : f.execution_pct >= 12 ? "Rezagado" : "Critico"}</span></td>
                         </tr>
                       )
                     })}
