@@ -11,6 +11,7 @@ import marketShare from "../data/market_share.json"
 import tiendaPerfecta from "../data/tienda_perfecta.json"
 import kbd from "../data/kbd.json"
 import brutoNeto from "../data/bruto_neto.json"
+import marcasNacional from "../data/marcas_nacional.json"
 import { formatMXN, getAccountHealth, getHealthLabel, getLastWeekSellout, getAvgCoverage, getCriticalSkus } from "../utils/helpers"
 
 const SKU_COLORS = ["#6366F1","#14B8A6","#F59E0B","#F43F5E","#8B5CF6","#06B6D4","#F97316","#EC4899","#10B981","#3B82F6","#EF4444","#84CC16"]
@@ -474,7 +475,23 @@ function OCModule({ accountId }) {
 // NUEVO MODULO: VISTA MARCA → CLIENTE (comparar marca en todos los clientes)
 // ============================================================
 function MarcaClienteModule() {
-  const allMarcas = [...new Set(accounts.flatMap(acc => Object.keys(sellout[acc.id]?.skus || {})))].sort()
+  const buOrder = { "BE": 1, "OTC": 2, "PH": 3, "HC": 4, "SC": 5, "MM": 6 }
+  const buLabels = { "BE": "Bebidas", "OTC": "OTC", "PH": "Nutricion", "HC": "Cabello", "SC": "Piel", "MM": "Multimarca" }
+  const allMarcasRaw = [...new Set(accounts.flatMap(acc => Object.keys(sellout[acc.id]?.skus || {})))]
+  const allMarcas = allMarcasRaw.sort((a, b) => {
+    const buA = marcasNacional[a]?.bu || "ZZ"
+    const buB = marcasNacional[b]?.bu || "ZZ"
+    const orderA = buOrder[buA] || 99
+    const orderB = buOrder[buB] || 99
+    if (orderA !== orderB) return orderA - orderB
+    return a.localeCompare(b)
+  })
+  const marcasByBU = {}
+  allMarcas.forEach(m => {
+    const bu = marcasNacional[m]?.bu || "MM"
+    if (!marcasByBU[bu]) marcasByBU[bu] = []
+    marcasByBU[bu].push(m)
+  })
   const [selectedMarca, setSelectedMarca] = useState(allMarcas[0] || "")
   const [expandedAccount, setExpandedAccount] = useState(null)
   
@@ -547,9 +564,18 @@ function MarcaClienteModule() {
         <div style={{ fontSize: 15, fontWeight: 800, marginBottom: 4 }}>Vista por Marca - Comparativo entre Clientes</div>
         <div style={{ fontSize: 12, color: "var(--silver)", marginBottom: 12 }}>Selecciona una marca · Barras = 2025 · Linea = 2026 · Sell-Out Neto</div>
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-          {allMarcas.map(m => (
-            <button key={m} onClick={() => { setSelectedMarca(m); setExpandedAccount(null) }} className={"btn " + (selectedMarca === m ? "btn-primary" : "btn-secondary")} style={{ fontSize: 11, padding: "4px 10px" }}>{m}</button>
-          ))}
+          {Object.entries(buOrder).map(([bu]) => {
+            const marcas = marcasByBU[bu]
+            if (!marcas || marcas.length === 0) return null
+            return (
+              <div key={bu} style={{ display: "flex", alignItems: "center", gap: 4, marginRight: 8 }}>
+                <span style={{ fontSize: 9, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.05em", marginRight: 2 }}>{buLabels[bu]}:</span>
+                {marcas.map(m => (
+                  <button key={m} onClick={() => { setSelectedMarca(m); setExpandedAccount(null) }} className={"btn " + (selectedMarca === m ? "btn-primary" : "btn-secondary")} style={{ fontSize: 11, padding: "3px 8px" }}>{m}</button>
+                ))}
+              </div>
+            )
+          })}
         </div>
       </div>
       {selectedMarca && (
