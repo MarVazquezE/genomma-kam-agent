@@ -4,7 +4,9 @@
     "titulo": "Cambio de politica de devoluciones Q2 2026",
     "fecha": "2026-03-28",
     "tipo": "politica",
-    "marcas": ["Todas"],
+    "marcas": [
+      "Todas"
+    ],
     "resumen": "A partir del 1 de abril se reduce la ventana de devolucion de 60 a 45 dias para todos los clientes de autoservicio. Farmacias mantienen 60 dias. Impacto estimado en provision de -$8M.",
     "periodo": "Abr 1 - Jun 30, 2026",
     "urgente": true
@@ -14,29 +16,35 @@
     "titulo": "Plan Verano Suerox — Activacion Nacional",
     "fecha": "2026-03-25",
     "tipo": "promocion",
-    "marcas": ["SUEROX"],
+    "marcas": [
+      "SUEROX"
+    ],
     "resumen": "Activacion de temporada calor con precio especial $29.90 en presentacion 630ml, exhibicion en isla y cabecera, y pauta digital en retailers. Meta: recuperar -19% YoY. Presupuesto: $4.2M.",
     "periodo": "Abr 1 - May 31, 2026",
     "urgente": true
-  },
-  {
-    "id": "tio_nacho_henna_2026",
-    "titulo": "Lanzamiento Tio Nacho Henna Egipcia — Apertura de codigo",
-    "fecha": "2026-03-20",
-    "tipo": "innovacion",
-    "marcas": ["TIO NACHO"],
-    "resumen": "Nuevo SKU Tio Nacho con Henna Egipcia 415ml. Requiere apertura de codigo en WMT, Chedraui y Soriana. Display de lanzamiento disponible. Meta: DN 70% en 45 dias.",
-    "periodo": "Abr 2026",
-    "urgente": false
   },
   {
     "id": "cicatricure_precio_2026",
     "titulo": "Ajuste de precio Cicatricure — Incremento 8%",
     "fecha": "2026-03-15",
     "tipo": "precio",
-    "marcas": ["CICATRICURE"],
+    "marcas": [
+      "CICATRICURE"
+    ],
     "resumen": "Incremento de precio de 8% en toda la linea Cicatricure efectivo desde W14. Comunicar a compradores y actualizar planogramas. Monitorear elasticidad en primeras 4 semanas.",
     "periodo": "W14 2026 en adelante",
+    "urgente": false
+  },
+  {
+    "id": "tio_nacho_exhib_2026",
+    "titulo": "Plan de Exhibicion Tio Nacho Q2 — Refuerzo de anaquel",
+    "fecha": "2026-03-20",
+    "tipo": "activacion",
+    "marcas": [
+      "TIO NACHO"
+    ],
+    "resumen": "Refuerzo de exhibicion en gondola de cabello para Tio Nacho en WMT, Chedraui y Soriana. Objetivo: recuperar disponibilidad y mejorar facing. Material POP disponible en almacen.",
+    "periodo": "Abr-May 2026",
     "urgente": false
   }
 ]

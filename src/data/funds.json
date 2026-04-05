@@ -35,7 +35,7 @@
         "status": "en_curso"
       },
       {
-        "name": "Relanzamiento Tio Nacho Henna Q2",
+        "name": "Exhibicion Tio Nacho gondola central Q2",
         "budget": 220000,
         "executed": 220000,
         "status": "completada"
@@ -72,7 +72,7 @@
         "status": "en_curso"
       },
       {
-        "name": "Material POP Tio Nacho Henna",
+        "name": "Material POP Tio Nacho PDV Q1",
         "budget": 170000,
         "executed": 170000,
         "status": "completada"
@@ -109,7 +109,7 @@
         "status": "completada"
       },
       {
-        "name": "Lanzamiento Tio Nacho Henna Q2",
+        "name": "Exhibicion adicional Tio Nacho Q2",
         "budget": 520000,
         "executed": 150000,
         "status": "en_curso"

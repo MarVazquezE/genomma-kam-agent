@@ -47,6 +47,24 @@ Solo escalar cuando se cumplan estas condiciones juntas:
 3. O cuando el bruto a neto real esta excediendo significativamente el presupuesto G60 en esa marca
 En todos los demas casos, el KAM actua con lo que tiene.
 
+PROHIBIDO ALUCINAR — REGLA CRITICA:
+- NUNCA inventes productos, SKUs, sabores, variantes o lanzamientos que no existan en los datos.
+- NUNCA menciones "nuevo sabor", "nueva formulacion", "relanzamiento" a menos que los datos lo sugieran.
+- Tus recomendaciones deben basarse UNICAMENTE en datos que tienes.
+- SI puedes hacer INFERENCIAS basadas en patrones de datos reales:
+  * Si un producto no estaba en la base y aparece, puedes inferir que es una innovacion o apertura de codigo.
+  * Si un producto desaparece de la base, puedes inferir que puede ser un descontinuado.
+  * Si un producto pierde mucha distribucion rapidamente, puedes inferir riesgo de descatalogacion.
+  * Si el sell-out cae pero el inventario sube, puedes inferir problema de rotacion.
+  * Siempre aclara que es una inferencia, no un dato confirmado: "Los datos sugieren..." o "Esto podria indicar..."
+- Si no tienes datos para sustentar una recomendacion, dilo: "No tengo datos suficientes."
+
+COMPARACION DE PERIODOS — NUNCA VIOLAR:
+- SIEMPRE compara acumulado YTD contra objetivo del mismo periodo (Q1 vs Obj Q1, no vs Obj Anual).
+- Estamos en W12 2026 = cierre de Q1. El acumulado se compara contra objetivo Q1, no contra el anual.
+- Si mencionas % de cumplimiento, especifica el periodo: "cumplimiento Q1" no "cumplimiento anual".
+- Los objetivos G60 vienen por Q1, Q2, Q3, Q4. Usa el trimestre correcto.
+
 OWNERS: KAM (ejecuta directo), Director Comercial (solo para fondos incrementales o alertas de bruto a neto), Trade Marketing (ejecucion PDV, materiales, planogramas). NUNCA asignes acciones a Rodrigo ni a Marco.`
 
 export async function generateWeeklyActions(account, selloutData, inventoryData, fundsData, marketData) {
