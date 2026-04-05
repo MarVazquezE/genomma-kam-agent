@@ -1029,7 +1029,15 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
                   const cs = getCriticalSkus(inventory, acc.id)
                   if (cs.length > 0) acciones.push({ urgencia: 1, text: acc.name.split(" ")[0] + ": " + cs[0] + " con " + (inventory[acc.id]?.skus?.[cs[0]]?.coverage_days || 0) + " dias de inventario — generar OC urgente", color: "var(--critical)" })
                   const revertir = (brandMap[acc.id] || []).filter(m => m.categoria === "revertir").sort((a,b) => a.sell_out_trend - b.sell_out_trend)
-                  if (revertir.length > 0) acciones.push({ urgencia: 2, text: acc.name.split(" ")[0] + ": " + revertir[0].marca + " cae " + revertir[0].sell_out_trend.toFixed(0) + "% YoY — revisar distribucion y activar promo", color: "var(--critical)" })
+                  if (revertir.length > 0) {
+                    const m = revertir[0]
+                    const bnData = brutoNeto[acc.id]?.marcas?.find(x => x.marca === m.marca)
+                    const tradeExcedido = bnData?.pct_trade_ytd > 25
+                    const action = tradeExcedido && m.sell_out_trend < -15
+                      ? "escalar a Dir. Comercial: bruto a neto excedido y sin fondos para revertir"
+                      : "activar distribucion y exhibicion con fondos disponibles"
+                    acciones.push({ urgencia: 2, text: acc.name.split(" ")[0] + ": " + m.marca + " cae " + m.sell_out_trend.toFixed(0) + "% YoY — " + action, color: "var(--critical)" })
+                  }
                 })
                 const tp_criticas = accounts.filter(acc => tiendaPerfecta[acc.id]?.score_general_pct < 60)
                 tp_criticas.forEach(acc => acciones.push({ urgencia: 3, text: acc.name.split(" ")[0] + ": Tienda Perfecta " + tiendaPerfecta[acc.id].score_general_pct.toFixed(0) + "% — ejecutar planograma y verificar POP", color: "var(--warning)" }))
@@ -1049,41 +1057,87 @@ export default function Dashboard({ onSelectAccount, onModuleClick }) {
               {accountSorted.map(acc => <AccountCard key={acc.id} account={acc} onSelect={onSelectAccount} />)}
             </div>
 
-            {/* SO/SI/ALERTAS — detalle expandible */}
+            {/* SO/SI/ALERTAS — siempre visible */}
             <div style={{ marginBottom: 16 }}>
-              <div onClick={() => toggleDrillDown("detalle_numerico")} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", cursor: "pointer", padding: "10px 16px", background: "var(--white)", border: "1px solid #E2E8F0", borderRadius: "var(--radius-md)" }}>
-                <span style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)" }}>Ver detalle numerico: Sell-Out, Sell-In, Alertas y Fondos</span>
-                <span style={{ fontSize: 12, color: "var(--cyan)" }}>{drillDown === "detalle_numerico" ? "▲ Cerrar" : "▼ Expandir"}</span>
+              <div className="grid-2" style={{ marginBottom: 16 }}>
+                <div className="card">
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Sell-Out Neto · Todas las cuentas</div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                    <KPICard label="SO Neto YTD" value={formatMXN(summary.so_real_acum, true)} target={formatMXN(summary.so_obj_acum, true)} vsLY={summary.so_vs_ly} pct={(summary.so_real_acum / summary.so_obj_acum) * 100} onClick={() => toggleDrillDown("sellout")} />
+                    <KPICard label="SO Neto W12" value={formatMXN(summary.total_so, true)} target="Meta sem." vsLY={-16.8} pct={83} onClick={() => toggleDrillDown("sellout")} />
+                  </div>
+                </div>
+                <div className="card">
+                  <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Sell-In Neto · Todas las cuentas</div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+                    <KPICard label="SI Neto YTD" value={formatMXN(summary.si_real_acum, true)} target={formatMXN(summary.si_obj_acum, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_acum / summary.si_obj_acum) * 100} />
+                    <KPICard label="SI Neto Mes" value={formatMXN(summary.si_real_mes, true)} target={formatMXN(summary.si_obj_mes, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_mes / summary.si_obj_mes) * 100} />
+                    <KPICard label="SI Neto Q1" value={formatMXN(summary.si_real_trim, true)} target={formatMXN(summary.si_obj_trim, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_trim / summary.si_obj_trim) * 100} />
+                  </div>
+                </div>
               </div>
-              {drillDown === "detalle_numerico" && (
-                <div style={{ marginTop: 12 }}>
-                  <div className="grid-2" style={{ marginBottom: 16 }}>
-                    <div className="card">
-                      <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Sell-Out Neto · Todas las cuentas</div>
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-                        <KPICard label="SO Neto YTD" value={formatMXN(summary.so_real_acum, true)} target={formatMXN(summary.so_obj_acum, true)} vsLY={summary.so_vs_ly} pct={(summary.so_real_acum / summary.so_obj_acum) * 100} onClick={() => toggleDrillDown("sellout")} />
-                        <KPICard label="SO Neto W12" value={formatMXN(summary.total_so, true)} target="Meta sem." vsLY={-16.8} pct={83} onClick={() => toggleDrillDown("sellout")} />
-                      </div>
-                    </div>
-                    <div className="card">
-                      <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Sell-In Neto · Todas las cuentas</div>
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
-                        <KPICard label="SI Neto YTD" value={formatMXN(summary.si_real_acum, true)} target={formatMXN(summary.si_obj_acum, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_acum / summary.si_obj_acum) * 100} />
-                        <KPICard label="SI Neto Mes" value={formatMXN(summary.si_real_mes, true)} target={formatMXN(summary.si_obj_mes, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_mes / summary.si_obj_mes) * 100} />
-                        <KPICard label="SI Neto Q1" value={formatMXN(summary.si_real_trim, true)} target={formatMXN(summary.si_obj_trim, true)} vsLY={summary.si_vs_ly} pct={(summary.si_real_trim / summary.si_obj_trim) * 100} />
-                      </div>
-                    </div>
+              {drillDown === "sellout" && <SellOutDrillDown onClose={() => setDrillDown(null)} />}
+
+              <div className="card" style={{ marginBottom: 16 }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Alertas y ejecucion</div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
+                  <AlertCard label="Venta en Riesgo" value={formatMXN(summary.totalOpp, true)} sub="Por ejecucion pendiente · Click ver detalle" color="var(--critical)" onClick={() => setDrillDown(drillDown === "alertas" ? null : "alertas")} />
+                  <AlertCard label="Fondos Ejecutados" value={summary.fondosExec.toFixed(0) + "%"} sub={"Esperado W12: 23% · " + (Math.abs(summary.fondosExec - 23.1) <= 2 ? "En linea" : summary.fondosExec > 25.1 ? "Sobreutilizado" : "Subutilizado")} color={Math.abs(summary.fondosExec - 23.1) <= 2 ? "var(--success)" : summary.fondosExec > 28.1 ? "var(--critical)" : "var(--warning)"} onClick={() => setDrillDown(drillDown === "fondos" ? null : "fondos")} />
+                  <AlertCard label="Tienda Perfecta" value={summary.avgTP.toFixed(0) + "%"} sub="Obj: 85% · Prom. cuentas" color={summary.avgTP >= 80 ? "var(--success)" : summary.avgTP >= 65 ? "var(--warning)" : "var(--critical)"} onClick={() => setActiveSection("tp")} />
+                  <AlertCard label="KBDs Off-Track" value={summary.totalKBDOffTrack} sub="Actividades sin cumplir" color="var(--critical)" onClick={() => setActiveSection("kbd")} />
+                </div>
+              </div>
+
+              {drillDown === "alertas" && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
+                    <div style={{ fontSize: 15, fontWeight: 800 }}>Venta en Riesgo — Detalle por Cuenta</div>
+                    <button className="btn btn-secondary" onClick={() => setDrillDown(null)} style={{ fontSize: 12, padding: "6px 14px" }}>Cerrar</button>
                   </div>
-                  {drillDown === "sellout" && <SellOutDrillDown onClose={() => setDrillDown(null)} />}
-                  <div className="card" style={{ marginBottom: 16 }}>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: "var(--silver)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 10 }}>Alertas y ejecucion</div>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
-                      <AlertCard label="Venta en Riesgo" value={formatMXN(summary.totalOpp, true)} sub="Por ejecucion pendiente" color="var(--critical)" onClick={() => toggleDrillDown("alertas")} />
-                      <AlertCard label="Fondos Ejecutados" value={summary.fondosExec.toFixed(0) + "%"} sub={"Esperado W12: 23% · " + (Math.abs(summary.fondosExec - 23.1) <= 2 ? "En linea" : summary.fondosExec > 25.1 ? "Sobreutilizado" : "Subutilizado")} color={Math.abs(summary.fondosExec - 23.1) <= 2 ? "var(--success)" : summary.fondosExec > 28.1 ? "var(--critical)" : "var(--warning)"} onClick={() => toggleDrillDown("fondos")} />
-                      <AlertCard label="Tienda Perfecta" value={summary.avgTP.toFixed(0) + "%"} sub="Obj: 85% · Prom. cuentas" color={summary.avgTP >= 80 ? "var(--success)" : summary.avgTP >= 65 ? "var(--warning)" : "var(--critical)"} onClick={() => setActiveSection("tp")} />
-                      <AlertCard label="KBDs Off-Track" value={summary.totalKBDOffTrack} sub="Actividades sin cumplir" color="var(--critical)" onClick={() => setActiveSection("kbd")} />
-                    </div>
+                  {accounts.map(acc => {
+                    const items = (executionScorecard[acc.id] || []).filter(i => i.estado === "off_track")
+                    if (items.length === 0) return null
+                    return items.map((item, i) => (
+                      <div key={acc.id+i} style={{ background: "var(--critical-light)", borderRadius: "var(--radius-md)", padding: "8px 12px", marginBottom: 6, borderLeft: "3px solid var(--critical)" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between" }}>
+                          <div><strong>{item.iniciativa}</strong><span style={{ fontSize: 11, color: "var(--silver)", marginLeft: 8 }}>— {acc.name}</span></div>
+                          <span style={{ fontSize: 11, fontWeight: 700, color: "var(--critical)", fontFamily: "var(--font-mono)" }}>{item.venta_perdida_mxn > 0 ? "-" + formatMXN(item.venta_perdida_mxn, true) : "Pendiente"}</span>
+                        </div>
+                        <div style={{ fontSize: 10, color: "#475569", marginTop: 2 }}>{item.accion}</div>
+                      </div>
+                    ))
+                  })}
+                </div>
+              )}
+
+              {drillDown === "fondos" && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
+                    <div style={{ fontSize: 15, fontWeight: 800 }}>Fondos de Inversion — Detalle por Cuenta</div>
+                    <button className="btn btn-secondary" onClick={() => setDrillDown(null)} style={{ fontSize: 12, padding: "6px 14px" }}>Cerrar</button>
                   </div>
+                  <table className="data-table">
+                    <thead><tr><th>Cuenta</th><th style={{ textAlign: "right" }}>Presupuesto Anual</th><th style={{ textAlign: "right" }}>Ejecutado YTD</th><th style={{ textAlign: "right" }}>% Avance</th><th style={{ textAlign: "center" }}>Estado</th></tr></thead>
+                    <tbody>
+                      {accounts.map(acc => {
+                        const f = funds[acc.id]
+                        const avanceAnio = 23.1
+                        const diff = f.execution_pct - avanceAnio
+                        const c = diff > 5 ? "var(--critical)" : diff > 2 ? "var(--warning)" : diff < -5 ? "var(--warning)" : "var(--success)"
+                        const chipCls = diff > 5 ? "chip-red" : diff > 2 ? "chip-amber" : diff < -5 ? "chip-amber" : "chip-green"
+                        const label = diff > 5 ? "Sobreutilizado" : diff > 2 ? "Adelantado" : diff < -5 ? "Subutilizado" : "En linea"
+                        return (
+                          <tr key={acc.id}>
+                            <td style={{ fontWeight: 700 }}>{acc.name}</td>
+                            <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.annual_committed_mxn, true)}</td>
+                            <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11 }}>{formatMXN(f.executed_ytd_mxn, true)}</td>
+                            <td style={{ textAlign: "right", fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: c }}>{f.execution_pct.toFixed(0)}% <span style={{ fontSize: 9, color: "var(--silver)" }}>({diff > 0 ? "+" : ""}{diff.toFixed(0)} vs {avanceAnio.toFixed(0)}%)</span></td>
+                            <td style={{ textAlign: "center" }}><span className={"chip " + chipCls}>{label}</span></td>
+                          </tr>
+                        )
+                      })}
+                    </tbody>
+                  </table>
                 </div>
               )}
             </div>

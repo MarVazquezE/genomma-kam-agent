@@ -344,7 +344,15 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
                       <div style={{ fontSize: 11, color: "var(--obsidian)", lineHeight: 1.6 }}>
                         {r.coverage < 14 && <div style={{ marginBottom: 4 }}>A. Generar OC urgente para llevar inventario a minimo 21 dias de cobertura.</div>}
                         {peorFmt && <div style={{ marginBottom: 4 }}>{r.coverage < 14 ? "B" : "A"}. Audit de distribucion en {peorFmt.formato}: verificar SKUs activos y negociar reposicion.</div>}
-                        <div>{r.coverage < 14 && peorFmt ? "C" : peorFmt ? "B" : "A"}. Revisar precio vs competencia y evaluar activacion de visibilidad (exhibicion adicional, POP).</div>
+                        <div style={{ marginBottom: 4 }}>{r.coverage < 14 && peorFmt ? "C" : peorFmt ? "B" : "A"}. Activar exhibicion y promo con fondos disponibles. Maximizar retorno invirtiendo en distribucion y disponibilidad.</div>
+                        {(() => {
+                          const isBigBrand = i < 3
+                          const isTradeExcedido = r.pct_trade > 25
+                          const isSevere = r.yoy_neto < -15
+                          if (isBigBrand && isSevere && isTradeExcedido) return <div style={{ background: "#FEF2F2", borderRadius: "var(--radius-sm)", padding: "4px 8px", marginTop: 4, fontSize: 10, color: "var(--critical)" }}>Escalar a Dir. Comercial: marca grande con caida severa y bruto a neto excedido. Solicitar fondos incrementales contra plan de SI incremental.</div>
+                          if (isBigBrand && isSevere) return <div style={{ background: "#DBEAFE", borderRadius: "var(--radius-sm)", padding: "4px 8px", marginTop: 4, fontSize: 10, color: "var(--info)" }}>Marca prioritaria: verificar fondos disponibles. Si se agotan, preparar solicitud incremental a Dir. Comercial.</div>
+                          return null
+                        })()}
                       </div>
                     </div>
                   </div>
@@ -382,7 +390,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
                       {mejorFmt && <span> · Mejor formato: {mejorFmt.formato} ({mejorFmt.yoy > 0 ? "+" : ""}{mejorFmt.yoy}%)</span>}
                     </div>
                     <div style={{ fontSize: 11, color: "var(--success)", marginTop: 4, fontWeight: 600 }}>
-                      Accion: {r.coverage >= 21 ? "Expandir distribucion y negociar exhibicion adicional" : "Asegurar inventario (solo " + r.coverage + "d) para no perder momentum"}
+                      Accion: {r.coverage >= 21 ? "Expandir distribucion y activar exhibicion adicional con fondos disponibles" : "Asegurar inventario (solo " + r.coverage + "d) para no perder momentum — prioridad OC"}
                     </div>
                   </div>
                 </div>
@@ -450,7 +458,11 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
       {/* FONDOS DE INVERSION */}
       <div className="card" style={{ marginBottom: 16 }}>
         <div style={{ fontSize: 13, fontWeight: 800, marginBottom: 2 }}>Plan de Fondos de Inversion</div>
-        <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Presupuesto anual: {formatMXN(fund.annual_committed_mxn)} · Ejecutado: {formatPct(fund.execution_pct)}</div>
+        <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Presupuesto anual: {formatMXN(fund.annual_committed_mxn)} · Ejecutado: {formatPct(fund.execution_pct)} · Esperado W12: 23%
+          {Math.abs(fund.execution_pct - 23.1) <= 5 && <span style={{ color: "var(--success)", fontWeight: 700 }}> · En linea</span>}
+          {fund.execution_pct - 23.1 > 5 && <span style={{ color: "var(--critical)", fontWeight: 700 }}> · Sobreutilizado</span>}
+          {fund.execution_pct - 23.1 < -5 && <span style={{ color: "var(--warning)", fontWeight: 700 }}> · Subutilizado</span>}
+        </div>
         <table className="data-table">
           <thead><tr><th>Actividad</th><th style={{ textAlign: "right" }}>Presupuesto</th><th style={{ textAlign: "right" }}>Ejecutado</th><th style={{ textAlign: "right" }}>Avance</th><th style={{ textAlign: "center" }}>Estado</th></tr></thead>
           <tbody>
@@ -512,8 +524,9 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
           <div style={{ fontSize: 11, color: "var(--silver)", marginBottom: 12 }}>Iniciativas off-track que requieren accion inmediata</div>
           {(() => {
             const items = (executionScorecard[accountId] || []).filter(i => i.estado === "off_track")
-            const pendientes = fund.activities.filter(a => a.status === "pendiente")
-            if (items.length === 0 && pendientes.length === 0) return <div style={{ fontSize: 12, color: "var(--success)", padding: 8 }}>Sin acciones pendientes</div>
+            // Only flag pendiente activities if they seem overdue (Q1 activities with 0 execution)
+            const pendientes = fund.activities.filter(a => a.status === "pendiente" && a.executed === 0 && a.budget > fund.annual_committed_mxn * 0.15)
+            if (items.length === 0 && pendientes.length === 0) return <div style={{ fontSize: 12, color: "var(--success)", padding: 8 }}>Sin acciones criticas pendientes — fondos en linea con avance del año (23%)</div>
             return (
               <div>
                 {items.map((item, i) => (
@@ -531,7 +544,7 @@ export default function Account360({ accountId, onBack, onGoToAgent, onGoToPrese
                       <span style={{ fontSize: 11, fontWeight: 700, color: "var(--obsidian)" }}>{act.name}</span>
                       <span style={{ fontSize: 11, fontWeight: 700, color: "#92400E", fontFamily: "var(--font-mono)" }}>{formatMXN(act.budget, true)}</span>
                     </div>
-                    <div style={{ fontSize: 10, color: "#92400E" }}>Presupuesto sin ejecutar</div>
+                    <div style={{ fontSize: 10, color: "#92400E" }}>Actividad de alto presupuesto sin iniciar — revisar timeline</div>
                   </div>
                 ))}
               </div>

@@ -21,7 +21,21 @@ async function callClaude(systemPrompt, userPrompt) {
   return data.content[0].text
 }
 
-const SYSTEM_KAM = `Eres el Agente KAM de Genomma Lab, experto en cuentas clave de consumo masivo en Mexico. Analizas datos de cuentas y generas recomendaciones comerciales accionables. Respondes en espanol, tono ejecutivo, directo y cuantificado. Marco = operacion, P&L, inventario, fondos. Rodrigo = marca, innovacion, estrategia. Sin disclaimers.`
+const SYSTEM_KAM = `Eres el Agente KAM de Genomma Lab, experto en cuentas clave de consumo masivo en Mexico. Analizas datos de cuentas y generas recomendaciones comerciales accionables. Respondes en espanol, tono ejecutivo, directo y cuantificado. Sin disclaimers.
+
+REGLAS DE OPERACION DEL KAM:
+- El KAM opera con autonomia, sentido de urgencia y criterio de negocio. No necesita pedir permiso para actuar.
+- Debe buscar siempre maximizar el retorno de la inversion e invertir en los KPIs que realmente mueven el negocio (distribucion, disponibilidad, precio, exhibicion).
+- Recomienda acciones directas y concretas. No seas tibio ni generico.
+
+CUANDO ESCALAR A DIRECTOR COMERCIAL:
+Solo escalar cuando se cumplan estas condiciones juntas:
+1. La caida es severa Y la marca es grande (top 5 del portafolio en esa cuenta)
+2. Y ya no hay fondos comerciales disponibles para revertir la tendencia
+3. O cuando el bruto a neto real esta excediendo significativamente el presupuesto G60 en esa marca
+En todos los demas casos, el KAM actua con lo que tiene.
+
+OWNERS: KAM (ejecuta directo), Director Comercial (solo para fondos incrementales o alertas de bruto a neto), Trade Marketing (ejecucion PDV, materiales, planogramas). NUNCA asignes acciones a Rodrigo ni a Marco.`
 
 export async function generateWeeklyActions(account, selloutData, inventoryData, fundsData, marketData) {
   const inv = inventoryData[account.id].skus
@@ -36,7 +50,7 @@ export async function generateWeeklyActions(account, selloutData, inventoryData,
     fondos: { comprometido: funds.annual_committed_mxn, ejecutado: funds.executed_ytd_mxn, pct: funds.execution_pct, pendientes: funds.activities.filter(a => a.status === "pendiente") },
     senales: market ? { ticker: market.ticker, variacion: market.change_pct, highlights: market.last_earnings.key_highlights } : null,
   }
-  const prompt = `Analiza los datos de ${account.name} y genera el analisis semanal.\n\nDATOS:\n${JSON.stringify(context, null, 2)}\n\nResponde SOLO en JSON sin texto adicional:\n{"resumen_ejecutivo":"2-3 oraciones del estado","actions":[{"priority":1,"type":"inventory|funds|growth|risk","title":"titulo corto","description":"descripcion con datos especificos","impact":"impacto cuantificado","owner":"Marco|Rodrigo","urgency":"alta|media|baja"},{"priority":2,"type":"...","title":"...","description":"...","impact":"...","owner":"...","urgency":"..."},{"priority":3,"type":"...","title":"...","description":"...","impact":"...","owner":"...","urgency":"..."}],"optimal_order":{"justification":"razon ejecutiva","sku_orders":[{"sku":"nombre","current_coverage_days":0,"suggested_units":0,"suggested_value_mxn":0,"priority":"urgente|programada|opcional","justification":"razon"}],"total_value_mxn":0,"delivery_window":"plazo"}}`
+  const prompt = `Analiza los datos de ${account.name} y genera el analisis semanal.\n\nDATOS:\n${JSON.stringify(context, null, 2)}\n\nResponde SOLO en JSON sin texto adicional:\n{"resumen_ejecutivo":"2-3 oraciones del estado","actions":[{"priority":1,"type":"inventory|funds|growth|risk","title":"titulo corto","description":"descripcion con datos especificos","impact":"impacto cuantificado","owner":"KAM|Director Comercial|Trade Marketing","urgency":"alta|media|baja"},{"priority":2,"type":"...","title":"...","description":"...","impact":"...","owner":"...","urgency":"..."},{"priority":3,"type":"...","title":"...","description":"...","impact":"...","owner":"...","urgency":"..."}],"optimal_order":{"justification":"razon ejecutiva","sku_orders":[{"sku":"nombre","current_coverage_days":0,"suggested_units":0,"suggested_value_mxn":0,"priority":"urgente|programada|opcional","justification":"razon"}],"total_value_mxn":0,"delivery_window":"plazo"}}`
   const raw = await callClaude(SYSTEM_KAM, prompt)
   const clean = raw.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim()
   return JSON.parse(clean)

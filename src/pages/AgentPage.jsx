@@ -10,8 +10,11 @@ import { generateWeeklyActions, chatWithAgent } from "../utils/agentService"
 const typeIcon = { inventory: "📦", funds: "💰", growth: "📈", risk: "⚠️", financial: "📊" }
 const urgencyColor = { alta: "chip-red", media: "chip-amber", baja: "chip-green" }
 const ownerStyle = {
-  Marco: { bg: "#E6F1FB", color: "#185FA5", label: "→ Marco" },
-  Rodrigo: { bg: "#EEEDFE", color: "#534AB7", label: "→ Rodrigo" }
+  KAM: { bg: "#F0FDF4", color: "#065F46", label: "→ KAM" },
+  "Director Comercial": { bg: "#E6F1FB", color: "#185FA5", label: "→ Dir. Comercial" },
+  "Trade Marketing": { bg: "#EEEDFE", color: "#534AB7", label: "→ Trade Mkt" },
+  Marco: { bg: "#E6F1FB", color: "#185FA5", label: "→ Dir. Comercial" },
+  Rodrigo: { bg: "#EEEDFE", color: "#534AB7", label: "→ Trade Mkt" }
 }
 
 export default function AgentPage({ accountId, onBack }) {
